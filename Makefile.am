@@ -10,16 +10,10 @@ ktimer_SOURCES =  main.cpp ktimer.cpp prefwidget.ui
 # ktimer.cpp pref.cpp
 noinst_HEADERS = ktimer.h
 
-KDE_ICON = ktimer AUTO
+KDE_ICON = AUTO
 
 appsdir = $(kde_appsdir)/Utilities
-
-install-data-local:
-	$(mkinstalldirs) $(appsdir)
-	$(INSTALL_DATA) $(srcdir)/support/ktimer.desktop $(appsdir)
-
-uninstall-local:
-	rm -f $(kde_appsdir)/ktimer.kdesktop
+apps_DATA = ktimer.desktop
 
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/ktimer.pot

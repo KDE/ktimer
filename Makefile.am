@@ -10,7 +10,7 @@ ktimer_SOURCES =  main.cpp ktimer.cpp prefwidget.ui
 # ktimer.cpp pref.cpp
 noinst_HEADERS = ktimer.h
 
-KDE_ICON = AUTO
+KDE_ICON = ktimer
 
 xdg_apps_DATA = ktimer.desktop
 

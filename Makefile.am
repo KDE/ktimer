@@ -24,6 +24,6 @@ messages: rc.cpp
 
 
 srcdoc:
-	kdoc -a -p -H -d $(HOME)/web/src/ktimer ktimer *.h -lkdecore -lkdeui -lqt
+	kdoc -a -p -H -d $$HOME/web/src/ktimer ktimer *.h -lkdecore -lkdeui -lqt
 
 

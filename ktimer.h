@@ -42,7 +42,7 @@ class KTimerJob : public QObject {
     bool oneInstance();
     unsigned value();
     States state();
-    void *user();    
+    void *user();
     void setUser( void *user );
 
     void load( KConfig *cfg, const QString& grp );
@@ -56,11 +56,11 @@ class KTimerJob : public QObject {
     void setOneInstance( bool one );
     void setValue( unsigned value );
     void setValue( int value ) { setValue( (unsigned)value ); };
-    void setState( States state ); 
+    void setState( States state );
 
     void pause() { setState( Paused ); }
     void stop() { setState( Stopped ); }
-    void start() { setState( Started ); }    
+    void start() { setState( Started ); }
 
  signals:
     void stateChanged( KTimerJob *job, States state );
@@ -79,7 +79,7 @@ class KTimerJob : public QObject {
     virtual void fire();
 
  private slots:
-    void timeout(); 
+    void timeout();
     void processExited(KProcess *proc);
 
  private:
@@ -97,8 +97,7 @@ class KTimerPref : public PrefWidget
  protected slots:
     void add();
     void remove();
-    void currentChanged( QListViewItem * );    
-    void browse();
+    void currentChanged( QListViewItem * );
 
     void saveJobs( KConfig *cfg );
     void loadJobs( KConfig *cfg );
@@ -106,7 +105,7 @@ class KTimerPref : public PrefWidget
  private slots:
     void jobChanged( KTimerJob *job );
     void jobFinished( KTimerJob *job, bool error );
-   
+
  private:
     struct KTimerPrefPrivate *d;
 };

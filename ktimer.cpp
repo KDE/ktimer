@@ -25,6 +25,8 @@
 #include <qcheckbox.h>
 #include <qslider.h>
 #include <qlcdnumber.h>
+#include <kurlrequester.h>
+#include <klineedit.h>
 
 #include <kiconloader.h>
 #include <kapplication.h>
@@ -117,8 +119,6 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     connect( m_remove, SIGNAL(clicked()), SLOT(remove()) );
     connect( m_list, SIGNAL(currentChanged(QListViewItem*)),
              SLOT(currentChanged(QListViewItem*)) );
-    connect( m_browse, SIGNAL(clicked()), SLOT(browse()) );
-
     loadJobs( kapp->config() );
 
     show();
@@ -149,12 +149,12 @@ void KTimerPref::add()
              SLOT(jobFinished(KTimerJob*,bool)) );
 
     job->setUser( item );
-        
+
     // Qt drops currentChanged signals on first item (bug?)
     if( m_list->childCount()==1 )
       currentChanged( item );
-    
-    m_list->setCurrentItem( item );    
+
+    m_list->setCurrentItem( item );
     m_list->triggerUpdate();
 }
 
@@ -163,14 +163,6 @@ void KTimerPref::remove()
 {
     delete m_list->currentItem();
     m_list->triggerUpdate();
-}
-
-
-void KTimerPref::browse()
-{
-    QString cmd = KFileDialog::getOpenFileName();
-    if( !cmd.isEmpty() )
-        m_command->setText( cmd );
 }
 
 
@@ -184,7 +176,6 @@ void KTimerPref::currentChanged( QListViewItem *i )
         m_settings->setEnabled( true );
         m_remove->setEnabled( true );
 
-        m_command->disconnect();
         m_delay->disconnect();
         m_loop->disconnect();
         m_one->disconnect();
@@ -194,7 +185,7 @@ void KTimerPref::currentChanged( QListViewItem *i )
         m_counter->disconnect();
         m_slider->disconnect();
 
-        connect( m_command, SIGNAL(textChanged(const QString &)),
+        connect( m_commandLine->lineEdit(), SIGNAL(textChanged(const QString &)),
                  job, SLOT(setCommand(const QString &)) );
         connect( m_delay, SIGNAL(valueChanged(int)),
                  job, SLOT(setDelay(int)) );
@@ -211,7 +202,7 @@ void KTimerPref::currentChanged( QListViewItem *i )
         connect( m_slider, SIGNAL(valueChanged(int)),
                  job, SLOT(setValue(int)) );
 
-        m_command->setText( job->command() );
+        m_commandLine->lineEdit()->setText( job->command() );
         m_delay->setValue( job->delay() );
         m_loop->setChecked( job->loop() );
         m_one->setChecked( job->oneInstance() );

@@ -73,7 +73,7 @@ public:
         setText( 0, QString::number(m_job->value()) );
 
         if( m_error )
-            setPixmap( 0, SmallIcon("error") );
+            setPixmap( 0, SmallIcon("stop") );
         else
             setPixmap( 0, QPixmap() );
 

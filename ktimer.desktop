@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-GenericName=Task Scheduler
+GenericName=Countdown Launcher
 GenericName[af]=Opdrag Skeduleerder
 GenericName[ar]=مجدول المهام
 GenericName[bg]=Изпълнение на програми
@@ -40,7 +40,7 @@ GenericName[sk]=Plánovač úloh
 GenericName[sl]=Razporejevalnik opravil
 GenericName[sr]=Распоређивач задатака
 GenericName[sv]=Jobbschemaläggare
-GenericName[ta]= பணி 
+GenericName[ta]=பணி அட்டவணை
 GenericName[th]=ตารางงาน
 GenericName[tr]=Görev Zamanlayıcı
 GenericName[uk]=Планувальник задач
@@ -66,7 +66,7 @@ Name[nb]=Tidtaker
 Name[pl]=Czasomierz
 Name[pt_BR]=Temporizador
 Name[sv]=Ktimer
-Name[ta]= Kநேரம் 
+Name[ta]= Kநேரம் காட்டி
 Name[th]=ตั้งเวลาทำงาน
 Name[tr]=Zamanlayıcı
 Name[ven]=Ratshikhathi wa K

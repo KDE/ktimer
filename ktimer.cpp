@@ -149,8 +149,12 @@ void KTimerPref::add()
              SLOT(jobFinished(KTimerJob*,bool)) );
 
     job->setUser( item );
-
-    m_list->setCurrentItem( item );
+        
+    // Qt drops currentChanged signals on first item (bug?)
+    if( m_list->childCount()==1 )
+      currentChanged( item );
+    
+    m_list->setCurrentItem( item );    
     m_list->triggerUpdate();
 }
 

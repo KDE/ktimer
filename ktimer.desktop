@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=A Timer
+Exec=ktimer
+Icon=ktimer
+Type=Application
+Terminal=0
+MapNotify=true
+Name=Timer

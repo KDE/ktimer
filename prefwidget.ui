@@ -1,5 +1,6 @@
 <!DOCTYPE UI><UI>
 <class>PrefWidget</class>
+<include location="global">kseparator.h</include>
 <widget>
     <class>QDialog</class>
     <property stdset="1">
@@ -96,7 +97,7 @@
             </property>
         </widget>
         <widget row="3"  column="0"  rowspan="1"  colspan="2" >
-            <class>Line</class>
+            <class>KSeparator</class>
             <property stdset="1">
                 <name>name</name>
                 <cstring>Line1</cstring>

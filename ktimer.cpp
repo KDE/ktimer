@@ -16,30 +16,23 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#include <qwidget.h>
-#include <qptrlist.h>
 #include <qtimer.h>
-#include <qpixmap.h>
 #include <qtoolbutton.h>
 #include <qgroupbox.h>
 #include <qlistview.h>
-#include <qpushbutton.h>
 #include <qspinbox.h>
 #include <qlineedit.h>
 #include <qcheckbox.h>
 #include <qslider.h>
 #include <qlcdnumber.h>
 
-#include <kinstance.h>
-#include <kapp.h>
-#include <ksystemtray.h>
-#include <kprocess.h>
 #include <kiconloader.h>
-#include <kglobal.h>
-#include <qstring.h>
+#include <kapplication.h>
+#include <ksystemtray.h>
 #include <kfiledialog.h>
 
 #include "ktimer.h"
+#include <qpushbutton.h>
 
 
 class KTimerJobItem : public QListViewItem {

@@ -343,7 +343,7 @@ void KTimerJob::load( KConfig *cfg, const QString& grp )
 {
     cfg->setGroup( grp );
     cfg->writeEntry( "Delay", d->delay );
-    cfg->writeEntry( "Command", d->command );
+    cfg->writePathEntry( "Command", d->command );
     cfg->writeEntry( "Loop", d->loop );
     cfg->writeEntry( "OneInstance", d->oneInstance );
     cfg->writeEntry( "State", (int)d->state );
@@ -354,7 +354,7 @@ void KTimerJob::save( KConfig *cfg, const QString& grp )
 {
     cfg->setGroup( grp );
     setDelay( cfg->readNumEntry( "Delay", 100 ) );
-    setCommand( cfg->readEntry( "Command", QString::null ) );
+    setCommand( cfg->readPathEntry( "Command" ) );
     setLoop( cfg->readBoolEntry( "Loop", false ) );
     setOneInstance( cfg->readBoolEntry( "OneInstance", d->oneInstance ) );
     setState( (States)cfg->readNumEntry( "State", (int)Stopped ) );

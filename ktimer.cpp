@@ -525,3 +525,4 @@ void KTimerJob::fire()
         }
     }
 }
+#include "ktimer.moc"

@@ -1,5 +1,5 @@
 INCLUDES = $(all_includes)
-LDFLAGS	= $(all_libraries)
+AM_LDFLAGS	= $(all_libraries)
 LDADD =  $(LIB_KDEUI) $(LIB_KFILE)
 
 bin_PROGRAMS = ktimer

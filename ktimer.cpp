@@ -105,9 +105,9 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     d->jobs.setAutoDelete( true );
 
     // set icons
-    m_stop->setPixmap( SmallIcon("player_stop") );
-    m_pause->setPixmap( SmallIcon("player_pause") );
-    m_start->setPixmap( SmallIcon("1rightarrow") );
+    m_stop->setIconSet( SmallIconSet("player_stop") );
+    m_pause->setIconSet( SmallIconSet("player_pause") );
+    m_start->setIconSet( SmallIconSet("1rightarrow") );
 
     // create tray icon
     KSystemTray *tray = new KSystemTray( this, "TimerTray" );

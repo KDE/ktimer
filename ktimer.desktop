@@ -67,3 +67,4 @@ Name[xh]=Umjongi Wexesha
 Name[zh_TW]=KDE 計時器
 X-KDE-StartupNotify=true
 X-DCOP-ServiceType=Multi
+Categories=QT;KDE;Utility

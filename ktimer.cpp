@@ -17,7 +17,7 @@
  */
 
 #include <qwidget.h>
-#include <qlist.h>
+#include <qptrlist.h>
 #include <qtimer.h>
 #include <qpixmap.h>
 #include <qtoolbutton.h>
@@ -99,7 +99,7 @@ private:
 
 struct KTimerPrefPrivate
 {
-    QList<KTimerJob> jobs;
+    QPtrList<KTimerJob> jobs;
 };
 
 KTimerPref::KTimerPref( QWidget *parent, const char *name )
@@ -311,7 +311,7 @@ struct KTimerJobPrivate {
     bool oneInstance;
     unsigned value;
     KTimerJob::States state;
-    QList<KProcess> processes;
+    QPtrList<KProcess> processes;
     void *user;
 
     QTimer *timer;

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 GenericName=Task Scheduler
-GenericName[af]=opdrag skeduleerder
+GenericName[af]=Opdrag Skeduleerder
 GenericName[ar]=مجدول المهام
 GenericName[bs]=Zakazivanje zadataka
 GenericName[cs]=Plánovač úloh
@@ -49,7 +49,7 @@ Icon=ktimer
 Type=Application
 Terminal=0
 Name=KTimer
-Name[af]=ktimer
+Name[af]=Ktimer
 Name[bg]=КТаймер
 Name[eo]=Tempoplanilo
 Name[lv]=KTaimers

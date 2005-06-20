@@ -18,13 +18,16 @@
 
 #include <qtimer.h>
 #include <qtoolbutton.h>
-#include <qgroupbox.h>
-#include <qlistview.h>
+#include <q3groupbox.h>
+#include <q3listview.h>
 #include <qspinbox.h>
 #include <qlineedit.h>
 #include <qcheckbox.h>
 #include <qslider.h>
 #include <qlcdnumber.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <Q3PtrList>
 #include <kurlrequester.h>
 #include <klineedit.h>
 
@@ -37,17 +40,17 @@
 #include <qpushbutton.h>
 
 
-class KTimerJobItem : public QListViewItem {
+class KTimerJobItem : public Q3ListViewItem {
 public:
-    KTimerJobItem( KTimerJob *job, QListView *parent )
-        : QListViewItem( parent ) {
+    KTimerJobItem( KTimerJob *job, Q3ListView *parent )
+        : Q3ListViewItem( parent ) {
         m_job = job;
         m_error = false;
         update();
     };
 
-    KTimerJobItem( KTimerJob *job, QListView *parent, QListViewItem *after )
-        : QListViewItem( parent, after ) {
+    KTimerJobItem( KTimerJob *job, Q3ListView *parent, Q3ListViewItem *after )
+        : Q3ListViewItem( parent, after ) {
         m_job = job;
         m_error = false;
         update();
@@ -94,7 +97,7 @@ private:
 
 struct KTimerPrefPrivate
 {
-    QPtrList<KTimerJob> jobs;
+    Q3PtrList<KTimerJob> jobs;
 };
 
 KTimerPref::KTimerPref( QWidget *parent, const char *name )
@@ -117,8 +120,8 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );
     connect( m_remove, SIGNAL(clicked()), SLOT(remove()) );
-    connect( m_list, SIGNAL(currentChanged(QListViewItem*)),
-             SLOT(currentChanged(QListViewItem*)) );
+    connect( m_list, SIGNAL(currentChanged(Q3ListViewItem*)),
+             SLOT(currentChanged(Q3ListViewItem*)) );
     loadJobs( kapp->config() );
 
     show();
@@ -166,7 +169,7 @@ void KTimerPref::remove()
 }
 
 
-void KTimerPref::currentChanged( QListViewItem *i )
+void KTimerPref::currentChanged( Q3ListViewItem *i )
 {
     KTimerJobItem *item = static_cast<KTimerJobItem*>(i);
     if( item ) {
@@ -299,7 +302,7 @@ struct KTimerJobPrivate {
     bool oneInstance;
     unsigned value;
     KTimerJob::States state;
-    QPtrList<KProcess> processes;
+    Q3PtrList<KProcess> processes;
     void *user;
 
     QTimer *timer;

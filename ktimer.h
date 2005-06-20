@@ -23,7 +23,7 @@
 #include <qwidget.h>
 #include <kprocess.h>
 #include <kconfig.h>
-
+#include <Q3ListViewItem>
 #include "prefwidget.h"
 
 
@@ -97,7 +97,7 @@ class KTimerPref : public PrefWidget
  protected slots:
     void add();
     void remove();
-    void currentChanged( QListViewItem * );
+    void currentChanged( Q3ListViewItem * );
 
     void saveJobs( KConfig *cfg );
     void loadJobs( KConfig *cfg );

@@ -49,26 +49,26 @@ class KTimerJob : public QObject {
     void save( KConfig *cfg, const QString& grp );
 
  public slots:
-    void setDelay( unsigned sec );
-    void setDelay( int sec ) { setDelay( (unsigned)sec ); };
+    void setDelay( unsigned int sec );
+    void setDelay( int sec );
     void setCommand( const QString &cmd );
     void setLoop( bool loop );
     void setOneInstance( bool one );
-    void setValue( unsigned value );
-    void setValue( int value ) { setValue( (unsigned)value ); };
+    void setValue( unsigned int value );
+    void setValue( int value );
     void setState( States state );
 
-    void pause() { setState( Paused ); }
-    void stop() { setState( Stopped ); }
-    void start() { setState( Started ); }
+    void pause();
+    void stop();
+    void start();
 
  signals:
     void stateChanged( KTimerJob *job, States state );
-    void delayChanged( KTimerJob *job, unsigned sec );
+    void delayChanged( KTimerJob *job, unsigned int sec );
     void commandChanged( KTimerJob *job, const QString &cmd );
     void loopChanged( KTimerJob *job, bool loop );
     void oneInstanceChanged( KTimerJob *job, bool one );
-    void valueChanged( KTimerJob *job, unsigned value );
+    void valueChanged( KTimerJob *job, unsigned int value );
 
     void changed( KTimerJob *job );
     void fired( KTimerJob *job );

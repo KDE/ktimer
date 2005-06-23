@@ -373,6 +373,31 @@ unsigned KTimerJob::delay()
 }
 
 
+void KTimerJob::pause()
+{
+    setState( Paused );
+}
+
+void KTimerJob::stop()
+{
+    setState( Stopped );
+}
+
+void KTimerJob::start()
+{
+    setState( Started );
+}
+
+void KTimerJob::setDelay( int sec )
+{
+    setDelay( (unsigned)sec );
+}
+
+void KTimerJob::setValue( int value )
+{
+    setValue( (unsigned)value );
+}
+
 void KTimerJob::setDelay( unsigned sec )
 {
     if( d->delay!=sec ) {

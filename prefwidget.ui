@@ -101,7 +101,7 @@
                 <cstring>Spacer4</cstring>
             </property>
             <property name="orientation">
-                <enum>Vertical</enum>
+                <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
                 <enum>Expanding</enum>
@@ -178,7 +178,7 @@
                         <cstring>Spacer1</cstring>
                     </property>
                     <property name="orientation">
-                        <enum>Horizontal</enum>
+                        <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeType">
                         <enum>Expanding</enum>
@@ -230,7 +230,7 @@
                         <cstring>m_slider</cstring>
                     </property>
                     <property name="orientation">
-                        <enum>Horizontal</enum>
+                        <enum>Qt::Horizontal</enum>
                     </property>
                 </widget>
                 <widget class="QLCDNumber" row="1" column="0" rowspan="1" colspan="3">

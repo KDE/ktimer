@@ -138,9 +138,9 @@ void KTimerPref::add()
     KTimerJob *job = new KTimerJob;
     KTimerJobItem *item = new KTimerJobItem( job, m_list );
 
-    connect( job, SIGNAL(delayChanged(KTimerJob*,unsigned)),
+    connect( job, SIGNAL(delayChanged(KTimerJob*,unsigned int)),
              SLOT(jobChanged(KTimerJob*)) );
-    connect( job, SIGNAL(valueChanged(KTimerJob*,unsigned)),
+    connect( job, SIGNAL(valueChanged(KTimerJob*,unsigned int)),
              SLOT(jobChanged(KTimerJob*)) );
     connect( job, SIGNAL(stateChanged(KTimerJob*,States)),
              SLOT(jobChanged(KTimerJob*)) );
@@ -270,9 +270,9 @@ void KTimerPref::loadJobs( KConfig *cfg )
             KTimerJob *job = new KTimerJob;
             KTimerJobItem *item = new KTimerJobItem( job, m_list );
 
-            connect( job, SIGNAL(delayChanged(KTimerJob*,unsigned)),
+            connect( job, SIGNAL(delayChanged(KTimerJob*,unsigned int)),
                      SLOT(jobChanged(KTimerJob*)) );
-            connect( job, SIGNAL(valueChanged(KTimerJob*,unsigned)),
+            connect( job, SIGNAL(valueChanged(KTimerJob*,unsigned int)),
                      SLOT(jobChanged(KTimerJob*)) );
             connect( job, SIGNAL(stateChanged(KTimerJob*,States)),
                      SLOT(jobChanged(KTimerJob*)) );

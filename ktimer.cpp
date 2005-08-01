@@ -27,7 +27,7 @@
 #include <qlcdnumber.h>
 //Added by qt3to4:
 #include <QPixmap>
-#include <Q3PtrList>
+#include <QList>
 #include <kurlrequester.h>
 #include <klineedit.h>
 
@@ -97,15 +97,13 @@ private:
 
 struct KTimerPrefPrivate
 {
-    Q3PtrList<KTimerJob> jobs;
+    QList<KTimerJob *> jobs;
 };
 
 KTimerPref::KTimerPref( QWidget *parent, const char *name )
     : PrefWidget( parent, name )
 {
     d = new KTimerPrefPrivate;
-
-    d->jobs.setAutoDelete( true );
 
     // set icons
     m_stop->setIconSet( SmallIconSet("player_stop") );
@@ -302,7 +300,7 @@ struct KTimerJobPrivate {
     bool oneInstance;
     unsigned value;
     KTimerJob::States state;
-    Q3PtrList<KProcess> processes;
+    QList<KProcess *> processes;
     void *user;
 
     QTimer *timer;
@@ -319,7 +317,6 @@ KTimerJob::KTimerJob( QObject *parent, const char *name )
     d->oneInstance = true;
     d->value = 100;
     d->state = Stopped;
-    d->processes.setAutoDelete( true );
     d->user = 0;
 
     d->timer = new QTimer( this );
@@ -518,7 +515,10 @@ void KTimerJob::timeout()
 void KTimerJob::processExited(KProcess *proc)
 {
     bool ok = proc->exitStatus()==0;
-    d->processes.remove( proc );
+    int i = d->processes.indexOf( proc);
+    if (i != -1)
+        delete d->processes.takeAt(i);
+
     if( !ok ) emit error( this );
     emit finished( this, !ok );
 }
@@ -535,7 +535,9 @@ void KTimerJob::fire()
         bool ok = proc->start( KProcess::NotifyOnExit );
         emit fired( this );
         if( !ok ) {
-            d->processes.remove( proc );
+            int i = d->processes.indexOf( proc);
+            if (i != -1)
+                delete d->processes.takeAt(i);
             emit error( this );
             emit finished( this, true );
         }

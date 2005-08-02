@@ -101,9 +101,11 @@ struct KTimerPrefPrivate
 };
 
 KTimerPref::KTimerPref( QWidget *parent, const char *name )
-    : PrefWidget( parent, name )
+    : QDialog( parent, name )
 {
     d = new KTimerPrefPrivate;
+
+    setupUi(this);
 
     // set icons
     m_stop->setIconSet( SmallIconSet("player_stop") );

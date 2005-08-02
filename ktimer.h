@@ -87,7 +87,7 @@ class KTimerJob : public QObject {
 };
 
 
-class KTimerPref : public PrefWidget
+class KTimerPref : public QDialog, public Ui::PrefWidget
 {
     Q_OBJECT
  public:

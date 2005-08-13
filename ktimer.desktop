@@ -29,7 +29,6 @@ GenericName[sr]=Лансер одбројавања
 GenericName[sr@Latn]=Lanser odbrojavanja
 GenericName[sv]=Nerräknande startprogram
 GenericName[ta]= குறிப்பு எடுப்பான் நேரக்குறைப்பான்
-GenericName[uk]=Таймер
 GenericName[xx]=xxCountdown Launcherxx
 GenericName[zh_CN]=倒计时
 Exec=ktimer

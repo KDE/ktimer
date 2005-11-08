@@ -38,6 +38,7 @@
 
 #include "ktimer.h"
 #include <qpushbutton.h>
+#include <kglobal.h>
 
 
 class KTimerJobItem : public Q3ListViewItem {
@@ -122,7 +123,7 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     connect( m_remove, SIGNAL(clicked()), SLOT(remove()) );
     connect( m_list, SIGNAL(currentChanged(Q3ListViewItem*)),
              SLOT(currentChanged(Q3ListViewItem*)) );
-    loadJobs( kapp->config() );
+    loadJobs( KGlobal::config() );
 
     show();
 }
@@ -130,7 +131,7 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
 
 KTimerPref::~KTimerPref()
 {
-    saveJobs( kapp->config() );
+    saveJobs( KGlobal::config() );
     delete d;
 }
 

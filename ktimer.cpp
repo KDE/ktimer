@@ -367,7 +367,7 @@ void KTimerJob::setUser( void *user )
 }
 
 
-unsigned KTimerJob::delay()
+unsigned KTimerJob::delay() const
 {
     return d->delay;
 }
@@ -412,7 +412,7 @@ void KTimerJob::setDelay( unsigned sec )
 }
 
 
-QString KTimerJob::command()
+QString KTimerJob::command() const
 {
     return d->command;
 }
@@ -428,7 +428,7 @@ void KTimerJob::setCommand( const QString &cmd )
 }
 
 
-bool KTimerJob::loop()
+bool KTimerJob::loop() const
 {
     return d->loop;
 }
@@ -444,7 +444,7 @@ void KTimerJob::setLoop( bool loop )
 }
 
 
-bool KTimerJob::oneInstance()
+bool KTimerJob::oneInstance() const
 {
     return d->oneInstance;
 }
@@ -460,7 +460,7 @@ void KTimerJob::setOneInstance( bool one )
 }
 
 
-unsigned KTimerJob::value()
+unsigned KTimerJob::value() const
 {
     return d->value;
 }
@@ -476,7 +476,7 @@ void KTimerJob::setValue( unsigned value )
 }
 
 
-KTimerJob::States KTimerJob::state()
+KTimerJob::States KTimerJob::state() const
 {
     return d->state;
 }

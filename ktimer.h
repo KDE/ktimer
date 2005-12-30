@@ -36,12 +36,12 @@ class KTimerJob : public QObject {
 
     enum States { Stopped, Paused, Started };
 
-    unsigned delay();
-    QString command();
-    bool loop();
-    bool oneInstance();
-    unsigned value();
-    States state();
+    unsigned delay() const;
+    QString command() const;
+    bool loop() const;
+    bool oneInstance() const;
+    unsigned value() const;
+    States state() const;
     void *user();
     void setUser( void *user );
 

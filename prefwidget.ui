@@ -173,7 +173,7 @@
               </spacer>
             </item>
             <item rowspan="1" row="0" column="2" colspan="3" >
-              <widget class="KURLRequester" name="m_commandLine" />
+              <widget class="KUrlRequester" name="m_commandLine" />
             </item>
             <item rowspan="1" row="0" column="0" colspan="2" >
               <widget class="QLabel" name="TextLabel1" >

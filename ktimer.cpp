@@ -268,7 +268,7 @@ void KTimerPref::saveJobs( KConfig *cfg )
 void KTimerPref::loadJobs( KConfig *cfg )
 {
     cfg->setGroup( "Jobs" );
-    int num = cfg->readNumEntry( "Number", 0 );
+    int num = cfg->readEntry( "Number", 0 );
     for( int n=0; n<num; n++ ) {
             KTimerJob *job = new KTimerJob;
             KTimerJobItem *item = new KTimerJobItem( job, m_list );
@@ -347,11 +347,11 @@ void KTimerJob::load( KConfig *cfg, const QString& grp )
 void KTimerJob::save( KConfig *cfg, const QString& grp )
 {
     cfg->setGroup( grp );
-    setDelay( cfg->readNumEntry( "Delay", 100 ) );
+    setDelay( cfg->readEntry( "Delay", 100 ) );
     setCommand( cfg->readPathEntry( "Command" ) );
-    setLoop( cfg->readBoolEntry( "Loop", false ) );
-    setOneInstance( cfg->readBoolEntry( "OneInstance", d->oneInstance ) );
-    setState( (States)cfg->readNumEntry( "State", (int)Stopped ) );
+    setLoop( cfg->readEntry( "Loop", false ) );
+    setOneInstance( cfg->readEntry( "OneInstance", d->oneInstance ) );
+    setState( (States)cfg->readEntry( "State", (int)Stopped ) );
 }
 
 

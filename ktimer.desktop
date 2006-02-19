@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 GenericName=Countdown Launcher
+GenericName[fr]=Lanceur de compte à rebours
 GenericName[x-test]=xxCountdown Launcherxx
 Exec=ktimer
 Icon=ktimer

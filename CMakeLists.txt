@@ -14,7 +14,7 @@ kde4_add_ui_files(ktimer_SRCS prefwidget.ui )
 
 kde4_add_executable(ktimer ${ktimer_SRCS})
 
-target_link_libraries(ktimer  ${LIB_KIO} )
+target_link_libraries(ktimer  ${KDE4_KIO_LIBRARIES} )
 
 install_targets(/bin ktimer )
 

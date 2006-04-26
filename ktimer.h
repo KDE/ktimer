@@ -24,7 +24,7 @@
 #include <kprocess.h>
 #include <kconfig.h>
 #include <Q3ListViewItem>
-#include "prefwidget.h"
+#include "ui_prefwidget.h"
 
 
 class KTimerJob : public QObject {

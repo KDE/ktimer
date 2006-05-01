@@ -14,8 +14,6 @@ KDE_ICON = ktimer
 
 xdg_apps_DATA = ktimer.desktop
 
-messages: rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/ktimer.pot
 
 
 srcdoc:

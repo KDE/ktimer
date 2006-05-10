@@ -16,13 +16,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <qtimer.h>
+#include <QTimer>
 #include <qtoolbutton.h>
 #include <q3groupbox.h>
 #include <q3listview.h>
-#include <qspinbox.h>
-#include <qlineedit.h>
-#include <qcheckbox.h>
+#include <QSpinBox>
+#include <QLineEdit>
+#include <QCheckBox>
 #include <qslider.h>
 #include <qlcdnumber.h>
 //Added by qt3to4:
@@ -37,7 +37,7 @@
 #include <kfiledialog.h>
 
 #include "ktimer.h"
-#include <qpushbutton.h>
+#include <QPushButton>
 #include <kglobal.h>
 
 

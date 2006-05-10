@@ -20,7 +20,7 @@
 #define KTIMER_H_INCLUDED
 
 #include <qdialog.h>
-#include <qwidget.h>
+#include <QWidget>
 #include <kprocess.h>
 #include <kconfig.h>
 #include <Q3ListViewItem>

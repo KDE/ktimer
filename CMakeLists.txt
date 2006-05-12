@@ -1,4 +1,3 @@
-kde4_header()
 project(ktimer)
 
 
@@ -25,7 +24,6 @@ install_files( ${XDG_APPS_DIR} FILES ktimer.desktop )
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
 
-kde4_footer()
 
 
 

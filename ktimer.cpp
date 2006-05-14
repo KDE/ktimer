@@ -109,9 +109,9 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     setupUi(this);
 
     // set icons
-    m_stop->setIconSet( SmallIconSet("player_stop") );
-    m_pause->setIconSet( SmallIconSet("player_pause") );
-    m_start->setIconSet( SmallIconSet("1rightarrow") );
+    m_stop->setIcon( SmallIconSet("player_stop") );
+    m_pause->setIcon( SmallIconSet("player_pause") );
+    m_start->setIcon( SmallIconSet("1rightarrow") );
 
     // create tray icon
     KSystemTray *tray = new KSystemTray( this );
@@ -211,7 +211,7 @@ void KTimerPref::currentChanged( Q3ListViewItem *i )
         m_loop->setChecked( job->loop() );
         m_one->setChecked( job->oneInstance() );
         m_counter->display( (int)job->value() );
-        m_slider->setMaxValue( job->delay() );
+        m_slider->setMaximum( job->delay() );
         m_slider->setValue( job->value() );
 
     } else {
@@ -232,7 +232,7 @@ void KTimerPref::jobChanged( KTimerJob *job )
         if( item==m_list->currentItem() ) {
 
             // XXX optimize
-            m_slider->setMaxValue( job->delay() );
+            m_slider->setMaximum( job->delay() );
             m_slider->setValue( job->value() );
             m_counter->display( (int)job->value() );
         }

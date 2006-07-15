@@ -116,7 +116,7 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     // create tray icon
     KSystemTray *tray = new KSystemTray( this );
     tray->show();
-    tray->setPixmap( SmallIcon( "ktimer" ) );
+    tray->setIcon( SmallIcon( "ktimer" ) );
 
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );

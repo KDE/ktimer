@@ -33,7 +33,7 @@
 
 #include <kiconloader.h>
 #include <kapplication.h>
-#include <ksystemtray.h>
+#include <ksystemtrayicon.h>
 #include <kfiledialog.h>
 
 #include "ktimer.h"
@@ -114,7 +114,7 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     m_start->setIcon( SmallIconSet("1rightarrow") );
 
     // create tray icon
-    KSystemTray *tray = new KSystemTray( this );
+    KSystemTrayIcon *tray = new KSystemTrayIcon( this );
     tray->show();
     tray->setIcon( SmallIcon( "ktimer" ) );
 

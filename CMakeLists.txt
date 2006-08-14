@@ -17,5 +17,5 @@ install(TARGETS ktimer  DESTINATION ${BIN_INSTALL_DIR} )
 
 install( FILES ktimer.desktop  DESTINATION ${XDG_APPS_DIR})
 
-kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
+kde4_install_icons( ${ICON_INSTALL_DIR}   )
 

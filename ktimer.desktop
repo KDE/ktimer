@@ -10,5 +10,5 @@ Terminal=false
 Name=KTimer
 Name[x-test]=xxKTimerxx
 X-KDE-StartupNotify=true
-X-DCOP-ServiceType=Multi
+X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Utility;X-KDE-More;

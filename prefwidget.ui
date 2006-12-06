@@ -107,7 +107,7 @@
         </spacer>
       </item>
       <item row="4" column="0" >
-        <widget class="Q3GroupBox" name="m_settings" >
+        <widget class="QGroupBox" name="m_settings" >
           <property name="enabled" >
             <bool>false</bool>
           </property>
@@ -186,7 +186,7 @@
         </widget>
       </item>
       <item row="4" column="1" >
-        <widget class="Q3GroupBox" name="m_state" >
+        <widget class="QGroupBox" name="m_state" >
           <property name="enabled" >
             <bool>false</bool>
           </property>

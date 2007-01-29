@@ -123,7 +123,7 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     connect( m_remove, SIGNAL(clicked()), SLOT(remove()) );
     connect( m_list, SIGNAL(currentChanged(Q3ListViewItem*)),
              SLOT(currentChanged(Q3ListViewItem*)) );
-    loadJobs( KGlobal::config() );
+    loadJobs( KGlobal::config().data() );
 
     show();
 }
@@ -131,7 +131,7 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
 
 KTimerPref::~KTimerPref()
 {
-    saveJobs( KGlobal::config() );
+    saveJobs( KGlobal::config().data() );
     delete d;
 }
 

@@ -72,16 +72,16 @@ public:
         setText( 0, QString::number(m_job->value()) );
 
         if( m_error )
-            setPixmap( 0, SmallIcon("stop") );
+            setPixmap( 0, SmallIcon("process-stop") );
         else
             setPixmap( 0, QPixmap() );
 
         setText( 1, QString::number(m_job->delay()) );
 
         switch( m_job->state() ) {
-            case KTimerJob::Stopped: setPixmap( 2, SmallIcon("player_stop") ); break;
-            case KTimerJob::Paused: setPixmap( 2, SmallIcon("player_pause") ); break;
-            case KTimerJob::Started: setPixmap( 2, SmallIcon("1rightarrow") ); break;
+            case KTimerJob::Stopped: setPixmap( 2, SmallIcon("media-playback-stop") ); break;
+            case KTimerJob::Paused: setPixmap( 2, SmallIcon("media-playback-pause") ); break;
+            case KTimerJob::Started: setPixmap( 2, SmallIcon("arrow-right") ); break;
         }
 
         setText( 3, m_job->command() );
@@ -109,9 +109,9 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     setupUi(this);
 
     // set icons
-    m_stop->setIcon( SmallIconSet("player_stop") );
-    m_pause->setIcon( SmallIconSet("player_pause") );
-    m_start->setIcon( SmallIconSet("1rightarrow") );
+    m_stop->setIcon( SmallIconSet("media-playback-stop") );
+    m_pause->setIcon( SmallIconSet("media-playback-pause") );
+    m_start->setIcon( SmallIconSet("arrow-right") );
 
     // create tray icon
     KSystemTrayIcon *tray = new KSystemTrayIcon( this );

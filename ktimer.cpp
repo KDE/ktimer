@@ -303,7 +303,7 @@ struct KTimerJobPrivate {
     bool oneInstance;
     unsigned value;
     KTimerJob::States state;
-    QList<KProcess *> processes;
+    QList<K3Process *> processes;
     void *user;
 
     QTimer *timer;
@@ -515,7 +515,7 @@ void KTimerJob::timeout()
 }
 
 
-void KTimerJob::processExited(KProcess *proc)
+void KTimerJob::processExited(K3Process *proc)
 {
     bool ok = proc->exitStatus()==0;
     int i = d->processes.indexOf( proc);
@@ -530,12 +530,12 @@ void KTimerJob::processExited(KProcess *proc)
 void KTimerJob::fire()
 {
     if( !d->oneInstance || d->processes.isEmpty() ) {
-        KShellProcess *proc = new KShellProcess;
+        K3ShellProcess *proc = new K3ShellProcess;
         (*proc) << d->command;
         d->processes.append( proc );
-        connect( proc, SIGNAL(processExited(KProcess*)),
-                 SLOT(processExited(KProcess*)) );
-        bool ok = proc->start( KProcess::NotifyOnExit );
+        connect( proc, SIGNAL(processExited(K3Process*)),
+                 SLOT(processExited(K3Process*)) );
+        bool ok = proc->start( K3Process::NotifyOnExit );
         emit fired( this );
         if( !ok ) {
             int i = d->processes.indexOf( proc);

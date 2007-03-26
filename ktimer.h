@@ -21,7 +21,7 @@
 
 #include <qdialog.h>
 #include <QWidget>
-#include <kprocess.h>
+#include <k3process.h>
 #include <kconfig.h>
 #include <Q3ListViewItem>
 #include "ui_prefwidget.h"
@@ -80,7 +80,7 @@ class KTimerJob : public QObject {
 
  private slots:
     void timeout();
-    void processExited(KProcess *proc);
+    void processExited(K3Process *proc);
 
  private:
     struct KTimerJobPrivate *d;

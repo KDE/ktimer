@@ -102,8 +102,9 @@ struct KTimerPrefPrivate
 };
 
 KTimerPref::KTimerPref( QWidget *parent, const char *name )
-    : QDialog( parent, name )
+    : QDialog( parent )
 {
+    setObjectName( name );
     d = new KTimerPrefPrivate;
 
     setupUi(this);
@@ -311,8 +312,9 @@ struct KTimerJobPrivate {
 
 
 KTimerJob::KTimerJob( QObject *parent, const char *name )
-    : QObject( parent, name )
+    : QObject( parent )
 {
+    setObjectName( name );
     d = new KTimerJobPrivate;
 
     d->delay = 100;

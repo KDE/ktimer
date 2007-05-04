@@ -48,20 +48,20 @@ public:
         m_job = job;
         m_error = false;
         update();
-    };
+    }
 
     KTimerJobItem( KTimerJob *job, Q3ListView *parent, Q3ListViewItem *after )
         : Q3ListViewItem( parent, after ) {
         m_job = job;
         m_error = false;
         update();
-    };
+    }
 
     virtual ~KTimerJobItem() {
         delete m_job;
-    };
+    }
 
-    KTimerJob *job() { return m_job; };
+    KTimerJob *job() { return m_job; }
 
     void setStatus( bool error ) {
         m_error = error;
@@ -85,7 +85,7 @@ public:
         }
 
         setText( 3, m_job->command() );
-    };
+    }
 
 private:
     bool m_error;

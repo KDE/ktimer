@@ -1,244 +1,227 @@
-<ui version="4.0" stdsetdef="1" >
-  <author></author>
-  <comment></comment>
-  <exportmacro></exportmacro>
-  <class>PrefWidget</class>
-  <widget class="QDialog" name="PrefWidget" >
-    <property name="geometry" >
-      <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>479</width>
-        <height>344</height>
-      </rect>
-    </property>
-    <property name="windowTitle" >
-      <string>Timer Settings</string>
-    </property>
-    <layout class="QGridLayout" >
+<ui version="4.0" >
+ <class>PrefWidget</class>
+ <widget class="QDialog" name="PrefWidget" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>479</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Timer Settings</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>11</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item rowspan="3" row="0" column="0" >
+    <widget class="QTreeWidget" name="m_list" >
+     <property name="allColumnsShowFocus" >
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text" >
+       <string>Counter</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Delay</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>State</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Command</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QPushButton" name="m_add" >
+     <property name="text" >
+      <string>&amp;New</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QPushButton" name="m_remove" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="text" >
+      <string>&amp;Remove</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0" >
+    <widget class="QGroupBox" name="m_settings" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="title" >
+      <string>Settings</string>
+     </property>
+     <layout class="QGridLayout" >
       <property name="margin" >
-        <number>11</number>
+       <number>11</number>
       </property>
       <property name="spacing" >
-        <number>6</number>
+       <number>6</number>
       </property>
-      <item rowspan="3" row="0" column="0" colspan="1" >
-        <widget class="Q3ListView" name="m_list" >
-          <property name="allColumnsShowFocus" >
-            <bool>true</bool>
-          </property>
-          <column>
-            <property name="text" >
-              <string>Counter [s]</string>
-            </property>
-            <property name="clickable" >
-              <bool>true</bool>
-            </property>
-            <property name="resizable" >
-              <bool>true</bool>
-            </property>
-          </column>
-          <column>
-            <property name="text" >
-              <string>Delay [s]</string>
-            </property>
-            <property name="clickable" >
-              <bool>true</bool>
-            </property>
-            <property name="resizable" >
-              <bool>true</bool>
-            </property>
-          </column>
-          <column>
-            <property name="text" >
-              <string>State</string>
-            </property>
-            <property name="clickable" >
-              <bool>true</bool>
-            </property>
-            <property name="resizable" >
-              <bool>true</bool>
-            </property>
-          </column>
-          <column>
-            <property name="text" >
-              <string>Command</string>
-            </property>
-            <property name="clickable" >
-              <bool>true</bool>
-            </property>
-            <property name="resizable" >
-              <bool>true</bool>
-            </property>
-          </column>
-        </widget>
+      <item row="2" column="0" colspan="4" >
+       <widget class="QCheckBox" name="m_loop" >
+        <property name="text" >
+         <string>&amp;Loop</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="TextLabel2" >
+        <property name="text" >
+         <string>Delay:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2" >
+       <widget class="QSpinBox" name="m_delay" >
+        <property name="maximum" >
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="4" >
+       <widget class="QCheckBox" name="m_one" >
+        <property name="text" >
+         <string>Start only &amp;one instance</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" >
+       <widget class="QLabel" name="TextLabel3" >
+        <property name="text" >
+         <string>seconds</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4" >
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType" >
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2" colspan="3" >
+       <widget class="KUrlRequester" native="1" name="m_commandLine" />
+      </item>
+      <item row="0" column="0" colspan="2" >
+       <widget class="QLabel" name="TextLabel1" >
+        <property name="text" >
+         <string>Command line:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="1" >
+    <widget class="QGroupBox" name="m_state" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="title" >
+      <string>State</string>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>11</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="2" column="0" colspan="3" >
+       <widget class="QSlider" name="m_slider" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3" >
+       <widget class="QLCDNumber" name="m_counter" />
       </item>
       <item row="0" column="1" >
-        <widget class="QPushButton" name="m_add" >
-          <property name="text" >
-            <string>&amp;New</string>
-          </property>
-        </widget>
+       <widget class="QToolButton" name="m_pause" >
+        <property name="text" >
+         <string>||</string>
+        </property>
+       </widget>
       </item>
-      <item row="1" column="1" >
-        <widget class="QPushButton" name="m_remove" >
-          <property name="enabled" >
-            <bool>false</bool>
-          </property>
-          <property name="text" >
-            <string>&amp;Remove</string>
-          </property>
-        </widget>
+      <item row="0" column="2" >
+       <widget class="QToolButton" name="m_start" >
+        <property name="text" >
+         <string>></string>
+        </property>
+       </widget>
       </item>
-      <item row="2" column="1" >
-        <spacer name="Spacer4" >
-          <property name="sizeHint" >
-            <size>
-              <width>20</width>
-              <height>20</height>
-            </size>
-          </property>
-          <property name="sizeType" >
-            <enum>Expanding</enum>
-          </property>
-          <property name="orientation" >
-            <enum>Qt::Vertical</enum>
-          </property>
-        </spacer>
+      <item row="0" column="0" >
+       <widget class="QToolButton" name="m_stop" >
+        <property name="text" >
+         <string>=</string>
+        </property>
+       </widget>
       </item>
-      <item row="4" column="0" >
-        <widget class="QGroupBox" name="m_settings" >
-          <property name="enabled" >
-            <bool>false</bool>
-          </property>
-          <property name="title" >
-            <string>Settings</string>
-          </property>
-          <layout class="QGridLayout" >
-            <property name="margin" >
-              <number>11</number>
-            </property>
-            <property name="spacing" >
-              <number>6</number>
-            </property>
-            <item rowspan="1" row="2" column="0" colspan="4" >
-              <widget class="QCheckBox" name="m_loop" >
-                <property name="text" >
-                  <string>&amp;Loop</string>
-                </property>
-              </widget>
-            </item>
-            <item row="1" column="0" >
-              <widget class="QLabel" name="TextLabel2" >
-                <property name="text" >
-                  <string>Delay:</string>
-                </property>
-              </widget>
-            </item>
-            <item rowspan="1" row="1" column="1" colspan="2" >
-              <widget class="QSpinBox" name="m_delay" >
-                <property name="maximum" >
-                  <number>99999</number>
-                </property>
-              </widget>
-            </item>
-            <item rowspan="1" row="3" column="0" colspan="4" >
-              <widget class="QCheckBox" name="m_one" >
-                <property name="text" >
-                  <string>Start only &amp;one instance</string>
-                </property>
-              </widget>
-            </item>
-            <item row="1" column="3" >
-              <widget class="QLabel" name="TextLabel3" >
-                <property name="text" >
-                  <string>seconds</string>
-                </property>
-              </widget>
-            </item>
-            <item row="1" column="4" >
-              <spacer name="Spacer1" >
-                <property name="sizeHint" >
-                  <size>
-                    <width>20</width>
-                    <height>20</height>
-                  </size>
-                </property>
-                <property name="sizeType" >
-                  <enum>Expanding</enum>
-                </property>
-                <property name="orientation" >
-                  <enum>Qt::Horizontal</enum>
-                </property>
-              </spacer>
-            </item>
-            <item rowspan="1" row="0" column="2" colspan="3" >
-              <widget class="KUrlRequester" name="m_commandLine" />
-            </item>
-            <item rowspan="1" row="0" column="0" colspan="2" >
-              <widget class="QLabel" name="TextLabel1" >
-                <property name="text" >
-                  <string>Command line:</string>
-                </property>
-              </widget>
-            </item>
-          </layout>
-        </widget>
-      </item>
-      <item row="4" column="1" >
-        <widget class="QGroupBox" name="m_state" >
-          <property name="enabled" >
-            <bool>false</bool>
-          </property>
-          <property name="title" >
-            <string>State</string>
-          </property>
-          <layout class="QGridLayout" >
-            <property name="margin" >
-              <number>11</number>
-            </property>
-            <property name="spacing" >
-              <number>6</number>
-            </property>
-            <item rowspan="1" row="2" column="0" colspan="3" >
-              <widget class="QSlider" name="m_slider" >
-                <property name="orientation" >
-                  <enum>Qt::Horizontal</enum>
-                </property>
-              </widget>
-            </item>
-            <item rowspan="1" row="1" column="0" colspan="3" >
-              <widget class="QLCDNumber" name="m_counter" />
-            </item>
-            <item row="0" column="1" >
-              <widget class="QToolButton" name="m_pause" >
-                <property name="text" >
-                  <string>||</string>
-                </property>
-              </widget>
-            </item>
-            <item row="0" column="2" >
-              <widget class="QToolButton" name="m_start" >
-                <property name="text" >
-                  <string>></string>
-                </property>
-              </widget>
-            </item>
-            <item row="0" column="0" >
-              <widget class="QToolButton" name="m_stop" >
-                <property name="text" >
-                  <string>=</string>
-                </property>
-              </widget>
-            </item>
-          </layout>
-        </widget>
-      </item>
-    </layout>
-  </widget>
-  <layoutdefault spacing="6" margin="11" />
-  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
-  <includes>
-    <include location="global" >kseparator.h</include>
-  </includes>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>KUrlRequester</class>
+   <extends>QWidget</extends>
+   <header>kurlrequester.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="global" >kseparator.h</include>
+ </includes>
+ <resources/>
+ <connections/>
 </ui>

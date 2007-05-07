@@ -16,42 +16,32 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#include <QProcess>
 #include <QTimer>
-#include <qtoolbutton.h>
-#include <q3groupbox.h>
-#include <q3listview.h>
-#include <QSpinBox>
-#include <QLineEdit>
-#include <QCheckBox>
-#include <qslider.h>
-#include <qlcdnumber.h>
-//Added by qt3to4:
-#include <QPixmap>
-#include <QList>
-#include <kurlrequester.h>
-#include <klineedit.h>
 
+#include <klineedit.h>
 #include <kiconloader.h>
 #include <kapplication.h>
 #include <ksystemtrayicon.h>
 #include <kfiledialog.h>
-
-#include "ktimer.h"
-#include <QPushButton>
 #include <kglobal.h>
 
+#include "ktimer.h"
 
-class KTimerJobItem : public Q3ListViewItem {
+class KTimerJobItem : public QTreeWidgetItem {
 public:
-    KTimerJobItem( KTimerJob *job, Q3ListView *parent )
-        : Q3ListViewItem( parent ) {
+    KTimerJobItem( KTimerJob *job, QTreeWidget *parent )
+        : QTreeWidgetItem() {
+			parent->addTopLevelItem(this);
         m_job = job;
         m_error = false;
         update();
     }
 
-    KTimerJobItem( KTimerJob *job, Q3ListView *parent, Q3ListViewItem *after )
-        : Q3ListViewItem( parent, after ) {
+    KTimerJobItem( KTimerJob *job, QTreeWidget * parent, QTreeWidgetItem *after )
+        : QTreeWidgetItem() {
+			int otherItemIndex = parent->indexOfTopLevelItem(after);
+			parent->insertTopLevelItem(otherItemIndex + 1, this);
         m_job = job;
         m_error = false;
         update();
@@ -72,16 +62,16 @@ public:
         setText( 0, QString::number(m_job->value()) );
 
         if( m_error )
-            setPixmap( 0, SmallIcon("process-stop") );
+            setIcon( 0, SmallIcon("process-stop") );
         else
-            setPixmap( 0, QPixmap() );
+            setIcon( 0, QPixmap() );
 
         setText( 1, QString::number(m_job->delay()) );
 
         switch( m_job->state() ) {
-            case KTimerJob::Stopped: setPixmap( 2, SmallIcon("media-playback-stop") ); break;
-            case KTimerJob::Paused: setPixmap( 2, SmallIcon("media-playback-pause") ); break;
-            case KTimerJob::Started: setPixmap( 2, SmallIcon("arrow-right") ); break;
+            case KTimerJob::Stopped: setIcon( 2, SmallIcon("media-playback-stop") ); break;
+            case KTimerJob::Paused: setIcon( 2, SmallIcon("media-playback-pause") ); break;
+            case KTimerJob::Started: setIcon( 2, SmallIcon("arrow-right") ); break;
         }
 
         setText( 3, m_job->command() );
@@ -122,8 +112,8 @@ KTimerPref::KTimerPref( QWidget *parent, const char *name )
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );
     connect( m_remove, SIGNAL(clicked()), SLOT(remove()) );
-    connect( m_list, SIGNAL(currentChanged(Q3ListViewItem*)),
-             SLOT(currentChanged(Q3ListViewItem*)) );
+    connect( m_list, SIGNAL(currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)),
+             SLOT(currentChanged(QTreeWidgetItem *, QTreeWidgetItem *)) );
     loadJobs( KGlobal::config().data() );
 
     show();
@@ -156,22 +146,23 @@ void KTimerPref::add()
     job->setUser( item );
 
     // Qt drops currentChanged signals on first item (bug?)
-    if( m_list->childCount()==1 )
-      currentChanged( item );
+    if( m_list->topLevelItemCount()==1 )
+      currentChanged( item , NULL);
 
     m_list->setCurrentItem( item );
-    m_list->triggerUpdate();
+    m_list->update();
 }
 
 
 void KTimerPref::remove()
 {
     delete m_list->currentItem();
-    m_list->triggerUpdate();
+    m_list->update();
 }
 
 
-void KTimerPref::currentChanged( Q3ListViewItem *i )
+// note, don't use old, but added it so we can connect to the new one
+void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old */)
 {
     KTimerJobItem *item = static_cast<KTimerJobItem*>(i);
     if( item ) {
@@ -189,6 +180,8 @@ void KTimerPref::currentChanged( Q3ListViewItem *i )
         m_stop->disconnect();
         m_counter->disconnect();
         m_slider->disconnect();
+		m_commandLine->disconnect();
+		m_commandLine->lineEdit()->disconnect();
 
         connect( m_commandLine->lineEdit(), SIGNAL(textChanged(const QString &)),
                  job, SLOT(setCommand(const QString &)) );
@@ -228,7 +221,7 @@ void KTimerPref::jobChanged( KTimerJob *job )
     KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
     if( item ) {
         item->update();
-        m_list->triggerUpdate();
+        m_list->update();
 
         if( item==m_list->currentItem() ) {
 
@@ -245,22 +238,21 @@ void KTimerPref::jobFinished( KTimerJob *job, bool error )
 {
     KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
     item->setStatus( error );
-    m_list->triggerUpdate();
+    m_list->update();
 }
 
 
 void KTimerPref::saveJobs( KConfig *cfg )
 {
-    int num = 0;
-    KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->firstChild());
-    while( item ) {
+	for (int num = 0; num < m_list->topLevelItemCount(); ++num)
+	{
+		KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->topLevelItem(num));
         item->job()->save( cfg, QString("Job%1").arg( num ) );
-        item = static_cast<KTimerJobItem*>(item->nextSibling());
-        num++;
-    }
+		
+	}
 
     cfg->setGroup( "Jobs" );
-    cfg->writeEntry( "Number", num );
+    cfg->writeEntry( "Number", m_list->topLevelItemCount());
 
     cfg->sync();
 }
@@ -290,7 +282,7 @@ void KTimerPref::loadJobs( KConfig *cfg )
             job->setUser( item );
     }
 
-    m_list->triggerUpdate();
+    m_list->update();
 }
 
 
@@ -304,7 +296,7 @@ struct KTimerJobPrivate {
     bool oneInstance;
     unsigned value;
     KTimerJob::States state;
-    QList<K3Process *> processes;
+    QList<QProcess *> processes;
     void *user;
 
     QTimer *timer;
@@ -517,8 +509,9 @@ void KTimerJob::timeout()
 }
 
 
-void KTimerJob::processExited(K3Process *proc)
+void KTimerJob::processExited(int, QProcess::ExitStatus status)
 {
+	QProcess * proc = static_cast<QProcess*>(sender());
     bool ok = proc->exitStatus()==0;
     int i = d->processes.indexOf( proc);
     if (i != -1)
@@ -532,14 +525,15 @@ void KTimerJob::processExited(K3Process *proc)
 void KTimerJob::fire()
 {
     if( !d->oneInstance || d->processes.isEmpty() ) {
-        K3ShellProcess *proc = new K3ShellProcess;
-        (*proc) << d->command;
+        QProcess *proc = new QProcess;
         d->processes.append( proc );
-        connect( proc, SIGNAL(processExited(K3Process*)),
-                 SLOT(processExited(K3Process*)) );
-        bool ok = proc->start( K3Process::NotifyOnExit );
-        emit fired( this );
-        if( !ok ) {
+        connect( proc, SIGNAL(finished(int, QProcess::ExitStatus)),
+                 SLOT(processExited(int, QProcess::ExitStatus)) );
+        if (!d->command.isEmpty()) {
+	        proc->start(d->command);
+	        emit fired( this );
+        }
+        if(proc->state() == QProcess::NotRunning) {
             int i = d->processes.indexOf( proc);
             if (i != -1)
                 delete d->processes.takeAt(i);

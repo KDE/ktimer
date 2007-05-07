@@ -19,13 +19,13 @@
 #ifndef KTIMER_H_INCLUDED
 #define KTIMER_H_INCLUDED
 
-#include <qdialog.h>
+#include <QDialog>
 #include <QWidget>
-#include <k3process.h>
-#include <kconfig.h>
-#include <Q3ListViewItem>
+#include <QProcess>
 #include "ui_prefwidget.h"
 
+class QTreeWidgetItem;
+class KConfig;
 
 class KTimerJob : public QObject {
  Q_OBJECT
@@ -80,7 +80,7 @@ class KTimerJob : public QObject {
 
  private slots:
     void timeout();
-    void processExited(K3Process *proc);
+    void processExited(int, QProcess::ExitStatus);
 
  private:
     struct KTimerJobPrivate *d;
@@ -97,7 +97,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
  protected slots:
     void add();
     void remove();
-    void currentChanged( Q3ListViewItem * );
+    void currentChanged( QTreeWidgetItem * , QTreeWidgetItem *);
 
     void saveJobs( KConfig *cfg );
     void loadJobs( KConfig *cfg );

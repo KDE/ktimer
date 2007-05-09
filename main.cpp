@@ -39,7 +39,6 @@ int main( int argc, char **argv )
     KApplication app;
 
     KTimerPref *timer = new KTimerPref;
-    app.setMainWidget( timer );
     app.setTopWidget( timer );
 
     return app.exec();

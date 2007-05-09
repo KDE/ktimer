@@ -62,16 +62,16 @@ public:
         setText( 0, QString::number(m_job->value()) );
 
         if( m_error )
-            setIcon( 0, SmallIcon("process-stop") );
+            setIcon( 0, KIcon("process-stop") );
         else
             setIcon( 0, QPixmap() );
 
         setText( 1, QString::number(m_job->delay()) );
 
         switch( m_job->state() ) {
-            case KTimerJob::Stopped: setIcon( 2, SmallIcon("media-playback-stop") ); break;
-            case KTimerJob::Paused: setIcon( 2, SmallIcon("media-playback-pause") ); break;
-            case KTimerJob::Started: setIcon( 2, SmallIcon("arrow-right") ); break;
+            case KTimerJob::Stopped: setIcon( 2, KIcon("media-playback-stop") ); break;
+            case KTimerJob::Paused: setIcon( 2, KIcon("media-playback-pause") ); break;
+            case KTimerJob::Started: setIcon( 2, KIcon("arrow-right") ); break;
         }
 
         setText( 3, m_job->command() );
@@ -91,23 +91,22 @@ struct KTimerPrefPrivate
     QList<KTimerJob *> jobs;
 };
 
-KTimerPref::KTimerPref( QWidget *parent, const char *name )
+KTimerPref::KTimerPref( QWidget *parent)
     : QDialog( parent )
 {
-    setObjectName( name );
     d = new KTimerPrefPrivate;
 
     setupUi(this);
 
     // set icons
-    m_stop->setIcon( SmallIconSet("media-playback-stop") );
-    m_pause->setIcon( SmallIconSet("media-playback-pause") );
-    m_start->setIcon( SmallIconSet("arrow-right") );
+    m_stop->setIcon( KIcon("media-playback-stop") );
+    m_pause->setIcon( KIcon("media-playback-pause") );
+    m_start->setIcon( KIcon("arrow-right") );
 
     // create tray icon
     KSystemTrayIcon *tray = new KSystemTrayIcon( this );
     tray->show();
-    tray->setIcon( SmallIcon( "ktimer" ) );
+    tray->setIcon( KIcon( "ktimer" ) );
 
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );
@@ -251,17 +250,16 @@ void KTimerPref::saveJobs( KConfig *cfg )
 		
 	}
 
-    cfg->setGroup( "Jobs" );
-    cfg->writeEntry( "Number", m_list->topLevelItemCount());
+	KConfigGroup jobscfg = cfg->group("Jobs");
+    jobscfg.writeEntry( "Number", m_list->topLevelItemCount());
 
-    cfg->sync();
+    jobscfg.sync();
 }
 
 
 void KTimerPref::loadJobs( KConfig *cfg )
 {
-    cfg->setGroup( "Jobs" );
-    int num = cfg->readEntry( "Number", 0 );
+    int num = cfg->group("Jobs").readEntry( "Number", 0 );
     for( int n=0; n<num; n++ ) {
             KTimerJob *job = new KTimerJob;
             KTimerJobItem *item = new KTimerJobItem( job, m_list );
@@ -303,10 +301,9 @@ struct KTimerJobPrivate {
 };
 
 
-KTimerJob::KTimerJob( QObject *parent, const char *name )
+KTimerJob::KTimerJob( QObject *parent)
     : QObject( parent )
 {
-    setObjectName( name );
     d = new KTimerJobPrivate;
 
     d->delay = 100;
@@ -329,23 +326,23 @@ KTimerJob::~KTimerJob()
 
 void KTimerJob::load( KConfig *cfg, const QString& grp )
 {
-    cfg->setGroup( grp );
-    cfg->writeEntry( "Delay", d->delay );
-    cfg->writePathEntry( "Command", d->command );
-    cfg->writeEntry( "Loop", d->loop );
-    cfg->writeEntry( "OneInstance", d->oneInstance );
-    cfg->writeEntry( "State", (int)d->state );
+	KConfigGroup groupcfg = cfg->group(grp);
+    groupcfg.writeEntry( "Delay", d->delay );
+    groupcfg.writePathEntry( "Command", d->command );
+    groupcfg.writeEntry( "Loop", d->loop );
+    groupcfg.writeEntry( "OneInstance", d->oneInstance );
+    groupcfg.writeEntry( "State", (int)d->state );
 }
 
 
 void KTimerJob::save( KConfig *cfg, const QString& grp )
 {
-    cfg->setGroup( grp );
-    setDelay( cfg->readEntry( "Delay", 100 ) );
-    setCommand( cfg->readPathEntry( "Command" ) );
-    setLoop( cfg->readEntry( "Loop", false ) );
-    setOneInstance( cfg->readEntry( "OneInstance", d->oneInstance ) );
-    setState( (States)cfg->readEntry( "State", (int)Stopped ) );
+	KConfigGroup groupcfg = cfg->group(grp);
+    setDelay( groupcfg.readEntry( "Delay", 100 ) );
+    setCommand( groupcfg.readPathEntry( "Command" ) );
+    setLoop( groupcfg.readEntry( "Loop", false ) );
+    setOneInstance( groupcfg.readEntry( "OneInstance", d->oneInstance ) );
+    setState( (States)groupcfg.readEntry( "State", (int)Stopped ) );
 }
 
 
@@ -512,7 +509,7 @@ void KTimerJob::timeout()
 void KTimerJob::processExited(int, QProcess::ExitStatus status)
 {
 	QProcess * proc = static_cast<QProcess*>(sender());
-    bool ok = proc->exitStatus()==0;
+    bool ok = status==0;
     int i = d->processes.indexOf( proc);
     if (i != -1)
         delete d->processes.takeAt(i);

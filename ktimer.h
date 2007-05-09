@@ -31,7 +31,7 @@ class KTimerJob : public QObject {
  Q_OBJECT
 
  public:
-    KTimerJob( QObject *parent=0, const char *name=0 );
+    KTimerJob( QObject *parent=0);
     virtual ~KTimerJob();
 
     enum States { Stopped, Paused, Started };
@@ -91,7 +91,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
 {
     Q_OBJECT
  public:
-    KTimerPref( QWidget *parent=0, const char *name = 0 );
+    KTimerPref( QWidget *parent=0);
     virtual ~KTimerPref();
 
  protected slots:

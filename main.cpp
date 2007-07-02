@@ -30,10 +30,10 @@ static const char version[] = "v0.1";
 
 int main( int argc, char **argv )
 {
-    KAboutData aboutData( "ktimer", I18N_NOOP("KTimer"),
-                          version, description, KAboutData::License_GPL,
-                          "(c) 2001, Stefan Schimanski");
-    aboutData.addAuthor("Stefan Schimanski",0, "schimmi@kde.org");
+    KAboutData aboutData( "ktimer", 0, ki18n("KTimer"),
+                          version, ki18n(description), KAboutData::License_GPL,
+                          ki18n("(c) 2001, Stefan Schimanski"));
+    aboutData.addAuthor(ki18n("Stefan Schimanski"),KLocalizedString(), "schimmi@kde.org");
     KCmdLineArgs::init( argc, argv, &aboutData );
 
     KApplication app;

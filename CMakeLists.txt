@@ -2,8 +2,6 @@ project(ktimer)
 
 set(ktimer_SRCS main.cpp ktimer.cpp )
 
-kde4_automoc(${ktimer_SRCS})
-
 kde4_add_ui_files(ktimer_SRCS prefwidget.ui )
 
 kde4_add_executable(ktimer ${ktimer_SRCS})

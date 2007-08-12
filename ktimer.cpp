@@ -16,6 +16,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#include "ktimer.h"
+
 #include <QProcess>
 #include <QTimer>
 
@@ -25,8 +27,6 @@
 #include <ksystemtrayicon.h>
 #include <kfiledialog.h>
 #include <kglobal.h>
-
-#include "ktimer.h"
 
 class KTimerJobItem : public QTreeWidgetItem {
 public:

@@ -1,5 +1,5 @@
 /*
- * (c) 2001 Stefan Schimanski <schimmi@kde.org>
+ * Copyright 2001 Stefan Schimanski <schimmi@kde.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

@@ -38,6 +38,7 @@ GenericName[sv]=Nerräknande startprogram
 GenericName[ta]= குறிப்பு எடுப்பான் நேரக்குறைப்பான்
 GenericName[uk]=Таймер
 GenericName[x-test]=xxCountdown Launcherxx
+GenericName[zh_CN]=倒计时执行器
 GenericName[zh_TW]=倒數發射計時
 Exec=ktimer
 Icon=ktimer

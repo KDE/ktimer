@@ -339,7 +339,7 @@ void KTimerJob::save( KConfig *cfg, const QString& grp )
 {
 	KConfigGroup groupcfg = cfg->group(grp);
     setDelay( groupcfg.readEntry( "Delay", 100 ) );
-    setCommand( groupcfg.readPathEntry( "Command" ) );
+    setCommand( groupcfg.readPathEntry( "Command", QString() ) );
     setLoop( groupcfg.readEntry( "Loop", false ) );
     setOneInstance( groupcfg.readEntry( "OneInstance", d->oneInstance ) );
     setState( (States)groupcfg.readEntry( "State", (int)Stopped ) );

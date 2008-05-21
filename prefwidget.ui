@@ -48,6 +48,12 @@
    </item>
    <item row="0" column="1" >
     <widget class="QPushButton" name="m_add" >
+     <property name="toolTip" >
+      <string>Add a new task</string>
+     </property>
+     <property name="whatsThis" >
+      <string>Add a new task to the list.</string>
+     </property>
      <property name="text" >
       <string>&amp;New</string>
      </property>
@@ -57,6 +63,12 @@
     <widget class="QPushButton" name="m_remove" >
      <property name="enabled" >
       <bool>false</bool>
+     </property>
+     <property name="toolTip" >
+      <string>Remove a task</string>
+     </property>
+     <property name="statusTip" >
+      <string/>
      </property>
      <property name="text" >
       <string>&amp;Remove</string>
@@ -71,7 +83,7 @@
      <property name="sizeType" >
       <enum>QSizePolicy::Expanding</enum>
      </property>
-     <property name="sizeHint" >
+     <property name="sizeHint" stdset="0" >
       <size>
        <width>20</width>
        <height>20</height>
@@ -137,7 +149,7 @@
         <property name="sizeType" >
          <enum>QSizePolicy::Expanding</enum>
         </property>
-        <property name="sizeHint" >
+        <property name="sizeHint" stdset="0" >
          <size>
           <width>20</width>
           <height>20</height>
@@ -146,7 +158,7 @@
        </spacer>
       </item>
       <item row="0" column="2" colspan="3" >
-       <widget class="KUrlRequester" native="1" name="m_commandLine" />
+       <widget class="KUrlRequester" name="m_commandLine" />
       </item>
       <item row="0" column="0" colspan="2" >
        <widget class="QLabel" name="TextLabel1" >
@@ -185,6 +197,12 @@
       </item>
       <item row="0" column="1" >
        <widget class="QToolButton" name="m_pause" >
+        <property name="toolTip" >
+         <string>Pause a countdown</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Use this to pause a timer countdown.</string>
+        </property>
         <property name="text" >
          <string>||</string>
         </property>
@@ -192,6 +210,12 @@
       </item>
       <item row="0" column="2" >
        <widget class="QToolButton" name="m_start" >
+        <property name="toolTip" >
+         <string>Start a countdown</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Use this to start or restart a countdown.</string>
+        </property>
         <property name="text" >
          <string>></string>
         </property>
@@ -199,6 +223,12 @@
       </item>
       <item row="0" column="0" >
        <widget class="QToolButton" name="m_stop" >
+        <property name="toolTip" >
+         <string>Stop a countdown</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Use this to stop the countdown for a task.</string>
+        </property>
         <property name="text" >
          <string>=</string>
         </property>
@@ -214,7 +244,7 @@
  <customwidgets>
   <customwidget>
    <class>KUrlRequester</class>
-   <extends>QWidget</extends>
+   <extends>QFrame</extends>
    <header>kurlrequester.h</header>
    <container>1</container>
   </customwidget>

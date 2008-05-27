@@ -8,7 +8,7 @@ kde4_add_executable(ktimer ${ktimer_SRCS})
 
 target_link_libraries(ktimer  ${KDE4_KIO_LIBS} )
 
-install(TARGETS ktimer  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS ktimer  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############

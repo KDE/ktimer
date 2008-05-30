@@ -121,8 +121,11 @@ KTimerPref::KTimerPref( QWidget *parent)
 
 KTimerPref::~KTimerPref()
 {
-    saveJobs( KGlobal::config().data() );
     delete d;
+}
+
+void KTimerPref::saveAllJobs() {
+    saveJobs( KGlobal::config().data() );
 }
 
 
@@ -214,6 +217,10 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
     }
 }
 
+const QString KTimerPref::formatSeconds( int seconds ) {
+   if(seconds<60) return QString("%1").arg(seconds);
+	return QString("%1:%2").arg( (int)seconds/60, 2, 10, QChar('0') ).arg( (int)seconds%60, 2, 10, QChar('0') ); 
+}
 
 void KTimerPref::jobChanged( KTimerJob *job )
 {
@@ -240,6 +247,10 @@ void KTimerPref::jobFinished( KTimerJob *job, bool error )
     m_list->update();
 }
 
+void KTimerPref::done(int result) {
+    saveAllJobs();
+    QDialog::done(result);
+}
 
 void KTimerPref::saveJobs( KConfig *cfg )
 {
@@ -278,6 +289,7 @@ void KTimerPref::loadJobs( KConfig *cfg )
             job->load( cfg, QString( "Job%1" ).arg(n) );
 
             job->setUser( item );
+            jobChanged ( job);
     }
 
     m_list->update();
@@ -324,7 +336,7 @@ KTimerJob::~KTimerJob()
 }
 
 
-void KTimerJob::load( KConfig *cfg, const QString& grp )
+void KTimerJob::save( KConfig *cfg, const QString& grp )
 {
 	KConfigGroup groupcfg = cfg->group(grp);
     groupcfg.writeEntry( "Delay", d->delay );
@@ -335,7 +347,7 @@ void KTimerJob::load( KConfig *cfg, const QString& grp )
 }
 
 
-void KTimerJob::save( KConfig *cfg, const QString& grp )
+void KTimerJob::load( KConfig *cfg, const QString& grp )
 {
 	KConfigGroup groupcfg = cfg->group(grp);
     setDelay( groupcfg.readEntry( "Delay", 100 ) );
@@ -517,6 +529,8 @@ void KTimerJob::processExited(int, QProcess::ExitStatus status)
     if( !ok ) emit error( this );
     emit finished( this, !ok );
 }
+
+
 
 
 void KTimerJob::fire()

@@ -48,6 +48,7 @@ class KTimerJob : public QObject {
     void load( KConfig *cfg, const QString& grp );
     void save( KConfig *cfg, const QString& grp );
 
+
  public slots:
     void setDelay( unsigned int sec );
     void setDelay( int sec );
@@ -93,6 +94,10 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
  public:
     KTimerPref( QWidget *parent=0);
     virtual ~KTimerPref();
+    const QString formatSeconds( int seconds );
+
+ public slots:
+    void done(int result);
 
  protected slots:
     void add();
@@ -101,6 +106,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
 
     void saveJobs( KConfig *cfg );
     void loadJobs( KConfig *cfg );
+    void saveAllJobs();
 
  private slots:
     void jobChanged( KTimerJob *job );

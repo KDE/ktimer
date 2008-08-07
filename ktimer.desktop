@@ -60,3 +60,4 @@ Name[zh_TW]=KDE 計時器
 X-KDE-StartupNotify=true
 X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Utility;X-KDE-More;
+X-DocPath=ktimer/index.html

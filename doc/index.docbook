@@ -46,22 +46,84 @@
 <chapter id="introduction">
 <title>Introduction</title>
 <para>The documentation for &ktimer; was not finished when &kde; was installed on this computer.</para> 
-<para>If you need help, please check <ulink url="http://www.kde.org">The &kde; Website</ulink> for updates, or by submitting your question to <ulink url="mailto:kde@kde.org">The &kde; User Mailing list</ulink>.</para>
-<para><emphasis>The &kde; Team</emphasis></para>
-
-<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-&underFDL;
-&underGPL;
+<para>Describe in a few sentences the purpose of KTimer</para>
 
 </chapter>
 
-&documentation.index; 
+<chapter id="using-ktimer">
+<title>Using &ktimer;</title>
+
+<screenshot>
+<screeninfo>Here's a screenshot of &ktimer; when you start it for the first
+time</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase>&ktimer; main window</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para>Describe the actions to use KTimer</para>
+
+<para></para>
+
+<sect1 id="settings">
+<title>Settings</title>
+<para>
+
+</para>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title>Credits and License</title>
+
+<para>
+&ktimer;
+</para>
+
+
+<para>
+Documentation copyright 2008 YOUR NAME
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+
+</chapter>
+
+<appendix id="installation">
+<title>Installation</title>
+
+<sect1 id="getting-ktimer">
+<title>How to obtain &ktimer;</title>
+
+&install.intro.documentation;
+
+</sect1>
+
+<sect1 id="compilation">
+<title>Compilation and installation</title>
+
+&install.compile.documentation;
+
+</sect1>
+</appendix>
+
+&documentation.index;
 </book>
 <!--
 Local Variables:
 mode: sgml
 sgml-minimize-attributes: nil
 sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
 End:
 -->
 

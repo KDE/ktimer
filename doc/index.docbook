@@ -2,6 +2,10 @@
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY kappname "&ktimer;">
   <!ENTITY package "kdeutils">
+  <!ENTITY A.L.Spehr "<personname><firstname>A. L.</firstname><surname>Spehr</surname></personname>">
+  <!ENTITY A.L.Spehr.email "<email>zahl+kde@transbay.net</email>">
+  <!ENTITY Stefan.Schimanski "<personname><firstname>Stefan</firstname><surname>Schimanski</surname></personname>">
+  <!ENTITY Stefan.Schimanski.email "<email>1Stein@gmx.de</email>">
   <!ENTITY % English "INCLUDE">
   <!ENTITY % addindex "IGNORE">
 ]>
@@ -13,11 +17,11 @@
 
 <authorgroup>
 <author>
-<firstname></firstname>
+<firstname>A. L.</firstname>
 <othername></othername>
-<surname></surname>
+<surname>Spehr</surname>
 <affiliation>
-<address><email></email></address>
+<address>&A.L.Spehr.email;</address>
 </affiliation>
 </author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
@@ -25,12 +29,12 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2001-01-20</date>
-<releaseinfo>0.00.00</releaseinfo>
+<date>2008-11-26</date>
+<releaseinfo>0.01.00</releaseinfo>
 
 <abstract>
 <para>
-&ktimer; is part of the kdeutils package.
+&ktimer; is an application for the &kde; environment that lets you start an application after a certain amount of time has passed.
 </para>
 </abstract>
 
@@ -39,14 +43,14 @@
 <keyword>KDE</keyword>
 <keyword>kdeutils</keyword>
 <keyword>ktimer</keyword>
+<keyword>countdown</keyword>
 </keywordset>
 
 </bookinfo>
 
 <chapter id="introduction">
 <title>Introduction</title>
-<para>The documentation for &ktimer; was not finished when &kde; was installed on this computer.</para> 
-<para>Describe in a few sentences the purpose of KTimer</para>
+<para>&ktimer; allows you to enter several tasks and to set a timer for each of them. When the timer reaches zero, the task is executed. The timers for each task can be started, stopped, changed, or looped.</para> 
 
 </chapter>
 
@@ -66,17 +70,85 @@ time</screeninfo>
 	</mediaobject>
 </screenshot>
 
-<para>Describe the actions to use KTimer</para>
+<para>To start, first add a task by selecting <guimenu>New</guimenu>. Then type the command you wish to execute into the <guimenu>Command line:</guimenu> box. You can then adjust the settings, or start the timer countdown. When the time is up, the command will be run.</para>
 
-<para></para>
+<screenshot>
+<screeninfo>Here's a screenshot of &ktimer; after you have told it to run &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase>add a task</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para>Let's use &konqueror; as an example. By default, it will start in 100 seconds once the timer countdown is started.</para>
+
+<screenshot>
+<screeninfo>Here it is counting down: in 56 seconds &konqueror; will be run.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase>56 seconds to go</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para>Now let's start the task. Here it has been running for a bit and is partway through the countdown. In 56 seconds, &konqueror; will be started.</para>
+
+<para>See that sliding bar? You can use it to quickly increase or decrease the amount of time on a task.</para>
+
+<screenshot>
+<screeninfo>Let's add a second task.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two.at.once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase>start another &konqueror;, you can never have too many!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para>Now two &konqueror;s are scheduled to be run. The top one will be run in 20 seconds, and the bottom one is currently stopped. You can add more commands. While you can never have too many &konqueror;s, you probably want to use other executables. Your own shell script, perhaps.</para>
 
 <sect1 id="settings">
 <title>Settings</title>
 <para>
 
+<variablelist>
+  <varlistentry>
+    <term><menuchoice>
+    <shortcut>
+    <keycombo action="simul">&Alt;<keycap>N</keycap></keycombo>
+    </shortcut>
+    <guimenuitem>New</guimenuitem>
+    </menuchoice></term>
+    <listitem><para><action>Adds a new task.</action></para></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term><menuchoice>
+    <shortcut>
+    <keycombo action="simul">&Alt;<keycap>R</keycap></keycombo>
+    </shortcut>
+    <guimenuitem>Remove</guimenuitem>
+    </menuchoice></term>
+    <listitem><para><action>Removes the current task.</action></para></listitem>
+    </varlistentry>
+</variablelist>
+
+
 </para>
 </sect1>
 </chapter>
+
+
+
 
 <chapter id="credits">
 
@@ -87,9 +159,10 @@ time</screeninfo>
 </para>
 
 
-<para>
-Documentation copyright 2008 YOUR NAME
-</para>
+<!--List all the copyright holders here-->
+<para>Program Copyright 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para>Documentation Copyright 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 &underFDL;               <!-- FDL: do not remove -->
@@ -97,6 +170,7 @@ Documentation copyright 2008 YOUR NAME
 
 </chapter>
 
+<!-- !!!!do not change ANYTHING after this line!!!! (?) -->
 <appendix id="installation">
 <title>Installation</title>
 

@@ -19,7 +19,7 @@
    <property name="spacing" >
     <number>6</number>
    </property>
-   <item rowspan="3" row="0" column="0" >
+   <item rowspan="4" row="0" column="0" >
     <widget class="QTreeWidget" name="m_list" >
      <property name="allColumnsShowFocus" >
       <bool>true</bool>
@@ -75,7 +75,7 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1" >
+   <item row="3" column="1" >
     <spacer>
      <property name="orientation" >
       <enum>Qt::Vertical</enum>
@@ -91,7 +91,7 @@
      </property>
     </spacer>
    </item>
-   <item row="4" column="0" >
+   <item row="5" column="0" >
     <widget class="QGroupBox" name="m_settings" >
      <property name="enabled" >
       <bool>false</bool>
@@ -170,7 +170,7 @@
      </layout>
     </widget>
    </item>
-   <item row="4" column="1" >
+   <item row="5" column="1" >
     <widget class="QGroupBox" name="m_state" >
      <property name="enabled" >
       <bool>false</bool>
@@ -235,6 +235,16 @@
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="QPushButton" name="m_help" >
+     <property name="toolTip" >
+      <string>Show help</string>
+     </property>
+     <property name="text" >
+      <string>&amp;Help</string>
+     </property>
     </widget>
    </item>
   </layout>

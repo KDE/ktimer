@@ -27,6 +27,7 @@
 #include <ksystemtrayicon.h>
 #include <kfiledialog.h>
 #include <kglobal.h>
+#include <ktoolinvocation.h>
 
 class KTimerJobItem : public QTreeWidgetItem {
 public:
@@ -111,6 +112,7 @@ KTimerPref::KTimerPref( QWidget *parent)
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );
     connect( m_remove, SIGNAL(clicked()), SLOT(remove()) );
+    connect( m_help, SIGNAL(clicked()), SLOT(help()) );
     connect( m_list, SIGNAL(currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)),
              SLOT(currentChanged(QTreeWidgetItem *, QTreeWidgetItem *)) );
     loadJobs( KGlobal::config().data() );
@@ -162,6 +164,10 @@ void KTimerPref::remove()
     m_list->update();
 }
 
+void KTimerPref::help()
+{
+    KToolInvocation::invokeHelp();
+}
 
 // note, don't use old, but added it so we can connect to the new one
 void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old */)

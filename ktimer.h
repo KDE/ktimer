@@ -102,6 +102,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
  protected slots:
     void add();
     void remove();
+    void help();
     void currentChanged( QTreeWidgetItem * , QTreeWidgetItem *);
 
     void saveJobs( KConfig *cfg );

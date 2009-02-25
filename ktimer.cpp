@@ -28,6 +28,7 @@
 #include <kfiledialog.h>
 #include <kglobal.h>
 #include <ktoolinvocation.h>
+#include <kstandardguiitem.h>
 
 class KTimerJobItem : public QTreeWidgetItem {
 public:
@@ -108,6 +109,9 @@ KTimerPref::KTimerPref( QWidget *parent)
     KSystemTrayIcon *tray = new KSystemTrayIcon( this );
     tray->show();
     tray->setIcon( KIcon( "ktimer" ) );
+
+    // set help button gui item
+    m_help->setGuiItem(KStandardGuiItem::help());
 
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );

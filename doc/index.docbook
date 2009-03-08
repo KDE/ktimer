@@ -70,7 +70,7 @@ time</screeninfo>
 	</mediaobject>
 </screenshot>
 
-<para>To start, first add a task by selecting <guimenu>New</guimenu>. Then type the command you wish to execute into the <guimenu>Command line:</guimenu> box. You can then adjust the settings, or start the timer countdown. When the time is up, the command will be run.</para>
+<para>To start, first add a task by selecting <guibutton>New</guibutton>. Then type the command you wish to execute into the <guilabel>Command line:</guilabel> box. You can then adjust the settings, or start the timer countdown. When the time is up, the command will be run.</para>
 
 <screenshot>
 <screeninfo>Here's a screenshot of &ktimer; after you have told it to run &konqueror;.</screeninfo>
@@ -122,22 +122,12 @@ time</screeninfo>
 
 <variablelist>
   <varlistentry>
-    <term><menuchoice>
-    <shortcut>
-    <keycombo action="simul">&Alt;<keycap>N</keycap></keycombo>
-    </shortcut>
-    <guimenuitem>New</guimenuitem>
-    </menuchoice></term>
+    <term><guibutton>New</guibutton></term>
     <listitem><para><action>Adds a new task.</action></para></listitem>
     </varlistentry>
     
     <varlistentry>
-    <term><menuchoice>
-    <shortcut>
-    <keycombo action="simul">&Alt;<keycap>R</keycap></keycombo>
-    </shortcut>
-    <guimenuitem>Remove</guimenuitem>
-    </menuchoice></term>
+    <term><guibutton>Remove</guibutton></term>
     <listitem><para><action>Removes the current task.</action></para></listitem>
     </varlistentry>
 </variablelist>

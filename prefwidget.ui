@@ -47,7 +47,7 @@
     </widget>
    </item>
    <item row="0" column="1" >
-    <widget class="QPushButton" name="m_add" >
+    <widget class="KPushButton" name="m_add" >
      <property name="toolTip" >
       <string>Add a new task</string>
      </property>
@@ -60,19 +60,7 @@
     </widget>
    </item>
    <item row="1" column="1" >
-    <widget class="QPushButton" name="m_remove" >
-     <property name="enabled" >
-      <bool>false</bool>
-     </property>
-     <property name="toolTip" >
-      <string>Remove a task</string>
-     </property>
-     <property name="statusTip" >
-      <string/>
-     </property>
-     <property name="text" >
-      <string>&amp;Remove</string>
-     </property>
+    <widget class="KPushButton" name="m_remove" >
     </widget>
    </item>
    <item row="3" column="1" >

@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>PrefWidget</class>
- <widget class="QDialog" name="PrefWidget" >
-  <property name="geometry" >
+ <widget class="QDialog" name="PrefWidget">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,75 +10,84 @@
     <height>344</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Timer Settings</string>
   </property>
-  <layout class="QGridLayout" >
-   <property name="margin" >
+  <layout class="QGridLayout">
+   <property name="margin">
     <number>11</number>
    </property>
-   <property name="spacing" >
+   <property name="spacing">
     <number>6</number>
    </property>
-   <item rowspan="4" row="0" column="0" >
-    <widget class="QTreeWidget" name="m_list" >
-     <property name="allColumnsShowFocus" >
+   <item row="0" column="0" rowspan="4">
+    <widget class="QTreeWidget" name="m_list">
+     <property name="toolTip">
+      <string>List of countdowns you have set</string>
+     </property>
+     <property name="whatsThis">
+      <string>New countdowns are put here. You can add and remove them, and stop and start them.</string>
+     </property>
+     <property name="allColumnsShowFocus">
       <bool>true</bool>
      </property>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Counter</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Delay</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>State</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Command</string>
       </property>
      </column>
     </widget>
    </item>
-   <item row="0" column="1" >
-    <widget class="KPushButton" name="m_add" >
-     <property name="toolTip" >
+   <item row="0" column="1">
+    <widget class="KPushButton" name="m_add">
+     <property name="toolTip">
       <string>Add a new task</string>
      </property>
-     <property name="whatsThis" >
+     <property name="whatsThis">
       <string>Add a new task to the list.</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>&amp;New</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="1" >
-    <widget class="KPushButton" name="m_remove" >
-      <property name="toolTip" >
-         <string>Remove a task</string>
-      </property>
-      <property name="text" >
-         <string>&amp;Remove</string>
-      </property>
+   <item row="1" column="1">
+    <widget class="KPushButton" name="m_remove">
+     <property name="toolTip">
+      <string>Remove a task</string>
+     </property>
+     <property name="whatsThis">
+      <string>Remove a task from the list.</string>
+     </property>
+     <property name="text">
+      <string>&amp;Remove</string>
+     </property>
     </widget>
    </item>
-   <item row="3" column="1" >
+   <item row="3" column="1">
     <spacer>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
-     <property name="sizeType" >
+     <property name="sizeType">
       <enum>QSizePolicy::Expanding</enum>
      </property>
-     <property name="sizeHint" stdset="0" >
+     <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
        <height>20</height>
@@ -85,65 +95,83 @@
      </property>
     </spacer>
    </item>
-   <item row="5" column="0" >
-    <widget class="QGroupBox" name="m_settings" >
-     <property name="enabled" >
+   <item row="5" column="0">
+    <widget class="QGroupBox" name="m_settings">
+     <property name="enabled">
       <bool>false</bool>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>Settings</string>
      </property>
-     <layout class="QGridLayout" >
-      <property name="margin" >
+     <layout class="QGridLayout">
+      <property name="margin">
        <number>11</number>
       </property>
-      <property name="spacing" >
+      <property name="spacing">
        <number>6</number>
       </property>
-      <item row="2" column="0" colspan="4" >
-       <widget class="QCheckBox" name="m_loop" >
-        <property name="text" >
+      <item row="2" column="0" colspan="4">
+       <widget class="QCheckBox" name="m_loop">
+        <property name="toolTip">
+         <string>Check this box if you want your countdown to start over after it finishes</string>
+        </property>
+        <property name="whatsThis">
+         <string>Check this box if you want your countdown to start over after it finishes</string>
+        </property>
+        <property name="text">
          <string>&amp;Loop</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" >
-       <widget class="QLabel" name="TextLabel2" >
-        <property name="text" >
+      <item row="1" column="0">
+       <widget class="QLabel" name="TextLabel2">
+        <property name="text">
          <string>Delay:</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1" colspan="2" >
-       <widget class="QSpinBox" name="m_delay" >
-        <property name="maximum" >
+      <item row="1" column="1" colspan="2">
+       <widget class="QSpinBox" name="m_delay">
+        <property name="toolTip">
+         <string>You can change the amount of time here.</string>
+        </property>
+        <property name="whatsThis">
+         <string>You can change the amount of time in the countdown here.</string>
+        </property>
+        <property name="maximum">
          <number>99999</number>
         </property>
        </widget>
       </item>
-      <item row="3" column="0" colspan="4" >
-       <widget class="QCheckBox" name="m_one" >
-        <property name="text" >
+      <item row="3" column="0" colspan="4">
+       <widget class="QCheckBox" name="m_one">
+        <property name="toolTip">
+         <string>Check this box if you only want to open one copy of your program</string>
+        </property>
+        <property name="whatsThis">
+         <string>Check this box if you only want one instance to open</string>
+        </property>
+        <property name="text">
          <string>Start only &amp;one instance</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="3" >
-       <widget class="QLabel" name="TextLabel3" >
-        <property name="text" >
+      <item row="1" column="3">
+       <widget class="QLabel" name="TextLabel3">
+        <property name="text">
          <string>seconds</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="4" >
+      <item row="1" column="4">
        <spacer>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeType" >
+        <property name="sizeType">
          <enum>QSizePolicy::Expanding</enum>
         </property>
-        <property name="sizeHint" stdset="0" >
+        <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
           <height>20</height>
@@ -151,12 +179,19 @@
         </property>
        </spacer>
       </item>
-      <item row="0" column="2" colspan="3" >
-       <widget class="KUrlRequester" name="m_commandLine" />
+      <item row="0" column="2" colspan="3">
+       <widget class="KUrlRequester" name="m_commandLine">
+        <property name="toolTip">
+         <string>command you would like to run when time is up</string>
+        </property>
+        <property name="whatsThis">
+         <string>Enter here a program you would like to run when the countdown is zero</string>
+        </property>
+       </widget>
       </item>
-      <item row="0" column="0" colspan="2" >
-       <widget class="QLabel" name="TextLabel1" >
-        <property name="text" >
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="TextLabel1">
+        <property name="text">
          <string>Command line:</string>
         </property>
        </widget>
@@ -164,66 +199,79 @@
      </layout>
     </widget>
    </item>
-   <item row="5" column="1" >
-    <widget class="QGroupBox" name="m_state" >
-     <property name="enabled" >
+   <item row="5" column="1">
+    <widget class="QGroupBox" name="m_state">
+     <property name="enabled">
       <bool>false</bool>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>State</string>
      </property>
-     <layout class="QGridLayout" >
-      <property name="margin" >
+     <layout class="QGridLayout">
+      <property name="margin">
        <number>11</number>
       </property>
-      <property name="spacing" >
+      <property name="spacing">
        <number>6</number>
       </property>
-      <item row="2" column="0" colspan="3" >
-       <widget class="QSlider" name="m_slider" >
-        <property name="orientation" >
+      <item row="2" column="0" colspan="3">
+       <widget class="QSlider" name="m_slider">
+        <property name="toolTip">
+         <string>Speed up or slow down your countdown</string>
+        </property>
+        <property name="whatsThis">
+         <string>You can use this slider to adjust the time.</string>
+        </property>
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="3" >
-       <widget class="QLCDNumber" name="m_counter" />
+      <item row="1" column="0" colspan="3">
+       <widget class="QLCDNumber" name="m_counter">
+        <property name="toolTip">
+         <string>This many seconds are left</string>
+        </property>
+        <property name="whatsThis">
+         <string>This number is how many seconds are left for the selected countdown.</string>
+        </property>
+       </widget>
       </item>
-      <item row="0" column="1" >
-       <widget class="QToolButton" name="m_pause" >
-        <property name="toolTip" >
+      <item row="0" column="1">
+       <widget class="QToolButton" name="m_pause">
+        <property name="toolTip">
          <string>Pause a countdown</string>
         </property>
-        <property name="whatsThis" >
+        <property name="whatsThis">
          <string>Use this to pause a timer countdown.</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>||</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="2" >
-       <widget class="QToolButton" name="m_start" >
-        <property name="toolTip" >
+      <item row="0" column="2">
+       <widget class="QToolButton" name="m_start">
+        <property name="toolTip">
          <string>Start a countdown</string>
         </property>
-        <property name="whatsThis" >
+        <property name="whatsThis">
          <string>Use this to start or restart a countdown.</string>
         </property>
-        <property name="text" >
-         <string>></string>
+        <property name="text">
+         <string>&gt;</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="0" >
-       <widget class="QToolButton" name="m_stop" >
-        <property name="toolTip" >
+      <item row="0" column="0">
+       <widget class="QToolButton" name="m_stop">
+        <property name="toolTip">
          <string>Stop a countdown</string>
         </property>
-        <property name="whatsThis" >
+        <property name="whatsThis">
          <string>Use this to stop the countdown for a task.</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>=</string>
         </property>
        </widget>
@@ -231,23 +279,34 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="1" >
-    <widget class="KPushButton" name="m_help" >
+   <item row="2" column="1">
+    <widget class="KPushButton" name="m_help">
+     <property name="toolTip">
+      <string>Detailed help documentation</string>
+     </property>
+     <property name="whatsThis">
+      <string>Click here to open the help documentation viewer.</string>
+     </property>
     </widget>
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="11" />
-  <customwidgets>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
   <customwidget>
    <class>KUrlRequester</class>
    <extends>QFrame</extends>
    <header>kurlrequester.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
  </customwidgets>
  <includes>
-  <include location="global" >kseparator.h</include>
+  <include location="global">kseparator.h</include>
  </includes>
  <resources/>
  <connections/>

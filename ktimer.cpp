@@ -550,7 +550,7 @@ void KTimerJob::fire()
         d->processes.append( proc );
         connect( proc, SIGNAL(finished(int, QProcess::ExitStatus)),
                  SLOT(processExited(int, QProcess::ExitStatus)) );
-        if (!d->command.isEmpty()) {
+        if (!d->command.simplified ().isEmpty()) {
 	        proc->start(d->command);
 	        emit fired( this );
         }

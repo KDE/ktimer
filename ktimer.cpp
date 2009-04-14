@@ -104,9 +104,8 @@ KTimerPref::KTimerPref( QWidget *parent)
     m_start->setIcon( KIcon("arrow-right") );
 
     // create tray icon
-    KSystemTrayIcon *tray = new KSystemTrayIcon( this );
+    KSystemTrayIcon *tray = new KSystemTrayIcon( "ktimer",this );
     tray->show();
-    tray->setIcon( KIcon( "ktimer" ) );
 
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );

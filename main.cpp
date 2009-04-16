@@ -38,6 +38,7 @@ int main( int argc, char **argv )
     KCmdLineArgs::init( argc, argv, &aboutData );
 
     KApplication app;
+    app.setQuitOnLastWindowClosed( false );
 
     KTimerPref *timer = new KTimerPref;
     app.setTopWidget( timer );

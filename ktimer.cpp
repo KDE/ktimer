@@ -263,7 +263,8 @@ void KTimerPref::done(int result) {
 
 void KTimerPref::saveJobs( KConfig *cfg )
 {
-	for (int num = 0; num < m_list->topLevelItemCount(); ++num)
+	const int nbList=m_list->topLevelItemCount();
+	for (int num = 0; num < nbList; ++num)
 	{
 		KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->topLevelItem(num));
         item->job()->save( cfg, QString("Job%1").arg( num ) );
@@ -279,7 +280,7 @@ void KTimerPref::saveJobs( KConfig *cfg )
 
 void KTimerPref::loadJobs( KConfig *cfg )
 {
-    int num = cfg->group("Jobs").readEntry( "Number", 0 );
+    const int num = cfg->group("Jobs").readEntry( "Number", 0 );
     for( int n=0; n<num; n++ ) {
             KTimerJob *job = new KTimerJob;
             KTimerJobItem *item = new KTimerJobItem( job, m_list );
@@ -530,8 +531,8 @@ void KTimerJob::timeout()
 void KTimerJob::processExited(int, QProcess::ExitStatus status)
 {
 	QProcess * proc = static_cast<QProcess*>(sender());
-    bool ok = status==0;
-    int i = d->processes.indexOf( proc);
+    const bool ok = status==0;
+    const int i = d->processes.indexOf( proc);
     if (i != -1)
         delete d->processes.takeAt(i);
 
@@ -554,7 +555,7 @@ void KTimerJob::fire()
 	        emit fired( this );
         }
         if(proc->state() == QProcess::NotRunning) {
-            int i = d->processes.indexOf( proc);
+            const int i = d->processes.indexOf( proc);
             if (i != -1)
                 delete d->processes.takeAt(i);
             emit error( this );

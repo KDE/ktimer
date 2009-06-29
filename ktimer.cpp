@@ -24,11 +24,11 @@
 #include <klineedit.h>
 #include <kiconloader.h>
 #include <kapplication.h>
-#include <ksystemtrayicon.h>
 #include <kfiledialog.h>
 #include <kglobal.h>
 #include <ktoolinvocation.h>
 #include <kstandardguiitem.h>
+#include "knotificationitem.h"
 
 class KTimerJobItem : public QTreeWidgetItem {
 public:
@@ -106,9 +106,9 @@ KTimerPref::KTimerPref( QWidget *parent)
     m_start->setIcon( KIcon("arrow-right") );
 
     // create tray icon
-    KSystemTrayIcon *tray = new KSystemTrayIcon( "ktimer",this );
-    tray->show();
-
+    Experimental::KNotificationItem *tray = new Experimental::KNotificationItem(this);
+    tray->setIconByName("ktimer");
+    tray->setCategory(Experimental::KNotificationItem::ApplicationStatus);
     // set help button gui item
     m_help->setGuiItem(KStandardGuiItem::help());
 

@@ -8,7 +8,7 @@ kde4_add_app_icon(ktimer_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-ktimer.png")
 
 kde4_add_executable(ktimer ${ktimer_SRCS})
 
-target_link_libraries(ktimer  ${KDE4_KIO_LIBS} )
+target_link_libraries(ktimer  ${KDE4_KIO_LIBS}  ${LIBKNOTIFICATIONITEM-1_LIBRARIES})
 
 install(TARGETS ktimer  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

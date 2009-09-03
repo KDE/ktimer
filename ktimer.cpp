@@ -106,9 +106,9 @@ KTimerPref::KTimerPref( QWidget *parent)
     m_start->setIcon( KIcon("arrow-right") );
 
     // create tray icon
-    Experimental::KNotificationItem *tray = new Experimental::KNotificationItem(this);
+    KNotificationItem *tray = new KNotificationItem(this);
     tray->setIconByName("ktimer");
-    tray->setCategory(Experimental::KNotificationItem::ApplicationStatus);
+    tray->setCategory(KNotificationItem::ApplicationStatus);
     // set help button gui item
     m_help->setGuiItem(KStandardGuiItem::help());
 

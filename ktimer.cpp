@@ -109,6 +109,7 @@ KTimerPref::KTimerPref( QWidget *parent)
     KNotificationItem *tray = new KNotificationItem(this);
     tray->setIconByName("ktimer");
     tray->setCategory(KNotificationItem::ApplicationStatus);
+    tray->setStatus(KNotificationItem::Active);
     // set help button gui item
     m_help->setGuiItem(KStandardGuiItem::help());
 

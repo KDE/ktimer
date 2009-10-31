@@ -28,7 +28,7 @@
 #include <kglobal.h>
 #include <ktoolinvocation.h>
 #include <kstandardguiitem.h>
-#include "knotificationitem.h"
+#include "kstatusnotifieritem.h"
 
 class KTimerJobItem : public QTreeWidgetItem {
 public:
@@ -106,10 +106,10 @@ KTimerPref::KTimerPref( QWidget *parent)
     m_start->setIcon( KIcon("arrow-right") );
 
     // create tray icon
-    KNotificationItem *tray = new KNotificationItem(this);
+    KStatusNotifierItem *tray = new KStatusNotifierItem(this);
     tray->setIconByName("ktimer");
-    tray->setCategory(KNotificationItem::ApplicationStatus);
-    tray->setStatus(KNotificationItem::Active);
+    tray->setCategory(KStatusNotifierItem::ApplicationStatus);
+    tray->setStatus(KStatusNotifierItem::Active);
     // set help button gui item
     m_help->setGuiItem(KStandardGuiItem::help());
 

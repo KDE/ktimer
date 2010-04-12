@@ -97,6 +97,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
     const QString formatSeconds( int seconds );
 
  public slots:
+    void exit();
     void done(int result);
 
  protected slots:

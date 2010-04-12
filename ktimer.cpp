@@ -28,6 +28,8 @@
 #include <kglobal.h>
 #include <ktoolinvocation.h>
 #include <kstandardguiitem.h>
+#include <kaction.h>
+#include <kstandardaction.h>
 #include "kstatusnotifieritem.h"
 
 class KTimerJobItem : public QTreeWidgetItem {
@@ -112,6 +114,10 @@ KTimerPref::KTimerPref( QWidget *parent)
     tray->setStatus(KStatusNotifierItem::Active);
     // set help button gui item
     m_help->setGuiItem(KStandardGuiItem::help());
+
+    // Exit
+    KAction *exit = KStandardAction::quit(this, SLOT(exit()), this);
+    addAction(exit);
 
     // connect
     connect( m_add, SIGNAL(clicked()), SLOT(add()) );
@@ -255,6 +261,12 @@ void KTimerPref::jobFinished( KTimerJob *job, bool error )
     KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
     item->setStatus( error );
     m_list->update();
+}
+
+// Realy quits the application
+void KTimerPref::exit() {
+    done(0);
+    qApp->quit();
 }
 
 void KTimerPref::done(int result) {

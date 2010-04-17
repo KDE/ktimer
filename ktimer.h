@@ -47,6 +47,9 @@ class KTimerJob : public QObject {
 
     void load( KConfig *cfg, const QString& grp );
     void save( KConfig *cfg, const QString& grp );
+    QString formatTime( int seconds ) const;
+    int timeToSeconds( int hours, int minutes, int seconds ) const;
+    void secondsToHMS( int secs, int *hours, int *minutes, int *seconds ) const;
 
 
  public slots:
@@ -94,7 +97,6 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
  public:
     KTimerPref( QWidget *parent=0);
     virtual ~KTimerPref();
-    const QString formatSeconds( int seconds );
 
  public slots:
     void exit();
@@ -113,6 +115,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
  private slots:
     void jobChanged( KTimerJob *job );
     void jobFinished( KTimerJob *job, bool error );
+    void delayChanged();
 
  private:
     struct KTimerPrefPrivate *d;

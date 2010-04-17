@@ -63,14 +63,14 @@ public:
     }
 
     void update() {
-        setText( 0, QString::number(m_job->value()) );
+        setText( 0, m_job->formatTime(m_job->value()) );
 
         if( m_error )
             setIcon( 0, KIcon("process-stop") );
         else
             setIcon( 0, QPixmap() );
 
-        setText( 1, QString::number(m_job->delay()) );
+        setText( 1, m_job->formatTime(m_job->delay()) );
 
         switch( m_job->state() ) {
             case KTimerJob::Stopped: setIcon( 2, KIcon("media-playback-stop") ); break;
@@ -189,7 +189,8 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
         m_state->setEnabled( true );
         m_settings->setEnabled( true );
         m_remove->setEnabled( true );
-
+        m_delayH->disconnect();
+        m_delayM->disconnect();
         m_delay->disconnect();
         m_loop->disconnect();
         m_one->disconnect();
@@ -201,10 +202,21 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
 		m_commandLine->disconnect();
 		m_commandLine->lineEdit()->disconnect();
 
+        // Set hour, minute and second QSpinBoxes before we connect to signals.
+        int h, m, s;
+        job->secondsToHMS( job->delay(), &h, &m, &s );
+        m_delayH->setValue( h );
+        m_delayM->setValue( m );
+        m_delay->setValue( s );
+
         connect( m_commandLine->lineEdit(), SIGNAL(textChanged(const QString &)),
                  job, SLOT(setCommand(const QString &)) );
+        connect( m_delayH, SIGNAL(valueChanged(int)),
+                 SLOT(delayChanged()) );
+        connect( m_delayM, SIGNAL(valueChanged(int)),
+                 SLOT(delayChanged()) );
         connect( m_delay, SIGNAL(valueChanged(int)),
-                 job, SLOT(setDelay(int)) );
+                 SLOT(delayChanged()) );
         connect( m_loop, SIGNAL(toggled(bool)),
                  job, SLOT(setLoop(bool)) );
         connect( m_one, SIGNAL(toggled(bool)),
@@ -219,7 +231,6 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
                  job, SLOT(setValue(int)) );
 
         m_commandLine->lineEdit()->setText( job->command() );
-        m_delay->setValue( job->delay() );
         m_loop->setChecked( job->loop() );
         m_one->setChecked( job->oneInstance() );
         m_counter->display( (int)job->value() );
@@ -233,10 +244,6 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
     }
 }
 
-const QString KTimerPref::formatSeconds( int seconds ) {
-   if(seconds<60) return QString("%1").arg(seconds);
-	return QString("%1:%2").arg( (int)seconds/60, 2, 10, QChar('0') ).arg( (int)seconds%60, 2, 10, QChar('0') ); 
-}
 
 void KTimerPref::jobChanged( KTimerJob *job )
 {
@@ -261,6 +268,18 @@ void KTimerPref::jobFinished( KTimerJob *job, bool error )
     KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
     item->setStatus( error );
     m_list->update();
+}
+
+/* Hour/Minute/Second was changed. This slot calculates the seconds until we start
+    the job and inform the current job */
+void KTimerPref::delayChanged()
+{
+    KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->currentItem());
+    if ( item ) {
+        KTimerJob *job = item->job();
+        int time_sec = job->timeToSeconds( m_delayH->value(), m_delayM->value(), m_delay->value() );
+        job->setDelay( time_sec );
+    }
 }
 
 // Realy quits the application
@@ -380,6 +399,32 @@ void KTimerJob::load( KConfig *cfg, const QString& grp )
     setState( (States)groupcfg.readEntry( "State", (int)Stopped ) );
 }
 
+
+// Format given seconds to hour:minute:seconds and return QString 
+QString KTimerJob::formatTime( int seconds ) const
+{
+    int h, m, s;
+    secondsToHMS( seconds, &h, &m, &s );
+    return QString( "%1:%2:%3" ).arg( h ).arg( m, 2, 10, QChar( '0' ) ).arg( s,2, 10, QChar( '0' ) );
+}
+
+
+// calculate seconds from hour, minute and seconds, returns seconds
+int KTimerJob::timeToSeconds( int hours, int minutes, int seconds ) const
+{
+    return hours * 3600 + minutes * 60 + seconds;
+}
+
+
+// calculates hours, minutes and seconds from given secs.
+void KTimerJob::secondsToHMS( int secs, int *hours, int *minutes, int *seconds ) const
+{
+    int s = secs;
+    (*hours) = s / 3600;
+    s = s % 3600;
+    (*minutes) = s / 60;
+    (*seconds) = s % 60;
+}
 
 void *KTimerJob::user()
 {

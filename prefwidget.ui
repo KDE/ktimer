@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>479</width>
-    <height>344</height>
+    <width>563</width>
+    <height>352</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -95,110 +95,6 @@
      </property>
     </spacer>
    </item>
-   <item row="5" column="0">
-    <widget class="QGroupBox" name="m_settings">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="title">
-      <string>Settings</string>
-     </property>
-     <layout class="QGridLayout">
-      <property name="margin">
-       <number>11</number>
-      </property>
-      <property name="spacing">
-       <number>6</number>
-      </property>
-      <item row="2" column="0" colspan="4">
-       <widget class="QCheckBox" name="m_loop">
-        <property name="toolTip">
-         <string>Check this box if you want your countdown to start over after it finishes</string>
-        </property>
-        <property name="whatsThis">
-         <string>Check this box if you want your countdown to start over after it finishes</string>
-        </property>
-        <property name="text">
-         <string>&amp;Loop</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="TextLabel2">
-        <property name="text">
-         <string>Delay:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1" colspan="2">
-       <widget class="QSpinBox" name="m_delay">
-        <property name="toolTip">
-         <string>You can change the amount of time here.</string>
-        </property>
-        <property name="whatsThis">
-         <string>You can change the amount of time in the countdown here.</string>
-        </property>
-        <property name="maximum">
-         <number>99999</number>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0" colspan="4">
-       <widget class="QCheckBox" name="m_one">
-        <property name="toolTip">
-         <string>Check this box if you only want to open one copy of your program</string>
-        </property>
-        <property name="whatsThis">
-         <string>Check this box if you only want one instance to open</string>
-        </property>
-        <property name="text">
-         <string>Start only &amp;one instance</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
-       <widget class="QLabel" name="TextLabel3">
-        <property name="text">
-         <string>seconds</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="4">
-       <spacer>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="0" column="2" colspan="3">
-       <widget class="KUrlRequester" name="m_commandLine">
-        <property name="toolTip">
-         <string>command you would like to run when time is up</string>
-        </property>
-        <property name="whatsThis">
-         <string>Enter here a program you would like to run when the countdown is zero</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="2">
-       <widget class="QLabel" name="TextLabel1">
-        <property name="text">
-         <string>Command line:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="5" column="1">
     <widget class="QGroupBox" name="m_state">
      <property name="enabled">
@@ -230,10 +126,13 @@
       <item row="1" column="0" colspan="3">
        <widget class="QLCDNumber" name="m_counter">
         <property name="toolTip">
-         <string>This many seconds are left</string>
+         <string>Time in seconds until command is executed</string>
         </property>
         <property name="whatsThis">
          <string>This number is how many seconds are left for the selected countdown.</string>
+        </property>
+        <property name="numDigits">
+         <number>6</number>
         </property>
        </widget>
       </item>
@@ -287,6 +186,165 @@
      <property name="whatsThis">
       <string>Click here to open the help documentation viewer.</string>
      </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QGroupBox" name="m_settings">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Settings</string>
+     </property>
+     <layout class="QGridLayout">
+      <property name="margin">
+       <number>11</number>
+      </property>
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item row="3" column="0" colspan="8">
+       <widget class="QCheckBox" name="m_loop">
+        <property name="toolTip">
+         <string>Check this box if you want your countdown to start over after it finishes</string>
+        </property>
+        <property name="whatsThis">
+         <string>Check this box if you want your countdown to start over after it finishes</string>
+        </property>
+        <property name="text">
+         <string>&amp;Loop</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="TextLabel2">
+        <property name="text">
+         <string>Delay:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5" colspan="2">
+       <widget class="QSpinBox" name="m_delay">
+        <property name="toolTip">
+         <string>Enter the seconds here</string>
+        </property>
+        <property name="whatsThis">
+         <string>You can change the amount of time in the countdown here.</string>
+        </property>
+        <property name="maximum">
+         <number>59</number>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="8">
+       <widget class="QCheckBox" name="m_one">
+        <property name="toolTip">
+         <string>Check this box if you only want to open one copy of your program</string>
+        </property>
+        <property name="whatsThis">
+         <string>Check this box if you only want one instance to open</string>
+        </property>
+        <property name="text">
+         <string>Start only &amp;one instance</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLabel" name="TextLabel3">
+        <property name="text">
+         <string>seconds</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="3">
+       <widget class="QLabel" name="TextLabel1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Command line:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="m_delayH">
+        <property name="toolTip">
+         <string>Enter the hours here</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QSpinBox" name="m_delayM">
+        <property name="toolTip">
+         <string>Enter the minutes here</string>
+        </property>
+        <property name="maximum">
+         <number>59</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="TextLabel4">
+        <property name="text">
+         <string>hours</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="TextLabel5">
+        <property name="text">
+         <string>minutes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="8">
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="3" colspan="6">
+       <widget class="KUrlRequester" name="m_commandLine">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>1</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>command you would like to run when time is up</string>
+        </property>
+        <property name="whatsThis">
+         <string>Enter a program you would like to run when the countdown is zero</string>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
   </layout>

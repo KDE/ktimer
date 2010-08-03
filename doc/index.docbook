@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2008-11-26</date>
-<releaseinfo>0.01.00</releaseinfo>
+<date>2010-07-23</date>
+<releaseinfo>&kde; 4.5</releaseinfo>
 
 <abstract>
 <para>
@@ -129,6 +129,11 @@ time</screeninfo>
     <varlistentry>
     <term><guibutton>Remove</guibutton></term>
     <listitem><para><action>Removes the current task.</action></para></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term><guibutton>Help</guibutton></term>
+    <listitem><para><action>Opens the Handbook.</action></para></listitem>
     </varlistentry>
 </variablelist>
 

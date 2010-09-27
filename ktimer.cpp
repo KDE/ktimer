@@ -109,7 +109,7 @@ KTimerPref::KTimerPref( QWidget *parent)
 
     // create tray icon
     KStatusNotifierItem *tray = new KStatusNotifierItem(this);
-    tray->setIconByName("ktimer");
+    tray->setIconByName(QLatin1String( "ktimer" ));
     tray->setCategory(KStatusNotifierItem::ApplicationStatus);
     tray->setStatus(KStatusNotifierItem::Active);
     // set help button gui item
@@ -299,8 +299,8 @@ void KTimerPref::saveJobs( KConfig *cfg )
 	for (int num = 0; num < nbList; ++num)
 	{
 		KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->topLevelItem(num));
-        item->job()->save( cfg, QString("Job%1").arg( num ) );
-		
+        item->job()->save( cfg, QString(QLatin1String( "Job%1" )).arg( num ) );
+
 	}
 
 	KConfigGroup jobscfg = cfg->group("Jobs");
@@ -328,7 +328,7 @@ void KTimerPref::loadJobs( KConfig *cfg )
             connect( job, SIGNAL(finished(KTimerJob*,bool)),
                      SLOT(jobFinished(KTimerJob*,bool)) );
 
-            job->load( cfg, QString( "Job%1" ).arg(n) );
+            job->load( cfg, QString( QLatin1String( "Job%1" ) ).arg(n) );
 
             job->setUser( item );
             jobChanged ( job);
@@ -400,12 +400,12 @@ void KTimerJob::load( KConfig *cfg, const QString& grp )
 }
 
 
-// Format given seconds to hour:minute:seconds and return QString 
+// Format given seconds to hour:minute:seconds and return QString
 QString KTimerJob::formatTime( int seconds ) const
 {
     int h, m, s;
     secondsToHMS( seconds, &h, &m, &s );
-    return QString( "%1:%2:%3" ).arg( h ).arg( m, 2, 10, QChar( '0' ) ).arg( s,2, 10, QChar( '0' ) );
+    return QString( QLatin1String( "%1:%2:%3" ) ).arg( h ).arg( m, 2, 10, QLatin1Char( '0' ) ).arg( s,2, 10, QLatin1Char( '0' ) );
 }
 
 

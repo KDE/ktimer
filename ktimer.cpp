@@ -66,16 +66,16 @@ public:
         setText( 0, m_job->formatTime(m_job->value()) );
 
         if( m_error )
-            setIcon( 0, KIcon("process-stop") );
+            setIcon( 0, KIcon( QLatin1String( "process-stop" )) );
         else
             setIcon( 0, QPixmap() );
 
         setText( 1, m_job->formatTime(m_job->delay()) );
 
         switch( m_job->state() ) {
-            case KTimerJob::Stopped: setIcon( 2, KIcon("media-playback-stop") ); break;
-            case KTimerJob::Paused: setIcon( 2, KIcon("media-playback-pause") ); break;
-            case KTimerJob::Started: setIcon( 2, KIcon("arrow-right") ); break;
+            case KTimerJob::Stopped: setIcon( 2, KIcon( QLatin1String( "media-playback-stop" )) ); break;
+            case KTimerJob::Paused: setIcon( 2, KIcon( QLatin1String( "media-playback-pause" )) ); break;
+            case KTimerJob::Started: setIcon( 2, KIcon( QLatin1String( "arrow-right" )) ); break;
         }
 
         setText( 3, m_job->command() );
@@ -103,9 +103,9 @@ KTimerPref::KTimerPref( QWidget *parent)
     setupUi(this);
 
     // set icons
-    m_stop->setIcon( KIcon("media-playback-stop") );
-    m_pause->setIcon( KIcon("media-playback-pause") );
-    m_start->setIcon( KIcon("arrow-right") );
+    m_stop->setIcon( KIcon( QLatin1String( "media-playback-stop" )) );
+    m_pause->setIcon( KIcon( QLatin1String( "media-playback-pause" )) );
+    m_start->setIcon( KIcon( QLatin1String( "arrow-right" )) );
 
     // create tray icon
     KStatusNotifierItem *tray = new KStatusNotifierItem(this);

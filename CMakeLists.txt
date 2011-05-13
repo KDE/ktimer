@@ -1,5 +1,9 @@
 project(ktimer)
 
+find_package(KDE4)
+include( KDE4Defaults )
+include_directories(${KDE4_INCLUDES})
+
 set(ktimer_SRCS main.cpp ktimer.cpp )
 
 kde4_add_ui_files(ktimer_SRCS prefwidget.ui )

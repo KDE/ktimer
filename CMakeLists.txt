@@ -23,3 +23,4 @@ install( PROGRAMS ktimer.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 kde4_install_icons( ${ICON_INSTALL_DIR}   )
 
+add_subdirectory(doc)

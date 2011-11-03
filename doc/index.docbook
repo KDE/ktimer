@@ -106,7 +106,7 @@ time</screeninfo>
 <screeninfo>Let's add a second task.</screeninfo>
 	<mediaobject>
 	  <imageobject>
-	    <imagedata fileref="two.at.once.png" format="PNG"/>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
 	  </imageobject>
 	    <textobject>
 	    <phrase>start another &konqueror;, you can never have too many!</phrase>

@@ -26,7 +26,7 @@
 static const char description[] =
         I18N_NOOP("KDE Timer");
 
-static const char version[] = "v0.9";
+static const char version[] = "v0.10";
 
 int main( int argc, char **argv )
 {

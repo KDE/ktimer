@@ -282,7 +282,7 @@ void KTimerPref::delayChanged()
     }
 }
 
-// Realy quits the application
+// Really quits the application
 void KTimerPref::exit() {
     done(0);
     qApp->quit();

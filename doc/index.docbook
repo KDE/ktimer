@@ -10,9 +10,9 @@
   <!ENTITY % addindex "IGNORE">
 ]>
 
-<book lang="&language;">
+<book id="ktimer" lang="&language;">
 
-<bookinfo>
+<book id="ktimer"info>
 <title>The &ktimer; Handbook</title>
 
 <authorgroup>

@@ -362,6 +362,22 @@
    <header>kpushbutton.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>m_list</tabstop>
+  <tabstop>m_add</tabstop>
+  <tabstop>m_remove</tabstop>
+  <tabstop>m_commandLine</tabstop>
+  <tabstop>m_delayH</tabstop>
+  <tabstop>m_delayM</tabstop>
+  <tabstop>m_delay</tabstop>
+  <tabstop>m_loop</tabstop>
+  <tabstop>m_one</tabstop>
+  <tabstop>m_stop</tabstop>
+  <tabstop>m_pause</tabstop>
+  <tabstop>m_start</tabstop>
+  <tabstop>m_slider</tabstop>
+  <tabstop>m_help</tabstop>
+ </tabstops>
  <includes>
   <include location="global">kseparator.h</include>
  </includes>

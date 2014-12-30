@@ -23,7 +23,9 @@ find_package(KF5 REQUIRED COMPONENTS
     I18n
     WidgetsAddons
     XmlGui
-    KDELibs4Support
+    KIO
+    IconThemes
+    Notifications
 )
 
 
@@ -31,11 +33,11 @@ set(ktimer_SRCS main.cpp ktimer.cpp )
 
 ki18n_wrap_ui(ktimer_SRCS prefwidget.ui )
 
-kde4_add_app_icon(ktimer_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-ktimer.png")
+#kde4_add_app_icon(ktimer_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-ktimer.png")
 
 add_executable(ktimer ${ktimer_SRCS})
 
-target_link_libraries(ktimer  KF5::KIOCore KF5::KDELibs4Support)
+target_link_libraries(ktimer  KF5::KIOCore KF5::I18n KF5::XmlGui KF5::KIOWidgets KF5::IconThemes KF5::Notifications)
 
 install(TARGETS ktimer  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

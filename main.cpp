@@ -17,7 +17,6 @@
  */
 
 
-#include <klocale.h>
 
 #include <KAboutData>
 #include <QApplication>

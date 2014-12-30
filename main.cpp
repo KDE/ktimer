@@ -16,10 +16,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <kapplication.h>
+
 #include <klocale.h>
-#include <kcmdlineargs.h>
-#include <K4AboutData>
+
+#include <KAboutData>
+#include <QApplication>
+#include <KLocalizedString>
+#include <QCommandLineParser>
 
 #include "ktimer.h"
 
@@ -30,18 +33,24 @@ static const char version[] = "v0.10";
 
 int main( int argc, char **argv )
 {
-    K4AboutData aboutData( "ktimer", 0, ki18n("KTimer"),
-                          version, ki18n(description), K4AboutData::License_GPL,
-                          ki18n("(c) 2001, Stefan Schimanski"), KLocalizedString(),
+    KAboutData aboutData( "ktimer", i18n("KTimer"),
+                          version, i18n(description), KAboutLicense::GPL,
+                          i18n("(c) 2001, Stefan Schimanski"),
                           "http://utils.kde.org/projects/ktimer");
-    aboutData.addAuthor(ki18n("Stefan Schimanski"),KLocalizedString(), "schimmi@kde.org");
-    KCmdLineArgs::init( argc, argv, &aboutData );
+    aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), "schimmi@kde.org");
+    QApplication app(argc, argv);
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(aboutData);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
 
-    KApplication app;
     app.setQuitOnLastWindowClosed( false );
 
     KTimerPref *timer = new KTimerPref;
-    app.setTopWidget( timer );
+    timer->show();
 
     return app.exec();
 }

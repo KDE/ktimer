@@ -33,7 +33,7 @@
 #include "kstatusnotifieritem.h"
 #include <KToolInvocation>
 #include <KHelpClient>
-
+#include <KGuiItem>
 class KTimerJobItem : public QTreeWidgetItem {
 public:
     KTimerJobItem( KTimerJob *job, QTreeWidget *parent )
@@ -115,7 +115,7 @@ KTimerPref::KTimerPref( QWidget *parent)
     tray->setCategory(KStatusNotifierItem::ApplicationStatus);
     tray->setStatus(KStatusNotifierItem::Active);
     // set help button gui item
-    m_help->setGuiItem(KStandardGuiItem::help());
+    KGuiItem::assign(m_help,KStandardGuiItem::help());
 
     // Exit
     QAction *exit = KStandardAction::quit(this, SLOT(exit()), this);

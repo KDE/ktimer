@@ -54,7 +54,7 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="KPushButton" name="m_add">
+    <widget class="QPushButton" name="m_add">
      <property name="toolTip">
       <string>Add a new task</string>
      </property>
@@ -67,7 +67,7 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="KPushButton" name="m_remove">
+    <widget class="QPushButton" name="m_remove">
      <property name="toolTip">
       <string>Remove a task</string>
      </property>
@@ -179,7 +179,7 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="KPushButton" name="m_help">
+    <widget class="QPushButton" name="m_help">
      <property name="toolTip">
       <string>Detailed help documentation</string>
      </property>
@@ -355,11 +355,6 @@
    <extends>QFrame</extends>
    <header>kurlrequester.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

@@ -143,3 +143,4 @@ X-KDE-StartupNotify=true
 X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Utility;
 X-DocPath=ktimer/index.html
+X-DBUS-ServiceName=org.kde.ktimer

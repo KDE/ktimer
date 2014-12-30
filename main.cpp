@@ -22,6 +22,7 @@
 #include <QApplication>
 #include <KLocalizedString>
 #include <QCommandLineParser>
+#include <kdelibs4configmigrator.h>
 
 #include "ktimer.h"
 
@@ -32,6 +33,10 @@ static const char version[] = "v0.10";
 
 int main( int argc, char **argv )
 {
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("ktimer"));
+    migrate.setConfigFiles(QStringList() << QStringLiteral("ktimerrc"));
+    migrate.migrate();
+
     KAboutData aboutData( "ktimer", i18n("KTimer"),
                           version, i18n(description), KAboutLicense::GPL,
                           i18n("(c) 2001, Stefan Schimanski"),

@@ -121,11 +121,10 @@ KTimerPref::KTimerPref( QWidget *parent)
     addAction(exit);
 
     // connect
-    connect( m_add, SIGNAL(clicked()), SLOT(add()) );
-    connect( m_remove, SIGNAL(clicked()), SLOT(remove()) );
-    connect( m_help, SIGNAL(clicked()), SLOT(help()) );
-    connect( m_list, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
-             SLOT(currentChanged(QTreeWidgetItem*,QTreeWidgetItem*)) );
+    connect(m_add, &QPushButton::clicked, this, &KTimerPref::add);
+    connect(m_remove, &QPushButton::clicked, this, &KTimerPref::remove);
+    connect(m_help, &QPushButton::clicked, this, &KTimerPref::help);
+    connect(m_list, &QTreeWidget::currentItemChanged, this, &KTimerPref::currentChanged);
     loadJobs( KSharedConfig::openConfig().data() );
 
     show();
@@ -147,16 +146,11 @@ void KTimerPref::add()
     KTimerJob *job = new KTimerJob;
     KTimerJobItem *item = new KTimerJobItem( job, m_list );
 
-    connect( job, SIGNAL(delayChanged(KTimerJob*,uint)),
-             SLOT(jobChanged(KTimerJob*)) );
-    connect( job, SIGNAL(valueChanged(KTimerJob*,uint)),
-             SLOT(jobChanged(KTimerJob*)) );
-    connect( job, SIGNAL(stateChanged(KTimerJob*,States)),
-             SLOT(jobChanged(KTimerJob*)) );
-    connect( job, SIGNAL(commandChanged(KTimerJob*,QString)),
-             SLOT(jobChanged(KTimerJob*)) );
-    connect( job, SIGNAL(finished(KTimerJob*,bool)),
-             SLOT(jobFinished(KTimerJob*,bool)) );
+    connect(job, &KTimerJob::delayChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::valueChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::stateChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::commandChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::finished, this, &KTimerPref::jobFinished);
 
     job->setUser( item );
 
@@ -212,24 +206,17 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
 
         connect( m_commandLine->lineEdit(), SIGNAL(textChanged(QString)),
                  job, SLOT(setCommand(QString)) );
-        connect( m_delayH, SIGNAL(valueChanged(int)),
-                 SLOT(delayChanged()) );
-        connect( m_delayM, SIGNAL(valueChanged(int)),
-                 SLOT(delayChanged()) );
-        connect( m_delay, SIGNAL(valueChanged(int)),
-                 SLOT(delayChanged()) );
-        connect( m_loop, SIGNAL(toggled(bool)),
-                 job, SLOT(setLoop(bool)) );
-        connect( m_one, SIGNAL(toggled(bool)),
-                 job, SLOT(setOneInstance(bool)) );
-        connect( m_stop, SIGNAL(clicked()),
-                 job, SLOT(stop()) );
-        connect( m_pause, SIGNAL(clicked()),
-                 job, SLOT(pause()) );
-        connect( m_start, SIGNAL(clicked()),
-                 job, SLOT(start()) );
+        connect(m_delayH, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
+        connect(m_delayM, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
+        connect(m_delay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
+        connect(m_loop, &QCheckBox::toggled, job, &KTimerJob::setLoop);
+        connect(m_one, &QCheckBox::toggled, job, &KTimerJob::setOneInstance);
+        connect(m_stop, &QToolButton::clicked, job, &KTimerJob::stop);
+        connect(m_pause, &QToolButton::clicked, job, &KTimerJob::pause);
+        connect(m_start, &QToolButton::clicked, job, &KTimerJob::start);
         connect( m_slider, SIGNAL(valueChanged(int)),
                  job, SLOT(setValue(int)) );
+
 
         m_commandLine->lineEdit()->setText( job->command() );
         m_loop->setChecked( job->loop() );
@@ -318,16 +305,11 @@ void KTimerPref::loadJobs( KConfig *cfg )
             KTimerJob *job = new KTimerJob;
             KTimerJobItem *item = new KTimerJobItem( job, m_list );
 
-            connect( job, SIGNAL(delayChanged(KTimerJob*,uint)),
-                     SLOT(jobChanged(KTimerJob*)) );
-            connect( job, SIGNAL(valueChanged(KTimerJob*,uint)),
-                     SLOT(jobChanged(KTimerJob*)) );
-            connect( job, SIGNAL(stateChanged(KTimerJob*,States)),
-                     SLOT(jobChanged(KTimerJob*)) );
-            connect( job, SIGNAL(commandChanged(KTimerJob*,QString)),
-                     SLOT(jobChanged(KTimerJob*)) );
-            connect( job, SIGNAL(finished(KTimerJob*,bool)),
-                     SLOT(jobFinished(KTimerJob*,bool)) );
+            connect(job, &KTimerJob::delayChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::valueChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::stateChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::commandChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::finished, this, &KTimerPref::jobFinished);
 
             job->load( cfg, QString( QLatin1String( "Job%1" ) ).arg(n) );
 
@@ -369,7 +351,7 @@ KTimerJob::KTimerJob( QObject *parent)
     d->user = 0;
 
     d->timer = new QTimer( this );
-    connect( d->timer, SIGNAL(timeout()), SLOT(timeout()) );
+    connect(d->timer, &QTimer::timeout, this, &KTimerJob::timeout);
 }
 
 
@@ -607,8 +589,7 @@ void KTimerJob::fire()
     if( !d->oneInstance || d->processes.isEmpty() ) {
         QProcess *proc = new QProcess;
         d->processes.append( proc );
-        connect( proc, SIGNAL(finished(int,QProcess::ExitStatus)),
-                 SLOT(processExited(int,QProcess::ExitStatus)) );
+        connect(proc, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KTimerJob::processExited);
         if (!d->command.simplified ().isEmpty()) {
 	        proc->start(d->command);
 	        emit fired( this );

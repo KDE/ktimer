@@ -20,7 +20,7 @@
 
 #include <QProcess>
 #include <QTimer>
-
+#include <KConfigGroup>
 #include <klineedit.h>
 #include <kiconloader.h>
 #include <kapplication.h>
@@ -28,9 +28,11 @@
 #include <kglobal.h>
 #include <ktoolinvocation.h>
 #include <kstandardguiitem.h>
-#include <kaction.h>
+#include <QAction>
 #include <kstandardaction.h>
 #include "kstatusnotifieritem.h"
+#include <KToolInvocation>
+#include <KHelpClient>
 
 class KTimerJobItem : public QTreeWidgetItem {
 public:
@@ -66,16 +68,16 @@ public:
         setText( 0, m_job->formatTime(m_job->value()) );
 
         if( m_error )
-            setIcon( 0, KIcon( QLatin1String( "process-stop" )) );
+            setIcon( 0, QIcon::fromTheme( QLatin1String( "process-stop" )) );
         else
             setIcon( 0, QPixmap() );
 
         setText( 1, m_job->formatTime(m_job->delay()) );
 
         switch( m_job->state() ) {
-            case KTimerJob::Stopped: setIcon( 2, KIcon( QLatin1String( "media-playback-stop" )) ); break;
-            case KTimerJob::Paused: setIcon( 2, KIcon( QLatin1String( "media-playback-pause" )) ); break;
-            case KTimerJob::Started: setIcon( 2, KIcon( QLatin1String( "arrow-right" )) ); break;
+            case KTimerJob::Stopped: setIcon( 2, QIcon::fromTheme( QLatin1String( "media-playback-stop" )) ); break;
+            case KTimerJob::Paused: setIcon( 2, QIcon::fromTheme( QLatin1String( "media-playback-pause" )) ); break;
+            case KTimerJob::Started: setIcon( 2, QIcon::fromTheme( QLatin1String( "arrow-right" )) ); break;
         }
 
         setText( 3, m_job->command() );
@@ -103,9 +105,9 @@ KTimerPref::KTimerPref( QWidget *parent)
     setupUi(this);
 
     // set icons
-    m_stop->setIcon( KIcon( QLatin1String( "media-playback-stop" )) );
-    m_pause->setIcon( KIcon( QLatin1String( "media-playback-pause" )) );
-    m_start->setIcon( KIcon( QLatin1String( "arrow-right" )) );
+    m_stop->setIcon( QIcon::fromTheme( QLatin1String( "media-playback-stop" )) );
+    m_pause->setIcon( QIcon::fromTheme( QLatin1String( "media-playback-pause" )) );
+    m_start->setIcon( QIcon::fromTheme( QLatin1String( "arrow-right" )) );
 
     // create tray icon
     KStatusNotifierItem *tray = new KStatusNotifierItem(this);
@@ -116,7 +118,7 @@ KTimerPref::KTimerPref( QWidget *parent)
     m_help->setGuiItem(KStandardGuiItem::help());
 
     // Exit
-    KAction *exit = KStandardAction::quit(this, SLOT(exit()), this);
+    QAction *exit = KStandardAction::quit(this, SLOT(exit()), this);
     addAction(exit);
 
     // connect
@@ -125,7 +127,7 @@ KTimerPref::KTimerPref( QWidget *parent)
     connect( m_help, SIGNAL(clicked()), SLOT(help()) );
     connect( m_list, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
              SLOT(currentChanged(QTreeWidgetItem*,QTreeWidgetItem*)) );
-    loadJobs( KGlobal::config().data() );
+    loadJobs( KSharedConfig::openConfig().data() );
 
     show();
 }
@@ -137,7 +139,7 @@ KTimerPref::~KTimerPref()
 }
 
 void KTimerPref::saveAllJobs() {
-    saveJobs( KGlobal::config().data() );
+    saveJobs( KSharedConfig::openConfig().data() );
 }
 
 
@@ -176,7 +178,7 @@ void KTimerPref::remove()
 
 void KTimerPref::help()
 {
-    KToolInvocation::invokeHelp();
+    KHelpClient::invokeHelp();
 }
 
 // note, don't use old, but added it so we can connect to the new one

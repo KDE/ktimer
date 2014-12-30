@@ -1,30 +1,41 @@
 project(ktimer)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    find_package(KDE4)
-    include( KDE4Defaults )
-    include_directories(${KDE4_INCLUDES})
+cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
+set (QT_MIN_VERSION "5.2.0")
 
-    add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
-    add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+find_package (ECM 1.3.0 REQUIRED NO_MODULE)
+set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-    # If definitions like -D_GNU_SOURCE are needed for these checks they
-    # should be added to _KDE4_PLATFORM_DEFINITIONS when it is originally
-    # defined outside this file.  Here we include these definitions in
-    # CMAKE_REQUIRED_DEFINITIONS so they will be included in the build of
-    # checks below.
-    set( CMAKE_REQUIRED_DEFINITIONS ${_KDE4_PLATFORM_DEFINITIONS} )
-endif()
+add_definitions(-DTRANSLATION_DOMAIN="kcharselect")
+
+include(KDEInstallDirs)
+include(KDECompilerSettings)
+include(KDECMakeSettings)
+include(ECMInstallIcons)
+
+find_package (Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+    Core
+    Widgets
+)
+
+find_package(KF5 REQUIRED COMPONENTS
+    DocTools
+    I18n
+    WidgetsAddons
+    XmlGui
+    KDELibs4Support
+)
+
 
 set(ktimer_SRCS main.cpp ktimer.cpp )
 
-kde4_add_ui_files(ktimer_SRCS prefwidget.ui )
+ki18n_wrap_ui(ktimer_SRCS prefwidget.ui )
 
 kde4_add_app_icon(ktimer_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-ktimer.png")
 
-kde4_add_executable(ktimer ${ktimer_SRCS})
+add_executable(ktimer ${ktimer_SRCS})
 
-target_link_libraries(ktimer  ${KDE4_KIO_LIBS})
+target_link_libraries(ktimer  KF5::KIOCore KF5::KDELibs4Support)
 
 install(TARGETS ktimer  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
@@ -33,6 +44,6 @@ install(TARGETS ktimer  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( PROGRAMS ktimer.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 
-kde4_install_icons( ${ICON_INSTALL_DIR}   )
+ecm_install_icons( ${ICON_INSTALL_DIR}   )
 
 add_subdirectory(doc)

@@ -44,6 +44,6 @@ install(TARGETS ktimer  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( PROGRAMS ktimer.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 
-ecm_install_icons( ${ICON_INSTALL_DIR}   )
+ecm_install_icons( ICONS hi128-apps-ktimer.png  hi16-apps-ktimer.png  hi32-apps-ktimer.png  hi48-apps-ktimer.png DESTINATION ${ICON_INSTALL_DIR}   )
 
 add_subdirectory(doc)

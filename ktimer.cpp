@@ -23,9 +23,6 @@
 #include <KConfigGroup>
 #include <klineedit.h>
 #include <kiconloader.h>
-#include <kapplication.h>
-#include <kfiledialog.h>
-#include <kglobal.h>
 #include <ktoolinvocation.h>
 #include <kstandardguiitem.h>
 #include <QAction>
@@ -34,6 +31,8 @@
 #include <KToolInvocation>
 #include <KHelpClient>
 #include <KGuiItem>
+#include <KSharedConfig>
+
 class KTimerJobItem : public QTreeWidgetItem {
 public:
     KTimerJobItem( KTimerJob *job, QTreeWidget *parent )

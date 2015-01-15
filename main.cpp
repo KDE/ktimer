@@ -23,7 +23,7 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <kdelibs4configmigrator.h>
-
+#include <KDBusService>
 #include "ktimer.h"
 
 static const char description[] =
@@ -33,6 +33,7 @@ static const char version[] = "v0.10";
 
 int main( int argc, char **argv )
 {
+    QApplication app(argc, argv);
     Kdelibs4ConfigMigrator migrate(QStringLiteral("ktimer"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("ktimerrc"));
     migrate.migrate();
@@ -42,7 +43,6 @@ int main( int argc, char **argv )
                           i18n("(c) 2001, Stefan Schimanski"),
                           "http://utils.kde.org/projects/ktimer");
     aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), "schimmi@kde.org");
-    QApplication app(argc, argv);
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
@@ -52,6 +52,7 @@ int main( int argc, char **argv )
     aboutData.processCommandLine(&parser);
 
     app.setQuitOnLastWindowClosed( false );
+    KDBusService service;
 
     KTimerPref *timer = new KTimerPref;
     timer->show();

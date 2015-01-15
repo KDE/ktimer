@@ -37,7 +37,7 @@ ki18n_wrap_ui(ktimer_SRCS prefwidget.ui )
 
 add_executable(ktimer ${ktimer_SRCS})
 
-target_link_libraries(ktimer  KF5::KIOCore KF5::I18n KF5::XmlGui KF5::KIOWidgets KF5::IconThemes KF5::Notifications)
+target_link_libraries(ktimer  KF5::KIOCore KF5::I18n KF5::XmlGui KF5::KIOWidgets KF5::IconThemes KF5::Notifications KF5::DBusAddons)
 
 install(TARGETS ktimer  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

@@ -49,3 +49,4 @@ install( PROGRAMS org.kde.ktimer.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 ecm_install_icons( ICONS hi128-apps-ktimer.png  hi16-apps-ktimer.png  hi32-apps-ktimer.png  hi48-apps-ktimer.png DESTINATION ${ICON_INSTALL_DIR}   )
 
 add_subdirectory(doc)
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

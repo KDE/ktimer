@@ -23,7 +23,6 @@ find_package(KF5 REQUIRED COMPONENTS
     DocTools
     I18n
     WidgetsAddons
-    XmlGui
     KIO
     IconThemes
     DBusAddons
@@ -40,7 +39,7 @@ ecm_add_app_icon(ktimer_SRCS ICONS ${ICONS_SRCS})
 
 add_executable(ktimer ${ktimer_SRCS})
 
-target_link_libraries(ktimer  KF5::KIOCore KF5::I18n KF5::XmlGui KF5::KIOWidgets KF5::IconThemes KF5::Notifications KF5::DBusAddons)
+target_link_libraries(ktimer  KF5::I18n KF5::KIOWidgets KF5::ConfigWidgets KF5::IconThemes KF5::Notifications KF5::DBusAddons)
 
 install(TARGETS ktimer  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

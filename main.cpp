@@ -34,6 +34,12 @@ static const char version[] = "v0.10";
 int main( int argc, char **argv )
 {
     QApplication app(argc, argv);
+
+    /**
+     * enable high dpi support
+     */
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     Kdelibs4ConfigMigrator migrate(QStringLiteral("ktimer"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("ktimerrc"));
     migrate.migrate();

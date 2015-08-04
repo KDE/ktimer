@@ -29,12 +29,12 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2013-05-25</date>
-<releaseinfo>&kde; 4.11</releaseinfo>
+<date>2015-08-04</date>
+<releaseinfo>Applications 15.08</releaseinfo>
 
 <abstract>
 <para>
-&ktimer; is an application for the &kde; environment that lets you start an application after a certain amount of time has passed.
+&ktimer; is an application that lets you start an application after a certain amount of time has passed.
 </para>
 </abstract>
 
@@ -164,25 +164,6 @@ time</screeninfo>
 &underGPL;        	 <!-- GPL License -->
 
 </chapter>
-
-<!-- !!!!do not change ANYTHING after this line!!!! (?) -->
-<appendix id="installation">
-<title>Installation</title>
-
-<sect1 id="getting-ktimer">
-<title>How to obtain &ktimer;</title>
-
-&install.intro.documentation;
-
-</sect1>
-
-<sect1 id="compilation">
-<title>Compilation and installation</title>
-
-&install.compile.documentation;
-
-</sect1>
-</appendix>
 
 &documentation.index;
 </book>

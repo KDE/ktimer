@@ -44,6 +44,7 @@ int main( int argc, char **argv )
     migrate.setConfigFiles(QStringList() << QStringLiteral("ktimerrc"));
     migrate.migrate();
 
+    KLocalizedString::setApplicationDomain("ktimer");
     KAboutData aboutData( "ktimer", i18n("KTimer"),
                           version, i18n(description), KAboutLicense::GPL,
                           i18n("(c) 2001, Stefan Schimanski"),

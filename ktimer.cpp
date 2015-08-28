@@ -22,7 +22,6 @@
 #include <QTimer>
 #include <KConfigGroup>
 #include <klineedit.h>
-#include <kiconloader.h>
 #include <ktoolinvocation.h>
 #include <kstandardguiitem.h>
 #include <QAction>

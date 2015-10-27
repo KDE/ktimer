@@ -66,16 +66,16 @@ public:
         setText( 0, m_job->formatTime(m_job->value()) );
 
         if( m_error )
-            setIcon( 0, QIcon::fromTheme( QLatin1String( "process-stop" )) );
+            setIcon( 0, QIcon::fromTheme( QStringLiteral( "process-stop" )) );
         else
             setIcon( 0, QPixmap() );
 
         setText( 1, m_job->formatTime(m_job->delay()) );
 
         switch( m_job->state() ) {
-            case KTimerJob::Stopped: setIcon( 2, QIcon::fromTheme( QLatin1String( "media-playback-stop" )) ); break;
-            case KTimerJob::Paused: setIcon( 2, QIcon::fromTheme( QLatin1String( "media-playback-pause" )) ); break;
-            case KTimerJob::Started: setIcon( 2, QIcon::fromTheme( QLatin1String( "arrow-right" )) ); break;
+            case KTimerJob::Stopped: setIcon( 2, QIcon::fromTheme( QStringLiteral( "media-playback-stop" )) ); break;
+            case KTimerJob::Paused: setIcon( 2, QIcon::fromTheme( QStringLiteral( "media-playback-pause" )) ); break;
+            case KTimerJob::Started: setIcon( 2, QIcon::fromTheme( QStringLiteral( "arrow-right" )) ); break;
         }
 
         setText( 3, m_job->command() );
@@ -103,13 +103,13 @@ KTimerPref::KTimerPref( QWidget *parent)
     setupUi(this);
 
     // set icons
-    m_stop->setIcon( QIcon::fromTheme( QLatin1String( "media-playback-stop" )) );
-    m_pause->setIcon( QIcon::fromTheme( QLatin1String( "media-playback-pause" )) );
-    m_start->setIcon( QIcon::fromTheme( QLatin1String( "arrow-right" )) );
+    m_stop->setIcon( QIcon::fromTheme( QStringLiteral( "media-playback-stop" )) );
+    m_pause->setIcon( QIcon::fromTheme( QStringLiteral( "media-playback-pause" )) );
+    m_start->setIcon( QIcon::fromTheme( QStringLiteral( "arrow-right" )) );
 
     // create tray icon
     KStatusNotifierItem *tray = new KStatusNotifierItem(this);
-    tray->setIconByName(QLatin1String( "ktimer" ));
+    tray->setIconByName(QStringLiteral( "ktimer" ));
     tray->setCategory(KStatusNotifierItem::ApplicationStatus);
     tray->setStatus(KStatusNotifierItem::Active);
     // set help button gui item
@@ -286,7 +286,7 @@ void KTimerPref::saveJobs( KConfig *cfg )
 	for (int num = 0; num < nbList; ++num)
 	{
 		KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->topLevelItem(num));
-        item->job()->save( cfg, QString(QLatin1String( "Job%1" )).arg( num ) );
+        item->job()->save( cfg, QStringLiteral( "Job%1" ).arg( num ) );
 
 	}
 
@@ -310,7 +310,7 @@ void KTimerPref::loadJobs( KConfig *cfg )
             connect(job, &KTimerJob::commandChanged, this, &KTimerPref::jobChanged);
             connect(job, &KTimerJob::finished, this, &KTimerPref::jobFinished);
 
-            job->load( cfg, QString( QLatin1String( "Job%1" ) ).arg(n) );
+            job->load( cfg, QStringLiteral( "Job%1" ).arg(n) );
 
             job->setUser( item );
             jobChanged ( job);
@@ -387,7 +387,7 @@ QString KTimerJob::formatTime( int seconds ) const
 {
     int h, m, s;
     secondsToHMS( seconds, &h, &m, &s );
-    return QString( QLatin1String( "%1:%2:%3" ) ).arg( h ).arg( m, 2, 10, QLatin1Char( '0' ) ).arg( s,2, 10, QLatin1Char( '0' ) );
+    return QStringLiteral( "%1:%2:%3" ).arg( h ).arg( m, 2, 10, QLatin1Char( '0' ) ).arg( s,2, 10, QLatin1Char( '0' ) );
 }
 
 

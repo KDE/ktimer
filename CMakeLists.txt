@@ -22,7 +22,6 @@ find_package(KF5 REQUIRED COMPONENTS
     I18n
     WidgetsAddons
     KIO
-    IconThemes
     DBusAddons
     Notifications
 )

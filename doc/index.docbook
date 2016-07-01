@@ -1,7 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY kappname "&ktimer;">
-  <!ENTITY package "kdeutils">
   <!ENTITY A.L.Spehr "<personname><firstname>A. L.</firstname><surname>Spehr</surname></personname>">
   <!ENTITY A.L.Spehr.email "<email>zahl+kde@transbay.net</email>">
   <!ENTITY Stefan.Schimanski "<personname><firstname>Stefan</firstname><surname>Schimanski</surname></personname>">

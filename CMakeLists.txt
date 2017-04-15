@@ -6,12 +6,8 @@ set (QT_MIN_VERSION "5.5.0")
 find_package (ECM 5.10.0 REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-if (POLICY CMP0063)
-    cmake_policy(SET CMP0063 NEW)
-endif()
-
 include(KDEInstallDirs)
-include(KDECompilerSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)

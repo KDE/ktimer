@@ -100,7 +100,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
 
  public slots:
     void exit();
-    void done(int result);
+    void done(int result) Q_DECL_OVERRIDE;
 
  protected slots:
     void add();

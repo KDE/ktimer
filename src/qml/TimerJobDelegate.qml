@@ -35,23 +35,25 @@ Kirigami.AbstractListItem {
             onClicked : {
                 job.start();
             }
-            visible : job.state != TimerJob.Started
+            visible : job.state != TimerJob.Started && listItem.hovered
         }
         QC1.Button {
             iconName : "media-playback-pause"
             onClicked : {
                 job.pause();
             }
-            visible : job.state == TimerJob.Started
+            visible : job.state == TimerJob.Started && listItem.hovered
         }
         QC1.Button {
             iconName : "media-playback-stop"
+            visible: listItem.hovered
             onClicked : {
                 job.stop();
             }
         }
         QC1.Button {
             text : "Remove"
+            visible: listItem.hovered
             onClicked : {
                 jobModel.removeJob(index);
             }

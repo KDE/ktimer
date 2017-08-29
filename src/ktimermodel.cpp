@@ -17,11 +17,7 @@ QVariant KTimerModel::data(const QModelIndex& idx, int role) const
 
     auto job = m_timerInfos.at(idx.row());
     switch(role) {
-        case VALUE: return job->formatTime(job->delay());
-        case CURRENT: return job->formatTime(job->value());
-        case STATE: return job->state();
-        case COMMAND: return job->command();
-        case LOOP: return job->loop();
+        case JOB: return QVariant::fromValue<QObject*>(job);
     }
     return {};
 }
@@ -43,11 +39,7 @@ int KTimerModel::rowCount(const QModelIndex& parent) const
 QHash<int, QByteArray> KTimerModel::roleNames() const
 {
     return {
-        {VALUE, "value"},
-        {CURRENT, "current"},
-        {STATE, "state"},
-        {LOOP, "loop"},
-        {COMMAND, "command"}
+        {JOB, "job"},
     };
 }
 

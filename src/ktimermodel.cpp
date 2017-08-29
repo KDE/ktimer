@@ -37,7 +37,13 @@ int KTimerModel::rowCount(const QModelIndex& parent) const
 
 QHash<int, QByteArray> KTimerModel::roleNames() const
 {
-    return {};
+    return {
+        {VALUE, "value"},
+        {CURRENT, "current"},
+        {STATE, "state"},
+        {LOOP, "loop"},
+        {COMMAND, "command"}
+    };
 }
 
 void KTimerModel::loadJobs()

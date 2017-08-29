@@ -1,4 +1,5 @@
 #include "ktimermodel.h"
+#include <QDebug>
 
 KTimerModel::KTimerModel(QObject* parent) : QAbstractListModel(parent)
 {

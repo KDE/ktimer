@@ -10,7 +10,7 @@ class KTimerModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum {VALUE = Qt::UserRole+1, CURRENT, STATE, LOOP, COMMAND};
+    enum {JOB};
     KTimerModel(QObject *parent = 0);
     QVariant data(const QModelIndex& idx, int role) const override;
     int rowCount(const QModelIndex& parent) const override;

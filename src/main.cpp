@@ -22,7 +22,9 @@
 #include <QApplication>
 #include <KLocalizedString>
 #include <KStatusNotifierItem>
-#include <QQuickView>
+#include <QQmlApplicationEngine>
+#include <QDebug>
+#include <QWindow>
 
 #include <QCommandLineParser>
 #include <Kdelibs4ConfigMigrator>
@@ -65,16 +67,20 @@ int main( int argc, char **argv )
     KTimerPref *timer = new KTimerPref;
 
     // create tray icon
-    KStatusNotifierItem *tray = new KStatusNotifierItem(timer);
-    tray->setIconByName(QStringLiteral( "ktimer" ));
-    tray->setCategory(KStatusNotifierItem::ApplicationStatus);
-    tray->setStatus(KStatusNotifierItem::Active);
 
     timer->show();
 
-    auto *view = new QQuickView();
-    view->setSource(QUrl("qrc:/KTimer/Main.qml"));
-    view->show();
+    auto *engine = new QQmlApplicationEngine("qrc:/KTimer/Main.qml");
+    for(auto obj : engine->rootObjects()) {
+        if (! qobject_cast<QWindow*>(obj))
+            continue;
+
+        //TODO: find a way for this to work.
+        KStatusNotifierItem *tray = new KStatusNotifierItem(obj);
+        tray->setIconByName(QStringLiteral( "ktimer" ));
+        tray->setCategory(KStatusNotifierItem::ApplicationStatus);
+        tray->setStatus(KStatusNotifierItem::Active);
+    }
 
     return app.exec();
 }

@@ -21,6 +21,7 @@ target_link_libraries(ktimer
     KF5::Notifications
     KF5::DBusAddons
     Qt5::Quick
+    Qt5::Qml
 )
 
 install(TARGETS ktimer ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

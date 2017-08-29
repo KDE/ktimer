@@ -68,12 +68,21 @@ Kirigami.ApplicationWindow {
 
                             QC1.Button {
                                 iconName : "arrow-right"
+                                onClicked : {
+                                    model.job.start();
+                                }
                             }
                             QC1.Button {
                                 iconName : "media-playback-pause"
+                                onClicked : {
+                                    model.job.pause();
+                                }
                             }
                             QC1.Button {
                                 iconName : "media-playback-stop"
+                                onClicked : {
+                                    model.job.stop();
+                                }
                             }
                         }
                     }

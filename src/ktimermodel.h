@@ -18,6 +18,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     Q_INVOKABLE void loadJobs();
     Q_INVOKABLE void saveJobs();
+    Q_INVOKABLE void createJob();
 private:
     QList<KTimerJob*> m_timerInfos;
 

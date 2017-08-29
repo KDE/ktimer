@@ -15,8 +15,13 @@ QVariant KTimerModel::data(const QModelIndex& idx, int role) const
     if (! idx.isValid())
         return {};
 
+    auto job = m_timerInfos.at(idx.row());
     switch(role) {
-        case Qt::DisplayRole : return "Something";
+        case VALUE: return job->formatTime(job->delay());
+        case CURRENT: return job->formatTime(job->value());
+        case STATE: return job->state();
+        case COMMAND: return job->command();
+        case LOOP: return job->loop();
     }
     return {};
 }

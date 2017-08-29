@@ -2,7 +2,6 @@ add_subdirectory(qml)
 
 set(ktimer_SRCS
     main.cpp
-    ktimer.cpp
     ktimermodel.cpp
     ktimerjob.cpp
 )

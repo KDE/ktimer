@@ -7,13 +7,15 @@
 #include <KConfigGroup>
 
 struct KTimerJobPrivate {
-    unsigned delay;
+    int delay;
     QString command;
     bool loop;
     bool oneInstance;
-    unsigned value;
+    int value;
     KTimerJob::States state;
     QList<QProcess *> processes;
+
+    //TODO: Remove this void pointer.
     void *user;
 
     QTimer *timer;
@@ -94,7 +96,7 @@ void KTimerJob::setUser( void *user )
     d->user = user;
 }
 
-unsigned KTimerJob::delay() const
+int KTimerJob::delay() const
 {
     return d->delay;
 }
@@ -113,18 +115,7 @@ void KTimerJob::start()
 {
     setState( Started );
 }
-
 void KTimerJob::setDelay( int sec )
-{
-    setDelay( (unsigned)sec );
-}
-
-void KTimerJob::setValue( int value )
-{
-    setValue( (unsigned)value );
-}
-
-void KTimerJob::setDelay( unsigned sec )
 {
     if( d->delay!=sec ) {
         d->delay = sec;
@@ -175,12 +166,12 @@ void KTimerJob::setOneInstance( bool one )
     }
 }
 
-unsigned KTimerJob::value() const
+int KTimerJob::value() const
 {
     return d->value;
 }
 
-void KTimerJob::setValue( unsigned value )
+void KTimerJob::setValue( int value )
 {
     if( d->value!=value ) {
         d->value = value;

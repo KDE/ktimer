@@ -19,6 +19,8 @@
 
 import QtQuick 2.1
 import org.kde.kirigami 2.1 as Kirigami
+import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.2 as QC2
 
 Kirigami.ApplicationWindow {
     id: root
@@ -33,9 +35,18 @@ Kirigami.ApplicationWindow {
         id: mainPageComponent
         Kirigami.Page {
             title: "Hello"
-            Rectangle {
-                color: "red"
+            ColumnLayout {
                 anchors.fill: parent
+                Rectangle {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    color: "red"
+                }
+                RowLayout {
+                    QC2.Button {
+                        text: "+"
+                    }
+                }
             }
         }
     }

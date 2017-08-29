@@ -43,50 +43,8 @@ Kirigami.ApplicationWindow {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     model: timerModel
-                    delegate : Kirigami.AbstractListItem {
-                        id: listItem
-
-                        RowLayout {
-                            anchors.fill: listItem
-                            spacing: Kirigami.Units.smallSpacing*2
-                            Kirigami.Label {
-                                id: iconItem
-                                Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
-                                Layout.maximumHeight: Layout.minimumHeight
-                                Layout.minimumWidth: height
-                                text: model.job.delay
-                            }
-
-                            Kirigami.Label {
-                                id: labelItem
-                                Layout.fillWidth: true
-                                color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
-                                elide: Text.ElideRight
-                                font: listItem.font
-                                text: model.job.value
-                            }
-
-                            QC1.Button {
-                                iconName : "arrow-right"
-                                onClicked : {
-                                    model.job.start();
-                                }
-                                visible : model.job.state != TimerJob.Started
-                            }
-                            QC1.Button {
-                                iconName : "media-playback-pause"
-                                onClicked : {
-                                    model.job.pause();
-                                }
-                                visible : model.job.state == TimerJob.Started
-                            }
-                            QC1.Button {
-                                iconName : "media-playback-stop"
-                                onClicked : {
-                                    model.job.stop();
-                                }
-                            }
-                        }
+                    delegate : TimerJobDelegate {
+                        job : model.job
                     }
                 }
                 RowLayout {

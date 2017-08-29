@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/KTimer">
         <file>Main.qml</file>
+        <file>TimerJobDelegate.qml</file>
     </qresource>
 </RCC>

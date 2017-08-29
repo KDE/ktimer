@@ -26,6 +26,7 @@
 
 class QTreeWidgetItem;
 class KConfig;
+<<<<<<< HEAD
 
 class KTimerJob : public QObject {
  Q_OBJECT
@@ -93,6 +94,9 @@ class KTimerJob : public QObject {
     struct KTimerJobPrivate *d;
 };
 
+=======
+class KTimerJob;
+>>>>>>> 7c8a04c... Move KTimerJob to its own file
 
 class KTimerPref : public QDialog, public Ui::PrefWidget
 {

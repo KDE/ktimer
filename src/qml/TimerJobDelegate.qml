@@ -8,10 +8,11 @@ import kde.ktimer.components 1.0
 Kirigami.AbstractListItem {
     id: listItem
     property QtObject job;
+    property QtObject jobModel;
 
     RowLayout {
         anchors.fill: listItem
-        spacing: Kirigami.Units.smallSpacing*2
+        spacing: Kirigami.Units.smallSpacing*4
         Kirigami.Label {
             id: iconItem
             Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
@@ -47,6 +48,12 @@ Kirigami.AbstractListItem {
             iconName : "media-playback-stop"
             onClicked : {
                 job.stop();
+            }
+        }
+        QC1.Button {
+            text : "Remove"
+            onClicked : {
+                jobModel.removeJob(index);
             }
         }
     }

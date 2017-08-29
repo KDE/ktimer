@@ -42,6 +42,25 @@ void KTimerModel::createJob()
     insertRows(1, 1, QModelIndex());
 }
 
+bool KTimerModel::removeRows(int first, int last, const QModelIndex& parent)
+{
+    if (last < first)
+        return false;
+    if (first >= m_timerInfos.count() || last >= m_timerInfos.count())
+        return false;
+
+    beginRemoveRows(parent, first, last);
+        auto job = m_timerInfos.takeAt(first);
+        job->deleteLater();
+    endRemoveRows();
+    return true;
+}
+
+void KTimerModel::removeJob(int row)
+{
+    removeRows(row, row, QModelIndex());
+}
+
 int KTimerModel::rowCount(const QModelIndex& parent) const
 {
     Q_UNUSED(parent);

@@ -4,7 +4,7 @@
 #include <QAbstractListModel>
 #include <QList>
 
-class KTimerInfo;
+class KTimerJob;
 
 class KTimerModel : public QAbstractListModel
 {
@@ -15,9 +15,9 @@ public:
     int rowCount(const QModelIndex& parent) const override;
     bool insertRows(int row, int count, const QModelIndex& parent = QModelIndex()) override;
     QHash<int, QByteArray> roleNames() const override;
-    Q_INVOKABLE void load();
+    Q_INVOKABLE void loadJobs();
 private:
-    QList<KTimerInfo*> m_timerInfos;
+    QList<KTimerJob*> m_timerInfos;
 
 };
 

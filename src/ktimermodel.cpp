@@ -40,14 +40,16 @@ QHash<int, QByteArray> KTimerModel::roleNames() const
     return {};
 }
 
-void KTimerModel::load()
+void KTimerModel::loadJobs()
 {
     auto cfg = KSharedConfig::openConfig().data();
     const int numJobs = cfg->group("Jobs").readEntry( "Number", 0 );
     beginResetModel();
+    qDebug() << "Reading " << numJobs;
     for (int n = 0; n < numJobs; ++n) {
         auto *job = new KTimerJob();
         job->load(cfg, QStringLiteral("Job%1").arg(n));
+        m_timerInfos.append(job);
     }
     endResetModel();
 }

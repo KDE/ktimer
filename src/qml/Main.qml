@@ -45,6 +45,7 @@ Kirigami.ApplicationWindow {
                     model: timerModel
                     delegate : TimerJobDelegate {
                         job : model.job
+                        jobModel : timerModel
                     }
                 }
                 RowLayout {

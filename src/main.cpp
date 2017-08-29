@@ -21,6 +21,8 @@
 #include <KAboutData>
 #include <QApplication>
 #include <KLocalizedString>
+#include <KStatusNotifierItem>
+
 #include <QCommandLineParser>
 #include <Kdelibs4ConfigMigrator>
 #include <KDBusService>
@@ -59,6 +61,13 @@ int main( int argc, char **argv )
     KDBusService service;
 
     KTimerPref *timer = new KTimerPref;
+
+    // create tray icon
+    KStatusNotifierItem *tray = new KStatusNotifierItem(timer);
+    tray->setIconByName(QStringLiteral( "ktimer" ));
+    tray->setCategory(KStatusNotifierItem::ApplicationStatus);
+    tray->setStatus(KStatusNotifierItem::Active);
+
     timer->show();
 
     return app.exec();

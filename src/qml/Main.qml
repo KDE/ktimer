@@ -103,5 +103,8 @@ Kirigami.ApplicationWindow {
         Component.onCompleted : {
             timerModel.loadJobs()
         }
+        Component.onDestruction : {
+            timerModel.saveJobs()
+        }
     }
 }

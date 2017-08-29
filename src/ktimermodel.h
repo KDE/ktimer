@@ -17,6 +17,7 @@ public:
     bool insertRows(int row, int count, const QModelIndex& parent = QModelIndex()) override;
     QHash<int, QByteArray> roleNames() const override;
     Q_INVOKABLE void loadJobs();
+    Q_INVOKABLE void saveJobs();
 private:
     QList<KTimerJob*> m_timerInfos;
 

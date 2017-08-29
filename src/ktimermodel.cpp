@@ -48,11 +48,24 @@ void KTimerModel::loadJobs()
     auto cfg = KSharedConfig::openConfig().data();
     const int numJobs = cfg->group("Jobs").readEntry( "Number", 0 );
     beginResetModel();
-    qDebug() << "Reading " << numJobs;
     for (int n = 0; n < numJobs; ++n) {
         auto *job = new KTimerJob();
         job->load(cfg, QStringLiteral("Job%1").arg(n));
         m_timerInfos.append(job);
     }
     endResetModel();
+}
+
+void KTimerModel::saveJobs()
+{
+    auto cfg = KSharedConfig::openConfig().data();
+    for(int i = 0, end = m_timerInfos.count(); i < end; ++i)
+    {
+        const auto job = m_timerInfos.at(i);
+        job->save( cfg, QStringLiteral( "Job%1" ).arg( i ) );
+    }
+
+    KConfigGroup jobscfg = cfg->group("Jobs");
+    jobscfg.writeEntry( "Number", m_timerInfos.count());
+    jobscfg.sync();
 }

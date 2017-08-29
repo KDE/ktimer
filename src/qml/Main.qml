@@ -54,7 +54,7 @@ Kirigami.ApplicationWindow {
                                 Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
                                 Layout.maximumHeight: Layout.minimumHeight
                                 Layout.minimumWidth: height
-                                text: "Teste!"
+                                text: model.current
                             }
 
                             Kirigami.Label {
@@ -63,7 +63,7 @@ Kirigami.ApplicationWindow {
                                 color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
                                 elide: Text.ElideRight
                                 font: listItem.font
-                                text: "Tes  te!"
+                                text: model.value
                             }
 
                             QC1.Button {

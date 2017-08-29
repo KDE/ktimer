@@ -15,6 +15,7 @@ public:
     int rowCount(const QModelIndex& parent) const override;
     bool insertRows(int row, int count, const QModelIndex& parent = QModelIndex()) override;
     QHash<int, QByteArray> roleNames() const override;
+    Q_INVOKABLE void load();
 private:
     QList<KTimerInfo*> m_timerInfos;
 

@@ -92,6 +92,10 @@ Kirigami.ApplicationWindow {
                 RowLayout {
                     QC2.Button {
                         text: "+"
+
+                        onClicked : {
+                            timerModel.createJob();
+                        }
                     }
                 }
             }

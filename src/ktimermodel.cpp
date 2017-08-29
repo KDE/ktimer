@@ -24,10 +24,22 @@ QVariant KTimerModel::data(const QModelIndex& idx, int role) const
 
 bool KTimerModel::insertRows(int row, int count, const QModelIndex& parent)
 {
+    // We ignore everything because we are always inserting at the end.
     Q_UNUSED(row);
     Q_UNUSED(count);
     Q_UNUSED(parent);
+
+    auto currTotal = rowCount(parent);
+    beginInsertRows(parent, currTotal, currTotal);
+    auto *job = new KTimerJob();
+    m_timerInfos.append(job);
+    endInsertRows();
     return false;
+}
+
+void KTimerModel::createJob()
+{
+    insertRows(1, 1, QModelIndex());
 }
 
 int KTimerModel::rowCount(const QModelIndex& parent) const

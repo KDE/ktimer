@@ -2,6 +2,7 @@ set(ktimer_SRCS
     main.cpp
     ktimer.cpp
     ktimermodel.cpp
+    ktimerjob.cpp
 )
 
 ki18n_wrap_ui(ktimer_SRCS prefwidget.ui )

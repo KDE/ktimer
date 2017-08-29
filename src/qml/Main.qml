@@ -71,12 +71,14 @@ Kirigami.ApplicationWindow {
                                 onClicked : {
                                     model.job.start();
                                 }
+                                visible : model.job.state != TimerJob.Started
                             }
                             QC1.Button {
                                 iconName : "media-playback-pause"
                                 onClicked : {
                                     model.job.pause();
                                 }
+                                visible : model.job.state == TimerJob.Started
                             }
                             QC1.Button {
                                 iconName : "media-playback-stop"

@@ -38,10 +38,33 @@ Kirigami.ApplicationWindow {
             title: "Hello"
             ColumnLayout {
                 anchors.fill: parent
-                Rectangle {
+                ListView {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-                    color: "red"
+                    model: timerModel
+                    delegate : Kirigami.AbstractListItem {
+                        id: listItem
+                        RowLayout {
+                            spacing: Kirigami.Units.smallSpacing*2
+                            Kirigami.Label {
+                                id: iconItem
+                                Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
+                                Layout.maximumHeight: Layout.minimumHeight
+                                Layout.minimumWidth: height
+                               // selected: listItem.checked || listItem.pressed
+                                text: "Teste!"
+                            }
+
+                            Kirigami.Label {
+                                id: labelItem
+                                Layout.fillWidth: true
+                                color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
+                                elide: Text.ElideRight
+                                font: listItem.font
+                                text: "Tes  te!"
+                            }
+                        }
+                    }
                 }
                 RowLayout {
                     QC2.Button {

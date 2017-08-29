@@ -54,5 +54,8 @@ Kirigami.ApplicationWindow {
 
     TimerModel {
         id: timerModel
+        Component.onCompleted : {
+            timerModel.loadJobs()
+        }
     }
 }

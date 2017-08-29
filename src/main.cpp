@@ -32,6 +32,7 @@
 #include "ktimer.h"
 #include <config-ktimer.h>
 #include "ktimermodel.h"
+#include "ktimerjob.h"
 
 static const char description[] =
         I18N_NOOP("KDE Timer");
@@ -72,6 +73,7 @@ int main( int argc, char **argv )
     timer->show();
 
     qmlRegisterType<KTimerModel>("kde.ktimer.components", 1, 0, "TimerModel");
+    qmlRegisterType<KTimerJob>("kde.ktimer.components", 1, 0, "TimerJob");
 
     auto *engine = new QQmlApplicationEngine("qrc:/KTimer/Main.qml");
     for(auto obj : engine->rootObjects()) {

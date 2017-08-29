@@ -73,13 +73,17 @@ int main( int argc, char **argv )
     qmlRegisterType<KTimerJob>("kde.ktimer.components", 1, 0, "TimerJob");
 
     auto *engine = new QQmlApplicationEngine("qrc:/KTimer/Main.qml");
+    KStatusNotifierItem *statusNotifier = nullptr;
     for(auto obj : engine->rootObjects()) {
-        if (qobject_cast<QWindow*>(obj)) {
+        if (auto window = qobject_cast<QWindow*>(obj)) {
             //TODO: find a way for this to work.
-            KStatusNotifierItem *tray = new KStatusNotifierItem(obj);
-            tray->setIconByName(QStringLiteral( "ktimer" ));
-            tray->setCategory(KStatusNotifierItem::ApplicationStatus);
-            tray->setStatus(KStatusNotifierItem::Active);
+            statusNotifier = new KStatusNotifierItem();
+            statusNotifier->setIconByName(QStringLiteral( "ktimer" ));
+            statusNotifier->setCategory(KStatusNotifierItem::ApplicationStatus);
+            statusNotifier->setStatus(KStatusNotifierItem::Active);
+            QObject::connect(statusNotifier, &KStatusNotifierItem::activateRequested, [window]{
+                window->show();
+            });
             break;
         }
     }

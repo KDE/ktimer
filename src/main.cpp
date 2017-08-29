@@ -22,6 +22,7 @@
 #include <QApplication>
 #include <KLocalizedString>
 #include <KStatusNotifierItem>
+#include <QQuickView>
 
 #include <QCommandLineParser>
 #include <kdelibs4configmigrator.h>
@@ -36,6 +37,7 @@ static const char version[] = "v0.10";
 int main( int argc, char **argv )
 {
     QApplication app(argc, argv);
+    Q_INIT_RESOURCE(qml);
 
     /**
      * enable high dpi support
@@ -72,6 +74,10 @@ int main( int argc, char **argv )
     tray->setStatus(KStatusNotifierItem::Active);
 
     timer->show();
+
+    auto *view = new QQuickView();
+    view->setSource(QUrl("qrc:/KTimer/Main.qml"));
+    view->show();
 
     return app.exec();
 }

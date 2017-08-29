@@ -31,6 +31,7 @@
 #include <KDBusService>
 #include "ktimer.h"
 #include <config-ktimer.h>
+#include "ktimermodel.h"
 
 static const char description[] =
         I18N_NOOP("KDE Timer");
@@ -69,6 +70,8 @@ int main( int argc, char **argv )
     // create tray icon
 
     timer->show();
+
+    qmlRegisterType<KTimerModel>("kde.ktimer.components", 1, 0, "TimerModel");
 
     auto *engine = new QQmlApplicationEngine("qrc:/KTimer/Main.qml");
     for(auto obj : engine->rootObjects()) {

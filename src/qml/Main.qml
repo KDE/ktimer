@@ -21,6 +21,7 @@ import QtQuick 2.1
 import org.kde.kirigami 2.1 as Kirigami
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2 as QC2
+import kde.ktimer.components 1.0
 
 Kirigami.ApplicationWindow {
     id: root
@@ -49,5 +50,9 @@ Kirigami.ApplicationWindow {
                 }
             }
         }
+    }
+
+    TimerModel {
+        id: timerModel
     }
 }

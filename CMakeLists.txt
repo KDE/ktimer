@@ -24,28 +24,15 @@ find_package(KF5 REQUIRED COMPONENTS
     KIO
     DBusAddons
     Notifications
+    Kirigami2
 )
 
-
-set(ktimer_SRCS main.cpp ktimer.cpp )
-
-ki18n_wrap_ui(ktimer_SRCS prefwidget.ui )
-
-file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-ktimer.png")
-ecm_add_app_icon(ktimer_SRCS ICONS ${ICONS_SRCS})
-
-add_executable(ktimer ${ktimer_SRCS})
-
-target_link_libraries(ktimer  KF5::I18n KF5::KIOWidgets KF5::ConfigWidgets KF5::Notifications KF5::DBusAddons)
-
-install(TARGETS ktimer  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
-
+add_subdirectory(icons)
+add_subdirectory(src)
 
 ########### install files ###############
 
 install( PROGRAMS org.kde.ktimer.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
-
-ecm_install_icons( ICONS 128-apps-ktimer.png  16-apps-ktimer.png  32-apps-ktimer.png  48-apps-ktimer.png DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor  )
 
 add_subdirectory(doc)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

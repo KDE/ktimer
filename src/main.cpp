@@ -71,14 +71,14 @@ int main( int argc, char **argv )
 
     auto *engine = new QQmlApplicationEngine("qrc:/KTimer/Main.qml");
     for(auto obj : engine->rootObjects()) {
-        if (! qobject_cast<QWindow*>(obj))
-            continue;
-
-        //TODO: find a way for this to work.
-        KStatusNotifierItem *tray = new KStatusNotifierItem(obj);
-        tray->setIconByName(QStringLiteral( "ktimer" ));
-        tray->setCategory(KStatusNotifierItem::ApplicationStatus);
-        tray->setStatus(KStatusNotifierItem::Active);
+        if (qobject_cast<QWindow*>(obj)) {
+            //TODO: find a way for this to work.
+            KStatusNotifierItem *tray = new KStatusNotifierItem(obj);
+            tray->setIconByName(QStringLiteral( "ktimer" ));
+            tray->setCategory(KStatusNotifierItem::ApplicationStatus);
+            tray->setStatus(KStatusNotifierItem::Active);
+            break;
+        }
     }
 
     return app.exec();

@@ -21,6 +21,7 @@ import QtQuick 2.1
 import org.kde.kirigami 2.1 as Kirigami
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2 as QC2
+import QtQuick.Controls 1.4 as QC1
 import kde.ktimer.components 1.0
 
 Kirigami.ApplicationWindow {
@@ -44,14 +45,15 @@ Kirigami.ApplicationWindow {
                     model: timerModel
                     delegate : Kirigami.AbstractListItem {
                         id: listItem
+
                         RowLayout {
+                            anchors.fill: listItem
                             spacing: Kirigami.Units.smallSpacing*2
                             Kirigami.Label {
                                 id: iconItem
                                 Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
                                 Layout.maximumHeight: Layout.minimumHeight
                                 Layout.minimumWidth: height
-                               // selected: listItem.checked || listItem.pressed
                                 text: "Teste!"
                             }
 
@@ -62,6 +64,16 @@ Kirigami.ApplicationWindow {
                                 elide: Text.ElideRight
                                 font: listItem.font
                                 text: "Tes  te!"
+                            }
+
+                            QC1.Button {
+                                iconName : "arrow-right"
+                            }
+                            QC1.Button {
+                                iconName : "media-playback-pause"
+                            }
+                            QC1.Button {
+                                iconName : "media-playback-stop"
                             }
                         }
                     }

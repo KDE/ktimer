@@ -29,7 +29,7 @@
 #include <QCommandLineParser>
 #include <kdelibs4configmigrator.h>
 #include <KDBusService>
-#include "ktimer.h"
+
 #include "ktimermodel.h"
 #include "ktimerjob.h"
 
@@ -68,12 +68,6 @@ int main( int argc, char **argv )
 
     app.setQuitOnLastWindowClosed( false );
     KDBusService service;
-
-    KTimerPref *timer = new KTimerPref;
-
-    // create tray icon
-
-    timer->show();
 
     qmlRegisterType<KTimerModel>("kde.ktimer.components", 1, 0, "TimerModel");
     qmlRegisterType<KTimerJob>("kde.ktimer.components", 1, 0, "TimerJob");

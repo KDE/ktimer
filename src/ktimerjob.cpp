@@ -132,8 +132,7 @@ void KTimerJob::setDelay( unsigned sec )
         if( d->state==Stopped )
             setValue( sec );
 
-        emit delayChanged( this, sec );
-        emit changed( this );
+        emit delayChanged(sec);
     }
 }
 
@@ -146,8 +145,7 @@ void KTimerJob::setCommand( const QString &cmd )
 {
     if( d->command!=cmd ) {
         d->command = cmd;
-        emit commandChanged( this, cmd );
-        emit changed( this );
+        emit commandChanged(cmd);
     }
 }
 
@@ -160,8 +158,7 @@ void KTimerJob::setLoop( bool loop )
 {
     if( d->loop!=loop ) {
         d->loop = loop;
-        emit loopChanged( this, loop );
-        emit changed( this );
+        emit loopChanged(loop);
     }
 }
 
@@ -174,8 +171,7 @@ void KTimerJob::setOneInstance( bool one )
 {
     if( d->oneInstance!=one ) {
         d->oneInstance = one;
-        emit oneInstanceChanged( this, one );
-        emit changed( this );
+        emit oneInstanceChanged(one);
     }
 }
 
@@ -188,8 +184,7 @@ void KTimerJob::setValue( unsigned value )
 {
     if( d->value!=value ) {
         d->value = value;
-        emit valueChanged( this, value );
-        emit changed( this );
+        emit valueChanged(value);
     }
 }
 
@@ -211,8 +206,7 @@ void KTimerJob::setState( KTimerJob::States state )
             setValue( d->delay );
 
         d->state = state;
-        emit stateChanged( this, state );
-        emit changed( this );
+        emit stateChanged(state);
     }
 }
 
@@ -239,8 +233,8 @@ void KTimerJob::processExited(int, QProcess::ExitStatus status)
     if (i != -1)
         delete d->processes.takeAt(i);
 
-    if( !ok ) emit error( this );
-    emit finished( this, !ok );
+    if( !ok ) emit error();
+    emit finished(!ok);
 }
 
 void KTimerJob::fire()
@@ -251,14 +245,14 @@ void KTimerJob::fire()
         connect(proc, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KTimerJob::processExited);
         if (!d->command.simplified ().isEmpty()) {
 	        proc->start(d->command);
-	        emit fired( this );
+	        emit fired();
         }
         if(proc->state() == QProcess::NotRunning) {
             const int i = d->processes.indexOf( proc);
             if (i != -1)
                 delete d->processes.takeAt(i);
-            emit error( this );
-            emit finished( this, true );
+            emit error();
+            emit finished(true);
         }
     }
 }

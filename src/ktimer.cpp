@@ -233,9 +233,10 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
 }
 
 
-void KTimerPref::jobChanged( KTimerJob *job )
+void KTimerPref::jobChanged( )
 {
-    KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
+    auto job = qobject_cast<KTimerJob*>(sender());
+    auto item = static_cast<KTimerJobItem*>(job->user());
     if( item ) {
         item->update();
         m_list->update();
@@ -251,9 +252,10 @@ void KTimerPref::jobChanged( KTimerJob *job )
 }
 
 
-void KTimerPref::jobFinished( KTimerJob *job, bool error )
+void KTimerPref::jobFinished(bool error)
 {
-    KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
+    auto *job = qobject_cast<KTimerJob*>(sender());
+    auto *item = static_cast<KTimerJobItem*>(job->user());
     item->setStatus( error );
     m_list->update();
 }
@@ -314,7 +316,9 @@ void KTimerPref::loadJobs( KConfig *cfg )
             job->load( cfg, QStringLiteral( "Job%1" ).arg(n) );
 
             job->setUser( item );
-            jobChanged ( job);
+
+            // Triggers a jobChanged.
+            job->delayChanged(job->delay());
     }
 
     m_list->update();

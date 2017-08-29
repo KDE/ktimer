@@ -50,8 +50,9 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
     void saveAllJobs();
 
  private slots:
-    void jobChanged( KTimerJob *job );
-    void jobFinished( KTimerJob *job, bool error );
+     /* The jobs are the input connection, retrieve with sender(). */
+    void jobChanged();
+    void jobFinished(bool error );
     void delayChanged();
 
  private:

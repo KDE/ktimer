@@ -27,7 +27,6 @@
 #include <KSharedConfig>
 #include <KStandardAction>
 #include <KStandardGuiItem>
-#include <KStatusNotifierItem>
 #include <KToolInvocation>
 
 #include <QAction>
@@ -108,11 +107,6 @@ KTimerPref::KTimerPref( QWidget *parent)
     m_pause->setIcon( QIcon::fromTheme( QStringLiteral( "media-playback-pause" )) );
     m_start->setIcon( QIcon::fromTheme( QStringLiteral( "arrow-right" )) );
 
-    // create tray icon
-    KStatusNotifierItem *tray = new KStatusNotifierItem(this);
-    tray->setIconByName(QStringLiteral( "ktimer" ));
-    tray->setCategory(KStatusNotifierItem::ApplicationStatus);
-    tray->setStatus(KStatusNotifierItem::Active);
     // set help button gui item
     KGuiItem::assign(m_help,KStandardGuiItem::help());
 

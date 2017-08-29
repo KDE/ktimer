@@ -107,4 +107,9 @@ Kirigami.ApplicationWindow {
             timerModel.saveJobs()
         }
     }
+
+    onClosing : {
+        close.accepted = false
+        hide()
+    }
 }

@@ -27,6 +27,8 @@ import kde.ktimer.components 1.0
 Kirigami.ApplicationWindow {
     id: root
 
+    header: Kirigami.ApplicationHeader {}
+
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }
@@ -36,7 +38,7 @@ Kirigami.ApplicationWindow {
     Component {
         id: mainPageComponent
         Kirigami.ScrollablePage {
-            title: "Hello"
+            title: "Timers"
             actions.main: Kirigami.Action {
                 iconName: "list-add"
                 text: i18n("Add Timer")

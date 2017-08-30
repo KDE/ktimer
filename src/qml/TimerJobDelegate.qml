@@ -7,55 +7,52 @@ import kde.ktimer.components 1.0
 
 Kirigami.AbstractListItem {
     id: listItem
-    property QtObject job;
     property QtObject jobModel;
 
     RowLayout {
-        anchors.fill: listItem
+        //anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing*4
         Kirigami.Label {
             id: iconItem
-            Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
-            Layout.maximumHeight: Layout.minimumHeight
+            verticalAlignment: Text.AlignVCenter
             Layout.minimumWidth: height
-            text: job.delay
+            text: model.job.delay
         }
 
         Kirigami.Label {
             id: labelItem
+            verticalAlignment: Text.AlignVCenter
             Layout.fillWidth: true
             color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
             elide: Text.ElideRight
             font: listItem.font
-            text: job.value
+            text: model.job.value
         }
 
-        QC1.Button {
-            iconName : "arrow-right"
-            onClicked : {
-                job.start();
+        RowLayout {
+            //use opacity instead of visible to *not* relayout when things get visible/invisible
+            opacity: listItem.hovered || Kirigami.Settings.isMobile ? 1 : 0
+            QC1.Button {
+                iconName : model.job.state == TimerJob.Started ? "media-playback-pause" : "arrow-right"
+                onClicked : {
+                    if (model.job.state == TimerJob.Started) {
+                        job.pause();
+                    } else {
+                        job.start();
+                    }
+                }
             }
-            visible : job.state != TimerJob.Started && listItem.hovered
-        }
-        QC1.Button {
-            iconName : "media-playback-pause"
-            onClicked : {
-                job.pause();
+            QC1.Button {
+                iconName : "media-playback-stop"
+                onClicked : {
+                    job.stop();
+                }
             }
-            visible : job.state == TimerJob.Started && listItem.hovered
-        }
-        QC1.Button {
-            iconName : "media-playback-stop"
-            visible: listItem.hovered
-            onClicked : {
-                job.stop();
-            }
-        }
-        QC1.Button {
-            text : "Remove"
-            visible: listItem.hovered
-            onClicked : {
-                jobModel.removeJob(index);
+            QC1.Button {
+                text : "Remove"
+                onClicked : {
+                    jobModel.removeJob(index);
+                }
             }
         }
     }

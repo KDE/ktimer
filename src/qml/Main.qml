@@ -35,29 +35,24 @@ Kirigami.ApplicationWindow {
 
     Component {
         id: mainPageComponent
-        Kirigami.Page {
+        Kirigami.ScrollablePage {
             title: "Hello"
-            ColumnLayout {
-                anchors.fill: parent
-                ListView {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    model: timerModel
-                    delegate : TimerJobDelegate {
-                        job : model.job
-                        jobModel : timerModel
-                    }
-                }
-                RowLayout {
-                    QC2.Button {
-                        text: "+"
-
-                        onClicked : {
-                            timerModel.createJob();
-                        }
-                    }
+            actions.main: Kirigami.Action {
+                iconName: "list-add"
+                text: i18n("Add Timer")
+                onTriggered : {
+                    timerModel.createJob();
                 }
             }
+            background: Rectangle {
+                color: Kirigami.Theme.viewBackgroundColor
+            }
+            ListView {
+                model: timerModel
+                delegate : TimerJobDelegate {
+                    jobModel : timerModel
+                }
+             }
         }
     }
 

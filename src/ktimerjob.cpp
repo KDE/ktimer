@@ -16,7 +16,6 @@ struct KTimerJobPrivate {
     QList<QProcess *> processes;
     QString formattedValue;
     //TODO: Remove this void pointer.
-    void *user;
 
     QTimer *timer;
 };
@@ -31,7 +30,6 @@ KTimerJob::KTimerJob( QObject *parent)
     d->oneInstance = true;
     d->value = 100;
     d->state = Stopped;
-    d->user = 0;
     d->formattedValue = formatTime(d->value);
     d->timer = new QTimer( this );
     connect(d->timer, &QTimer::timeout, this, &KTimerJob::timeout);
@@ -84,16 +82,6 @@ void KTimerJob::secondsToHMS( int secs, int *hours, int *minutes, int *seconds )
     s = s % 3600;
     (*minutes) = s / 60;
     (*seconds) = s % 60;
-}
-
-void *KTimerJob::user()
-{
-    return d->user;
-}
-
-void KTimerJob::setUser( void *user )
-{
-    d->user = user;
 }
 
 int KTimerJob::delay() const

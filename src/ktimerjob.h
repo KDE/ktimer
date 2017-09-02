@@ -31,10 +31,6 @@ public:
     States state() const;
     QString formattedValue() const;
 
-    //TODO: Remove this void pointer.
-    void *user();
-    void setUser( void *user );
-
     void load( KConfig *cfg, const QString& grp );
     void save( KConfig *cfg, const QString& grp );
     QString formatTime( int seconds ) const;

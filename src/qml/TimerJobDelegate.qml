@@ -12,12 +12,6 @@ Kirigami.AbstractListItem {
     RowLayout {
         //anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing*4
-        Kirigami.Label {
-            id: iconItem
-            verticalAlignment: Text.AlignVCenter
-            Layout.minimumWidth: height
-            text: model.job.delay
-        }
 
         Kirigami.Label {
             id: labelItem
@@ -26,7 +20,7 @@ Kirigami.AbstractListItem {
             color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
             elide: Text.ElideRight
             font: listItem.font
-            text: model.job.value
+            text: model.job.formattedValue
         }
 
         RowLayout {

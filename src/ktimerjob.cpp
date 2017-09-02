@@ -14,7 +14,7 @@ struct KTimerJobPrivate {
     int value;
     KTimerJob::States state;
     QList<QProcess *> processes;
-
+    QString formattedValue;
     //TODO: Remove this void pointer.
     void *user;
 
@@ -32,7 +32,7 @@ KTimerJob::KTimerJob( QObject *parent)
     d->value = 100;
     d->state = Stopped;
     d->user = 0;
-
+    d->formattedValue = formatTime(d->value);
     d->timer = new QTimer( this );
     connect(d->timer, &QTimer::timeout, this, &KTimerJob::timeout);
 }
@@ -115,6 +115,7 @@ void KTimerJob::start()
 {
     setState( Started );
 }
+
 void KTimerJob::setDelay( int sec )
 {
     if( d->delay!=sec ) {
@@ -175,6 +176,7 @@ void KTimerJob::setValue( int value )
 {
     if( d->value!=value ) {
         d->value = value;
+        setFormattedValue(formatTime(value));
         emit valueChanged(value);
     }
 }
@@ -245,6 +247,20 @@ void KTimerJob::fire()
             emit error();
             emit finished(true);
         }
+    }
+}
+
+
+QString KTimerJob::formattedValue() const
+{
+    return d->formattedValue;
+}
+
+void KTimerJob::setFormattedValue(const QString& value)
+{
+    if (d->formattedValue != value) {
+        d->formattedValue = value;
+        emit formattedValueChanged(value);
     }
 }
 

@@ -13,6 +13,7 @@ class KTimerJob : public QObject {
     Q_PROPERTY(bool loop READ loop WRITE setLoop NOTIFY loopChanged)
     Q_PROPERTY(bool oneInstance READ oneInstance WRITE setOneInstance NOTIFY oneInstanceChanged)
     Q_PROPERTY(int value READ value WRITE setValue NOTIFY valueChanged)
+    Q_PROPERTY(QString formattedValue READ formattedValue WRITE setFormattedValue NOTIFY formattedValueChanged)
     Q_PROPERTY(States state READ state WRITE setState NOTIFY stateChanged)
 
 public:
@@ -28,6 +29,7 @@ public:
     bool oneInstance() const;
     int value() const;
     States state() const;
+    QString formattedValue() const;
 
     //TODO: Remove this void pointer.
     void *user();
@@ -46,12 +48,15 @@ public:
     void setOneInstance( bool one );
     void setValue( int value );
     void setState( States state );
+    void setFormattedValue(const QString& value);
 
     void pause();
     void stop();
     void start();
 
  signals:
+    // formats the value in hh:mm:ss
+    void formattedValueChanged(const QString& value);
     void stateChanged(States state);
     void delayChanged(int sec);
     void commandChanged(const QString &cmd);

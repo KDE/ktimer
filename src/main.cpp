@@ -76,7 +76,6 @@ int main( int argc, char **argv )
     KStatusNotifierItem *statusNotifier = nullptr;
     for(auto obj : engine->rootObjects()) {
             if (auto window = qobject_cast<QWindow*>(obj)) {
-            //TODO: find a way for this to work.
             statusNotifier = new KStatusNotifierItem();
             statusNotifier->setIconByName(QStringLiteral( "ktimer" ));
             statusNotifier->setCategory(KStatusNotifierItem::ApplicationStatus);

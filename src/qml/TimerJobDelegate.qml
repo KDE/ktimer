@@ -5,7 +5,7 @@ import QtQuick.Controls 2.2 as QC2
 import QtQuick.Controls 1.4 as QC1
 import kde.ktimer.components 1.0
 
-Kirigami.AbstractListItem {
+Kirigami.SwipeListItem {
     id: listItem
     property QtObject jobModel;
 
@@ -38,46 +38,32 @@ Kirigami.AbstractListItem {
                 text: model.job.command ? "Run " + model.job.command : ""
             }
         }
-        RowLayout {
-            //use opacity instead of visible to *not* relayout when things get visible/invisible
-            opacity: listItem.hovered || Kirigami.Settings.isMobile ? 1 : 0
-            QC1.Button {
-                iconName : model.job.state == TimerJob.Started ? "media-playback-pause" : "arrow-right"
-                onClicked : {
-                    if (model.job.state == TimerJob.Started) {
-                        job.pause();
-                    } else {
-                        job.start();
-                    }
-                }
-            }
-            QC1.Button {
-                iconName : "media-playback-stop"
-                onClicked : {
-                    job.stop();
-                }
-            }
-            QC1.Button {
-                checkable: true
-                iconName : "media-playlist-repeat"
-                onClicked : {
-                    job.loop = checked
-                }
-            }
-            /* TODO: Play when done
-            QC1.Button {
-                checkable: true
-                iconName : "audio-volume-high"
-                onClicked : {
-
-                }
-            } */
-            QC1.Button {
-                iconName : "user-trash"
-                onClicked : {
-                    jobModel.removeJob(index);
-                }
-            }
-        }
     }
+    actions:[
+        Kirigami.Action {
+            id:m_start
+            iconName: model.job.state == TimerJob.Started ? "media-playback-pause" : "arrow-right"
+            onTriggered: {
+                if (model.job.state == TimerJob.Started) {
+                    job.pause();
+                } else {
+                    job.start();
+                }
+            }
+        },
+        Kirigami.Action {
+            id:m_stop
+            iconName: "media-playback-stop"
+            tooltip: "Stop a countdown"
+            onTriggered: job.stop();
+        },
+        Kirigami.Action {
+            iconName: "media-playlist-repeat"
+            onTriggered: job.loop = checked
+        },
+        Kirigami.Action {
+            iconName: "edit-delete"
+            onTriggered: jobModel.removeJob(index);
+        }
+    ]
 }

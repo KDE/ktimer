@@ -53,6 +53,9 @@ Kirigami.ApplicationWindow {
                 model: timerModel
                 delegate : TimerJobDelegate {
                     jobModel : timerModel
+                    onClicked : {
+                        bottomDrawer.open()
+                    }
                 }
              }
         }
@@ -67,6 +70,52 @@ Kirigami.ApplicationWindow {
             timerModel.saveJobs()
         }
     }
+
+    Kirigami.OverlayDrawer {
+        id: bottomDrawer
+        edge: Qt.BottomEdge
+        contentItem: Item {
+            implicitHeight: childrenRect.height + Kirigami.Units.gridUnit
+            ColumnLayout {
+                anchors.centerIn: parent
+                QC2.TextField {
+                    placeholderText: "Name"
+                }
+                Row {
+                    QC2.Tumbler {
+                        id: hoursTumbler
+                        model: 24
+                        delegate: delegateComponent
+                    }
+                    QC2.Tumbler {
+                        id: minutesTumbler
+                        model: 60
+                        delegate: delegateComponent
+                    }
+                }
+                Item {
+                    Layout.minimumHeight: Kirigami.Units.gridUnit * 4
+                }
+            }
+            Component {
+                id: delegateComponent
+
+                QC2.Label {
+                    function formatText(count, modelData) {
+                        var data = count === 12 ? modelData + 1 : modelData;
+                        return data.toString().length < 2 ? "0" + data : data;
+                    }
+
+                    text: formatText(QC2.Tumbler.tumbler.count, modelData)
+                    opacity: 1.0 - Math.abs(QC2.Tumbler.displacement) / (QC2.Tumbler.tumbler.visibleItemCount / 2)
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    font.pixelSize: Kirigami.Units.pixelSize * 1.25
+                }
+            }
+        }
+    }
+
 
     onClosing : {
         close.accepted = false

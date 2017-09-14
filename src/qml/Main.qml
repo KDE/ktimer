@@ -81,36 +81,14 @@ Kirigami.ApplicationWindow {
                 QC2.TextField {
                     placeholderText: "Name"
                 }
-                Row {
-                    QC2.Tumbler {
-                        id: hoursTumbler
-                        model: 24
-                        delegate: delegateComponent
-                    }
-                    QC2.Tumbler {
-                        id: minutesTumbler
-                        model: 60
-                        delegate: delegateComponent
-                    }
+                QC2.TextField {
+                    placeholderText: "Duration"
+                }
+                QC2.TextField {
+                    placeholderText: "Run when finished"
                 }
                 Item {
                     Layout.minimumHeight: Kirigami.Units.gridUnit * 4
-                }
-            }
-            Component {
-                id: delegateComponent
-
-                QC2.Label {
-                    function formatText(count, modelData) {
-                        var data = count === 12 ? modelData + 1 : modelData;
-                        return data.toString().length < 2 ? "0" + data : data;
-                    }
-
-                    text: formatText(QC2.Tumbler.tumbler.count, modelData)
-                    opacity: 1.0 - Math.abs(QC2.Tumbler.displacement) / (QC2.Tumbler.tumbler.visibleItemCount / 2)
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    font.pixelSize: Kirigami.Units.pixelSize * 1.25
                 }
             }
         }

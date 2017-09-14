@@ -84,21 +84,21 @@ Kirigami.ApplicationWindow {
                 anchors.centerIn: parent
                 QC2.TextField {
                     placeholderText: "Name"
-                    text: currentTimer.name
+                    text: currentTimer ? currentTimer.name : ""
                     onEditingFinished : {
                         currentTimer.name = text
                     }
                 }
                 QC2.TextField { //TODO: Use a clock here.
                     placeholderText: "Duration"
-                    text: currentTimer.formattedValue
+                    text: currentTimer ? currentTimer.formattedValue : ""
                     onEditingFinished : {
                         currentTimer.setDelayFromString(text)
                     }
                 }
                 QC2.TextField {
                     placeholderText: "Run when finished"
-                    text: currentTimer.command
+                    text: currentTimer ? currentTimer.command : ""
                     onEditingFinished : {
                         currentTimer.command = text
                     }

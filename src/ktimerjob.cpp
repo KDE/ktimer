@@ -15,8 +15,7 @@ struct KTimerJobPrivate {
     KTimerJob::States state;
     QList<QProcess *> processes;
     QString formattedValue;
-    //TODO: Remove this void pointer.
-
+    QString name;
     QTimer *timer;
 };
 
@@ -65,13 +64,21 @@ QString KTimerJob::formatTime( int seconds ) const
 {
     int h, m, s;
     secondsToHMS( seconds, &h, &m, &s );
-    return QStringLiteral( "%1:%2:%3" ).arg( h ).arg( m, 2, 10, QLatin1Char( '0' ) ).arg( s,2, 10, QLatin1Char( '0' ) );
+    return QStringLiteral( "%1:%2:%3" ).arg( h, 2, 10, QLatin1Char('0'))
+                                       .arg( m, 2, 10, QLatin1Char('0'))
+                                       .arg( s, 2, 10, QLatin1Char('0'));
 }
 
 // calculate seconds from hour, minute and seconds, returns seconds
 int KTimerJob::timeToSeconds( int hours, int minutes, int seconds ) const
 {
     return hours * 3600 + minutes * 60 + seconds;
+}
+
+void KTimerJob::setDelayFromString(const QString& value)
+{
+    auto t = QTime::fromString(value, "hh:mm:ss");
+    setDelay(t.hour() * 3600 + t.minute() * 60 + t.second());
 }
 
 // calculates hours, minutes and seconds from given secs.
@@ -252,3 +259,15 @@ void KTimerJob::setFormattedValue(const QString& value)
     }
 }
 
+QString KTimerJob::name() const
+{
+    return d->name;
+}
+
+void KTimerJob::setName(const QString& name)
+{
+    if (name != d->name) {
+        d->name = name;
+        emit nameChanged(d->name);
+    }
+}

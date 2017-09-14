@@ -26,6 +26,7 @@ import kde.ktimer.components 1.0
 
 Kirigami.ApplicationWindow {
     id: root
+    property QtObject currentTimer
 
     header: Kirigami.ApplicationHeader {}
 
@@ -34,6 +35,7 @@ Kirigami.ApplicationWindow {
     }
 
     pageStack.initialPage: mainPageComponent
+
 
     Component {
         id: mainPageComponent
@@ -50,10 +52,12 @@ Kirigami.ApplicationWindow {
                 color: Kirigami.Theme.viewBackgroundColor
             }
             ListView {
+                id: timerView
                 model: timerModel
                 delegate : TimerJobDelegate {
                     jobModel : timerModel
                     onClicked : {
+                        currentTimer = model.job
                         bottomDrawer.open()
                     }
                 }
@@ -80,12 +84,24 @@ Kirigami.ApplicationWindow {
                 anchors.centerIn: parent
                 QC2.TextField {
                     placeholderText: "Name"
+                    text: currentTimer.name
+                    onEditingFinished : {
+                        currentTimer.name = text
+                    }
                 }
-                QC2.TextField {
+                QC2.TextField { //TODO: Use a clock here.
                     placeholderText: "Duration"
+                    text: currentTimer.formattedValue
+                    onEditingFinished : {
+                        currentTimer.setDelayFromString(text)
+                    }
                 }
                 QC2.TextField {
                     placeholderText: "Run when finished"
+                    text: currentTimer.command
+                    onEditingFinished : {
+                        currentTimer.command = text
+                    }
                 }
                 Item {
                     Layout.minimumHeight: Kirigami.Units.gridUnit * 4

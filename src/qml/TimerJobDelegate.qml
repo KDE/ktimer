@@ -43,7 +43,22 @@ Kirigami.AbstractListItem {
                 }
             }
             QC1.Button {
-                text : "Remove"
+                checkable: true
+                iconName : "media-playlist-repeat"
+                onClicked : {
+                    job.loop = checked
+                }
+            }
+            /* TODO: Play when done
+            QC1.Button {
+                checkable: true
+                iconName : "audio-volume-high"
+                onClicked : {
+
+                }
+            } */
+            QC1.Button {
+                iconName : "user-trash"
                 onClicked : {
                     jobModel.removeJob(index);
                 }

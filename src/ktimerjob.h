@@ -8,6 +8,7 @@
 class KConfig;
 class KTimerJob : public QObject {
  Q_OBJECT
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(int delay READ delay WRITE setDelay NOTIFY delayChanged)
     Q_PROPERTY(QString command READ command WRITE setCommand NOTIFY commandChanged)
     Q_PROPERTY(bool loop READ loop WRITE setLoop NOTIFY loopChanged)
@@ -30,7 +31,7 @@ public:
     int value() const;
     States state() const;
     QString formattedValue() const;
-
+    QString name() const;
     void load( KConfig *cfg, const QString& grp );
     void save( KConfig *cfg, const QString& grp );
     QString formatTime( int seconds ) const;
@@ -45,6 +46,8 @@ public:
     void setValue( int value );
     void setState( States state );
     void setFormattedValue(const QString& value);
+    void setName(const QString& name);
+    void setDelayFromString(const QString& value);
 
     void pause();
     void stop();
@@ -59,7 +62,7 @@ public:
     void loopChanged(bool loop);
     void oneInstanceChanged(bool one);
     void valueChanged(unsigned int value);
-
+    void nameChanged(const QString& name);
     void changed();
     void fired();
     void finished(bool error);

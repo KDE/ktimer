@@ -16,13 +16,28 @@ Kirigami.AbstractListItem {
         Kirigami.Label {
             id: labelItem
             verticalAlignment: Text.AlignVCenter
-            Layout.fillWidth: true
             color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
             elide: Text.ElideRight
             font: listItem.font
             text: model.job.formattedValue
         }
-
+        Column {
+            Layout.fillWidth: true
+            Kirigami.Label {
+                id: nameItem
+                color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
+                elide: Text.ElideRight
+                font: listItem.font
+                text: model.job.name
+            }
+            Kirigami.Label {
+                id: commandItem
+                color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
+                elide: Text.ElideRight
+                font: listItem.font
+                text: model.job.command ? "Run " + model.job.command : ""
+            }
+        }
         RowLayout {
             //use opacity instead of visible to *not* relayout when things get visible/invisible
             opacity: listItem.hovered || Kirigami.Settings.isMobile ? 1 : 0

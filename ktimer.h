@@ -40,6 +40,7 @@ class KTimerJob : public QObject {
     QString command() const;
     bool loop() const;
     bool oneInstance() const;
+    bool consecutive() const;
     unsigned value() const;
     States state() const;
     void *user();
@@ -58,6 +59,7 @@ class KTimerJob : public QObject {
     void setCommand( const QString &cmd );
     void setLoop( bool loop );
     void setOneInstance( bool one );
+    void setConsecutive( bool consecutive );
     void setValue( unsigned int value );
     void setValue( int value );
     void setState( States state );
@@ -72,6 +74,7 @@ class KTimerJob : public QObject {
     void commandChanged( KTimerJob *job, const QString &cmd );
     void loopChanged( KTimerJob *job, bool loop );
     void oneInstanceChanged( KTimerJob *job, bool one );
+    void consecutiveChanged( KTimerJob *job, bool consecutive );
     void valueChanged( KTimerJob *job, unsigned int value );
 
     void changed( KTimerJob *job );

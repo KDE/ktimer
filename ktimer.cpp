@@ -188,6 +188,7 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
         m_delay->disconnect();
         m_loop->disconnect();
         m_one->disconnect();
+        m_consecutive->disconnect();
         m_start->disconnect();
         m_pause->disconnect();
         m_stop->disconnect();
@@ -210,6 +211,7 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
         connect(m_delay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
         connect(m_loop, &QCheckBox::toggled, job, &KTimerJob::setLoop);
         connect(m_one, &QCheckBox::toggled, job, &KTimerJob::setOneInstance);
+        connect(m_consecutive, &QCheckBox::toggled, job, &KTimerJob::setConsecutive);
         connect(m_stop, &QToolButton::clicked, job, &KTimerJob::stop);
         connect(m_pause, &QToolButton::clicked, job, &KTimerJob::pause);
         connect(m_start, &QToolButton::clicked, job, &KTimerJob::start);
@@ -220,6 +222,7 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
         m_commandLine->lineEdit()->setText( job->command() );
         m_loop->setChecked( job->loop() );
         m_one->setChecked( job->oneInstance() );
+        m_consecutive->setChecked( job->consecutive() );
         m_counter->display( (int)job->value() );
         m_slider->setMaximum( job->delay() );
         m_slider->setValue( job->value() );
@@ -254,6 +257,10 @@ void KTimerPref::jobFinished( KTimerJob *job, bool error )
 {
     KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
     item->setStatus( error );
+    if( m_list->itemBelow(m_list->currentItem())!=nullptr && (static_cast<KTimerJobItem*>(m_list->itemBelow( m_list->currentItem() )))->job()->consecutive() ) {
+        m_list->setCurrentItem( m_list->itemBelow( m_list->currentItem() ) );
+        (static_cast<KTimerJobItem*>(m_list->currentItem()))->job()->start();
+    }
     m_list->update();
 }
 
@@ -328,6 +335,7 @@ struct KTimerJobPrivate {
     QString command;
     bool loop;
     bool oneInstance;
+    bool consecutive;
     unsigned value;
     KTimerJob::States state;
     QList<QProcess *> processes;
@@ -345,6 +353,7 @@ KTimerJob::KTimerJob( QObject *parent)
     d->delay = 100;
     d->loop = false;
     d->oneInstance = true;
+    d->consecutive = false;
     d->value = 100;
     d->state = Stopped;
     d->user = 0;
@@ -367,6 +376,7 @@ void KTimerJob::save( KConfig *cfg, const QString& grp )
     groupcfg.writePathEntry( "Command", d->command );
     groupcfg.writeEntry( "Loop", d->loop );
     groupcfg.writeEntry( "OneInstance", d->oneInstance );
+    groupcfg.writeEntry( "Consecutive", d->consecutive );
     groupcfg.writeEntry( "State", (int)d->state );
 }
 
@@ -378,6 +388,7 @@ void KTimerJob::load( KConfig *cfg, const QString& grp )
     setCommand( groupcfg.readPathEntry( "Command", QString() ) );
     setLoop( groupcfg.readEntry( "Loop", false ) );
     setOneInstance( groupcfg.readEntry( "OneInstance", d->oneInstance ) );
+    setConsecutive( groupcfg.readEntry( "Consecutive", d->consecutive ) );
     setState( (States)groupcfg.readEntry( "State", (int)Stopped ) );
 }
 
@@ -513,6 +524,22 @@ void KTimerJob::setOneInstance( bool one )
 }
 
 
+bool KTimerJob::consecutive() const
+{
+    return d->consecutive;
+}
+
+
+void KTimerJob::setConsecutive( bool consecutive )
+{
+    if( d->consecutive!=consecutive ) {
+        d->consecutive = consecutive;
+        emit consecutiveChanged( this, consecutive );
+        emit changed( this );
+    }
+}
+
+
 unsigned KTimerJob::value() const
 {
     return d->value;
@@ -579,8 +606,6 @@ void KTimerJob::processExited(int, QProcess::ExitStatus status)
     if( !ok ) emit error( this );
     emit finished( this, !ok );
 }
-
-
 
 
 void KTimerJob::fire()

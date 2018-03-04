@@ -249,6 +249,19 @@
         </property>
        </widget>
       </item>
+      <item row="5" column="0" colspan="8">
+       <widget class="QCheckBox" name="m_consecutive">
+        <property name="toolTip">
+         <string>Check this box if you want to execute this task after the previous one finishes</string>
+        </property>
+        <property name="whatsThis">
+         <string>Check this box if you want to execute this task after the previous one finishes</string>
+        </property>
+        <property name="text">
+          <string>Consecutive task</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="7">
        <widget class="QLabel" name="TextLabel3">
         <property name="text">

@@ -27,8 +27,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2015-08-04</date>
-<releaseinfo>Applications 15.08</releaseinfo>
+<date>2018-03-04</date>
+<releaseinfo>Applications 18.04</releaseinfo>
 
 <abstract>
 <para>
@@ -113,6 +113,11 @@ time</screeninfo>
 </screenshot>
 
 <para>Now two &konqueror;s are scheduled to be run. The top one will be run in 20 seconds, and the bottom one is currently stopped. You can add more commands. While you can never have too many &konqueror;s, you probably want to use other executables. Your own shell script, perhaps.</para>
+
+<para>If you want to start a new task with a certain delay after the previous task 
+in the list is finished check the option <guilabel>Consecutive task</guilabel>
+and adjust the time specified in the column <guilabel>Delay</guilabel>.
+</para>
 
 <sect1 id="settings">
 <title>Settings</title>

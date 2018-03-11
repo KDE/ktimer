@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>KTimer</name>
   <name xml:lang="ca">KTimer</name>
+  <name xml:lang="en-GB">KTimer</name>
   <name xml:lang="nl">KTimer</name>
   <name xml:lang="pt">KTimer</name>
   <name xml:lang="sv">Ktimer</name>
@@ -12,6 +13,7 @@
   <name xml:lang="x-test">xxKTimerxx</name>
   <summary>Countdown Launcher</summary>
   <summary xml:lang="ca">Llançador amb compte enrere</summary>
+  <summary xml:lang="en-GB">Countdown Launcher</summary>
   <summary xml:lang="nl">Starter van aftellen</summary>
   <summary xml:lang="pt">Lançamento Temporizado</summary>
   <summary xml:lang="sv">Nerräknande startprogram</summary>
@@ -22,6 +24,7 @@
       KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.
     </p>
     <p xml:lang="ca">El KTimer és una petita eina per executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
+    <p xml:lang="en-GB">KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.</p>
     <p xml:lang="nl">KTimer is een klein hulpmiddel om programma's uit te voeren na enige tijd. Het stelt u in staat om verschillende taken in te voeren en een timer voor elk van hen in te stellen. De timers voor elke taak kunnen worden gestart, gestopt, gewijzigd of in een loop gezet worden.</p>
     <p xml:lang="pt">O KTimer é uma pequena ferramenta para executar programas ao fim de algum tempo. Permite-lhe introduzir várias tarefas e a definir um cronómetro para cada uma delas. Poderá iniciar, parar, modificar ou configurar em ciclo cada uma das tarefas.</p>
     <p xml:lang="sv">Ktimer är ett litet verktyg för att köra program efter en viss tid. Det låter dig ange flera aktiviteter och ställa in en tidtagare för var och en av dem. Tidtagningen av varje aktivitet kan startas, stoppas, ändras eller upprepas.</p>

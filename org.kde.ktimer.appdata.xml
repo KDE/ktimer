@@ -15,6 +15,7 @@
   <name xml:lang="sv">Ktimer</name>
   <name xml:lang="uk">KTimer</name>
   <name xml:lang="x-test">xxKTimerxx</name>
+  <name xml:lang="zh-CN">KTimer</name>
   <summary>Countdown Launcher</summary>
   <summary xml:lang="ca">Llançador amb compte enrere</summary>
   <summary xml:lang="ca-valencia">Llançador amb compte arrere</summary>
@@ -26,6 +27,7 @@
   <summary xml:lang="sv">Nerräknande startprogram</summary>
   <summary xml:lang="uk">Таймер</summary>
   <summary xml:lang="x-test">xxCountdown Launcherxx</summary>
+  <summary xml:lang="zh-CN">倒计时执行器</summary>
   <description>
     <p>
       KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.

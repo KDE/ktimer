@@ -8,6 +8,7 @@
   <name xml:lang="ca-valencia">KTimer</name>
   <name xml:lang="de">KTimer</name>
   <name xml:lang="en-GB">KTimer</name>
+  <name xml:lang="es">KTimer</name>
   <name xml:lang="fr">KTimer</name>
   <name xml:lang="nl">KTimer</name>
   <name xml:lang="pt">KTimer</name>
@@ -21,6 +22,7 @@
   <summary xml:lang="ca-valencia">Llançador amb compte arrere</summary>
   <summary xml:lang="de">Rückwärtszähler</summary>
   <summary xml:lang="en-GB">Countdown Launcher</summary>
+  <summary xml:lang="es">Lanzador de cuenta atrás</summary>
   <summary xml:lang="nl">Starter van aftellen</summary>
   <summary xml:lang="pt">Lançamento Temporizado</summary>
   <summary xml:lang="sk">Odpočítavané spúšťanie</summary>
@@ -36,6 +38,7 @@
     <p xml:lang="ca-valencia">El KTimer és una petita eina per executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
     <p xml:lang="de">KTimer ist ein Programm, um andere Anwendungen nach einer bestimmten Zeit zu starten. Es erlaubt das Erfassen von mehreren Aufgaben mit je eigenem Countdown. Jeder einzelne Countdown kann individuell gestartet, angehalten, geändert oder repetiert werden.</p>
     <p xml:lang="en-GB">KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.</p>
+    <p xml:lang="es">KTimer es una pequeña herramienta para ejecutar programas tras cierto tiempo. Le permite introducir varias tareas y definir un temporizador para cada una de ellas. Puede iniciar, detener, modificar o poner en bucle estos temporizadores.</p>
     <p xml:lang="nl">KTimer is een klein hulpmiddel om programma's uit te voeren na enige tijd. Het stelt u in staat om verschillende taken in te voeren en een timer voor elk van hen in te stellen. De timers voor elke taak kunnen worden gestart, gestopt, gewijzigd of in een loop gezet worden.</p>
     <p xml:lang="pt">O KTimer é uma pequena ferramenta para executar programas ao fim de algum tempo. Permite-lhe introduzir várias tarefas e a definir um cronómetro para cada uma delas. Poderá iniciar, parar, modificar ou configurar em ciclo cada uma das tarefas.</p>
     <p xml:lang="sv">Ktimer är ett litet verktyg för att köra program efter en viss tid. Det låter dig ange flera aktiviteter och ställa in en tidtagare för var och en av dem. Tidtagningen av varje aktivitet kan startas, stoppas, ändras eller upprepas.</p>

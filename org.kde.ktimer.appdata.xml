@@ -6,6 +6,7 @@
   <name>KTimer</name>
   <name xml:lang="ca">KTimer</name>
   <name xml:lang="ca-valencia">KTimer</name>
+  <name xml:lang="cs">KTimer</name>
   <name xml:lang="de">KTimer</name>
   <name xml:lang="en-GB">KTimer</name>
   <name xml:lang="es">KTimer</name>
@@ -20,6 +21,7 @@
   <summary>Countdown Launcher</summary>
   <summary xml:lang="ca">Llançador amb compte enrere</summary>
   <summary xml:lang="ca-valencia">Llançador amb compte arrere</summary>
+  <summary xml:lang="cs">Spouštěč s odpočtem</summary>
   <summary xml:lang="de">Rückwärtszähler</summary>
   <summary xml:lang="en-GB">Countdown Launcher</summary>
   <summary xml:lang="es">Lanzador de cuenta atrás</summary>

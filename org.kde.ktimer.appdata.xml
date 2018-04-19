@@ -11,6 +11,7 @@
   <name xml:lang="en-GB">KTimer</name>
   <name xml:lang="es">KTimer</name>
   <name xml:lang="fr">KTimer</name>
+  <name xml:lang="ia">KTimer</name>
   <name xml:lang="nl">KTimer</name>
   <name xml:lang="pt">KTimer</name>
   <name xml:lang="sk">KTimer</name>
@@ -25,6 +26,7 @@
   <summary xml:lang="de">Rückwärtszähler</summary>
   <summary xml:lang="en-GB">Countdown Launcher</summary>
   <summary xml:lang="es">Lanzador de cuenta atrás</summary>
+  <summary xml:lang="ia">Lanceator de computo a retro</summary>
   <summary xml:lang="nl">Starter van aftellen</summary>
   <summary xml:lang="pt">Lançamento Temporizado</summary>
   <summary xml:lang="sk">Odpočítavané spúšťanie</summary>

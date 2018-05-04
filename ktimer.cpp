@@ -474,15 +474,23 @@ unsigned KTimerJob::delay() const
 void KTimerJob::pause()
 {
     setState( Paused );
+    fireInferior(d->onPause);
 }
 
 void KTimerJob::stop()
 {
     setState( Stopped );
+    fireInferior(d->onStop);
 }
 
 void KTimerJob::start()
 {
+    if (d->state==Paused) {
+        fireInferior(d->onResume);
+    } else {
+        fireInferior(d->onSchedule);
+    }
+
     setState( Started );
 }
 
@@ -723,7 +731,13 @@ void KTimerJob::processExited(int, QProcess::ExitStatus status)
     if (i != -1)
         delete d->processes.takeAt(i);
 
-    if( !ok ) emit error( this );
+    if( ok ) {
+        fireInferior(d->onSuccess);
+    } else {
+        emit error( this );
+        fireInferior(d->onFailure);
+    }
+
     emit finished( this, !ok );
 }
 
@@ -745,6 +759,14 @@ void KTimerJob::fire()
             emit error( this );
             emit finished( this, true );
         }
+    }
+}
+
+void KTimerJob::fireInferior(const QString &command)
+{
+    if (!command.simplified().isEmpty()) {
+        QProcess *proc = new QProcess;
+	    proc->start(command);
     }
 }
 

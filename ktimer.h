@@ -105,6 +105,7 @@ class KTimerJob : public QObject {
 
  protected slots:
     virtual void fire();
+    virtual void fireInferior(const QString &cmd);
 
  private slots:
     void timeout();

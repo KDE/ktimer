@@ -38,6 +38,13 @@ class KTimerJob : public QObject {
 
     unsigned delay() const;
     QString command() const;
+    QString onSchedule() const;
+    QString onPause() const;
+    QString onResume() const;
+    QString onStop() const;
+    QString onSuccess() const;
+    QString onFailure() const;
+
     bool loop() const;
     bool oneInstance() const;
     bool consecutive() const;
@@ -57,6 +64,13 @@ class KTimerJob : public QObject {
     void setDelay( unsigned int sec );
     void setDelay( int sec );
     void setCommand( const QString &cmd );
+    void setOnSchedule( const QString &cmd );
+    void setOnPause( const QString &cmd );
+    void setOnResume( const QString &cmd );
+    void setOnStop( const QString &cmd );
+    void setOnSuccess( const QString &cmd );
+    void setOnFailure( const QString &cmd );
+
     void setLoop( bool loop );
     void setOneInstance( bool one );
     void setConsecutive( bool consecutive );
@@ -72,6 +86,13 @@ class KTimerJob : public QObject {
     void stateChanged( KTimerJob *job, States state );
     void delayChanged( KTimerJob *job, unsigned int sec );
     void commandChanged( KTimerJob *job, const QString &cmd );
+    void onScheduleChanged( KTimerJob *job, const QString &cmd );
+    void onPauseChanged( KTimerJob *job, const QString &cmd );
+    void onResumeChanged( KTimerJob *job, const QString &cmd );
+    void onStopChanged( KTimerJob *job, const QString &cmd );
+    void onSuccessChanged( KTimerJob *job, const QString &cmd );
+    void onFailureChanged( KTimerJob *job, const QString &cmd );
+
     void loopChanged( KTimerJob *job, bool loop );
     void oneInstanceChanged( KTimerJob *job, bool one );
     void consecutiveChanged( KTimerJob *job, bool consecutive );

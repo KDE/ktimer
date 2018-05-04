@@ -149,6 +149,12 @@ void KTimerPref::add()
     connect(job, &KTimerJob::valueChanged, this, &KTimerPref::jobChanged);
     connect(job, &KTimerJob::stateChanged, this, &KTimerPref::jobChanged);
     connect(job, &KTimerJob::commandChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::onScheduleChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::onPauseChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::onResumeChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::onStopChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::onSuccessChanged, this, &KTimerPref::jobChanged);
+    connect(job, &KTimerJob::onFailureChanged, this, &KTimerPref::jobChanged);
     connect(job, &KTimerJob::finished, this, &KTimerPref::jobFinished);
 
     job->setUser( item );
@@ -196,6 +202,9 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
         m_slider->disconnect();
 		m_commandLine->disconnect();
 		m_commandLine->lineEdit()->disconnect();
+
+        //NB: WIP: No GUI way to set: onSchedule, onPause, onResume, onStop, onSuccess, onFailure
+        //With the current scheme, so many fields would be rather cluttered; so maybe it would require a special dialog?
 
         // Set hour, minute and second QSpinBoxes before we connect to signals.
         int h, m, s;
@@ -315,6 +324,12 @@ void KTimerPref::loadJobs( KConfig *cfg )
             connect(job, &KTimerJob::valueChanged, this, &KTimerPref::jobChanged);
             connect(job, &KTimerJob::stateChanged, this, &KTimerPref::jobChanged);
             connect(job, &KTimerJob::commandChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::onScheduleChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::onPauseChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::onResumeChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::onStopChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::onSuccessChanged, this, &KTimerPref::jobChanged);
+            connect(job, &KTimerJob::onFailureChanged, this, &KTimerPref::jobChanged);
             connect(job, &KTimerJob::finished, this, &KTimerPref::jobFinished);
 
             job->load( cfg, QStringLiteral( "Job%1" ).arg(n) );
@@ -333,6 +348,12 @@ void KTimerPref::loadJobs( KConfig *cfg )
 struct KTimerJobPrivate {
     unsigned delay;
     QString command;
+    QString onSchedule;
+    QString onPause;
+    QString onResume;
+    QString onStop;
+    QString onSuccess;
+    QString onFailure;
     bool loop;
     bool oneInstance;
     bool consecutive;
@@ -374,6 +395,12 @@ void KTimerJob::save( KConfig *cfg, const QString& grp )
 	KConfigGroup groupcfg = cfg->group(grp);
     groupcfg.writeEntry( "Delay", d->delay );
     groupcfg.writePathEntry( "Command", d->command );
+    groupcfg.writePathEntry( "OnSchedule", d->onSchedule );
+    groupcfg.writePathEntry( "OnPause", d->onPause );
+    groupcfg.writePathEntry( "OnResume", d->onResume );
+    groupcfg.writePathEntry( "OnStop", d->onStop );
+    groupcfg.writePathEntry( "OnSuccess", d->onSuccess );
+    groupcfg.writePathEntry( "OnFailure", d->onFailure );
     groupcfg.writeEntry( "Loop", d->loop );
     groupcfg.writeEntry( "OneInstance", d->oneInstance );
     groupcfg.writeEntry( "Consecutive", d->consecutive );
@@ -386,6 +413,13 @@ void KTimerJob::load( KConfig *cfg, const QString& grp )
 	KConfigGroup groupcfg = cfg->group(grp);
     setDelay( groupcfg.readEntry( "Delay", 100 ) );
     setCommand( groupcfg.readPathEntry( "Command", QString() ) );
+    setOnSchedule( groupcfg.readPathEntry( "OnSchedule", QString() ) );
+    setOnPause(    groupcfg.readPathEntry( "OnPause"   , QString() ) );
+    setOnResume(   groupcfg.readPathEntry( "OnResume"  , QString() ) );
+    setOnStop(     groupcfg.readPathEntry( "OnStop"    , QString() ) );
+    setOnSuccess(  groupcfg.readPathEntry( "OnSuccess" , QString() ) );
+    setOnFailure(  groupcfg.readPathEntry( "OnFailure" , QString() ) );
+
     setLoop( groupcfg.readEntry( "Loop", false ) );
     setOneInstance( groupcfg.readEntry( "OneInstance", d->oneInstance ) );
     setConsecutive( groupcfg.readEntry( "Consecutive", d->consecutive ) );
@@ -481,6 +515,37 @@ QString KTimerJob::command() const
     return d->command;
 }
 
+QString KTimerJob::onSchedule() const
+{
+    return d->onSchedule;
+}
+
+QString KTimerJob::onPause() const
+{
+    return d->onPause;
+}
+
+QString KTimerJob::onResume() const
+{
+    return d->onResume;
+}
+
+QString KTimerJob::onStop() const
+{
+    return d->onStop;
+}
+
+QString KTimerJob::onSuccess() const
+{
+    return d->onSuccess;
+}
+
+QString KTimerJob::onFailure() const
+{
+    return d->onFailure;
+}
+
+
 
 void KTimerJob::setCommand( const QString &cmd )
 {
@@ -490,6 +555,61 @@ void KTimerJob::setCommand( const QString &cmd )
         emit changed( this );
     }
 }
+
+void KTimerJob::setOnSchedule( const QString &cmd )
+{
+    if( d->onSchedule!=cmd ) {
+        d->onSchedule = cmd;
+        emit onScheduleChanged( this, cmd );
+        emit changed( this );
+    }
+}
+
+void KTimerJob::setOnPause( const QString &cmd )
+{
+    if( d->onPause!=cmd ) {
+        d->onPause = cmd;
+        emit onPauseChanged( this, cmd );
+        emit changed( this );
+    }
+}
+
+void KTimerJob::setOnResume( const QString &cmd )
+{
+    if( d->onResume!=cmd ) {
+        d->onResume = cmd;
+        emit onResumeChanged( this, cmd );
+        emit changed( this );
+    }
+}
+
+void KTimerJob::setOnStop( const QString &cmd )
+{
+    if( d->onStop!=cmd ) {
+        d->onStop = cmd;
+        emit onStopChanged( this, cmd );
+        emit changed( this );
+    }
+}
+
+void KTimerJob::setOnSuccess( const QString &cmd )
+{
+    if( d->onSuccess!=cmd ) {
+        d->onSuccess = cmd;
+        emit onSuccessChanged( this, cmd );
+        emit changed( this );
+    }
+}
+
+void KTimerJob::setOnFailure( const QString &cmd )
+{
+    if( d->onFailure!=cmd ) {
+        d->onFailure = cmd;
+        emit onFailureChanged( this, cmd );
+        emit changed( this );
+    }
+}
+
 
 
 bool KTimerJob::loop() const

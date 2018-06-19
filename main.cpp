@@ -52,8 +52,6 @@ int main( int argc, char **argv )
     aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), "schimmi@kde.org");
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    parser.addVersionOption();
-    parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);

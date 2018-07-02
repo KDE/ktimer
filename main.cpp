@@ -45,11 +45,11 @@ int main( int argc, char **argv )
     migrate.migrate();
 
     KLocalizedString::setApplicationDomain("ktimer");
-    KAboutData aboutData( "ktimer", i18n("KTimer"),
-                          version, i18n(description), KAboutLicense::GPL,
+    KAboutData aboutData( QStringLiteral("ktimer"), i18n("KTimer"),
+                          QString::fromLatin1(version), i18n(description), KAboutLicense::GPL,
                           i18n("(c) 2001, Stefan Schimanski"),
-                          "http://utils.kde.org/projects/ktimer");
-    aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), "schimmi@kde.org");
+                          QStringLiteral("http://utils.kde.org/projects/ktimer"));
+    aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), QStringLiteral("schimmi@kde.org"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
     aboutData.setupCommandLine(&parser);

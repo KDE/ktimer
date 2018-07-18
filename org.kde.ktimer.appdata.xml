@@ -20,6 +20,7 @@
   <name xml:lang="nn">KTimer</name>
   <name xml:lang="pl">KTimer</name>
   <name xml:lang="pt">KTimer</name>
+  <name xml:lang="pt-BR">KTimer</name>
   <name xml:lang="sk">KTimer</name>
   <name xml:lang="sv">Ktimer</name>
   <name xml:lang="uk">KTimer</name>
@@ -41,6 +42,7 @@
   <summary xml:lang="nn">Nedteljingsstartar</summary>
   <summary xml:lang="pl">Odliczanie</summary>
   <summary xml:lang="pt">Lançamento Temporizado</summary>
+  <summary xml:lang="pt-BR">Lançador de contagem regressiva</summary>
   <summary xml:lang="sk">Odpočítavané spúšťanie</summary>
   <summary xml:lang="sv">Nerräknande startprogram</summary>
   <summary xml:lang="uk">Таймер</summary>

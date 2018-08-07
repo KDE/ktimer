@@ -25,11 +25,10 @@
 #include <kdelibs4configmigrator.h>
 #include <KDBusService>
 #include "ktimer.h"
+#include "config-ktimer.h"
 
 static const char description[] =
         I18N_NOOP("KDE Timer");
-
-static const char version[] = "v0.10";
 
 int main( int argc, char **argv )
 {
@@ -46,7 +45,7 @@ int main( int argc, char **argv )
 
     KLocalizedString::setApplicationDomain("ktimer");
     KAboutData aboutData( QStringLiteral("ktimer"), i18n("KTimer"),
-                          QString::fromLatin1(version), i18n(description), KAboutLicense::GPL,
+                          QString::fromLatin1(KTIMER_VERSION), i18n(description), KAboutLicense::GPL,
                           i18n("(c) 2001, Stefan Schimanski"),
                           QStringLiteral("http://utils.kde.org/projects/ktimer"));
     aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), QStringLiteral("schimmi@kde.org"));

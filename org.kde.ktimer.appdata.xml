@@ -16,6 +16,7 @@
   <name xml:lang="gl">KTimer</name>
   <name xml:lang="ia">KTimer</name>
   <name xml:lang="it">KTimer</name>
+  <name xml:lang="ko">KTimer</name>
   <name xml:lang="nl">KTimer</name>
   <name xml:lang="nn">KTimer</name>
   <name xml:lang="pl">KTimer</name>
@@ -38,6 +39,7 @@
   <summary xml:lang="gl">Iniciador de conta atrás</summary>
   <summary xml:lang="ia">Lanceator de computo a retro</summary>
   <summary xml:lang="it">Conto alla rovescia</summary>
+  <summary xml:lang="ko">카운트다운 실행기</summary>
   <summary xml:lang="nl">Starter van aftellen</summary>
   <summary xml:lang="nn">Nedteljingsstartar</summary>
   <summary xml:lang="pl">Odliczanie</summary>
@@ -61,6 +63,7 @@
     <p xml:lang="fr">KTimer est un petit outil qui exécute des programmes après un laps de temps défini. Il vous permet de configurer plusieurs tâches et de définir un compte à rebours pour chacune d'entre elles. Il est possible de lancer, d'arrêter, de modifier ou de faire tourner en boucle les comptes à rebours de chaque tâche.</p>
     <p xml:lang="gl">KTimer é unha pequena ferramenta para executar programas despois dun certo tempo. Permítelle introducir varias tarefas e definir unha conta atrás para cada unha delas. As contas atrás de cada tarefa poden iniciarse, deterse, modificarse ou executarse en bucle.</p>
     <p xml:lang="it">KTimer è un piccolo strumento per eseguire i programmi dopo un certo tempo. Ti permette di inserire molte attività e di impostare un temporizzatore per ciascuna di esse; questi possono essere avviati, fermati, modificati o ripetuti.</p>
+    <p xml:lang="ko">KTimer는 시간을 두고 프로그램을 실행할 수 있는 작은 도구입니다. 여러 작업과 타이머를 지정할 수 있으며, 각각 작업의 타이머를 개별적으로 관리할 수 있습니다.</p>
     <p xml:lang="nl">KTimer is een klein hulpmiddel om programma's uit te voeren na enige tijd. Het stelt u in staat om verschillende taken in te voeren en een timer voor elk van hen in te stellen. De timers voor elke taak kunnen worden gestart, gestopt, gewijzigd of in een loop gezet worden.</p>
     <p xml:lang="nn">KTimer er eit lite verktøy for automatisk start av program når det har gått ei fastsett tid. Du kan leggja til fleire oppgåver og ha ei eiga nedteljing for kvar av dei. Nedteljarane kan du òg starta, stoppa, endra eller køyra i løkkje.</p>
     <p xml:lang="pl">KTimer jest małym narzędziem do wykonywania programów po danym czasie. Umożliwia podanie kliku zadań i ustawienia czasomierza dla nich. Czasomierz dla każdego z zadań można rozpocząć, zatrzymać, zmienić lub zapętlić.</p>

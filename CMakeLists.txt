@@ -13,7 +13,7 @@ find_package (ECM ${KF5_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
-include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
@@ -32,11 +32,7 @@ find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS
     Notifications
 )
 
-add_definitions(-DQT_NO_CAST_FROM_ASCII)
-add_definitions(-DQT_NO_CAST_TO_ASCII)
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
-add_definitions(-DQT_USE_QSTRINGBUILDER)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 
 configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)

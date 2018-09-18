@@ -53,7 +53,7 @@ class KTimerJob : public QObject {
     void secondsToHMS( int secs, int *hours, int *minutes, int *seconds ) const;
 
 
- public slots:
+ public Q_SLOTS:
     void setDelay( unsigned int sec );
     void setDelay( int sec );
     void setCommand( const QString &cmd );
@@ -68,7 +68,7 @@ class KTimerJob : public QObject {
     void stop();
     void start();
 
- signals:
+ Q_SIGNALS:
     void stateChanged( KTimerJob *job, States state );
     void delayChanged( KTimerJob *job, unsigned int sec );
     void commandChanged( KTimerJob *job, const QString &cmd );
@@ -82,10 +82,10 @@ class KTimerJob : public QObject {
     void finished( KTimerJob *job, bool error );
     void error( KTimerJob *job );
 
- protected slots:
+ protected Q_SLOTS:
     virtual void fire();
 
- private slots:
+ private Q_SLOTS:
     void timeout();
     void processExited(int, QProcess::ExitStatus);
 
@@ -101,11 +101,11 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
     KTimerPref( QWidget *parent=0);
     virtual ~KTimerPref();
 
- public slots:
+ public Q_SLOTS:
     void exit();
     void done(int result) Q_DECL_OVERRIDE;
 
- protected slots:
+ protected Q_SLOTS:
     void add();
     void remove();
     void help();
@@ -115,7 +115,7 @@ class KTimerPref : public QDialog, public Ui::PrefWidget
     void loadJobs( KConfig *cfg );
     void saveAllJobs();
 
- private slots:
+ private Q_SLOTS:
     void jobChanged( KTimerJob *job );
     void jobFinished( KTimerJob *job, bool error );
     void delayChanged();

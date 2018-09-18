@@ -25,7 +25,7 @@
 #include <kdelibs4configmigrator.h>
 #include <KDBusService>
 #include "ktimer.h"
-#include "config-ktimer.h"
+#include <config-ktimer.h>
 
 static const char description[] =
         I18N_NOOP("KDE Timer");

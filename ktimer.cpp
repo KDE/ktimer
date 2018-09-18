@@ -356,7 +356,7 @@ KTimerJob::KTimerJob( QObject *parent)
     d->consecutive = false;
     d->value = 100;
     d->state = Stopped;
-    d->user = 0;
+    d->user = nullptr;
 
     d->timer = new QTimer( this );
     connect(d->timer, &QTimer::timeout, this, &KTimerJob::timeout);

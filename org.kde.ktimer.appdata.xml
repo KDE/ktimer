@@ -82,6 +82,7 @@
   <url type="homepage">https://utils.kde.org/projects/ktimer/</url>
   <screenshots>
     <screenshot type="default">
+      <caption>KTimer configuration window</caption>
       <image>https://www.kde.org/images/screenshots/ktimer.png</image>
     </screenshot>
   </screenshots>

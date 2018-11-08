@@ -77,7 +77,7 @@
     <p xml:lang="zh-CN">KTimer 是一个用于在一段时间之后执行程序的小工具。它让您可以创建多个任务，并且为它们每一个设置一个定时器。每个任务的定时器均可被启动、停止、更改或循环运行。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ktimer</url>
-  <url type="donation">https://www.kde.org/community/donations/</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=ktimer&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=ktimer</url>
   <url type="homepage">https://utils.kde.org/projects/ktimer/</url>
   <screenshots>

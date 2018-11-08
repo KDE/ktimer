@@ -131,7 +131,7 @@
         <property name="whatsThis">
          <string>This number is how many seconds are left for the selected countdown.</string>
         </property>
-        <property name="numDigits">
+        <property name="digitCount">
          <number>6</number>
         </property>
        </widget>

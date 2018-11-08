@@ -462,7 +462,7 @@ void KTimerJob::setValue( int value )
     setValue( (unsigned)value );
 }
 
-void KTimerJob::setDelay( unsigned sec )
+void KTimerJob::setDelay( unsigned int sec )
 {
     if( d->delay!=sec ) {
         d->delay = sec;
@@ -546,7 +546,7 @@ unsigned KTimerJob::value() const
 }
 
 
-void KTimerJob::setValue( unsigned value )
+void KTimerJob::setValue( unsigned int value )
 {
     if( d->value!=value ) {
         d->value = value;

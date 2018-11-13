@@ -86,10 +86,12 @@
       <caption xml:lang="ca">Finestra de configuració del KTimer.</caption>
       <caption xml:lang="ca-valencia">Finestra de configuració del KTimer.</caption>
       <caption xml:lang="nl">Configuratievenster van KTimer</caption>
+      <caption xml:lang="nn">Oppsettvindauge for KTimer</caption>
       <caption xml:lang="pt">Janela de configuração do KTimer</caption>
       <caption xml:lang="sv">Inställningsfönster i Ktimer </caption>
       <caption xml:lang="uk">Вікно налаштовування KTimer</caption>
       <caption xml:lang="x-test">xxKTimer configuration windowxx</caption>
+      <caption xml:lang="zh-CN">KTimer 配置窗口</caption>
       <image>https://www.kde.org/images/screenshots/ktimer.png</image>
     </screenshot>
   </screenshots>

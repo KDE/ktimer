@@ -27,6 +27,7 @@
   <name xml:lang="uk">KTimer</name>
   <name xml:lang="x-test">xxKTimerxx</name>
   <name xml:lang="zh-CN">KTimer</name>
+  <name xml:lang="zh-TW">KTimer</name>
   <summary>Countdown Launcher</summary>
   <summary xml:lang="ca">Llançador amb compte enrere</summary>
   <summary xml:lang="ca-valencia">Llançador amb compte arrere</summary>
@@ -51,6 +52,7 @@
   <summary xml:lang="uk">Таймер</summary>
   <summary xml:lang="x-test">xxCountdown Launcherxx</summary>
   <summary xml:lang="zh-CN">倒计时执行器</summary>
+  <summary xml:lang="zh-TW">倒數計時啟動器</summary>
   <description>
     <p>
       KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.
@@ -102,6 +104,7 @@
       <caption xml:lang="uk">Вікно налаштовування KTimer</caption>
       <caption xml:lang="x-test">xxKTimer configuration windowxx</caption>
       <caption xml:lang="zh-CN">KTimer 配置窗口</caption>
+      <caption xml:lang="zh-TW">KTimer 設定視窗</caption>
       <image>https://www.kde.org/images/screenshots/ktimer.png</image>
     </screenshot>
   </screenshots>

@@ -34,7 +34,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
-add_definitions(-DQT_NO_FOREACH)
+if (${KF5Config_VERSION} STRGREATER "5.56.0")
+        add_definitions(-DQT_NO_FOREACH)
+endif()
 
 configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
 

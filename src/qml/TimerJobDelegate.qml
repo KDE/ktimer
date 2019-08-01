@@ -2,7 +2,6 @@ import QtQuick 2.1
 import org.kde.kirigami 2.1 as Kirigami
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2 as QC2
-import QtQuick.Controls 1.4 as QC1
 import kde.ktimer.components 1.0
 
 Kirigami.SwipeListItem {
@@ -13,7 +12,7 @@ Kirigami.SwipeListItem {
         //anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing*4
 
-        Kirigami.Label {
+        QC2.Label {
             id: labelItem
             verticalAlignment: Text.AlignVCenter
             color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
@@ -23,14 +22,14 @@ Kirigami.SwipeListItem {
         }
         Column {
             Layout.fillWidth: true
-            Kirigami.Label {
+            QC2.Label {
                 id: nameItem
                 color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
                 elide: Text.ElideRight
                 font: listItem.font
                 text: model.job.name
             }
-            Kirigami.Label {
+            QC2.Label {
                 id: commandItem
                 color: listItem.checked || listItem.pressed ? listItem.activeTextColor : listItem.textColor
                 elide: Text.ElideRight

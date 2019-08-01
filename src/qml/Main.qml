@@ -28,8 +28,6 @@ Kirigami.ApplicationWindow {
     id: root
     property QtObject currentTimer
 
-    header: Kirigami.ApplicationHeader {}
-
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }

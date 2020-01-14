@@ -22,7 +22,7 @@
 #include <QApplication>
 #include <KLocalizedString>
 #include <QCommandLineParser>
-#include <kdelibs4configmigrator.h>
+#include <Kdelibs4ConfigMigrator>
 #include <KDBusService>
 #include "ktimer.h"
 #include <config-ktimer.h>

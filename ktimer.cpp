@@ -21,11 +21,11 @@
 #include <QProcess>
 #include <QTimer>
 #include <KConfigGroup>
-#include <klineedit.h>
+#include <KLineEdit>
 #include <ktoolinvocation.h>
-#include <kstandardguiitem.h>
+#include <KStandardGuiItem>
 #include <QAction>
-#include <kstandardaction.h>
+#include <KStandardAction>
 #include "kstatusnotifieritem.h"
 #include <KToolInvocation>
 #include <KHelpClient>

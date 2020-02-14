@@ -615,7 +615,7 @@ void KTimerJob::fire()
         d->processes.append( proc );
         connect(proc, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KTimerJob::processExited);
         if (!d->command.simplified ().isEmpty()) {
-	        proc->start(d->command);
+                proc->start(d->command, QStringList());
 	        emit fired( this );
         }
         if(proc->state() == QProcess::NotRunning) {

@@ -18,7 +18,7 @@ class KTimerJob : public QObject {
     Q_PROPERTY(States state READ state WRITE setState NOTIFY stateChanged)
 
 public:
-    KTimerJob( QObject *parent=0);
+    KTimerJob( QObject *parent=nullptr);
     virtual ~KTimerJob();
 
     enum States { Stopped, Paused, Started };
@@ -38,7 +38,7 @@ public:
     int timeToSeconds( int hours, int minutes, int seconds ) const;
     void secondsToHMS( int secs, int *hours, int *minutes, int *seconds ) const;
 
- public slots:
+ public Q_SLOTS:
     void setDelay( int sec );
     void setCommand( const QString &cmd );
     void setLoop( bool loop );
@@ -53,7 +53,7 @@ public:
     void stop();
     void start();
 
- signals:
+ Q_SIGNALS:
     // formats the value in hh:mm:ss
     void formattedValueChanged(const QString& value);
     void stateChanged(States state);
@@ -68,10 +68,10 @@ public:
     void finished(bool error);
     void error();
 
- protected slots:
+ protected Q_SLOTS:
     virtual void fire();
 
- private slots:
+ private Q_SLOTS:
     void timeout();
     void processExited(int, QProcess::ExitStatus);
 

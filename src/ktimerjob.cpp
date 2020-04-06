@@ -77,7 +77,7 @@ int KTimerJob::timeToSeconds( int hours, int minutes, int seconds ) const
 
 void KTimerJob::setDelayFromString(const QString& value)
 {
-    auto t = QTime::fromString(value, "hh:mm:ss");
+    auto t = QTime::fromString(value, QStringLiteral("hh:mm:ss"));
     setDelay(t.hour() * 3600 + t.minute() * 60 + t.second());
 }
 

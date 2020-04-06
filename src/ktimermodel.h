@@ -11,7 +11,7 @@ class KTimerModel : public QAbstractListModel
     Q_OBJECT
 public:
     enum {JOB};
-    KTimerModel(QObject *parent = 0);
+    KTimerModel(QObject *parent = nullptr);
     QVariant data(const QModelIndex& idx, int role) const override;
     int rowCount(const QModelIndex& parent) const override;
     bool insertRows(int row, int count, const QModelIndex& parent = QModelIndex()) override;

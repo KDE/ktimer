@@ -38,7 +38,7 @@ if (${KF5Config_VERSION} STRGREATER "5.56.0")
         add_definitions(-DQT_NO_FOREACH)
 endif()
 
-configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
+configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-ktimer.h)
 
 add_subdirectory(icons)
 add_subdirectory(src)

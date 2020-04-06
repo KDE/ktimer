@@ -30,7 +30,7 @@
 #include <Kdelibs4ConfigMigrator>
 #include <KDBusService>
 
-#include <config-ktimer.h>
+#include "config-ktimer.h"
 #include "ktimermodel.h"
 #include "ktimerjob.h"
 
@@ -69,7 +69,7 @@ int main( int argc, char **argv )
     qmlRegisterType<KTimerModel>("kde.ktimer.components", 1, 0, "TimerModel");
     qmlRegisterType<KTimerJob>("kde.ktimer.components", 1, 0, "TimerJob");
 
-    auto *engine = new QQmlApplicationEngine("qrc:/KTimer/Main.qml");
+    auto *engine = new QQmlApplicationEngine(QStringLiteral("qrc:/KTimer/Main.qml"));
     KStatusNotifierItem *statusNotifier = nullptr;
     for(auto obj : engine->rootObjects()) {
         if (auto window = qobject_cast<QWindow*>(obj)) {

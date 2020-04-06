@@ -13,6 +13,7 @@ class KTimerJob : public QObject {
     Q_PROPERTY(QString command READ command WRITE setCommand NOTIFY commandChanged)
     Q_PROPERTY(bool loop READ loop WRITE setLoop NOTIFY loopChanged)
     Q_PROPERTY(bool oneInstance READ oneInstance WRITE setOneInstance NOTIFY oneInstanceChanged)
+    Q_PROPERTY(bool consecutive READ consecutive WRITE setConsecutive NOTIFY consecutiveChanged)
     Q_PROPERTY(int value READ value WRITE setValue NOTIFY valueChanged)
     Q_PROPERTY(QString formattedValue READ formattedValue WRITE setFormattedValue NOTIFY formattedValueChanged)
     Q_PROPERTY(States state READ state WRITE setState NOTIFY stateChanged)
@@ -37,6 +38,7 @@ public:
     QString formatTime( int seconds ) const;
     int timeToSeconds( int hours, int minutes, int seconds ) const;
     void secondsToHMS( int secs, int *hours, int *minutes, int *seconds ) const;
+    bool consecutive() const;
 
  public Q_SLOTS:
     void setDelay( int sec );
@@ -48,7 +50,7 @@ public:
     void setFormattedValue(const QString& value);
     void setName(const QString& name);
     void setDelayFromString(const QString& value);
-
+    void setConsecutive(bool value);
     void pause();
     void stop();
     void start();
@@ -63,6 +65,7 @@ public:
     void oneInstanceChanged(bool one);
     void valueChanged(unsigned int value);
     void nameChanged(const QString& name);
+    void consecutiveChanged(bool value);
     void changed();
     void fired();
     void finished(bool error);

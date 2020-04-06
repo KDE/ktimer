@@ -11,6 +11,7 @@ struct KTimerJobPrivate {
     QString command;
     bool loop;
     bool oneInstance;
+    bool consecutive;
     int value;
     KTimerJob::States state;
     QList<QProcess *> processes;
@@ -223,6 +224,21 @@ void KTimerJob::processExited(int, QProcess::ExitStatus status)
 
     if( !ok ) emit error();
     emit finished(!ok);
+}
+
+bool KTimerJob::consecutive() const
+{
+    return d->consecutive;
+}
+
+void KTimerJob::setConsecutive(bool value)
+{
+    if (d->consecutive == value) {
+        return;
+    }
+
+    d->consecutive = value;
+    Q_EMIT consecutiveChanged(value);
 }
 
 void KTimerJob::fire()

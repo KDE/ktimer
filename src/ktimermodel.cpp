@@ -32,6 +32,20 @@ bool KTimerModel::insertRows(int row, int count, const QModelIndex& parent)
     auto currTotal = rowCount(parent);
     beginInsertRows(parent, currTotal, currTotal);
     auto *job = new KTimerJob();
+
+    connect(job, &KTimerJob::finished, [this, job] {
+        auto idx = m_timerInfos.indexOf(job);
+        idx += 1;
+        if (idx >= m_timerInfos.count()) {
+            return;
+        }
+
+        auto *nextJob = m_timerInfos[idx];
+        if (nextJob->consecutive()) {
+            nextJob->start();
+        }
+    });
+
     m_timerInfos.append(job);
     endInsertRows();
     return false;

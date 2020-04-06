@@ -37,6 +37,9 @@ Kirigami.SwipeListItem {
                 text: model.job.command ? "Run " + model.job.command : ""
             }
         }
+        Item {
+            Layout.fillWidth: true
+        }
     }
     actions:[
         Kirigami.Action {
@@ -58,8 +61,12 @@ Kirigami.SwipeListItem {
         },
         Kirigami.Action {
             iconName: "media-playlist-repeat"
+            tooltip: "Repeat"
             onTriggered: job.loop = checked
         },
+        Kirigami.Action {
+            iconName:
+        }
         Kirigami.Action {
             iconName: "edit-delete"
             onTriggered: jobModel.removeJob(index);

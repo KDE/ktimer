@@ -85,6 +85,7 @@
     <p xml:lang="pl">KTimer jest małym narzędziem do wykonywania programów po danym czasie. Umożliwia podanie kliku zadań i ustawienia czasomierza dla nich. Czasomierz dla każdego z zadań można rozpocząć, zatrzymać, zmienić lub zapętlić.</p>
     <p xml:lang="pt">O KTimer é uma pequena ferramenta para executar programas ao fim de algum tempo. Permite-lhe introduzir várias tarefas e a definir um cronómetro para cada uma delas. Poderá iniciar, parar, modificar ou configurar em ciclo cada uma das tarefas.</p>
     <p xml:lang="pt-BR">O KTimer é uma pequena ferramenta para executar programas em um tempo determinado. Permite-lhe inserir diversas tarefas e definir um cronômetro para cada uma delas. Os cronômetros de cada tarefa podem ser iniciados, parados, alterados ou colocados em ciclo.</p>
+    <p xml:lang="ru">Приложение KTimer позволяет запускать выполнение команд по срабатыванию таймера. Таймеры возможно запустить, остановить, изменить или зациклить.</p>
     <p xml:lang="sk">KTimer je malý nástroj na vykonanie programov po určitom čase. Umožnuje vám zadať niekoľko úloh a nastaviť šasovač pre každý z nich. Časovače pre každú úlohu môžu byť spustené, zastavené, zmenené alebo opakované.</p>
     <p xml:lang="sv">Ktimer är ett litet verktyg för att köra program efter en viss tid. Det låter dig ange flera aktiviteter och ställa in en tidtagare för var och en av dem. Tidtagningen av varje aktivitet kan startas, stoppas, ändras eller upprepas.</p>
     <p xml:lang="uk">KTimer — невеличка програма для відкладеного запуску інших програм. За її допомогою ви зможете вказати декілька завдань і встановити для кожного з них таймер. Таймери для кожного з завдань можна запускати, зупиняти, змінювати або зациклювати.</p>
@@ -119,6 +120,7 @@
       <caption xml:lang="pl">Okno ustawień KTimer</caption>
       <caption xml:lang="pt">Janela de configuração do KTimer</caption>
       <caption xml:lang="pt-BR">Janela de configuração do KTimer</caption>
+      <caption xml:lang="ru">Окно параметров KTimer</caption>
       <caption xml:lang="sk">KTimer konfiguračné okno</caption>
       <caption xml:lang="sv">Inställningsfönster i Ktimer </caption>
       <caption xml:lang="uk">Вікно налаштовування KTimer</caption>

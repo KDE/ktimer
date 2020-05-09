@@ -615,7 +615,15 @@ void KTimerJob::fire()
         d->processes.append( proc );
         connect(proc, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KTimerJob::processExited);
         if (!d->command.simplified ().isEmpty()) {
-                proc->start(d->command, QStringList());
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+            QStringList splitArguments = QProcess::splitCommand(d->command);
+            if (!splitArguments.isEmpty()) {
+                const QString prog = splitArguments.takeFirst();
+                proc->start(prog, splitArguments);
+            }
+#else
+            proc->start(d->command, QStringList());
+#endif
 	        emit fired( this );
         }
         if(proc->state() == QProcess::NotRunning) {

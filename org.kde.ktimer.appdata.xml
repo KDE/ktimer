@@ -30,7 +30,6 @@
   <name xml:lang="sl">KTimer</name>
   <name xml:lang="sv">Ktimer</name>
   <name xml:lang="uk">KTimer</name>
-  <name xml:lang="x-test">xxKTimerxx</name>
   <name xml:lang="zh-CN">KTimer</name>
   <name xml:lang="zh-TW">KTimer</name>
   <summary>Countdown Launcher</summary>
@@ -60,7 +59,6 @@
   <summary xml:lang="sl">Zaganjalnik odštevanja</summary>
   <summary xml:lang="sv">Nerräknande startprogram</summary>
   <summary xml:lang="uk">Таймер</summary>
-  <summary xml:lang="x-test">xxCountdown Launcherxx</summary>
   <summary xml:lang="zh-CN">倒计时执行器</summary>
   <summary xml:lang="zh-TW">倒數計時啟動器</summary>
   <description>
@@ -92,7 +90,6 @@
     <p xml:lang="sl">KTimer je malo orodje za izvajanje programov čez nekaj časa. Omogoča vam, da vnesete več opravil in nastavite časovni plan za vsakega od njih. Časovni termin za vsako opravilo lahko zaženete, zaustavite, spremenite ali uredite v zanko.</p>
     <p xml:lang="sv">Ktimer är ett litet verktyg för att köra program efter en viss tid. Det låter dig ange flera aktiviteter och ställa in en tidtagare för var och en av dem. Tidtagningen av varje aktivitet kan startas, stoppas, ändras eller upprepas.</p>
     <p xml:lang="uk">KTimer — невеличка програма для відкладеного запуску інших програм. За її допомогою ви зможете вказати декілька завдань і встановити для кожного з них таймер. Таймери для кожного з завдань можна запускати, зупиняти, змінювати або зациклювати.</p>
-    <p xml:lang="x-test">xxKTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.xx</p>
     <p xml:lang="zh-CN">KTimer 是一个用于在一段时间之后执行程序的小工具。它让您可以创建多个任务，并且为它们每一个设置一个定时器。每个任务的定时器均可被启动、停止、更改或循环运行。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ktimer</url>
@@ -128,7 +125,6 @@
       <caption xml:lang="sl">Okno za nastavitev KTimerja</caption>
       <caption xml:lang="sv">Inställningsfönster i Ktimer </caption>
       <caption xml:lang="uk">Вікно налаштовування KTimer</caption>
-      <caption xml:lang="x-test">xxKTimer configuration windowxx</caption>
       <caption xml:lang="zh-CN">KTimer 配置窗口</caption>
       <caption xml:lang="zh-TW">KTimer 設定視窗</caption>
       <image>https://www.kde.org/images/screenshots/ktimer.png</image>

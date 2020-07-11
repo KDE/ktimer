@@ -622,7 +622,7 @@ void KTimerJob::fire()
                 proc->start(prog, splitArguments);
             }
 #else
-            proc->start(d->command, QStringList());
+            proc->start(d->command);
 #endif
 	        emit fired( this );
         }

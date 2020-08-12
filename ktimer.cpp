@@ -22,12 +22,10 @@
 #include <QTimer>
 #include <KConfigGroup>
 #include <KLineEdit>
-#include <ktoolinvocation.h>
 #include <KStandardGuiItem>
 #include <QAction>
 #include <KStandardAction>
 #include "kstatusnotifieritem.h"
-#include <KToolInvocation>
 #include <KHelpClient>
 #include <KGuiItem>
 #include <KSharedConfig>

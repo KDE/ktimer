@@ -6,8 +6,8 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project(ktimer VERSION ${RELEASE_SERVICE_VERSION})
 
-set (QT_MIN_VERSION "5.9.0")
-set(KF5_MIN_VERSION "5.46.0")
+set (QT_MIN_VERSION "5.12.0")
+set(KF5_MIN_VERSION "5.57.0")
 
 find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -32,9 +32,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Notifications
 )
 
-if (${KF5Config_VERSION} STRGREATER "5.56.0")
-        add_definitions(-DQT_NO_FOREACH)
-endif()
+add_definitions(-DQT_NO_FOREACH)
 
 configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
 

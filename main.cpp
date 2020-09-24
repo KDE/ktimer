@@ -45,7 +45,7 @@ int main( int argc, char **argv )
 
     KLocalizedString::setApplicationDomain("ktimer");
     KAboutData aboutData( QStringLiteral("ktimer"), i18n("KTimer"),
-                          QString::fromLatin1(KTIMER_VERSION), i18n(description), KAboutLicense::GPL,
+                          QStringLiteral(KTIMER_VERSION), i18n(description), KAboutLicense::GPL,
                           i18n("(c) 2001, Stefan Schimanski"),
                           QStringLiteral("https://utils.kde.org/projects/ktimer/"));
     aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), QStringLiteral("schimmi@kde.org"));

@@ -153,7 +153,7 @@ void KTimerPref::add()
 
     // Qt drops currentChanged signals on first item (bug?)
     if( m_list->topLevelItemCount()==1 )
-      currentChanged( item , NULL);
+      currentChanged( item , nullptr);
 
     m_list->setCurrentItem( item );
     m_list->update();
@@ -202,8 +202,8 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
         m_delayM->setValue( m );
         m_delay->setValue( s );
 
-        connect( m_commandLine->lineEdit(), SIGNAL(textChanged(QString)),
-                 job, SLOT(setCommand(QString)) );
+        connect( m_commandLine->lineEdit(), &QLineEdit::textChanged,
+                 job, &KTimerJob::setCommand);
         connect(m_delayH, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
         connect(m_delayM, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
         connect(m_delay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);

@@ -18,7 +18,6 @@
 
 #include "ktimer.h"
 
-#include <QProcess>
 #include <QTimer>
 #include <KConfigGroup>
 #include <KLineEdit>

@@ -103,7 +103,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>KTimer configuration window</caption>
-      <caption xml:lang="ca">Finestra de configuració del KTimer.</caption>
+      <caption xml:lang="ca">Finestra de configuració del KTimer</caption>
       <caption xml:lang="ca-valencia">Finestra de configuració del KTimer.</caption>
       <caption xml:lang="cs">Konfigurační okno aplikace KTimer</caption>
       <caption xml:lang="de">Einrichtungsdialog von KTimer</caption>

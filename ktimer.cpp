@@ -467,8 +467,8 @@ void KTimerJob::setDelay( unsigned int sec )
         if( d->state==Stopped )
             setValue( sec );
 
-        emit delayChanged( this, sec );
-        emit changed( this );
+        Q_EMIT delayChanged( this, sec );
+        Q_EMIT changed( this );
     }
 }
 
@@ -483,8 +483,8 @@ void KTimerJob::setCommand( const QString &cmd )
 {
     if( d->command!=cmd ) {
         d->command = cmd;
-        emit commandChanged( this, cmd );
-        emit changed( this );
+        Q_EMIT commandChanged( this, cmd );
+        Q_EMIT changed( this );
     }
 }
 
@@ -499,8 +499,8 @@ void KTimerJob::setLoop( bool loop )
 {
     if( d->loop!=loop ) {
         d->loop = loop;
-        emit loopChanged( this, loop );
-        emit changed( this );
+        Q_EMIT loopChanged( this, loop );
+        Q_EMIT changed( this );
     }
 }
 
@@ -515,8 +515,8 @@ void KTimerJob::setOneInstance( bool one )
 {
     if( d->oneInstance!=one ) {
         d->oneInstance = one;
-        emit oneInstanceChanged( this, one );
-        emit changed( this );
+        Q_EMIT oneInstanceChanged( this, one );
+        Q_EMIT changed( this );
     }
 }
 
@@ -531,8 +531,8 @@ void KTimerJob::setConsecutive( bool consecutive )
 {
     if( d->consecutive!=consecutive ) {
         d->consecutive = consecutive;
-        emit consecutiveChanged( this, consecutive );
-        emit changed( this );
+        Q_EMIT consecutiveChanged( this, consecutive );
+        Q_EMIT changed( this );
     }
 }
 
@@ -547,8 +547,8 @@ void KTimerJob::setValue( unsigned int value )
 {
     if( d->value!=value ) {
         d->value = value;
-        emit valueChanged( this, value );
-        emit changed( this );
+        Q_EMIT valueChanged( this, value );
+        Q_EMIT changed( this );
     }
 }
 
@@ -571,8 +571,8 @@ void KTimerJob::setState( KTimerJob::States state )
             setValue( d->delay );
 
         d->state = state;
-        emit stateChanged( this, state );
-        emit changed( this );
+        Q_EMIT stateChanged( this, state );
+        Q_EMIT changed( this );
     }
 }
 
@@ -600,8 +600,8 @@ void KTimerJob::processExited(int, QProcess::ExitStatus status)
     if (i != -1)
         delete d->processes.takeAt(i);
 
-    if( !ok ) emit error( this );
-    emit finished( this, !ok );
+    if( !ok ) Q_EMIT error( this );
+    Q_EMIT finished( this, !ok );
 }
 
 
@@ -621,14 +621,14 @@ void KTimerJob::fire()
 #else
             proc->start(d->command);
 #endif
-	        emit fired( this );
+            Q_EMIT fired( this );
         }
         if(proc->state() == QProcess::NotRunning) {
             const int i = d->processes.indexOf( proc);
             if (i != -1)
                 delete d->processes.takeAt(i);
-            emit error( this );
-            emit finished( this, true );
+            Q_EMIT error( this );
+            Q_EMIT finished( this, true );
         }
     }
 }

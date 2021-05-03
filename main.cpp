@@ -58,7 +58,7 @@ int main( int argc, char **argv )
     app.setQuitOnLastWindowClosed( false );
     KDBusService service;
 
-    KTimerPref *timer = new KTimerPref;
+    auto timer = new KTimerPref;
     timer->show();
 
     return app.exec();

@@ -105,7 +105,7 @@ KTimerPref::KTimerPref( QWidget *parent)
     m_start->setIcon( QIcon::fromTheme( QStringLiteral( "arrow-right" )) );
 
     // create tray icon
-    KStatusNotifierItem *tray = new KStatusNotifierItem(this);
+    auto tray = new KStatusNotifierItem(this);
     tray->setIconByName(QStringLiteral( "ktimer" ));
     tray->setCategory(KStatusNotifierItem::ApplicationStatus);
     tray->setStatus(KStatusNotifierItem::Active);
@@ -139,8 +139,8 @@ void KTimerPref::saveAllJobs() {
 
 void KTimerPref::add()
 {
-    KTimerJob *job = new KTimerJob;
-    KTimerJobItem *item = new KTimerJobItem( job, m_list );
+    auto job = new KTimerJob;
+    auto item = new KTimerJobItem( job, m_list );
 
     connect(job, &KTimerJob::delayChanged, this, &KTimerPref::jobChanged);
     connect(job, &KTimerJob::valueChanged, this, &KTimerPref::jobChanged);
@@ -173,7 +173,7 @@ void KTimerPref::help()
 // note, don't use old, but added it so we can connect to the new one
 void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old */)
 {
-    KTimerJobItem *item = static_cast<KTimerJobItem*>(i);
+    auto item = static_cast<KTimerJobItem*>(i);
     if( item ) {
         KTimerJob *job = item->job();
 
@@ -234,7 +234,7 @@ void KTimerPref::currentChanged( QTreeWidgetItem *i , QTreeWidgetItem * /* old *
 
 void KTimerPref::jobChanged( KTimerJob *job )
 {
-    KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
+    auto item = static_cast<KTimerJobItem*>(job->user());
     if( item ) {
         item->update();
         m_list->update();
@@ -252,7 +252,7 @@ void KTimerPref::jobChanged( KTimerJob *job )
 
 void KTimerPref::jobFinished( KTimerJob *job, bool error )
 {
-    KTimerJobItem *item = static_cast<KTimerJobItem*>(job->user());
+    auto item = static_cast<KTimerJobItem*>(job->user());
     item->setStatus( error );
     if( m_list->itemBelow(m_list->currentItem())!=nullptr && (static_cast<KTimerJobItem*>(m_list->itemBelow( m_list->currentItem() )))->job()->consecutive() ) {
         m_list->setCurrentItem( m_list->itemBelow( m_list->currentItem() ) );
@@ -265,7 +265,7 @@ void KTimerPref::jobFinished( KTimerJob *job, bool error )
     the job and inform the current job */
 void KTimerPref::delayChanged()
 {
-    KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->currentItem());
+    auto item = static_cast<KTimerJobItem*>(m_list->currentItem());
     if ( item ) {
         KTimerJob *job = item->job();
         int time_sec = job->timeToSeconds( m_delayH->value(), m_delayM->value(), m_delay->value() );
@@ -289,7 +289,7 @@ void KTimerPref::saveJobs( KConfig *cfg )
 	const int nbList=m_list->topLevelItemCount();
 	for (int num = 0; num < nbList; ++num)
 	{
-		KTimerJobItem *item = static_cast<KTimerJobItem*>(m_list->topLevelItem(num));
+		auto item = static_cast<KTimerJobItem*>(m_list->topLevelItem(num));
         item->job()->save( cfg, QStringLiteral( "Job%1" ).arg( num ) );
 
 	}
@@ -305,8 +305,8 @@ void KTimerPref::loadJobs( KConfig *cfg )
 {
     const int num = cfg->group("Jobs").readEntry( "Number", 0 );
     for( int n=0; n<num; n++ ) {
-            KTimerJob *job = new KTimerJob;
-            KTimerJobItem *item = new KTimerJobItem( job, m_list );
+            auto job = new KTimerJob;
+            auto item = new KTimerJobItem( job, m_list );
 
             connect(job, &KTimerJob::delayChanged, this, &KTimerPref::jobChanged);
             connect(job, &KTimerJob::valueChanged, this, &KTimerPref::jobChanged);
@@ -594,7 +594,7 @@ void KTimerJob::timeout()
 
 void KTimerJob::processExited(int, QProcess::ExitStatus status)
 {
-	QProcess * proc = static_cast<QProcess*>(sender());
+	auto  proc = static_cast<QProcess*>(sender());
     const bool ok = status==0;
     const int i = d->processes.indexOf( proc);
     if (i != -1)
@@ -608,7 +608,7 @@ void KTimerJob::processExited(int, QProcess::ExitStatus status)
 void KTimerJob::fire()
 {
     if( !d->oneInstance || d->processes.isEmpty() ) {
-        QProcess *proc = new QProcess;
+        auto proc = new QProcess;
         d->processes.append( proc );
         connect(proc, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KTimerJob::processExited);
         if (!d->command.simplified ().isEmpty()) {

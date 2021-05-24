@@ -32,8 +32,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Notifications
 )
 
-add_definitions(-DQT_NO_FOREACH)
-
 configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
 
 set(ktimer_SRCS main.cpp ktimer.cpp )

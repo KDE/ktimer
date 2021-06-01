@@ -31,17 +31,17 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     DBusAddons
     Notifications
 )
+add_executable(ktimer)
 
 configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
 
-set(ktimer_SRCS main.cpp ktimer.cpp )
+target_sources(ktimer PRIVATE main.cpp ktimer.cpp )
 
 ki18n_wrap_ui(ktimer_SRCS prefwidget.ui )
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-ktimer.png")
 ecm_add_app_icon(ktimer_SRCS ICONS ${ICONS_SRCS})
 
-add_executable(ktimer ${ktimer_SRCS})
 
 target_link_libraries(ktimer  KF5::I18n KF5::KIOWidgets KF5::ConfigWidgets KF5::Notifications KF5::DBusAddons)
 

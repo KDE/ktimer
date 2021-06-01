@@ -7,7 +7,7 @@ cmake_minimum_required (VERSION 3.16 FATAL_ERROR)
 project(ktimer VERSION ${RELEASE_SERVICE_VERSION})
 
 set (QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.82.0")
+set(KF5_MIN_VERSION "5.83.0")
 
 find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -37,10 +37,10 @@ configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h
 
 target_sources(ktimer PRIVATE main.cpp ktimer.cpp )
 
-ki18n_wrap_ui(ktimer_SRCS prefwidget.ui )
+ki18n_wrap_ui(ktimer prefwidget.ui )
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-ktimer.png")
-ecm_add_app_icon(ktimer_SRCS ICONS ${ICONS_SRCS})
+ecm_add_app_icon(ktimer ICONS ${ICONS_SRCS})
 
 
 target_link_libraries(ktimer  KF5::I18n KF5::KIOWidgets KF5::ConfigWidgets KF5::Notifications KF5::DBusAddons)

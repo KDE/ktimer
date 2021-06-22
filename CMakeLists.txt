@@ -31,9 +31,14 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     DBusAddons
     Notifications
 )
+
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055400)
+
 add_executable(ktimer)
 
 configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
+
 
 target_sources(ktimer PRIVATE main.cpp ktimer.cpp )
 

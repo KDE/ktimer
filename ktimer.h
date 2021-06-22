@@ -62,14 +62,14 @@ class KTimerJob : public QObject {
     void setConsecutive( bool consecutive );
     void setValue( unsigned int value );
     void setValue( int value );
-    void setState( States state );
+    void setState( KTimerJob::States state );
 
     void pause();
     void stop();
     void start();
 
  Q_SIGNALS:
-    void stateChanged( KTimerJob *job, States state );
+    void stateChanged( KTimerJob *job, KTimerJob::States state );
     void delayChanged( KTimerJob *job, unsigned int sec );
     void commandChanged( KTimerJob *job, const QString &cmd );
     void loopChanged( KTimerJob *job, bool loop );

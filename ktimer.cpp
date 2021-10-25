@@ -48,7 +48,7 @@ public:
         update();
     }
 
-    virtual ~KTimerJobItem() {
+    ~KTimerJobItem() override {
         delete m_job;
     }
 

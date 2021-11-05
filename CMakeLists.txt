@@ -40,7 +40,7 @@ add_executable(ktimer)
 configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
 
 
-target_sources(ktimer PRIVATE main.cpp ktimer.cpp )
+target_sources(ktimer PRIVATE main.cpp ktimer.cpp ktimer.h)
 
 ki18n_wrap_ui(ktimer prefwidget.ui )
 

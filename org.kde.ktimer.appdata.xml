@@ -69,7 +69,7 @@
       KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.
     </p>
     <p xml:lang="ca">El KTimer és una petita eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
-    <p xml:lang="ca-valencia">El KTimer és una petita eina per executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
+    <p xml:lang="ca-valencia">El KTimer és una petita eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
     <p xml:lang="de">KTimer ist ein Programm, um andere Anwendungen nach einer bestimmten Zeit zu starten. Es erlaubt das Erfassen von mehreren Aufgaben mit je eigenem Countdown. Jeder einzelne Countdown kann individuell gestartet, angehalten, geändert oder repetiert werden.</p>
     <p xml:lang="el">Το KTimer είναι ένα μικρό εργαλέιο για την εκτέλεση προγραμμάτων έπειτα από κάποιο χρονικό διάστημα. Σας επιτρέπει να εισάγετε πολλές εργασίες και να ορίσετε χρονόμετρο για καθεμιά. Η χρονομέτρηση για κάθε εργασία μπορεί να ξεκινήσει, να διακοπεί, να αλλάξει ή να επαναληφθεί.</p>
     <p xml:lang="en-GB">KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.</p>
@@ -104,7 +104,7 @@
     <screenshot type="default">
       <caption>KTimer configuration window</caption>
       <caption xml:lang="ca">Finestra de configuració del KTimer</caption>
-      <caption xml:lang="ca-valencia">Finestra de configuració del KTimer.</caption>
+      <caption xml:lang="ca-valencia">Finestra de configuració del KTimer</caption>
       <caption xml:lang="cs">Konfigurační okno aplikace KTimer</caption>
       <caption xml:lang="de">Einrichtungsdialog von KTimer</caption>
       <caption xml:lang="el">Παράθυρο διαμόρφωσης του KTimer</caption>

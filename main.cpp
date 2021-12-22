@@ -30,7 +30,7 @@
 int main( int argc, char **argv )
 {
     QApplication app(argc, argv);
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     /**
      * enable high dpi support
      */
@@ -39,7 +39,7 @@ int main( int argc, char **argv )
     Kdelibs4ConfigMigrator migrate(QStringLiteral("ktimer"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("ktimerrc"));
     migrate.migrate();
-
+#endif
     KLocalizedString::setApplicationDomain("ktimer");
     KAboutData aboutData( QStringLiteral("ktimer"), i18n("KTimer"),
                           QStringLiteral(KTIMER_VERSION), i18n("KDE Timer"), KAboutLicense::GPL,

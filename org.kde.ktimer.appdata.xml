@@ -31,6 +31,7 @@
   <name xml:lang="sl">KTimer</name>
   <name xml:lang="sv">Ktimer</name>
   <name xml:lang="uk">KTimer</name>
+  <name xml:lang="vi">KTimer</name>
   <name xml:lang="x-test">xxKTimerxx</name>
   <name xml:lang="zh-CN">KTimer</name>
   <name xml:lang="zh-TW">KTimer</name>
@@ -129,6 +130,7 @@
       <caption xml:lang="sl">Okno za nastavitev KTimerja</caption>
       <caption xml:lang="sv">Inställningsfönster i Ktimer </caption>
       <caption xml:lang="uk">Вікно налаштовування KTimer</caption>
+      <caption xml:lang="vi">Cửa sổ cấu hình KTimer</caption>
       <caption xml:lang="x-test">xxKTimer configuration windowxx</caption>
       <caption xml:lang="zh-CN">KTimer 配置窗口</caption>
       <caption xml:lang="zh-TW">KTimer 設定視窗</caption>

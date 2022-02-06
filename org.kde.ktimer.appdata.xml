@@ -26,6 +26,7 @@
   <name xml:lang="pl">KTimer</name>
   <name xml:lang="pt">KTimer</name>
   <name xml:lang="pt-BR">KTimer</name>
+  <name xml:lang="ro">KTimer</name>
   <name xml:lang="ru">KTimer</name>
   <name xml:lang="sk">KTimer</name>
   <name xml:lang="sl">KTimer</name>
@@ -56,6 +57,7 @@
   <summary xml:lang="pl">Odliczanie</summary>
   <summary xml:lang="pt">Lançamento Temporizado</summary>
   <summary xml:lang="pt-BR">Lançador de contagem regressiva</summary>
+  <summary xml:lang="ro">Lansator numărătoare inversă</summary>
   <summary xml:lang="ru">Обратный отсчёт</summary>
   <summary xml:lang="sk">Odpočítavané spúšťanie</summary>
   <summary xml:lang="sl">Zaganjalnik odštevanja</summary>
@@ -124,6 +126,7 @@
       <caption xml:lang="pl">Okno ustawień KTimer</caption>
       <caption xml:lang="pt">Janela de configuração do KTimer</caption>
       <caption xml:lang="pt-BR">Janela de configuração do KTimer</caption>
+      <caption xml:lang="ro">Fereastra de configurare KTimer</caption>
       <caption xml:lang="ru">Окно параметров KTimer</caption>
       <caption xml:lang="sk">KTimer konfiguračné okno</caption>
       <caption xml:lang="sl">Okno za nastavitev KTimerja</caption>

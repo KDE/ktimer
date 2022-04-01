@@ -77,7 +77,7 @@
     </p>
     <p xml:lang="ar">مؤقت ك هي أداة صغيرة لتنفيذ البرامج بعد مرور بعض الوقت. يسمح لك بإدخال العديد من المهام وتعيين مؤقت لكل منها. يمكن بَدْء تشغيل أجهزة ضبط الوقت لكل مهمة أو إيقافها أو تغييرها أو تكرارها.</p>
     <p xml:lang="ca">El KTimer és una petita eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
-    <p xml:lang="ca-valencia">El KTimer és una xicoteta eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
+    <p xml:lang="ca-valencia">KTimer és una xicoteta eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
     <p xml:lang="da">KTimer er et lille værktøj til at køre programmer efter et stykke tid. Det lader dig angive flere opgaver og sætte en timer for hver af dem. Timerne for hver opgave kan startes, stoppes, ændres eller sættes til at køre i løkke.</p>
     <p xml:lang="de">KTimer ist ein Programm, um andere Anwendungen nach einer bestimmten Zeit zu starten. Es erlaubt das Erfassen von mehreren Aufgaben mit je eigenem Countdown. Jeder einzelne Countdown kann individuell gestartet, angehalten, geändert oder repetiert werden.</p>
     <p xml:lang="el">Το KTimer είναι ένα μικρό εργαλέιο για την εκτέλεση προγραμμάτων έπειτα από κάποιο χρονικό διάστημα. Σας επιτρέπει να εισάγετε πολλές εργασίες και να ορίσετε χρονόμετρο για καθεμιά. Η χρονομέτρηση για κάθε εργασία μπορεί να ξεκινήσει, να διακοπεί, να αλλάξει ή να επαναληφθεί.</p>
@@ -115,7 +115,7 @@
       <caption>KTimer configuration window</caption>
       <caption xml:lang="ar">نافذة ضبط مؤقت ك</caption>
       <caption xml:lang="ca">Finestra de configuració del KTimer</caption>
-      <caption xml:lang="ca-valencia">Finestra de configuració del KTimer</caption>
+      <caption xml:lang="ca-valencia">Finestra de configuració de KTimer</caption>
       <caption xml:lang="cs">Konfigurační okno aplikace KTimer</caption>
       <caption xml:lang="da">KTimers konfigurationsvindue</caption>
       <caption xml:lang="de">Einrichtungsdialog von KTimer</caption>

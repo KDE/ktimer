@@ -146,6 +146,7 @@ X-DocPath=ktimer/index.html
 X-DBUS-ServiceName=org.kde.ktimer
 Comment=Desktop stopwatch
 Comment[ar]=ساعة إيقاف لسطح المكتب
+Comment[bg]=Хронометър за работния плот
 Comment[ca]=Cronòmetre per a l'escriptori
 Comment[ca@valencia]=Cronòmetre per a l'escriptori
 Comment[cs]=Stopky na k pracovní ploše

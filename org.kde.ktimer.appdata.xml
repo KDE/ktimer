@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>KTimer</name>
   <name xml:lang="ar">مؤقّت ك</name>
+  <name xml:lang="bg">KTimer</name>
   <name xml:lang="ca">KTimer</name>
   <name xml:lang="ca-valencia">KTimer</name>
   <name xml:lang="cs">KTimer</name>
@@ -39,6 +40,7 @@
   <name xml:lang="zh-TW">KTimer</name>
   <summary>Countdown Launcher</summary>
   <summary xml:lang="ar">مطلق العدّ التنازلي</summary>
+  <summary xml:lang="bg">Хронометър</summary>
   <summary xml:lang="ca">Llançador amb compte enrere</summary>
   <summary xml:lang="ca-valencia">Iniciador amb compte enrere</summary>
   <summary xml:lang="cs">Spouštěč s odpočtem</summary>
@@ -76,6 +78,7 @@
       KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.
     </p>
     <p xml:lang="ar">مؤقت ك هي أداة صغيرة لتنفيذ البرامج بعد مرور بعض الوقت. يسمح لك بإدخال العديد من المهام وتعيين مؤقت لكل منها. يمكن بَدْء تشغيل أجهزة ضبط الوقت لكل مهمة أو إيقافها أو تغييرها أو تكرارها.</p>
+    <p xml:lang="bg">KTimer е малък инструмент за изпълнение на програми след зададено време. Той ви позволява да да въведете няколко задачи и да зададете таймер за всяка от тях. Таймерите за всяка задача могат да се стартират, спират, променят или зациклят.</p>
     <p xml:lang="ca">El KTimer és una petita eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
     <p xml:lang="ca-valencia">KTimer és una xicoteta eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, parar, modificar o repetir.</p>
     <p xml:lang="da">KTimer er et lille værktøj til at køre programmer efter et stykke tid. Det lader dig angive flere opgaver og sætte en timer for hver af dem. Timerne for hver opgave kan startes, stoppes, ændres eller sættes til at køre i løkke.</p>
@@ -114,6 +117,7 @@
     <screenshot type="default">
       <caption>KTimer configuration window</caption>
       <caption xml:lang="ar">نافذة ضبط مؤقت ك</caption>
+      <caption xml:lang="bg">Прозорец за настройки на KTimer</caption>
       <caption xml:lang="ca">Finestra de configuració del KTimer</caption>
       <caption xml:lang="ca-valencia">Finestra de configuració de KTimer</caption>
       <caption xml:lang="cs">Konfigurační okno aplikace KTimer</caption>

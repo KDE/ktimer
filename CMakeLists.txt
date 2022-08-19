@@ -18,6 +18,10 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
+include(KDEGitCommitHooks)
+include(KDEClangFormat)
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
 find_package (Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
@@ -77,5 +81,5 @@ if(KF5DocTools_FOUND)
     add_subdirectory(doc)
 endif()
 ki18n_install(po)
-
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

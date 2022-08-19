@@ -16,18 +16,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
-
-#include <KAboutData>
-#include <QApplication>
-#include <KLocalizedString>
-#include <QCommandLineParser>
-#include <Kdelibs4ConfigMigrator>
-#include <KDBusService>
 #include "ktimer.h"
+#include <KAboutData>
+#include <KDBusService>
+#include <KLocalizedString>
+#include <Kdelibs4ConfigMigrator>
+#include <QApplication>
+#include <QCommandLineParser>
 #include <config-ktimer.h>
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -41,18 +39,21 @@ int main( int argc, char **argv )
     migrate.migrate();
 #endif
     KLocalizedString::setApplicationDomain("ktimer");
-    KAboutData aboutData( QStringLiteral("ktimer"), i18n("KTimer"),
-                          QStringLiteral(KTIMER_VERSION), i18n("KDE Timer"), KAboutLicense::GPL,
-                          i18n("(c) 2001, Stefan Schimanski"),
-                          QStringLiteral("https://utils.kde.org/projects/ktimer/"));
-    aboutData.addAuthor(i18n("Stefan Schimanski"),QString(), QStringLiteral("schimmi@kde.org"));
+    KAboutData aboutData(QStringLiteral("ktimer"),
+                         i18n("KTimer"),
+                         QStringLiteral(KTIMER_VERSION),
+                         i18n("KDE Timer"),
+                         KAboutLicense::GPL,
+                         i18n("(c) 2001, Stefan Schimanski"),
+                         QStringLiteral("https://utils.kde.org/projects/ktimer/"));
+    aboutData.addAuthor(i18n("Stefan Schimanski"), QString(), QStringLiteral("schimmi@kde.org"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    app.setQuitOnLastWindowClosed( false );
+    app.setQuitOnLastWindowClosed(false);
     KDBusService service;
 
     auto timer = new KTimerPref;

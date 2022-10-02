@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % German "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Das Handbuch zu &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Gregor</firstname
+><surname
+>Zumstein</surname
+><affiliation
+><address
+><email
+>zumstein@ssd.ethz.ch</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2018-03-04</date>
+<releaseinfo
+>Anwendungen 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; ist ein Programm, mit dem andere Anwendungen nach dem Ablauf eines definierten Zeitintervalls gestartet werden können. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>Countdown</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Einführung</title>
+<para
+>&ktimer; erlaubt das Erfassen von mehreren Aufgaben mit je eigenem Countdown. Erreicht der Zähler Null, so wird die Aufgabe ausgeführt. Jeder einzelne Countdown kann individuell gestartet, angehalten, geändert oder repetiert werden.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Verwendung von &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Dies ist ein Bildschirmfoto von &ktimer; beim ersten Start</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Hauptfenster von &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Fügen Sie mit <guibutton
+>Neu</guibutton
+> eine neue Aufgabe hinzu. Geben Sie dann den auszuführenden Befehl im Feld <guilabel
+>Befehlszeile</guilabel
+> ein. Nun können Sie die Einstellungen anpassen oder den Countdown starten. Wenn die Zeit abgelaufen ist, wird der Befehl ausgeführt.</para>
+
+<screenshot>
+<screeninfo
+>So sieht &ktimer; aus, wenn das Programm &konqueror; gestartet werden soll.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Aufgabe hinzufügen</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Als Beispiel wird soll der &konqueror; gestartet werden. In der Voreinstellung dauert es 100 Sekunden bis zum Start.</para>
+
+<screenshot>
+<screeninfo
+>Der Countdown läuft: In 56 Sekunden startet &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Noch 56 Sekunden</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Jetzt kann der Countdown gestartet werden. In diesem Beispiel ist bereits einige Zeit vergangen, in 56 Sekunden wird &konqueror; gestartet.</para>
+
+<para
+>Mit dem Schieberegler können Sie schnell den Zeitraum für den Start einer Aufgabe verändern.</para>
+
+<screenshot>
+<screeninfo
+>Hinzufügen einer zweiten Aufgabe</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Start eines zweiten &konqueror;.</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Nun soll &konqueror; zweimal gestartet werden. Der erste &konqueror; in der ersten Zeile wird in 20 Sekunden gestartet, für den zweiten darunter wurde der Countdown angehalten. Sie können weitere ausführbare Programme wie zum Beispiel eigene Skripte hinzufügen.</para>
+
+<para
+>Möchten Sie eine neue Aufgabe mit einer bestimmten Verzögerung nach der vorigen Aufgabe in der Liste starten, wählen Sie <guilabel
+>Fortlaufende Aufgabe</guilabel
+> und passen die Zeit in der Spalte <guilabel
+>Verzögerung</guilabel
+> an. </para>
+
+<sect1 id="settings">
+<title
+>Einstellungen</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Neu</guibutton
+></term>
+    <listitem
+><para
+><action
+>Fügt eine neue Aufgabe hinzu.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Entfernen</guibutton
+></term>
+    <listitem
+><para
+><action
+>Entfernt die ausgewählte Aufgabe.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Hilfe</guibutton
+></term>
+    <listitem
+><para
+><action
+>Öffnet das Handbuch zu &ktimer;</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Mitwirkende und Lizenz</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Copyright für das Programm (c) 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Copyright für die Dokumentation (c) 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Übersetzung Gregor Zumstein<email
+>zumstein@ssd.ethz.ch</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

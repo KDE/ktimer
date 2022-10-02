@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Swedish "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Handbok &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2018-03-04</date>
+<releaseinfo
+>Program 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; är ett program som låter dig starta ett program efter en viss tidsrymd har passerat. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>nerräkning</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+<para
+>&ktimer; låter dig ange flera aktiviteter och ställa in en tid för var och en av dem. När tiden når noll, utförs aktiviteten. Tiden för varje aktivitet kan startas, stoppas, ändras eller cirkuleras.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Använda &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Här är en skärmbild av &ktimer; när du startar det för första gången</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Huvudfönstret i &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>För att komma igång, lägg först till en aktivitet genom att välja <guibutton
+>Ny</guibutton
+>. Skriv därefter in kommandot du vill köra i rutan <guilabel
+>Kommandorad:</guilabel
+>. Därefter kan du justera inställningarna, eller starta nerräkningen av tiden. När tiden har gått ut, kommer kommandot att köras.</para>
+
+<screenshot>
+<screeninfo
+>Här är en skärmbild av &ktimer; efter du har angivit att &konqueror; ska köras.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Lägga till en aktivitet</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Låt oss använda &konqueror; som exempel. Som förval körs den om 100 sekunder när tidnerräkningen väl startas.</para>
+
+<screenshot>
+<screeninfo
+>Här räknar den ner: om 56 sekunder kommer &konqueror; att köras.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>56 sekunder kvar</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Låt oss nu starta aktiviteten. Här har den kört en stund och har delvis utfört nerräkningen. Om 56 sekunder kommer &konqueror; att startas.</para>
+
+<para
+>Ser du skjutreglaget? Det kan användas för att snabbt öka eller minska tiden för en aktivitet.</para>
+
+<screenshot>
+<screeninfo
+>Låt oss lägga till en andra aktivitet.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Starta en &konqueror; till. Man kan aldrig få för många!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Nu är två &konqueror; inställda att köras. Den övre kommer att köras om 20 sekunder, och den undre är för tillfället stoppad. Du kan lägga till fler kommandon, och även om man aldrig kan få för många &konqueror;, kanske du vill använda andra körbara program. Möjligen dina egna skalskript.</para>
+
+<para
+>Om du vill påbörja en ny aktivitet med en viss fördröjning efter den föregående aktiviteten i listan är klar, markera alternativet <guilabel
+>Aktivitet i följd</guilabel
+> och justera angiven tid i kolumnen <guilabel
+>Fördröjning</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Inställningar</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Ny</guibutton
+></term>
+    <listitem
+><para
+><action
+>Lägger till en ny aktivitet.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Ta bort</guibutton
+></term>
+    <listitem
+><para
+><action
+>Tar bort nuvarande aktivitet.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Hjälp</guibutton
+></term>
+    <listitem
+><para
+><action
+>Visa handboken.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Tack till och licens</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Program Copyright 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Dokumentation Copyright 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Översättning Stefan Asserhäll<email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

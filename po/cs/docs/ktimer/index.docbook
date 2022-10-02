@@ -1,0 +1,266 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Czech "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Příručka &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Lukáš</firstname
+><surname
+>Vlček</surname
+><affiliation
+><address
+><email
+>lukas.vlcek777@gmail.com</email
+></address
+></affiliation
+><contrib
+>Překlad</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>4.8.2015</date>
+<releaseinfo
+>Aplikace 15.08</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; je aplikace, která umožňuje spustit jinou aplikaci po zadaném časovém intervalu. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>odpočítávání</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Úvod</title>
+<para
+>&ktimer; umožňuje zadat vlastní úkoly a nastavit pro ně časové prodlevy. Když čas dosáhne nuly, je úkol spuštěn. Časovače mohou být pro každý úkol odstartovány, zastaveny, změněny nebo zacykleny.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Použití &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Zde je snímek aplikace &ktimer;, při prvním spuštění</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Hlavní okno aplikace &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Chcete-li přidat první úkol, klikněte na <guibutton
+>New</guibutton
+>. Pak do pole <guilabel
+>Příkazová řádka:</guilabel
+> napište příkaz, který si přejete spustit. Poté můžete upravit nastavení nebo spustit odpočítávání. Když čas vyprší, příkaz bude spuštěn.</para>
+
+<screenshot>
+<screeninfo
+>Zde je snímek aplikace &ktimer;, po spuštění aplikace &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>přidat nový úkol</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Zadejte například &konqueror;. Ve výchozím stavu po 100 sekundách. A bude spuštěn pouze jednou.</para>
+
+<screenshot>
+<screeninfo
+>Odpočítávání: &konqueror; bude spuštěn za 56 sekund.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>zbývá 56 sekund</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Nyní úkol spusťte. Zde zbývá chvilka do spuštění, zbývá polovina času. &konqueror; bude spuštěn za 56 sekund.</para>
+
+<para
+>Všimli jste si posuvníku? Můžete jej použít k rychlému uspíšení nebo oddálení úkolu.</para>
+
+<screenshot>
+<screeninfo
+>Přidejte druhý úkol.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>spustit další &konqueror;, nikdy jich nemůžete mít příliš!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Nyní je naplánováno dvojnásobné spuštění &konqueror;u. Horní bude spuštěn za 20 sekund a spodní je teď zastaven. Můžete přidat více příkazů. Zatímco nemůžete mít nikdy příliš mnoho spuštěných &konqueror;ů, možná chcete spustit i něco jiného. Třeba vlastní shellový skript.</para>
+
+<sect1 id="settings">
+<title
+>Nastavení</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Nový</guibutton
+></term>
+    <listitem
+><para
+><action
+>Přidá nový úkol.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Odstranit</guibutton
+></term>
+    <listitem
+><para
+><action
+>Odstraní vybraný úkol.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Nápověda</guibutton
+></term>
+    <listitem
+><para
+><action
+>Otevírá tuto příručku.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Informace o autorech a licenční ujednání</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Program Copyright 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Documentation Copyright 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Překlad dokumentace Lukáš Vlček <email
+>lukas.vlcek777@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

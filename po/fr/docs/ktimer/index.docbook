@@ -1,0 +1,256 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % French "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Manuel de &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+&traducteurRobertJacolin;&traducteurStanislasZeller; 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>04-03-2018</date>
+<releaseinfo
+>Applications 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; est une application vous permettant de lancer une application après une période de temps donnée. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>KTimer</keyword>
+<keyword
+>compte à rebours</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduction</title>
+<para
+>&ktimer; vous permet de saisir plusieurs tâches et de régler une programmation pour chacune d'elles. Quand le compte à rebours atteint zéro, la tâche est exécutée. Les programmations pour chaque tâche peuvent être démarrées, arrêtées, modifiées ou mises en boucle.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Utilisation de &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Voici une capture d'écran de &ktimer; quand vous le lancer pour la première fois</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>La fenêtre principale de &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Pour commencer, ajoutez une tâche en sélectionnant <guibutton
+>Nouveau</guibutton
+>. Saisissez ensuite une commande que vous souhaitez exécuter dans l'emplacement de <guilabel
+>Ligne de commande : </guilabel
+>. Vous pouvez ensuite ajuster la configuration, ou démarrer le compte à rebours de la programmation. Quand l'heure est atteint, la commande sera lancée.</para>
+
+<screenshot>
+<screeninfo
+>Voici une capture d'écran de &ktimer; après le lancement programmé de &konqueror;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Ajouter une tâche</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Utilisons &konqueror; comme exemple. Par défaut, il démarrera dans 100 secondes au démarrage du compte à rebours de la programmation.</para>
+
+<screenshot>
+<screeninfo
+>Voici le compte à rebours : dans 56 secondes, &konqueror; sera lancé.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Il reste 56 secondes</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Maintenant démarrons la tâche. Elle a été lancée depuis peu. Dans 56 secondes, &konqueror; sera lancé.</para>
+
+<para
+>Voyez-vous la barre de glissière ? Vous pouvez l'utiliser pour augmenter ou diminuer la période de temps de la tâche.</para>
+
+<screenshot>
+<screeninfo
+>Ajoutons une deuxième tâche.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Démarrer un deuxième &konqueror;, vous en aurez jamais assez !</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Deux &konqueror; sont maintenant programmés à être lancés. Le premier sera lancé dans 20 secondes, et le deuxième est actuellement arrêté. Vous pouvez ajouter plus de commandes. Quoique vous n'avez jamais trop de &konqueror;, vous voulez probablement utiliser d'autres logiciels. Votre propre script shell peut être.</para>
+
+<para
+>Si vous voulez démarrer une nouvelle tâche après la fin de tâche précédente d'une liste mais après un délai donné, veuillez cocher l'option <guilabel
+>Tâche consécutive</guilabel
+> et ajuster le temps dans la colonne <guilabel
+>Délai</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Configuration</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Nouveau</guibutton
+></term>
+    <listitem
+><para
+><action
+>Ajouter une nouvelle tâche</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Supprimer</guibutton
+></term>
+    <listitem
+><para
+><action
+>Supprime la tâche courante.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Aide</guibutton
+></term>
+    <listitem
+><para
+><action
+>Ouvre ce manuel.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Remerciements et licence</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Copyright du programme 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Copyright de la documentation 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Traduction française par &traducteurRobertJacolin; et &StanislasZeller;.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

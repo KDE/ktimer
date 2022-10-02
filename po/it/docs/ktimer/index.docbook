@@ -1,0 +1,290 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Italian "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Manuale di &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Nicola</firstname
+><surname
+>Ruggero</surname
+><affiliation
+><address
+><email
+>nicola@nxnt.org</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Cozzi</surname
+><affiliation
+><address
+><email
+>federico.cozzi@sns.it</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2018-03-04</date>
+<releaseinfo
+>Applications 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; è un'applicazione che ti permette di avviare un programma dopo che un certo periodo di tempo è trascorso. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>conto alla rovescia</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduzione</title>
+<para
+>&ktimer; permette di inserire parecchie attività e impostare un timer su ciascuna. Quando il timer arriva a zero, l'attività viene eseguita. Il timer di ciascuna attività può essere avviato, arrestato o avviato ciclicamente.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Uso di &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Questa è una schermata di &ktimer; quando viene avviato la prima volta</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Finestra principale di &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Per iniziare aggiungi un'attività selezionando <guibutton
+>Nuovo</guibutton
+>. Digita poi il comando che desideri eseguire nella casella <guilabel
+>Riga di comando:</guilabel
+>. Successivamente puoi regolare le impostazioni oppure avviare il conto alla rovescia. Quando il tempo scade il comando verrà eseguito.</para>
+
+<screenshot>
+<screeninfo
+>Ecco una schermata di &ktimer; dopo che ha avviato &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>aggiungi un'attività</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Prendiamo &konqueror; come esempio. In maniera predefinita verrà avviato dopo 100 secondi dall'avvio del conto alla rovescia.</para>
+
+<screenshot>
+<screeninfo
+>Questo è il conto alla rovescia: in 56 secondi &konqueror; verrà avviato.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>56 secondi al termine</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Ora eseguiamo l'attività. Del tempo è già trascorso ma il conto alla rovescia è ancora in corso. In 56 secondi &konqueror; verrà avviato.</para>
+
+<para
+>Vedi la barra di scorrimento? Puoi usarla per aumentare o diminuire velocemente il tempo che deve trascorrere prima del lancio.</para>
+
+<screenshot>
+<screeninfo
+>Aggiungiamo una seconda attività.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Avvio un altro &konqueror;, non sono mai troppi!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>In questo momento sono pianificati per l'avvio due &konqueror;. Quello più in alto verrà avviato in 20 secondi, quello in basso è arrestato. Puoi aggiungere altri comandi. Anche se le sessioni di &konqueror; non sono mai abbastanza, probabilmente vuoi usare altri eseguibili. Un tuo script della shell.</para>
+
+<para
+>Se vuoi avviare una nuova attività con un certo ritardo dopo il completamento dell'attività precedente nell'elenco, attiva l'opzione <guilabel
+>Attività consecutive</guilabel
+> e aggiusta l'orario specificato nella colonna <guilabel
+>Attesa</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Impostazioni</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Nuovo</guibutton
+></term>
+    <listitem
+><para
+><action
+>Aggiunge una nuova attività.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Rimuovi</guibutton
+></term>
+    <listitem
+><para
+><action
+>Rimuovi l'attività corrente.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Aiuto</guibutton
+></term>
+    <listitem
+><para
+><action
+>Apre il manuale.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Copyright programma: 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Copyright documentazione: 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Traduzione della documentazione: Nicola Ruggero <email
+>nicola@nxnt.org</email
+></para
+><para
+>Traduzione della documentazione: Federico Cozzi<email
+>federico.cozzi@sns.it</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

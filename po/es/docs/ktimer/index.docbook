@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Spanish "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Manual de &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Eloy</firstname
+> <surname
+>Cuadra</surname
+> <affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2018-03-04</date>
+<releaseinfo
+>Aplicaciones 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; es una aplicación que le permite iniciar una aplicación después de que haya transcurrido una cierta cantidad de tiempo. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>cuenta atrás</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducción</title>
+<para
+>&ktimer; le permite introducir varias tareas y establecer un temporizador para cada una de ellas. Cuando el temporizador llega a cero, se ejecuta la tarea. Los temporizadores de cada tarea se pueden iniciar, detener, modificar o repetir.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Uso de &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla de &ktimer; cuando se inicia por primera vez</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>La ventana principal de &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Para comenzar, añada primero una tarea seleccionando <guibutton
+>Nueva</guibutton
+>. Luego escriba la orden que desea ejecutar en la caja <guilabel
+>Orden:</guilabel
+>. A continuación puede ajustar las preferencias o iniciar la cuenta atrás del temporizador. Cuando el tiempo se haya agotado, la orden será ejecutada.</para>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla de &ktimer; tras indicarle que ejecute &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>añadir una tarea</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Usaremos &konqueror; como ejemplo. Por omisión, se ejecutará en 100 segundos una vez que la cuenta atrás del temporizador haya comenzado.</para>
+
+<screenshot>
+<screeninfo
+>La cuenta atrás ya está en marcha: &konqueror; se ejecutará en 56 segundos.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Faltan 56 segundos</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Ahora comenzará la tarea. Ya ha lleva en ejecución un rato y está en medio de la cuenta atrás. En 56 segundos se iniciará &konqueror;.</para>
+
+<para
+>¿Ve esta barra de desplazamiento? Puede usarla para incrementar o decrementar de modo inmediato la cantidad de tiempo para una tarea.</para>
+
+<screenshot>
+<screeninfo
+>Añadamos una segunda tarea.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Iniciar otro &konqueror;, ¡nunca ha tenido tantos!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Ahora se han programado dos ejecuciones de &konqueror;. La de arriba comenzará en 20 segundos, y la de abajo está actualmente detenida. Puede añadir más órdenes. Aunque nunca quiera tener tantos &konqueror;s, es probable que quiera usar otros ejecutables. Tal vez su propio script del intérprete de órdenes.</para>
+
+<para
+>Si desea iniciar una nueva tarea con cierta demora tras finalizar la anterior tarea de la lista, marque la opción <guilabel
+>Tarea consecutiva</guilabel
+> y ajuste el tiempo indicado en la columna <guilabel
+>Demora</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Preferencias</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Nueva</guibutton
+></term>
+    <listitem
+><para
+><action
+>Añade una nueva tarea.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Eliminar</guibutton
+></term>
+    <listitem
+><para
+><action
+>Elimina la tarea actual.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Ayuda</guibutton
+></term>
+    <listitem
+><para
+><action
+>Abre el manual.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Créditos y licencia</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Copyright del programa, 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Copyright de la documentación, 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Traducido por Eloy Cuadra <email
+>ecuadra@eloihr.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

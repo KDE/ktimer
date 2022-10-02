@@ -1,0 +1,306 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Serbian-Latin "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Priručnik za <application
+>K‑odbrojavač</application
+></title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <surname
+>Šper</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Dragan</firstname
+><surname
+>Pantelić</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>4. 8. 2015.</date>
+<releaseinfo
+>Programi KDE‑a 15.08</releaseinfo>
+
+<abstract>
+<para
+><application
+>K‑odbrojavač</application
+> je KDE program koje vam omogućava da pokrenete neki program nakon što je prošlo izvesno vreme. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>K‑odbrojavač</keyword>
+<keyword
+>odbrojavanje</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+<para
+><application
+>K‑odbrojavač</application
+> vam omogućava da unesete nekoliko zadataka i postavite odbrojavač za svaki od njih. Kad odbrojavač dostigne nulu, zadatak se izvršava. Odbrojavači za svaki zadatak mogu se pokretati, zaustavljati, menjati, ili vrteti u krug.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Korišćenje <application
+>K‑odbrojavača</application
+></title>
+
+<screenshot>
+<screeninfo
+>Snimak ekrana <application
+>K‑odbrojavača</application
+> pošto se prvi put pokrene.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Glavni prozor <application
+>K‑odbrojavača</application
+>.</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Zadatak dodajete pomoću <guibutton
+>Novi</guibutton
+>, i tada upisujete željenu naredbu u polje <guilabel
+>Komandna linija:</guilabel
+>. Zatim možete prilagoditi postavke ili pokrenuti odbrojavanje. Naredba se izvršava kad vreme istekne.</para>
+
+<screenshot>
+<screeninfo
+>Snimak ekrana <application
+>K‑odbrojavača</application
+> nakon što ste zadali pokretanje <application
+>K‑osvajača</application
+>.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Dodajemo zadatak.</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Upotrebimo <application
+>K‑osvajač</application
+> kao primer. Podrazumevano će se pokrenuti 100 sekundi po početku odbrojavanja.</para>
+
+<screenshot>
+<screeninfo
+>Odbrojavanje u toku: <application
+>K‑osvajač</application
+> će se pokrenuti za 56 sekundi.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Još 56 sekundi.</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Sada pokrenimo zadatak. Odbrojavanje je teklo neko vreme i sada je na polovini. <application
+>K‑osvajač</application
+> će se pokrenuti za 56 sekundi.</para>
+
+<para
+>Vidite li klizačku traku? Njome možete brzo povećati ili smanjiti vreme za zadatak.</para>
+
+<screenshot>
+<screeninfo
+>Dodajemo drugi zadatak.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Pokrećemo još jedan <application
+>K‑osvajač</application
+> — njih nikad dosta!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Sada su za pokretanje raspoređena dva primerka <application
+>K‑osvajača</application
+>. Gornji će se pokrenuti za 20 sekundi, a donji je trenutno zaustavljen. Možete dodati još naredbi. Iako vam je <application
+>K‑osvajač</application
+> baš drag, verovatno bi trebalo da isprobate još koju naredbu. Možda sopstvenu skriptu školjke?</para>
+
+<sect1 id="settings">
+<title
+>Postavke</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Novi</guibutton
+></term>
+    <listitem
+><para
+><action
+>Dodaje novi zadatak.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Ukloni</guibutton
+></term>
+    <listitem
+><para
+><action
+>Uklanja trenutni zadatak.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Pomoć</guibutton
+></term>
+    <listitem
+><para
+><action
+>Otvara priručnik.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Zasluge i licenca</title>
+
+<para
+><application
+>K‑odbrojavač</application
+> </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Program: © 2001, <personname
+><firstname
+>Štefan</firstname
+> <surname
+>Šimanski</surname
+></personname
+> &Stefan.Schimanski.email;.</para>
+
+<para
+>Dokumentacija: © 2008, <personname
+><firstname
+>A. L.</firstname
+> <surname
+>Šper</surname
+></personname
+> &A.L.Spehr.email;.</para>
+
+<para
+>Preveo Dragan Pantelić <email
+>falcon-10@gmx.de</email
+>.</para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

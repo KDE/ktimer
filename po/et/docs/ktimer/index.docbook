@@ -1,0 +1,284 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&ktimer;">
+  <!ENTITY package "kdeutils">
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Estonian  "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>&ktimer;i käsiraamat</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+><surname
+>Laane</surname
+><affiliation
+><address
+><email
+>bald@starman.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2013-05-25</date>
+<releaseinfo
+>&kde; 4.11</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; on &kde; töökeskkonna rakendus, mis võimaldab käivitada rakendusi pärast määratud aja möödumist. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>ajaarvestus</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Sissejuhatus</title>
+<para
+>&ktimer; võimaldab sisestada mitu ülesannet ning määrata neile kõigile omaette taimeri. Kui taimer jõuab nulli, käivitatakse ülesanne. Kõigi ülesannete taimereid saab käivitada, peatada, muuta või lasta korrata.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>&ktimer;i kasutamine</title>
+
+<screenshot>
+<screeninfo
+>&ktimer; esimesel käivitamisel</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>&ktimer;i peaaken</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Kõigepealt tuleb lisada ülesanne, valides menüükäsu <guimenu
+>Uus</guimenu
+>. Siis tuleb kirjutada käsk, mida soovid käivitada, tekstikasti <guilabel
+>Käsurida</guilabel
+>. Seejärel saab kohandada seadistusi või panna taimeri käima. Kui määratud aeg täis saab, käivitatakse käsk.</para>
+
+<screenshot>
+<screeninfo
+>&ktimer; ülesandega käivitada &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>ülesande lisamine</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Võtame näiteks &konqueror;i. Vaikimisi käivitatakse see 100 sekundit pärast taimeri käivitamist.</para>
+
+<screenshot>
+<screeninfo
+>Ajaarvestus: veel 56 sekundit ja &konqueror; käivitatakse.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Veel 56 sekundit</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Käivitame nüüd ülesande. Siin on see juba veidi töötanud ning aega on jäänud alles juba vähem: &konqueror; käivitatakse 56 sekundi pärast.</para>
+
+<para
+>Märkad liuguririba? Selle abil saab kiiresti ülesandele määratud aega suurendada või vähendada.</para>
+
+<screenshot>
+<screeninfo
+>Lisame teise ülesande.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Teise &konqueror;i käivitamine - kunagi ei saa küllalt!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Nüüd on käivutuma pandud kaks &konqueror;i. Ülemine hakkab tööle 20 sekundi pärast, teine on praegu peatatud. Käske võib ka rohkem lisada. Ehkki kindlasti ei teki juhust, et &konqueror;e oleks liiga palju, võib muidugi tööle panna ka teisi asju, näiteks sinu enda tehtud shelliskripti.</para>
+
+<sect1 id="settings">
+<title
+>Seadistused</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Uus</guibutton
+></term>
+    <listitem
+><para
+><action
+>Lisab uue ülesande.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Eemalda</guibutton
+></term>
+    <listitem
+><para
+><action
+>Eemaldab aktiivse ülesande.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Abi</guibutton
+></term>
+    <listitem
+><para
+><action
+>Avab käesoleva käsiraamatu.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Autorid ja litsents</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Rakenduse autoriõigus 2001: &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Dokumentatsiooni autoriõigus 2008: &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@smail.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<!-- !!!!do not change ANYTHING after this line!!!! (?) -->
+<appendix id="installation">
+<title
+>Paigaldamine</title>
+
+<sect1 id="getting-ktimer">
+<title
+>&ktimer;i hankimine</title>
+&install.intro.documentation; </sect1>
+
+<sect1 id="compilation">
+<title
+>Kompileerimine ja paigaldamine</title>
+&install.compile.documentation; </sect1>
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

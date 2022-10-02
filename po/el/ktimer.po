@@ -1,0 +1,357 @@
+# translation of ktimer.po to greek
+# Copyright (C) 2002, 2003, 2007 Free Software Foundation, Inc.
+#
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2002-2003.
+# Spiros Georgaras <sng@hellug.gr>, 2007.
+# Stelios <sstavra@gmail.com>, 2012.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Long Run <pvidalis@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktimer\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-20 00:48+0000\n"
+"PO-Revision-Date: 2018-10-18 15:46+0200\n"
+"Last-Translator: Long Run <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "koppermind@homelinux.org"
+
+#: main.cpp:43
+#, kde-format
+msgid "KTimer"
+msgstr "KTimer"
+
+#: main.cpp:45
+#, kde-format
+msgid "KDE Timer"
+msgstr "Χρονόμετρο του KDE"
+
+#: main.cpp:47
+#, kde-format
+msgid "(c) 2001, Stefan Schimanski"
+msgstr "(c) 2001, Stefan Schimanski"
+
+#: main.cpp:49
+#, kde-format
+msgid "Stefan Schimanski"
+msgstr "Stefan Schimanski"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, PrefWidget)
+#: prefwidget.ui:14
+#, kde-format
+msgid "Timer Settings"
+msgstr "Ρυθμίσεις χρονομέτρου"
+
+#. i18n: ectx: property (toolTip), widget (QTreeWidget, m_list)
+#: prefwidget.ui:26
+#, kde-format
+msgid "List of countdowns you have set"
+msgstr "Λίστα αντίστροφων μετρήσεων που έχετε ορίσει"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, m_list)
+#: prefwidget.ui:29
+#, kde-format
+msgid ""
+"New countdowns are put here. You can add and remove them, and stop and start "
+"them."
+msgstr ""
+"Οι νέες αντίστροφες μετρήσεις τοποθετούνται εδώ. Μπορείτε να τις προσθέσετε "
+"και να τις διαγράψετε και να τις διακόψετε και να τις ξεκινήσετε."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, m_list)
+#: prefwidget.ui:36
+#, kde-format
+msgid "Counter"
+msgstr "Μετρητής"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, m_list)
+#: prefwidget.ui:41
+#, kde-format
+msgid "Delay"
+msgstr "Καθυστέρηση"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, m_list)
+#. i18n: ectx: property (title), widget (QGroupBox, m_state)
+#: prefwidget.ui:46 prefwidget.ui:104
+#, kde-format
+msgid "State"
+msgstr "Κατάσταση"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, m_list)
+#: prefwidget.ui:51
+#, kde-format
+msgid "Command"
+msgstr "Εντολή"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
+#: prefwidget.ui:59
+#, kde-format
+msgid "Add a new task"
+msgstr "Προσθήκη νέας εργασίας"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_add)
+#: prefwidget.ui:62
+#, kde-format
+msgid "Add a new task to the list."
+msgstr "Προσθήκη μιας νέας εργασίας στη λίστα."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_add)
+#: prefwidget.ui:65
+#, kde-format
+msgid "&New"
+msgstr "&Νέα"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
+#: prefwidget.ui:72
+#, kde-format
+msgid "Remove a task"
+msgstr "Αφαίρεση μιας εργασίας"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_remove)
+#: prefwidget.ui:75
+#, kde-format
+msgid "Remove a task from the list."
+msgstr "Διαγραφή εργασίας από τη λίστα."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_remove)
+#: prefwidget.ui:78
+#, kde-format
+msgid "&Remove"
+msgstr "Α&φαίρεση"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, m_slider)
+#: prefwidget.ui:116
+#, kde-format
+msgid "Speed up or slow down your countdown"
+msgstr "Επιτάχυνση ή επιβράδυνση της αντίστροφης μέτρησης"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, m_slider)
+#: prefwidget.ui:119
+#, kde-format
+msgid "You can use this slider to adjust the time."
+msgstr "Μπορείτε να κάνετε χρήση αυτής της κύλισης για να ρυθμίσετε το χρόνο."
+
+#. i18n: ectx: property (toolTip), widget (QLCDNumber, m_counter)
+#: prefwidget.ui:129
+#, kde-format
+msgid "Time in seconds until command is executed"
+msgstr "Χρόνος σε δευτερόλεπτα μέχρι να εκτελεστεί η εντολή"
+
+#. i18n: ectx: property (whatsThis), widget (QLCDNumber, m_counter)
+#: prefwidget.ui:132
+#, kde-format
+msgid "This number is how many seconds are left for the selected countdown."
+msgstr ""
+"Αυτός ο αριθμός είναι τα δευτερόλεπτα που απομένουν για την επιλεγμένη "
+"αντίστροφη μέτρηση."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pause)
+#: prefwidget.ui:142
+#, kde-format
+msgid "Pause a countdown"
+msgstr "Παύση αντίστροφης μέτρησης"
+
+#. i18n: ectx: property (whatsThis), widget (QToolButton, m_pause)
+#: prefwidget.ui:145
+#, kde-format
+msgid "Use this to pause a timer countdown."
+msgstr "Χρησιμοποιήστε αυτό για την παύση της αντίστροφης μέτρησης."
+
+#. i18n: ectx: property (text), widget (QToolButton, m_pause)
+#: prefwidget.ui:148
+#, kde-format
+msgid "||"
+msgstr "||"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_start)
+#: prefwidget.ui:155
+#, kde-format
+msgid "Start a countdown"
+msgstr "Έναρξη αντίστροφης μέτρησης"
+
+#. i18n: ectx: property (whatsThis), widget (QToolButton, m_start)
+#: prefwidget.ui:158
+#, kde-format
+msgid "Use this to start or restart a countdown."
+msgstr ""
+"Χρησιμοποιήστε αυτό για την έναρξη ή επανεκκίνηση μιας αντίστροφης μέτρησης."
+
+#. i18n: ectx: property (text), widget (QToolButton, m_start)
+#: prefwidget.ui:161
+#, kde-format
+msgid ">"
+msgstr ">"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_stop)
+#: prefwidget.ui:168
+#, kde-format
+msgid "Stop a countdown"
+msgstr "Σταμάτημα αντίστροφης μέτρησης"
+
+#. i18n: ectx: property (whatsThis), widget (QToolButton, m_stop)
+#: prefwidget.ui:171
+#, kde-format
+msgid "Use this to stop the countdown for a task."
+msgstr ""
+"Χρησιμοποιήστε αυτό για το σταμάτημα της αντίστροφης μέτρησης μιας εργασίας."
+
+#. i18n: ectx: property (text), widget (QToolButton, m_stop)
+#: prefwidget.ui:174
+#, kde-format
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_help)
+#: prefwidget.ui:184
+#, kde-format
+msgid "Detailed help documentation"
+msgstr "Λεπτομερής βοηθητική τεκμηρίωση"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_help)
+#: prefwidget.ui:187
+#, kde-format
+msgid "Click here to open the help documentation viewer."
+msgstr "Με κλικ εδώ ανοίγετε την προβολή της βοηθητικής τεκμηρίωσης."
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_settings)
+#: prefwidget.ui:197
+#, kde-format
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, m_loop)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_loop)
+#: prefwidget.ui:209 prefwidget.ui:212
+#, kde-format
+msgid ""
+"Check this box if you want your countdown to start over after it finishes"
+msgstr ""
+"Επιλέξτε αυτό το πλαίσιο αν θέλετε η αντίστροφή μέτρηση να επαναλαμβάνεται "
+"μόλις τελειώσει"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_loop)
+#: prefwidget.ui:215
+#, kde-format
+msgid "&Loop"
+msgstr "&Επανάληψη"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel2)
+#: prefwidget.ui:222
+#, kde-format
+msgid "Delay:"
+msgstr "Καθυστέρηση:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, m_delay)
+#: prefwidget.ui:229
+#, kde-format
+msgid "Enter the seconds here"
+msgstr "Δώστε τα δευτερόλεπτα εδώ"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, m_delay)
+#: prefwidget.ui:232
+#, kde-format
+msgid "You can change the amount of time in the countdown here."
+msgstr ""
+"Εδώ μπορείτε να αλλάξετε το ποσό του χρόνου για την αντίστροφη μέτρηση."
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, m_one)
+#: prefwidget.ui:242
+#, kde-format
+msgid "Check this box if you only want to open one copy of your program"
+msgstr ""
+"Επιλέξτε αυτό το πλαίσιο αν θέλετε να ανοίξετε μόνο ένα αντίγραφο του "
+"προγράμματός σας"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_one)
+#: prefwidget.ui:245
+#, kde-format
+msgid "Check this box if you only want one instance to open"
+msgstr "Επιλέξτε αυτό το πλαίσιο αν θέλετε να ανοίξει μόνο ένα αντίγραφο"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_one)
+#: prefwidget.ui:248
+#, kde-format
+msgid "Start only &one instance"
+msgstr "Εκκίνηση μόνο ενό&ς αντιγράφου"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, m_consecutive)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_consecutive)
+#: prefwidget.ui:255 prefwidget.ui:258
+#, kde-format
+msgid ""
+"Check this box if you want to execute this task after the previous one "
+"finishes"
+msgstr ""
+"Επιλέξτε αυτό το πλαίσιο αν θέλετε εκτελέσετε αυτή την εργασία μόλις "
+"ολοκληρωθεί η προηγούμενη"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)
+#: prefwidget.ui:261
+#, kde-format
+msgid "Consecutive task"
+msgstr "Διαδοχική εργασία"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel3)
+#: prefwidget.ui:268
+#, kde-format
+msgid "seconds"
+msgstr "δευτερόλεπτα"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel1)
+#: prefwidget.ui:284
+#, kde-format
+msgid "Command line:"
+msgstr "Γραμμή εντολών:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, m_delayH)
+#: prefwidget.ui:291
+#, kde-format
+msgid "Enter the hours here"
+msgstr "Δώστε τις ώρες εδώ"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, m_delayM)
+#: prefwidget.ui:298
+#, kde-format
+msgid "Enter the minutes here"
+msgstr "Δώστε τα λεπτά εδώ"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
+#: prefwidget.ui:308
+#, kde-format
+msgid "hours"
+msgstr "ώρες"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
+#: prefwidget.ui:315
+#, kde-format
+msgid "minutes"
+msgstr "λεπτά"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, m_commandLine)
+#: prefwidget.ui:350
+#, kde-format
+msgid "command you would like to run when time is up"
+msgstr "εντολή που θέλετε να εκτελέσετε στο τέλος χρόνου"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, m_commandLine)
+#: prefwidget.ui:353
+#, kde-format
+msgid "Enter a program you would like to run when the countdown is zero"
+msgstr ""
+"Δώστε το πρόγραμμα που θέλετε να εκτελέσετε όταν η αντίστροφη μέτρηση είναι "
+"μηδέν"

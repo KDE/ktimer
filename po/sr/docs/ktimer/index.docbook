@@ -1,0 +1,306 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Serbian "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Приручник за <application
+>К‑одбројавач</application
+></title>
+
+<authorgroup>
+<author
+><firstname
+>А. Л.</firstname
+> <surname
+>Шпер</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Драган</firstname
+><surname
+>Пантелић</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>превод</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>4. 8. 2015.</date>
+<releaseinfo
+>Програми КДЕ‑а 15.08</releaseinfo>
+
+<abstract>
+<para
+><application
+>К‑одбројавач</application
+> је КДЕ програм које вам омогућава да покренете неки програм након што је прошло извесно време. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>КДЕ</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>К‑одбројавач</keyword>
+<keyword
+>одбројавање</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Увод</title>
+<para
+><application
+>К‑одбројавач</application
+> вам омогућава да унесете неколико задатака и поставите одбројавач за сваки од њих. Кад одбројавач достигне нулу, задатак се извршава. Одбројавачи за сваки задатак могу се покретати, заустављати, мењати, или вртети у круг.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Коришћење <application
+>К‑одбројавача</application
+></title>
+
+<screenshot>
+<screeninfo
+>Снимак екрана <application
+>К‑одбројавача</application
+> пошто се први пут покрене.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Главни прозор <application
+>К‑одбројавача</application
+>.</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Задатак додајете помоћу <guibutton
+>Нови</guibutton
+>, и тада уписујете жељену наредбу у поље <guilabel
+>Командна линија:</guilabel
+>. Затим можете прилагодити поставке или покренути одбројавање. Наредба се извршава кад време истекне.</para>
+
+<screenshot>
+<screeninfo
+>Снимак екрана <application
+>К‑одбројавача</application
+> након што сте задали покретање <application
+>К‑освајача</application
+>.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Додајемо задатак.</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Употребимо <application
+>К‑освајач</application
+> као пример. Подразумевано ће се покренути 100 секунди по почетку одбројавања.</para>
+
+<screenshot>
+<screeninfo
+>Одбројавање у току: <application
+>К‑освајач</application
+> ће се покренути за 56 секунди.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Још 56 секунди.</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Сада покренимо задатак. Одбројавање је текло неко време и сада је на половини. <application
+>К‑освајач</application
+> ће се покренути за 56 секунди.</para>
+
+<para
+>Видите ли клизачку траку? Њоме можете брзо повећати или смањити време за задатак.</para>
+
+<screenshot>
+<screeninfo
+>Додајемо други задатак.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Покрећемо још један <application
+>К‑освајач</application
+> — њих никад доста!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Сада су за покретање распоређена два примерка <application
+>К‑освајача</application
+>. Горњи ће се покренути за 20 секунди, а доњи је тренутно заустављен. Можете додати још наредби. Иако вам је <application
+>К‑освајач</application
+> баш драг, вероватно би требало да испробате још коју наредбу. Можда сопствену скрипту шкољке?</para>
+
+<sect1 id="settings">
+<title
+>Поставке</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Нови</guibutton
+></term>
+    <listitem
+><para
+><action
+>Додаје нови задатак.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Уклони</guibutton
+></term>
+    <listitem
+><para
+><action
+>Уклања тренутни задатак.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Помоћ</guibutton
+></term>
+    <listitem
+><para
+><action
+>Отвара приручник.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Заслуге и лиценца</title>
+
+<para
+><application
+>К‑одбројавач</application
+> </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Програм: © 2001, <personname
+><firstname
+>Штефан</firstname
+> <surname
+>Шимански</surname
+></personname
+> &Stefan.Schimanski.email;.</para>
+
+<para
+>Документација: © 2008, <personname
+><firstname
+>А. Л.</firstname
+> <surname
+>Шпер</surname
+></personname
+> &A.L.Spehr.email;.</para>
+
+<para
+>Превео Драган Пантелић <email
+>falcon-10@gmx.de</email
+>.</para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

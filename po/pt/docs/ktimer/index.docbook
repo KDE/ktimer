@@ -1,0 +1,266 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Portuguese "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>O Manual do &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2015-08-04</date>
+<releaseinfo
+>Aplicações 15.08</releaseinfo>
+
+<abstract>
+<para
+>O &ktimer; é uma aplicação que lhe permite iniciar uma aplicação ao fim de um determinado tempo decorrido. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>contagem decrescente</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+<para
+>O &ktimer; permite-lhe introduzir diversas tarefas e definir um cronómetro para cada uma delas. Quando esse cronómetro chegar a zero, a tarefa é executada. Os cronómetros de cada tarefa poderão ser iniciados, parados, alterados ou colocados em ciclo.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Utilizar o &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Aqui está uma imagem do &ktimer; quando o inicia pela primeira vez</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Janela principal do &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Para iniciar, basta adicionar uma tarefa com a opção <guibutton
+>Novo</guibutton
+>. Depois, escreva o comando a executar no campo <guilabel
+>Linha de comandos:</guilabel
+>. Poderá então ajustar a configuração ou iniciar a contagem do cronómetro. Quando terminar o tempo, o comando será executado.</para>
+
+<screenshot>
+<screeninfo
+>Aqui está uma imagem do &ktimer; após lhe ter dito para arrancar o &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>adicionar uma tarefa</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Será utilizado o &konqueror; como exemplo. Por omissão, irá iniciar 100 segundos depois de a contagem decrescente ser iniciada.</para>
+
+<screenshot>
+<screeninfo
+>Aqui está ele em contagem: daqui a 56 segundos, o &konqueror; será executado.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Faltam 56 segundos</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Agora, iniciemos a tarefa. Aqui já esteve em execução durante algum tempo e já vai a meio caminho da contagem. Daqui a 56 segundos, o &konqueror; será iniciado.</para>
+
+<para
+>Vê a barra deslizante? Podê-lá utilizar para aumentar ou diminuir rapidamente a quantidade de tempo de uma tarefa.</para>
+
+<screenshot>
+<screeninfo
+>Adicionemos uma segunda tarefa.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>iniciar outro &konqueror;, muitos nunca são demais!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Agora tem dois &konqueror;s agendados para serem executados. O de topo será executado daqui a 20 segundos, enquanto o inferior está parado de momento. Poderá adicionar ainda mais comandos. Embora possa ter os &konqueror;s, que desejar, poderá querer usar outros executáveis. O seu próprio programa da linha de comandos, porventura.</para>
+
+<sect1 id="settings">
+<title
+>Configuração</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Novo</guibutton
+></term>
+    <listitem
+><para
+><action
+>Adiciona uma tarefa nova.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Remover</guibutton
+></term>
+    <listitem
+><para
+><action
+>Remove a tarefa actual.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Ajuda</guibutton
+></term>
+    <listitem
+><para
+><action
+>Abre o manual.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Créditos e Licença</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Programa com 'copyright' 2001 de &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Documentação com 'copyright' 2008 de &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Tradução de José Nuno Pires <email
+>zepires@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

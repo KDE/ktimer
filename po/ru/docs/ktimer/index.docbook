@@ -1,0 +1,290 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Russian "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Руководство пользователя &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Григорий</firstname
+><surname
+>Мохин</surname
+><affiliation
+><address
+><email
+>mok@kde.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Мария</firstname
+><surname
+>Шикунова</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Обновление перевода</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2018-03-04</date>
+<releaseinfo
+>Приложения KDE 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; — это приложение, позволяющее запускать другие приложения по прошествии определённого времени. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>обратный отсчёт</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Введение</title>
+<para
+>&ktimer; позволяет запускать выполнение команд по срабатыванию таймера. Таймеры возможно запустить, остановить, изменить или зациклить.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Использование приложения &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Внешний вид окна приложения &ktimer; при первом запуске</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Главное окно &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Чтобы начать, добавьте таймер нажатием кнопки <guibutton
+>Добавить</guibutton
+>. Затем введите команду, которую нужно выполнить, в окно ввода <guilabel
+>Выполнить:</guilabel
+>. Следом настройте параметры таймера или запустите его. Когда установленное время истечёт, указанная команда будет запущена.</para>
+
+<screenshot>
+<screeninfo
+>Внешний вид окна приложения &ktimer; после создания таймера запуска &konqueror;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Добавление таймера</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>В качестве примера используем &konqueror;. По умолчанию он будет запущен через 100 секунд после начала обратного отсчёта.</para>
+
+<screenshot>
+<screeninfo
+>Отсчёт времени: до запуска &konqueror; осталось 56 секунд.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Осталось 56 секунд</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>А теперь запустим задачу. На этом снимке таймер отсчитал уже половину времени: &konqueror; будет запущен через 56 секунд.</para>
+
+<para
+>Ползунок позволяет быстро увеличить или уменьшить продолжительность обратного отсчёта.</para>
+
+<screenshot>
+<screeninfo
+>Добавление второго таймера</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Запуск ещё одного экземпляра &konqueror;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Теперь запланирован запуск сразу двух экземпляров &konqueror;. Таймер, расположенный в верхней строке, запустит приложение через 20 секунд; таймер, расположенный внизу, приостановлен. Хоть и не бывает слишком много экземпляров &konqueror;, вполне вероятно, что потребуется запускать другие команды, например, собственные сценарии оболочки.</para>
+
+<para
+>Если требуется последовательный запуск команд с определённой задержкой, установите флажок <guilabel
+>Последовательный запуск таймеров</guilabel
+> и укажите длительность задержки в поле <guilabel
+>Задержка</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Параметры</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Добавить</guibutton
+></term>
+    <listitem
+><para
+><action
+>Создание нового таймера.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Удалить</guibutton
+></term>
+    <listitem
+><para
+><action
+>Удаление текущего таймера.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Справка</guibutton
+></term>
+    <listitem
+><para
+><action
+>Запуск Руководства пользователя.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Авторские права на программу: &Stefan.Schimanski; &Stefan.Schimanski.email;, 2001</para>
+
+<para
+>Авторские права на документацию: &A.L.Spehr; &A.L.Spehr.email;, 2008</para>
+
+<para
+>Григорий Мохин<email
+>mok@kde.ru</email
+></para
+><para
+>Мария Шикунова<email
+>translation-team@basealt.ru</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

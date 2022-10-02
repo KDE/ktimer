@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Dutch "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Het handboek van &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+&Sander.Koning; 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2018-03-04</date>
+<releaseinfo
+>Applications 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; is een toepassing die u in staat stelt een toepassing op te starten na een bepaalde hoeveelheid tijd. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>aftellen</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+<para
+>&ktimer; stelt u in staat om verschillende taken in te voeren en voor elk van hen een timer in te stellen. Wanneer de timer nul bereikt, wordt de taak uitgevoerd. De timers voor elke taak kunnen worden gestart, gestopt, gewijzigd of in een loop gezet worden.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>&ktimer; gebruiken</title>
+
+<screenshot>
+<screeninfo
+>Hier is een schermafbeelding van &ktimer; nadat het voor de eerste keer is gestart</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Hoofdvenster van &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Voeg, om te beginnen, eerst een taak toe door <guibutton
+>Nieuw</guibutton
+> te selecteren. Typ daarna het commando dat u wilt uitvoeren in het vakje <guilabel
+>Commandoregel:</guilabel
+>. U kunt daarna de instellingen aanpassen of de afteltimer starten. Wanneer de tijd verstreken is, wordt het commando uitgevoerd.</para>
+
+<screenshot>
+<screeninfo
+>Dit is een schermafdruk van &ktimer; nadat u het hebt verteld om &konqueror; uit te voeren.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>een taak toevoegen</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Laten we &konqueror; als een voorbeeld gebruiken. Standaard zal het starten na 100 seconden als het aftellen is gestart.</para>
+
+<screenshot>
+<screeninfo
+>Hier is het aftellen gaande: na 56 seconden zal &konqueror; gaan draaien.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>56 seconden te gaan</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Laten we nu de taak starten. Hier draait het al even en is gedeeltelijk door het aftellen. Na 56 seconden zal &konqueror; worden gestart.</para>
+
+<para
+>Ziet u die schuifbalk? U kunt deze gebruiken om snel de hoeveelheid tijd van een taak te verminderen of te vermeerderen.</para>
+
+<screenshot>
+<screeninfo
+>Laten we een tweede taak toevoegen</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>start nog een &konqueror;, u kunt er nooit teveel van hebben!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Nu zijn er twee &konqueror;s gepland om te worden uitgevoerd. De bovenste zal worden uitgevoerd na 20 seconden en de onderste is nu gestopt. U kunt meer commando's toevoegen. Terwijl u nooit te veel &konqueror;s kunt hebben, wilt u waarschijnlijk andere programma's gebruiken. Misschien uw eigen shellscript.</para>
+
+<para
+>Als u een nieuwe taak wilt starten met een bepaalde vertraging nadat de vorige taak in de lijst is beëindigd activeer dan de optie <guilabel
+>Opvolgende taak</guilabel
+> en pas de gespecificeerde tijd in de kolom <guilabel
+>Vertraging</guilabel
+> aan. </para>
+
+<sect1 id="settings">
+<title
+>Instellingen</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Nieuw</guibutton
+></term>
+    <listitem
+><para
+><action
+>Een nieuwe taak toevoegen.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Verwijderen</guibutton
+></term>
+    <listitem
+><para
+><action
+>De huidige taak verwijderen.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Help</guibutton
+></term>
+    <listitem
+><para
+><action
+>Opent het handboek</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Programma Copyright 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Documentatie Copyright 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+&meld.fouten;&vertaling.sander;&vertaling.freek; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

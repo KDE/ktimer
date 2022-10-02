@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Catalan  "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>El manual del &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Albert</firstname
+> <surname
+>Astals Cid</surname
+> <affiliation
+><address
+><email
+>aacid@kde.org</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+>&traductor.Antoni.Bella; 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>4 de març de 2018</date>
+<releaseinfo
+>Aplicacions 18.04</releaseinfo>
+
+<abstract>
+<para
+>El &ktimer; és una aplicació que permet iniciar una aplicació després que hagi transcorregut una certa quantitat de temps. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>compte enrere</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+<para
+>El &ktimer; permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Quan el comptador arribi a zero, s'executarà la tasca. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Utilitzar el &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Aquesta és una captura de pantalla del &ktimer; quan l'inicieu per primera vegada</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Finestra principal del &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Per començar, primer afegirem una tasca seleccionant <guibutton
+>Nou</guibutton
+>. A continuació, escriviu l'ordre que voleu executar en el quadre <guilabel
+>Línia d'ordres:</guilabel
+>. Després podeu ajustar la configuració, o iniciar el temporitzador de compte enrere. Quan s'acabi el temps, l'ordre serà executada.</para>
+
+<screenshot>
+<screeninfo
+>Aquesta és una captura de pantalla del &ktimer; després d'haver dit que s'executi el &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>afegeix una tasca</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Usarem el &konqueror; com a exemple. Per defecte, s'executarà en 100 segons una vegada el compte enrere del temporitzador hagi començat.</para>
+
+<screenshot>
+<screeninfo
+>El compte enrere ja està en marxa: El &konqueror; s'executarà en 56 segons.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Falten 56 segons</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Ara començarà la tasca. Ja porta en execució una estona i està en mig del compte enrere. En 56 segons s'iniciarà el &konqueror;.</para>
+
+<para
+>Veieu aquesta barra de desplaçament? La podeu utilitzar per incrementar o reduir ràpidament la quantitat de temps per a una tasca.</para>
+
+<screenshot>
+<screeninfo
+>Afegirem una segona tasca.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Iniciar un altre &konqueror;. Mai n'he tingut tants!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Ara s'ha programat l'execució de dos &konqueror;. La de dalt començarà en 20 segons, i la de baix està actualment aturada. Podeu afegir més ordres. Tot i que mai desitgeu tenir tants &konqueror;, és probable que vulgueu utilitzar altres executables. Potser el vostre propi script de l'intèrpret d'ordres.</para>
+
+<para
+>Si voleu iniciar una tasca nova amb un retard determinat després de finalitzar la tasca anterior a la llista, marqueu l'opció <guilabel
+>Tasca consecutiva</guilabel
+> i ajusteu el temps determinat a la columna <guilabel
+>Retard</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Arranjament</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Nou</guibutton
+></term>
+    <listitem
+><para
+><action
+>Afegeix una tasca nova.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Elimina</guibutton
+></term>
+    <listitem
+><para
+><action
+>Elimina la tasca actual.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Ajuda</guibutton
+></term>
+    <listitem
+><para
+><action
+>Obre el manual.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Crèdits i llicència</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Copyright del programa, 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Copyright de la documentació, 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Traductors de la documentació: Albert Astals Cid <email
+>aacid@kde.org</email
+> i &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

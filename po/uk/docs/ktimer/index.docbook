@@ -1,0 +1,273 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Ukrainian "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>Підручник з &ktimer;</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>4 березня 2018 року</date>
+<releaseinfo
+>Програми 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; — програма, за допомогою якої ви можете запустити програму після того, як мине певний проміжок часу. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>відлік</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Вступ</title>
+<para
+>За допомогою &ktimer; ви зможете вказати декілька завдань і встановити для кожного з них таймер. Коли таймер долічить до нуля, середовище виконає вказану вами команду. Таймери для кожного з завдань можна запускати, зупиняти, змінювати або зациклювати.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Користування &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Ось знімок вікна &ktimer; після першого запуску програми</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Головне вікно &ktimer;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Щоб запустити таймер, спочатку додайте завдання за допомогою кнопки <guibutton
+>Створити</guibutton
+>. Після цього введіть команду, яку слід виконати у поле <guilabel
+>Командний рядок:</guilabel
+>. Після цього можна налаштувати параметри або почати відлік таймера. Після завершення відліку, середовище виконає вказану вами команду.</para>
+
+<screenshot>
+<screeninfo
+>Ось знімок вікна &ktimer; після введення наказу запустити &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>додавання завдання</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Використаємо як приклад &konqueror;. Типово, його буде запущено через 100 після запуску відліку таймера.</para>
+
+<screenshot>
+<screeninfo
+>Відлік іде: &konqueror; буде запущено за 56 секунд.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>56 до запуску</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Тепер розпочнімо відлік. На знімку вже минув деякий час. &konqueror; буде запущено за 56 секунд.</para>
+
+<para
+>Бачите цей повзунок? За його допомогою можна швидко збільшити або зменшити час до запуску завдання.</para>
+
+<screenshot>
+<screeninfo
+>Тепер додамо друге завдання.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Запустимо ще один &konqueror;, &konqueror;-ів не буває забагато!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Тепер у розкладі на запуск два &konqueror;. Верхній буде запущено за 20 секунд, а відлік для нижнього поки що зупинено. Ви можете додати ще якісь команди. Хоча &konqueror;-ів і не може бути забагато, вам, ймовірно, захочеться запустити інші програми. Наприклад, ваші власні скрипти оболонки.</para>
+
+<para
+>Якщо ви хочете запустити нове завдання із певною затримкою щодо моменту завершення попереднього завдання у списку, позначте пункт <guilabel
+>Послідовне завдання</guilabel
+> і скоригуйте час, вказаний у стовпчику <guilabel
+>Затримка</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Параметри</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Створити</guibutton
+></term>
+    <listitem
+><para
+><action
+>Додає нове завдання.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Вилучити</guibutton
+></term>
+    <listitem
+><para
+><action
+>Вилучає поточне завдання.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Довідка</guibutton
+></term>
+    <listitem
+><para
+><action
+>Відкриває підручник з програми.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Подяки і ліцензія</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Авторські права на програму належать &Stefan.Schimanski; &Stefan.Schimanski.email;, ©2001</para>
+
+<para
+>Авторські права на документацію до програми належать &A.L.Spehr; &A.L.Spehr.email;, ©2008</para>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

@@ -18,7 +18,6 @@
 
 #include "ktimer.h"
 
-#include "kstatusnotifieritem.h"
 #include <KConfigGroup>
 #include <KGuiItem>
 #include <KHelpClient>
@@ -26,6 +25,7 @@
 #include <KSharedConfig>
 #include <KStandardAction>
 #include <KStandardGuiItem>
+#include <KStatusNotifierItem>
 #include <QAction>
 #include <QTimer>
 

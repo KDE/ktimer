@@ -22,6 +22,7 @@
   <name xml:lang="ia">KTimer</name>
   <name xml:lang="id">KTimer</name>
   <name xml:lang="it">KTimer</name>
+  <name xml:lang="ka">KTimer</name>
   <name xml:lang="ko">KTimer</name>
   <name xml:lang="nl">KTimer</name>
   <name xml:lang="nn">KTimer</name>
@@ -58,6 +59,7 @@
   <summary xml:lang="ia">Lanceator de computo a retro</summary>
   <summary xml:lang="id">Peluncur Hitung Mundur</summary>
   <summary xml:lang="it">Conto alla rovescia</summary>
+  <summary xml:lang="ka">ათვლის ტაიმერი</summary>
   <summary xml:lang="ko">카운트다운 실행기</summary>
   <summary xml:lang="nl">Starter van aftellen</summary>
   <summary xml:lang="nn">Nedteljingsstartar</summary>
@@ -139,6 +141,7 @@
       <caption xml:lang="ia">Fenestra de configuration de KTimer</caption>
       <caption xml:lang="id">Jendela konfigurasi KTimer</caption>
       <caption xml:lang="it">Finestra di configurazione di KTimer</caption>
+      <caption xml:lang="ka">KTimer -ის მორგების ფანჯარა</caption>
       <caption xml:lang="ko">KTimer 설정 창</caption>
       <caption xml:lang="nl">Configuratievenster van KTimer</caption>
       <caption xml:lang="nn">Oppsettvindauge for KTimer</caption>

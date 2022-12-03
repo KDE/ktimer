@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-20 00:48+0000\n"
-"PO-Revision-Date: 2022-10-06 19:57+0200\n"
+"PO-Revision-Date: 2022-12-02 23:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -58,7 +58,7 @@ msgstr "წამზომის მორგება"
 #: prefwidget.ui:26
 #, kde-format
 msgid "List of countdowns you have set"
-msgstr ""
+msgstr "დაყენებული უკუთვლების სია"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, m_list)
 #: prefwidget.ui:29
@@ -67,6 +67,8 @@ msgid ""
 "New countdowns are put here. You can add and remove them, and stop and start "
 "them."
 msgstr ""
+"ახალი უკუთვლები აქედან ემატება. შეგიძლიათ დაამატოთ, წაშალოთ, შეაჩეროთ და "
+"გაუშვათ ისინი."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:36
@@ -103,7 +105,7 @@ msgstr "ახალი ამოცანის დამატება"
 #: prefwidget.ui:62
 #, kde-format
 msgid "Add a new task to the list."
-msgstr ""
+msgstr "სიაში ახალი ამოცანის დამატება."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #: prefwidget.ui:65
@@ -121,7 +123,7 @@ msgstr "ამოცანის წაშლა"
 #: prefwidget.ui:75
 #, kde-format
 msgid "Remove a task from the list."
-msgstr ""
+msgstr "სიიდან ამოცანის წაშლა."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: prefwidget.ui:78
@@ -133,37 +135,37 @@ msgstr "&წაშლა"
 #: prefwidget.ui:116
 #, kde-format
 msgid "Speed up or slow down your countdown"
-msgstr ""
+msgstr "უკუთვლის შეჩერება ან აჩქარება"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, m_slider)
 #: prefwidget.ui:119
 #, kde-format
 msgid "You can use this slider to adjust the time."
-msgstr ""
+msgstr "დროის გასასწორებლად შეგიძლიათ ეს ჩოჩია გამოიყენოთ."
 
 #. i18n: ectx: property (toolTip), widget (QLCDNumber, m_counter)
 #: prefwidget.ui:129
 #, kde-format
 msgid "Time in seconds until command is executed"
-msgstr ""
+msgstr "დრო წამებში, სანამ ბრძანება შესრულდება"
 
 #. i18n: ectx: property (whatsThis), widget (QLCDNumber, m_counter)
 #: prefwidget.ui:132
 #, kde-format
 msgid "This number is how many seconds are left for the selected countdown."
-msgstr ""
+msgstr "ეს რიცხვი ნიშნავს, რამდენი წამია დარჩენილი მონიშნულ უკუთვნაში."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pause)
 #: prefwidget.ui:142
 #, kde-format
 msgid "Pause a countdown"
-msgstr ""
+msgstr "ათვლის შეჩერება"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_pause)
 #: prefwidget.ui:145
 #, kde-format
 msgid "Use this to pause a timer countdown."
-msgstr ""
+msgstr "გამოიყენეთ უკუთვლის შესაჩერებლად."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_pause)
 #: prefwidget.ui:148
@@ -175,13 +177,13 @@ msgstr "||"
 #: prefwidget.ui:155
 #, kde-format
 msgid "Start a countdown"
-msgstr ""
+msgstr "ათვლის დაწყება"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_start)
 #: prefwidget.ui:158
 #, kde-format
 msgid "Use this to start or restart a countdown."
-msgstr ""
+msgstr "გამოიყენეთ უკუთვლის დასაწყებად ან თავიდან გასაშვებად."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_start)
 #: prefwidget.ui:161
@@ -193,13 +195,13 @@ msgstr ">"
 #: prefwidget.ui:168
 #, kde-format
 msgid "Stop a countdown"
-msgstr ""
+msgstr "ათვლის გაჩერება"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_stop)
 #: prefwidget.ui:171
 #, kde-format
 msgid "Use this to stop the countdown for a task."
-msgstr ""
+msgstr "გამოიყენეთ ამოცანის უკუთვლის გასაჩერებლად."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_stop)
 #: prefwidget.ui:174
@@ -211,13 +213,13 @@ msgstr "="
 #: prefwidget.ui:184
 #, kde-format
 msgid "Detailed help documentation"
-msgstr ""
+msgstr "დეტალური დახმარების დოკუმენტაცია"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_help)
 #: prefwidget.ui:187
 #, kde-format
 msgid "Click here to open the help documentation viewer."
-msgstr ""
+msgstr "დააწკაპუნეთ დახმარების დოკუმენტაციის სანახავად."
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_settings)
 #: prefwidget.ui:197
@@ -232,12 +234,13 @@ msgstr "მორგება"
 msgid ""
 "Check this box if you want your countdown to start over after it finishes"
 msgstr ""
+"დასვით თოლია, თუ უკუთვლის დასრულების შემდეგ გნებავთ, ის თავიდან დაიწყოს"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_loop)
 #: prefwidget.ui:215
 #, kde-format
 msgid "&Loop"
-msgstr ""
+msgstr "&მარყუჟი"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel2)
 #: prefwidget.ui:222
@@ -249,31 +252,31 @@ msgstr "დაყოვნება:"
 #: prefwidget.ui:229
 #, kde-format
 msgid "Enter the seconds here"
-msgstr ""
+msgstr "წამები შეგიძლიათ აქ შეიყვანოთ"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, m_delay)
 #: prefwidget.ui:232
 #, kde-format
 msgid "You can change the amount of time in the countdown here."
-msgstr ""
+msgstr "აქ ათვლის დროის რაოდენობის შეცვლა შეგიძლიათ."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_one)
 #: prefwidget.ui:242
 #, kde-format
 msgid "Check this box if you only want to open one copy of your program"
-msgstr ""
+msgstr "დასვით ეს თოლია, თუ თქვენი პროგრამის მხოლოდ ერთი ასლის გახსნა გნებავთ"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_one)
 #: prefwidget.ui:245
 #, kde-format
 msgid "Check this box if you only want one instance to open"
-msgstr ""
+msgstr "დასვით ეს თოლია, თუ მხოლოდ ერთი ასლის გაშვება გნებავთ"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_one)
 #: prefwidget.ui:248
 #, kde-format
 msgid "Start only &one instance"
-msgstr ""
+msgstr "მხოლოდ &ერთი ასლის გაშვება"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_consecutive)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_consecutive)
@@ -283,12 +286,13 @@ msgid ""
 "Check this box if you want to execute this task after the previous one "
 "finishes"
 msgstr ""
+"დასვთ ეს თოლია, თუ წინას დასრულების შემდეგ ამ ამოცანის შესრულება გნებავთ"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:261
 #, kde-format
 msgid "Consecutive task"
-msgstr ""
+msgstr "მიმდევრობითი ამოცანა"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel3)
 #: prefwidget.ui:268
@@ -306,13 +310,13 @@ msgstr "ბრძანების სტრიქონი:"
 #: prefwidget.ui:291
 #, kde-format
 msgid "Enter the hours here"
-msgstr ""
+msgstr "საათები აქ შეიყვანეთ"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_delayM)
 #: prefwidget.ui:298
 #, kde-format
 msgid "Enter the minutes here"
-msgstr ""
+msgstr "წუთები აქ შეიყვანეთ"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel4)
 #: prefwidget.ui:308
@@ -330,10 +334,10 @@ msgstr "წუთი"
 #: prefwidget.ui:350
 #, kde-format
 msgid "command you would like to run when time is up"
-msgstr ""
+msgstr "ბრძანება, რომელიც გნებავთ, გაუშვათ, როცა დრო გავა"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, m_commandLine)
 #: prefwidget.ui:353
 #, kde-format
 msgid "Enter a program you would like to run when the countdown is zero"
-msgstr ""
+msgstr "შეიყვანეთ პროგრამა, რომელიც გნებავთ, გაეშვას, როცა უკუთვლა 0-ს უდროს"

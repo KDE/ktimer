@@ -1,230 +1,142 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY A.L.Spehr "<personname
-><firstname
->A. L.</firstname
-><surname
->Spehr</surname
-></personname
->">
-  <!ENTITY A.L.Spehr.email "<email
->zahl+kde@transbay.net</email
->">
-  <!ENTITY Stefan.Schimanski "<personname
-><firstname
->Stefan</firstname
-><surname
->Schimanski</surname
-></personname
->">
-  <!ENTITY Stefan.Schimanski.email "<email
->1Stein@gmx.de</email
->">
-  <!ENTITY % German "INCLUDE">
+  <!ENTITY A.L.Spehr "<personname><firstname>A. L.</firstname><surname>Spehr</surname></personname>">
+  <!ENTITY A.L.Spehr.email "<email>zahl+kde@transbay.net</email>">
+  <!ENTITY Stefan.Schimanski "<personname><firstname>Stefan</firstname><surname>Schimanski</surname></personname>">
+  <!ENTITY Stefan.Schimanski.email "<email>1Stein@gmx.de</email>">
+  <!ENTITY % English "INCLUDE">
   <!ENTITY % addindex "IGNORE">
 ]>
 
 <book id="ktimer" lang="&language;">
 
 <bookinfo>
-<title
->Das Handbuch zu &ktimer;</title>
+<title>The &ktimer; Handbook</title>
 
 <authorgroup>
-<author
-><firstname
->A. L.</firstname
-> <othername
-></othername
-> <surname
->Spehr</surname
-> <affiliation
-> <address
->&A.L.Spehr.email;</address>
+<author>
+<firstname>A. L.</firstname>
+<othername></othername>
+<surname>Spehr</surname>
+<affiliation>
+<address>&A.L.Spehr.email;</address>
 </affiliation>
 </author>
-<othercredit role="translator"
-><firstname
->Gregor</firstname
-><surname
->Zumstein</surname
-><affiliation
-><address
-><email
->zumstein@ssd.ethz.ch</email
-></address
-></affiliation
-><contrib
->Deutsche Übersetzung</contrib
-></othercredit
-> 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<legalnotice
->&FDLNotice;</legalnotice>
+<legalnotice>&FDLNotice;</legalnotice>
 
-<date
->2018-03-04</date>
-<releaseinfo
->Anwendungen 18.04</releaseinfo>
+<date>2018-03-04</date>
+<releaseinfo>Applications 18.04</releaseinfo>
 
 <abstract>
-<para
->&ktimer; ist ein Programm, mit dem andere Anwendungen nach dem Ablauf eines definierten Zeitintervalls gestartet werden können. </para>
+<para>
+&ktimer; is an application that lets you start an application after a certain amount of time has passed.
+</para>
 </abstract>
 
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->kdeutils</keyword>
-<keyword
->ktimer</keyword>
-<keyword
->Countdown</keyword>
+<keyword>KDE</keyword>
+<keyword>kdeutils</keyword>
+<keyword>ktimer</keyword>
+<keyword>countdown</keyword>
 </keywordset>
 
 </bookinfo>
 
 <chapter id="introduction">
-<title
->Einführung</title>
-<para
->&ktimer; erlaubt das Erfassen von mehreren Aufgaben mit je eigenem Countdown. Erreicht der Zähler Null, so wird die Aufgabe ausgeführt. Jeder einzelne Countdown kann individuell gestartet, angehalten, geändert oder repetiert werden.</para
-> 
+<title>Introduction</title>
+<para>&ktimer; allows you to enter several tasks and to set a timer for each of them. When the timer reaches zero, the task is executed. The timers for each task can be started, stopped, changed, or looped.</para> 
 
 </chapter>
 
 <chapter id="using-ktimer">
-<title
->Verwendung von &ktimer;</title>
+<title>Using &ktimer;</title>
 
 <screenshot>
-<screeninfo
->Dies ist ein Bildschirmfoto von &ktimer; beim ersten Start</screeninfo>
+<screeninfo>Here's a screenshot of &ktimer; when you start it for the first
+time</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="main.png" format="PNG"/>
 	  </imageobject>
 	    <textobject>
-	    <phrase
->Hauptfenster von &ktimer;</phrase>
+	    <phrase>&ktimer; main window</phrase>
 	  </textobject>
 	</mediaobject>
 </screenshot>
 
-<para
->Fügen Sie mit <guibutton
->Neu</guibutton
-> eine neue Aufgabe hinzu. Geben Sie dann den auszuführenden Befehl im Feld <guilabel
->Befehlszeile</guilabel
-> ein. Nun können Sie die Einstellungen anpassen oder den Countdown starten. Wenn die Zeit abgelaufen ist, wird der Befehl ausgeführt.</para>
+<para>To start, first add a task by selecting <guibutton>New</guibutton>. Then type the command you wish to execute into the <guilabel>Command line:</guilabel> box. You can then adjust the settings, or start the timer countdown. When the time is up, the command will be run.</para>
 
 <screenshot>
-<screeninfo
->So sieht &ktimer; aus, wenn das Programm &konqueror; gestartet werden soll.</screeninfo>
+<screeninfo>Here's a screenshot of &ktimer; after you have told it to run &konqueror;.</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="first.png" format="PNG"/>
 	  </imageobject>
 	    <textobject>
-	    <phrase
->Aufgabe hinzufügen</phrase>
+	    <phrase>add a task</phrase>
 	  </textobject>
 	</mediaobject>
 </screenshot>
 
-<para
->Als Beispiel wird soll der &konqueror; gestartet werden. In der Voreinstellung dauert es 100 Sekunden bis zum Start.</para>
+<para>Let's use &konqueror; as an example. By default, it will start in 100 seconds once the timer countdown is started.</para>
 
 <screenshot>
-<screeninfo
->Der Countdown läuft: In 56 Sekunden startet &konqueror;.</screeninfo>
+<screeninfo>Here it is counting down: in 56 seconds &konqueror; will be run.</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="running.png" format="PNG"/>
 	  </imageobject>
 	    <textobject>
-	    <phrase
->Noch 56 Sekunden</phrase>
+	    <phrase>56 seconds to go</phrase>
 	  </textobject>
 	</mediaobject>
 </screenshot>
 
-<para
->Jetzt kann der Countdown gestartet werden. In diesem Beispiel ist bereits einige Zeit vergangen, in 56 Sekunden wird &konqueror; gestartet.</para>
+<para>Now let's start the task. Here it has been running for a bit and is partway through the countdown. In 56 seconds, &konqueror; will be started.</para>
 
-<para
->Mit dem Schieberegler können Sie schnell den Zeitraum für den Start einer Aufgabe verändern.</para>
+<para>See that sliding bar? You can use it to quickly increase or decrease the amount of time on a task.</para>
 
 <screenshot>
-<screeninfo
->Hinzufügen einer zweiten Aufgabe</screeninfo>
+<screeninfo>Let's add a second task.</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="two_at_once.png" format="PNG"/>
 	  </imageobject>
 	    <textobject>
-	    <phrase
->Start eines zweiten &konqueror;.</phrase>
+	    <phrase>start another &konqueror;, you can never have too many!</phrase>
 	  </textobject>
 	</mediaobject>
 </screenshot>
 
-<para
->Nun soll &konqueror; zweimal gestartet werden. Der erste &konqueror; in der ersten Zeile wird in 20 Sekunden gestartet, für den zweiten darunter wurde der Countdown angehalten. Sie können weitere ausführbare Programme wie zum Beispiel eigene Skripte hinzufügen.</para>
+<para>Now two &konqueror;s are scheduled to be run. The top one will be run in 20 seconds, and the bottom one is currently stopped. You can add more commands. While you can never have too many &konqueror;s, you probably want to use other executables. Your own shell script, perhaps.</para>
 
-<para
->Möchten Sie eine neue Aufgabe mit einer bestimmten Verzögerung nach der vorigen Aufgabe in der Liste starten, wählen Sie <guilabel
->Fortlaufende Aufgabe</guilabel
-> und passen die Zeit in der Spalte <guilabel
->Verzögerung</guilabel
-> an. </para>
+<para>If you want to start a new task with a certain delay after the previous task 
+in the list is finished check the option <guilabel>Consecutive task</guilabel>
+and adjust the time specified in the column <guilabel>Delay</guilabel>.
+</para>
 
 <sect1 id="settings">
-<title
->Einstellungen</title>
+<title>Settings</title>
 <para>
 
 <variablelist>
   <varlistentry>
-    <term
-><guibutton
->Neu</guibutton
-></term>
-    <listitem
-><para
-><action
->Fügt eine neue Aufgabe hinzu.</action
-></para
-></listitem>
+    <term><guibutton>New</guibutton></term>
+    <listitem><para><action>Adds a new task.</action></para></listitem>
     </varlistentry>
     
     <varlistentry>
-    <term
-><guibutton
->Entfernen</guibutton
-></term>
-    <listitem
-><para
-><action
->Entfernt die ausgewählte Aufgabe.</action
-></para
-></listitem>
+    <term><guibutton>Remove</guibutton></term>
+    <listitem><para><action>Removes the current task.</action></para></listitem>
     </varlistentry>
  
     <varlistentry>
-    <term
-><guibutton
->Hilfe</guibutton
-></term>
-    <listitem
-><para
-><action
->Öffnet das Handbuch zu &ktimer;</action
-></para
-></listitem>
+    <term><guibutton>Help</guibutton></term>
+    <listitem><para><action>Opens the Handbook.</action></para></listitem>
     </varlistentry>
 </variablelist>
 
@@ -238,25 +150,23 @@
 
 <chapter id="credits">
 
-<title
->Mitwirkende und Lizenz</title>
+<title>Credits and License</title>
 
-<para
->&ktimer; </para>
+<para>
+&ktimer;
+</para>
 
 
 <!--List all the copyright holders here-->
-<para
->Copyright für das Programm (c) 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+<para>Program Copyright 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
 
-<para
->Copyright für die Dokumentation (c) 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+<para>Documentation Copyright 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
 
-<para
->Übersetzung Gregor Zumstein<email
->zumstein@ssd.ethz.ch</email
-></para
-> &underFDL; &underGPL; </chapter>
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+
+</chapter>
 
 &documentation.index;
 </book>

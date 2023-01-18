@@ -1,12 +1,10 @@
-# translation of ktimer.po to Belarusian
-#
 # Siarhei Liantsevich <serzh.by@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: ktimer\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-20 00:48+0000\n"
-"PO-Revision-Date: 2007-01-27 01:03+0100\n"
+"PO-Revision-Date: 2023-01-17 16:04\n"
 "Last-Translator: Siarhei Liantsevich <serzh.by@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -17,40 +15,45 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/ktimer/ktimer.po\n"
+"X-Crowdin-File-ID: 8309\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Сяржук Лянцэвіч"
+msgstr "Сяржук Лянцэвіч, Antikruk"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "serzh.by@gmail.com"
+msgstr "serzh.by@gmail.com, nashtlumach@gmail.com"
 
 #: main.cpp:43
-#, fuzzy, kde-format
+#, kde-format
 msgid "KTimer"
 msgstr "KTimer"
 
 #: main.cpp:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "KDE Timer"
 msgstr "Таймер KDE"
 
 #: main.cpp:47
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
-msgstr ""
+msgstr "(c) 2001, Stefan Schimanski"
 
 #: main.cpp:49
 #, kde-format
 msgid "Stefan Schimanski"
-msgstr ""
+msgstr "Stefan Schimanski"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, PrefWidget)
 #: prefwidget.ui:14
-#, fuzzy, kde-format
+#, kde-format
 msgid "Timer Settings"
 msgstr "Налады таймера"
 
@@ -58,7 +61,7 @@ msgstr "Налады таймера"
 #: prefwidget.ui:26
 #, kde-format
 msgid "List of countdowns you have set"
-msgstr ""
+msgstr "Спіс зваротных адлікаў"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, m_list)
 #: prefwidget.ui:29
@@ -67,107 +70,110 @@ msgid ""
 "New countdowns are put here. You can add and remove them, and stop and start "
 "them."
 msgstr ""
+"Тут размяшчаюцца новыя адлікі. Вы можаце дадаваць і выдаляць іх, спыняць і "
+"запускаць."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Counter"
-msgstr "Лічыльнік (з)"
+msgstr "Лічыльнік"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:41
-#, fuzzy, kde-format
+#, kde-format
 msgid "Delay"
-msgstr "Затрымка:"
+msgstr "Затрымліванне"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #. i18n: ectx: property (title), widget (QGroupBox, m_state)
 #: prefwidget.ui:46 prefwidget.ui:104
-#, fuzzy, kde-format
+#, kde-format
 msgid "State"
 msgstr "Стан"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:51
-#, fuzzy, kde-format
+#, kde-format
 msgid "Command"
-msgstr "Каманда"
+msgstr "Загад"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_add)
 #: prefwidget.ui:59
 #, kde-format
 msgid "Add a new task"
-msgstr ""
+msgstr "Дадаць новую задачу"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_add)
 #: prefwidget.ui:62
 #, kde-format
 msgid "Add a new task to the list."
-msgstr ""
+msgstr "Дадаць новую задачу ў спіс."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #: prefwidget.ui:65
-#, fuzzy, kde-format
+#, kde-format
 msgid "&New"
-msgstr "Новы"
+msgstr "&Стварыць"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
 #: prefwidget.ui:72
 #, kde-format
 msgid "Remove a task"
-msgstr ""
+msgstr "Выдаліць задачу"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_remove)
 #: prefwidget.ui:75
 #, kde-format
 msgid "Remove a task from the list."
-msgstr ""
+msgstr "Выдаліць задачу са спіса."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #: prefwidget.ui:78
 #, kde-format
 msgid "&Remove"
-msgstr ""
+msgstr "&Выдаліць"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, m_slider)
 #: prefwidget.ui:116
 #, kde-format
 msgid "Speed up or slow down your countdown"
-msgstr ""
+msgstr "Паскорыць або запаволіць зваротны адлік"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, m_slider)
 #: prefwidget.ui:119
 #, kde-format
 msgid "You can use this slider to adjust the time."
-msgstr ""
+msgstr "Вы можаце выкарыстоўваць гэты паўзунок для падладжвання часу."
 
 #. i18n: ectx: property (toolTip), widget (QLCDNumber, m_counter)
 #: prefwidget.ui:129
 #, kde-format
 msgid "Time in seconds until command is executed"
-msgstr ""
+msgstr "Час у секундах да выканання загаду"
 
 #. i18n: ectx: property (whatsThis), widget (QLCDNumber, m_counter)
 #: prefwidget.ui:132
 #, kde-format
 msgid "This number is how many seconds are left for the selected countdown."
 msgstr ""
+"Гэтая лічба паказвае, колькі секунд засталося ў абраным зваротным адліку."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pause)
 #: prefwidget.ui:142
 #, kde-format
 msgid "Pause a countdown"
-msgstr ""
+msgstr "Прыпыніць зваротны адлік"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_pause)
 #: prefwidget.ui:145
 #, kde-format
 msgid "Use this to pause a timer countdown."
-msgstr ""
+msgstr "Выкарыстоўвайце гэта, каб прыпыніць зваротны адлік таймера."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_pause)
 #: prefwidget.ui:148
-#, fuzzy, kde-format
+#, kde-format
 msgid "||"
 msgstr "||"
 
@@ -175,17 +181,17 @@ msgstr "||"
 #: prefwidget.ui:155
 #, kde-format
 msgid "Start a countdown"
-msgstr ""
+msgstr "Пачаць зваротны адлік"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_start)
 #: prefwidget.ui:158
 #, kde-format
 msgid "Use this to start or restart a countdown."
-msgstr ""
+msgstr "Выкарыстоўвайце гэта, каб пачаць або перазапусціць зваротны адлік."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_start)
 #: prefwidget.ui:161
-#, fuzzy, kde-format
+#, kde-format
 msgid ">"
 msgstr ">"
 
@@ -193,17 +199,17 @@ msgstr ">"
 #: prefwidget.ui:168
 #, kde-format
 msgid "Stop a countdown"
-msgstr ""
+msgstr "Спыніць зваротны адлік"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_stop)
 #: prefwidget.ui:171
 #, kde-format
 msgid "Use this to stop the countdown for a task."
-msgstr ""
+msgstr "Выкарыстоўвайце гэта, каб спыніць зваротны адлік для задачы."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_stop)
 #: prefwidget.ui:174
-#, fuzzy, kde-format
+#, kde-format
 msgid "="
 msgstr "="
 
@@ -211,17 +217,17 @@ msgstr "="
 #: prefwidget.ui:184
 #, kde-format
 msgid "Detailed help documentation"
-msgstr ""
+msgstr "Падрабязная дапаможная дакументацыя"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_help)
 #: prefwidget.ui:187
 #, kde-format
 msgid "Click here to open the help documentation viewer."
-msgstr ""
+msgstr "Пстрыкніце сюды, каб адкрыць сродак прагляду дапаможнай дакументацыі."
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_settings)
 #: prefwidget.ui:197
-#, fuzzy, kde-format
+#, kde-format
 msgid "Settings"
 msgstr "Налады"
 
@@ -232,48 +238,54 @@ msgstr "Налады"
 msgid ""
 "Check this box if you want your countdown to start over after it finishes"
 msgstr ""
+"Адзначце гэты параметр, калі хочаце, каб зваротны адлік пачынаўся зноў пасля "
+"яго заканчэння"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_loop)
 #: prefwidget.ui:215
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Loop"
-msgstr "У цыкле"
+msgstr "&Зацыкліць"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel2)
 #: prefwidget.ui:222
-#, fuzzy, kde-format
+#, kde-format
 msgid "Delay:"
-msgstr "Затрымка:"
+msgstr "Затрымліванне:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_delay)
 #: prefwidget.ui:229
 #, kde-format
 msgid "Enter the seconds here"
-msgstr ""
+msgstr "Увядзіце значэнне ў секундах"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, m_delay)
 #: prefwidget.ui:232
 #, kde-format
 msgid "You can change the amount of time in the countdown here."
-msgstr ""
+msgstr "Тут вы можаце змяніць колькасць часу ў зваротным адліку."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_one)
 #: prefwidget.ui:242
 #, kde-format
 msgid "Check this box if you only want to open one copy of your program"
 msgstr ""
+"Адзначце гэты параметр, калі хочаце, каб адкрывалася толькі адна копія "
+"праграмы"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_one)
 #: prefwidget.ui:245
 #, kde-format
 msgid "Check this box if you only want one instance to open"
 msgstr ""
+"Адзначце гэты параметр, калі хочаце, каб адкрываўся толькі адзін асобнік "
+"праграмы"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_one)
 #: prefwidget.ui:248
-#, fuzzy, kde-format
+#, kde-format
 msgid "Start only &one instance"
-msgstr "Запускаць толькі адзін асобнік"
+msgstr "Запускаць толькі &адзін асобнік"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_consecutive)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_consecutive)
@@ -283,60 +295,64 @@ msgid ""
 "Check this box if you want to execute this task after the previous one "
 "finishes"
 msgstr ""
+"Адзначце гэты параметр, калі хочаце, каб гэтая задача выконвалася пасля "
+"завяршэння папярэдняй"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:261
 #, kde-format
 msgid "Consecutive task"
-msgstr ""
+msgstr "Паслядоўная задача"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel3)
 #: prefwidget.ui:268
-#, fuzzy, kde-format
+#, kde-format
 msgid "seconds"
-msgstr "секунд"
+msgstr "секунд(ы)"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1)
 #: prefwidget.ui:284
-#, fuzzy, kde-format
+#, kde-format
 msgid "Command line:"
-msgstr "Камандны радок:"
+msgstr "Загадны радок:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_delayH)
 #: prefwidget.ui:291
 #, kde-format
 msgid "Enter the hours here"
-msgstr ""
+msgstr "Увядзіце сюды гадзіны"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_delayM)
 #: prefwidget.ui:298
 #, kde-format
 msgid "Enter the minutes here"
-msgstr ""
+msgstr "Увядзіце сюды хвіліны"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel4)
 #: prefwidget.ui:308
 #, kde-format
 msgid "hours"
-msgstr ""
+msgstr "гадзін(ы)"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel5)
 #: prefwidget.ui:315
 #, kde-format
 msgid "minutes"
-msgstr ""
+msgstr "хвілін(ы)"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_commandLine)
 #: prefwidget.ui:350
 #, kde-format
 msgid "command you would like to run when time is up"
-msgstr ""
+msgstr "загад, які вы хочаце выканаць пасля заканчэння часу"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, m_commandLine)
 #: prefwidget.ui:353
 #, kde-format
 msgid "Enter a program you would like to run when the countdown is zero"
 msgstr ""
+"Увядзіце праграму, якую вы хочаце запусціць пасля заканчэння зваротнага "
+"адліку"
 
 #, fuzzy
 #~ msgid "Delay [s]"

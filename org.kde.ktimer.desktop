@@ -1,6 +1,7 @@
 [Desktop Entry]
 GenericName=Countdown Launcher
 GenericName[ar]=مطلق العدّ التنازلى
+GenericName[be]=Праграма зваротнага адліку
 GenericName[bg]=Хронометър
 GenericName[bs]=Pokretač odbrojavanja
 GenericName[ca]=Llançador amb compte enrere
@@ -70,6 +71,7 @@ Type=Application
 Name=KTimer
 Name[af]=Ktimer
 Name[ar]=KTimer
+Name[be]=KTimer
 Name[bg]=KTimer
 Name[br]=KTimer
 Name[bs]=KTimer
@@ -147,6 +149,7 @@ X-DocPath=ktimer/index.html
 X-DBUS-ServiceName=org.kde.ktimer
 Comment=Desktop stopwatch
 Comment[ar]=ساعة إيقاف لسطح المكتب
+Comment[be]=Секундамер
 Comment[bg]=Хронометър за работния плот
 Comment[ca]=Cronòmetre per a l'escriptori
 Comment[ca@valencia]=Cronòmetre per a l'escriptori

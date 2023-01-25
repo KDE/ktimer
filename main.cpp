@@ -20,7 +20,9 @@
 #include <KAboutData>
 #include <KDBusService>
 #include <KLocalizedString>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
+#endif
 #include <QApplication>
 #include <QCommandLineParser>
 #include <config-ktimer.h>

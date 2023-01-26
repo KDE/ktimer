@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-20 00:48+0000\n"
+"POT-Creation-Date: 2023-01-26 01:01+0000\n"
 "PO-Revision-Date: 2002-09-05 23:12+0200\n"
 "Last-Translator: Heiko Evermann <heiko@evermann.de>\n"
 "Language-Team: Esperanto\n"
@@ -27,22 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wolfram@steloj.de"
 
-#: main.cpp:43
+#: main.cpp:45
 #, kde-format
 msgid "KTimer"
 msgstr "Tempoplanilo"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "KDE Timer"
 msgstr "KDE-Tempoplanilo"
 
-#: main.cpp:47
+#: main.cpp:49
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
 msgstr ""
 
-#: main.cpp:49
+#: main.cpp:51
 #, kde-format
 msgid "Stefan Schimanski"
 msgstr "Stefan Schimanski"

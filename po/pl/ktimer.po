@@ -1,5 +1,5 @@
 # translation of ktimer.po to Polish
-# Version: $Revision: 1631828 $
+# Version: $Revision: 1643201 $
 # translation of ktimer.po to
 # Copyright (C) 2002, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-20 00:48+0000\n"
+"POT-Creation-Date: 2023-01-26 01:01+0000\n"
 "PO-Revision-Date: 2018-05-01 06:05+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -33,22 +33,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mrudolf@kdewebdev.org"
 
-#: main.cpp:43
+#: main.cpp:45
 #, kde-format
 msgid "KTimer"
 msgstr "Stoper"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid "KDE Timer"
 msgstr "Stoper KDE"
 
-#: main.cpp:47
+#: main.cpp:49
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
 msgstr "(c) 2001, Stefan Schimanski"
 
-#: main.cpp:49
+#: main.cpp:51
 #, kde-format
 msgid "Stefan Schimanski"
 msgstr "Stefan Schimanski"

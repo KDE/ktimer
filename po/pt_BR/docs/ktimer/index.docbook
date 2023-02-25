@@ -1,7 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY kappname "&ktimer;">
-  <!ENTITY package "kdeutils">
   <!ENTITY A.L.Spehr "<personname
 ><firstname
 >A. L.</firstname
@@ -80,9 +78,9 @@
 >&FDLNotice;</legalnotice>
 
 <date
->04/08/2015</date>
+>04/03/2018</date>
 <releaseinfo
->Applications 15.08</releaseinfo>
+>Applications 18.04</releaseinfo>
 
 <abstract>
 <para
@@ -191,6 +189,13 @@
 <para
 >Agora você tem dois &konqueror;s agendados para serem executados. O de cima será executado daqui a 20 segundos, enquanto o inferior está atualmente parado. Você poderá adicionar ainda mais comandos. Embora você possa ter os &konqueror;s, que desejar, poderá querer usar outros executáveis. O seu próprio programa da linha de comando, por exemplo.</para>
 
+<para
+>Se você deseja iniciar uma nova tarefa com um certo atraso após a tarefa anterior na lista ter terminado, marque a opção <guilabel
+>Tarefa consecutiva</guilabel
+> e ajuste o tempo especificado na coluna <guilabel
+>Atraso</guilabel
+>. </para>
+
 <sect1 id="settings">
 <title
 >Configurações</title>
@@ -267,8 +272,7 @@
 > e André Marcelo Alvarenga <email
 >alvarenga@kde.org</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>

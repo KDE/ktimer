@@ -44,7 +44,7 @@ msgstr "مؤقّت ك"
 #: main.cpp:47
 #, kde-format
 msgid "KDE Timer"
-msgstr "مؤقّت كدي"
+msgstr "مؤقّت كِيدِي"
 
 #: main.cpp:49
 #, kde-format

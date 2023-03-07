@@ -125,8 +125,8 @@ KTimerPref::KTimerPref(QWidget *parent)
     KGuiItem::assign(m_help, KStandardGuiItem::help());
 
     // Exit
-    QAction *exit = KStandardAction::quit(this, SLOT(exit()), this);
-    addAction(exit);
+    QAction *exitAction = KStandardAction::quit(this, SLOT(exit()), this);
+    addAction(exitAction);
 
     // connect
     connect(m_add, &QPushButton::clicked, this, &KTimerPref::add);

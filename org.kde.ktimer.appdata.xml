@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>KTimer</name>
   <name xml:lang="ar">مؤقّت ك</name>
+  <name xml:lang="be">KTimer</name>
   <name xml:lang="bg">KTimer</name>
   <name xml:lang="ca">KTimer</name>
   <name xml:lang="ca-valencia">KTimer</name>
@@ -42,6 +43,7 @@
   <name xml:lang="zh-TW">KTimer</name>
   <summary>Countdown Launcher</summary>
   <summary xml:lang="ar">مطلق العدّ التنازلي</summary>
+  <summary xml:lang="be">Праграма зваротнага адліку</summary>
   <summary xml:lang="bg">Хронометър</summary>
   <summary xml:lang="ca">Llançador amb compte enrere</summary>
   <summary xml:lang="ca-valencia">Iniciador amb compte arrere</summary>
@@ -82,6 +84,7 @@
       KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.
     </p>
     <p xml:lang="ar">مؤقت ك هي أداة صغيرة لتنفيذ البرامج بعد مرور بعض الوقت. يسمح لك بإدخال العديد من المهام وتعيين مؤقت لكل منها. يمكن بَدْء تشغيل أجهزة ضبط الوقت لكل مهمة أو إيقافها أو تغييرها أو تكرارها.</p>
+    <p xml:lang="be">KTimer - гэта невялікі інструмент для выканання праграм праз некаторы час. У праграме можна стварыць некалькі задач і вызначыць таймер для кожнай з іх. Таймер для кожнай задачы можна запусціць, спыніць, змяніць або зацыкліць.</p>
     <p xml:lang="bg">KTimer е малък инструмент за изпълнение на програми след зададено време. Той ви позволява да да въведете няколко задачи и да зададете таймер за всяка от тях. Таймерите за всяка задача могат да се стартират, спират, променят или зациклят.</p>
     <p xml:lang="ca">El KTimer és una petita eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, aturar, modificar o repetir.</p>
     <p xml:lang="ca-valencia">KTimer és una xicoteta eina per a executar programes després d'un temps determinat. Permet introduir diverses tasques i establir un temporitzador per a cadascuna d'elles. Els comptadors de temps per a cada tasca es poden iniciar, parar, modificar o repetir.</p>
@@ -114,6 +117,7 @@
     <p xml:lang="vi">KTimer là một công cụ nhỏ để thực thi các chương trình sau một khoảng thời gian. Nó cho phép bạn nhập vào các tác vụ và đặt một bộ hẹn giờ cho mỗi cái. Các bộ hẹn giờ có thể được khởi động, dừng lại, thay đổi, hoặc lặp lại.</p>
     <p xml:lang="x-test">xxKTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.xx</p>
     <p xml:lang="zh-CN">KTimer 是一个用于在一段时间之后执行程序的小工具。它让您可以创建多个任务，并且为它们每一个设置一个定时器。每个任务的定时器均可被启动、停止、更改或循环运行。</p>
+    <p xml:lang="zh-TW">KTimer 是讓您在一段時間之後執行程式的小型工具。它讓您輸入數個工作並為它們個別設定倒數計時。各個工作的計時器可以分別啟動、停止、變更或設定重複。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ktimer</url>
   <url type="donation">https://www.kde.org/community/donations/?app=ktimer&amp;source=appdata</url>
@@ -124,6 +128,7 @@
     <screenshot type="default">
       <caption>KTimer configuration window</caption>
       <caption xml:lang="ar">نافذة ضبط مؤقت ك</caption>
+      <caption xml:lang="be">Акно канфігурацыі KTimer</caption>
       <caption xml:lang="bg">Прозорец за настройки на KTimer</caption>
       <caption xml:lang="ca">Finestra de configuració del KTimer</caption>
       <caption xml:lang="ca-valencia">Finestra de configuració de KTimer</caption>

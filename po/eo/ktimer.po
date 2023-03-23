@@ -1,14 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Translation of ktimer into esperanto.
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Wolfram Diestel <wolfram@steloj.de>, 2002.
+# Heiko Evermann <heiko@evermann.de>, 2002.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 01:01+0000\n"
-"PO-Revision-Date: 2002-09-05 23:12+0200\n"
-"Last-Translator: Heiko Evermann <heiko@evermann.de>\n"
+"PO-Revision-Date: 2023-03-22 19:14+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -69,17 +70,15 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:36
-#, fuzzy, kde-format
-#| msgid "Counter [s]"
+#, kde-format
 msgid "Counter"
-msgstr "Nombrilo [s]"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:41
-#, fuzzy, kde-format
-#| msgid "Delay:"
+#, kde-format
 msgid "Delay"
-msgstr "Prokrasto:"
+msgstr "Prokrasto"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #. i18n: ectx: property (title), widget (QGroupBox, m_state)
@@ -114,10 +113,9 @@ msgstr "&Nova"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_remove)
 #: prefwidget.ui:72
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgid "Remove a task"
-msgstr "Fo&rigi"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_remove)
 #: prefwidget.ui:75
@@ -320,7 +318,7 @@ msgstr ""
 #: prefwidget.ui:308
 #, kde-format
 msgid "hours"
-msgstr ""
+msgstr "horoj"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel5)
 #: prefwidget.ui:315
@@ -339,6 +337,3 @@ msgstr ""
 #, kde-format
 msgid "Enter a program you would like to run when the countdown is zero"
 msgstr ""
-
-#~ msgid "Delay [s]"
-#~ msgstr "Prokrasto [s]"

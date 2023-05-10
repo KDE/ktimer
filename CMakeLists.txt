@@ -45,6 +45,7 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
     KIO
     DBusAddons
     Notifications
+    ConfigWidgets
 )
 
 find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})

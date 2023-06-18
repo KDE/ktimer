@@ -14,6 +14,7 @@
   <name xml:lang="de">KTimer</name>
   <name xml:lang="el">KTimer</name>
   <name xml:lang="en-GB">KTimer</name>
+  <name xml:lang="eo">KTimer</name>
   <name xml:lang="es">KTimer</name>
   <name xml:lang="et">KTimer</name>
   <name xml:lang="eu">KTimer</name>
@@ -52,6 +53,7 @@
   <summary xml:lang="de">Rückwärtszähler</summary>
   <summary xml:lang="el">Εκτελεστής αντίστροφης μέτρησης</summary>
   <summary xml:lang="en-GB">Countdown Launcher</summary>
+  <summary xml:lang="eo">Retronombrada Lanĉilo</summary>
   <summary xml:lang="es">Lanzador de cuenta atrás</summary>
   <summary xml:lang="et">Ajaarvestuse käivitaja</summary>
   <summary xml:lang="eu">Atzekoz aurrera zenbatze abiarazlea</summary>
@@ -137,6 +139,7 @@
       <caption xml:lang="de">Einrichtungsdialog von KTimer</caption>
       <caption xml:lang="el">Παράθυρο διαμόρφωσης του KTimer</caption>
       <caption xml:lang="en-GB">KTimer configuration window</caption>
+      <caption xml:lang="eo">Agordfenestro de KTimer</caption>
       <caption xml:lang="es">Ventana de configuración de KTimer</caption>
       <caption xml:lang="et">KTimeri seadistuste aken</caption>
       <caption xml:lang="eu">KTimer konfiguratzeko leiho</caption>

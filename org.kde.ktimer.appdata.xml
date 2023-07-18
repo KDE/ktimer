@@ -14,6 +14,7 @@
   <name xml:lang="de">KTimer</name>
   <name xml:lang="el">KTimer</name>
   <name xml:lang="en-GB">KTimer</name>
+  <name xml:lang="eo">KTimer</name>
   <name xml:lang="es">KTimer</name>
   <name xml:lang="et">KTimer</name>
   <name xml:lang="eu">KTimer</name>
@@ -52,6 +53,7 @@
   <summary xml:lang="de">Rückwärtszähler</summary>
   <summary xml:lang="el">Εκτελεστής αντίστροφης μέτρησης</summary>
   <summary xml:lang="en-GB">Countdown Launcher</summary>
+  <summary xml:lang="eo">Retronombrada Lanĉilo</summary>
   <summary xml:lang="es">Lanzador de cuenta atrás</summary>
   <summary xml:lang="et">Ajaarvestuse käivitaja</summary>
   <summary xml:lang="eu">Atzekoz aurrera zenbatze abiarazlea</summary>
@@ -92,6 +94,7 @@
     <p xml:lang="de">KTimer ist ein Programm, um andere Anwendungen nach einer bestimmten Zeit zu starten. Es erlaubt das Erfassen von mehreren Aufgaben mit je eigenem Countdown. Jeder einzelne Countdown kann individuell gestartet, angehalten, geändert oder repetiert werden.</p>
     <p xml:lang="el">Το KTimer είναι ένα μικρό εργαλέιο για την εκτέλεση προγραμμάτων έπειτα από κάποιο χρονικό διάστημα. Σας επιτρέπει να εισάγετε πολλές εργασίες και να ορίσετε χρονόμετρο για καθεμιά. Η χρονομέτρηση για κάθε εργασία μπορεί να ξεκινήσει, να διακοπεί, να αλλάξει ή να επαναληφθεί.</p>
     <p xml:lang="en-GB">KTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.</p>
+    <p xml:lang="eo">KTimer estas eta ilo por ruli programojn post iom da tempo. Ĝi permesas vin enigi plurajn taskojn kaj agordi tempigilon por ĉiu el ili. La tempigiloj por ĉiu tasko povas esti komencitaj, haltigitaj, ŝanĝitaj aŭ buklitaj.</p>
     <p xml:lang="es">KTimer es una pequeña herramienta para ejecutar programas tras cierto tiempo. Le permite introducir varias tareas y definir un temporizador para cada una de ellas. Puede iniciar, detener, modificar o poner en bucle estos temporizadores.</p>
     <p xml:lang="et">KTimer on pisike tööriist programmide käivitamiseks teatava aja pärast. See võimaldab panna paika ülesandeid ja määrata kõigile neile taimeri. Kõigi ülesannete taimereid saab käivitada, peatada, muuta või korduma panna.</p>
     <p xml:lang="eu">KTimer adierazitako denbora igarotakoan aplikazioak exekutatzeko programa bat da. Hainbat ataza sartu eta bakoitzari atzera zenbatze bat ezarri dakioke. Ataza bakoitzaren atzera zenbatzea abiarazi, gelditu, aldatu edo begiztaz lotu daiteke.</p>
@@ -137,6 +140,7 @@
       <caption xml:lang="de">Einrichtungsdialog von KTimer</caption>
       <caption xml:lang="el">Παράθυρο διαμόρφωσης του KTimer</caption>
       <caption xml:lang="en-GB">KTimer configuration window</caption>
+      <caption xml:lang="eo">Agordfenestro de KTimer</caption>
       <caption xml:lang="es">Ventana de configuración de KTimer</caption>
       <caption xml:lang="et">KTimeri seadistuste aken</caption>
       <caption xml:lang="eu">KTimer konfiguratzeko leiho</caption>

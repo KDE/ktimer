@@ -605,3 +605,5 @@ void KTimerJob::fire()
         }
     }
 }
+
+#include "moc_ktimer.cpp"

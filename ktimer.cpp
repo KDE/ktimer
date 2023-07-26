@@ -211,6 +211,14 @@ void KTimerPref::currentChanged(QTreeWidgetItem *i, QTreeWidgetItem * /* old */)
         m_delayM->setValue(m);
         m_delay->setValue(s);
 
+        m_commandLine->lineEdit()->setText(job->command());
+        m_loop->setChecked(job->loop());
+        m_one->setChecked(job->oneInstance());
+        m_consecutive->setChecked(job->consecutive());
+        m_counter->display((int)job->value());
+        m_slider->setMaximum(job->delay());
+        m_slider->setValue(job->value());
+
         connect(m_commandLine->lineEdit(), &QLineEdit::textChanged, job, &KTimerJob::setCommand);
         connect(m_delayH, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
         connect(m_delayM, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KTimerPref::delayChanged);
@@ -222,14 +230,6 @@ void KTimerPref::currentChanged(QTreeWidgetItem *i, QTreeWidgetItem * /* old */)
         connect(m_pause, &QToolButton::clicked, job, &KTimerJob::pause);
         connect(m_start, &QToolButton::clicked, job, &KTimerJob::start);
         connect(m_slider, SIGNAL(valueChanged(int)), job, SLOT(setValue(int)));
-
-        m_commandLine->lineEdit()->setText(job->command());
-        m_loop->setChecked(job->loop());
-        m_one->setChecked(job->oneInstance());
-        m_consecutive->setChecked(job->consecutive());
-        m_counter->display((int)job->value());
-        m_slider->setMaximum(job->delay());
-        m_slider->setValue(job->value());
 
     } else {
         m_state->setEnabled(false);

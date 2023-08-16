@@ -48,6 +48,10 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
     ConfigWidgets
 )
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
+endif()
+
 find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})
 set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
@@ -73,6 +77,11 @@ ecm_add_app_icon(ktimer ICONS ${ICONS_SRCS})
 
 target_link_libraries(ktimer  KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::KIOWidgets KF${KF_MAJOR_VERSION}::ConfigWidgets
     KF${KF_MAJOR_VERSION}::Notifications KF${KF_MAJOR_VERSION}::DBusAddons)
+
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(ktimer KF6::StatusNotifierItem)
+endif()
+
 
 install(TARGETS ktimer  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

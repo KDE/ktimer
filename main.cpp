@@ -20,9 +20,6 @@
 #include <KAboutData>
 #include <KDBusService>
 #include <KLocalizedString>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
 #include <QApplication>
 #include <QCommandLineParser>
 #include <config-ktimer.h>
@@ -30,16 +27,6 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    /**
-     * enable high dpi support
-     */
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("ktimer"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("ktimerrc"));
-    migrate.migrate();
-#endif
     KLocalizedString::setApplicationDomain("ktimer");
     KAboutData aboutData(QStringLiteral("ktimer"),
                          i18n("KTimer"),

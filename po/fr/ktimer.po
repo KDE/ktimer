@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-26 01:01+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2018-06-01 16:28+0800\n"
 "Last-Translator: Simon Depiets <sdepiets@gmail.com>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -36,22 +36,22 @@ msgid "Your emails"
 msgstr ""
 "cousin@kde.org, rjacolin@ifrance.com, aminesay@yahoo.fr, sdepiets@gmail.com"
 
-#: main.cpp:45
+#: main.cpp:32
 #, kde-format
 msgid "KTimer"
 msgstr "KTimer"
 
-#: main.cpp:47
+#: main.cpp:34
 #, kde-format
 msgid "KDE Timer"
 msgstr "Chronomètre de KDE"
 
-#: main.cpp:49
+#: main.cpp:36
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
 msgstr "(c) 2001, Stefan Schimanski"
 
-#: main.cpp:51
+#: main.cpp:38
 #, kde-format
 msgid "Stefan Schimanski"
 msgstr "Stefan Schimanski"

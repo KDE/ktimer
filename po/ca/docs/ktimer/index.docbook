@@ -115,7 +115,7 @@
 </screenshot>
 
 <para
->Per començar, primer afegirem una tasca seleccionant <guibutton
+>Per a començar, primer afegirem una tasca seleccionant <guibutton
 >Nou</guibutton
 >. A continuació, escriviu l'ordre que voleu executar en el quadre <guilabel
 >Línia d'ordres:</guilabel
@@ -156,7 +156,7 @@
 >Ara començarà la tasca. Ja porta en execució una estona i està en mig del compte enrere. En 56 segons s'iniciarà el &konqueror;.</para>
 
 <para
->Veieu aquesta barra de desplaçament? La podeu utilitzar per incrementar o reduir ràpidament la quantitat de temps per a una tasca.</para>
+>Veieu aquesta barra de desplaçament? La podeu utilitzar per a incrementar o reduir ràpidament la quantitat de temps en una tasca.</para>
 
 <screenshot>
 <screeninfo

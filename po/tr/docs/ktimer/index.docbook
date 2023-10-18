@@ -28,7 +28,7 @@
 
 <bookinfo>
 <title
->The &ktimer; El Kitabı</title>
+>&ktimer; El Kitabı</title>
 
 <authorgroup>
 <author
@@ -70,7 +70,7 @@
 
 <abstract>
 <para
->&ktimer; belirli bir süre geçtikten sonra bir uygulamayı başlatmanıza izin veren bir uygulamadır. </para>
+>&ktimer;, belirli bir süre geçtikten sonra bir uygulamayı başlatmanıza izin veren bir uygulamadır. </para>
 </abstract>
 
 
@@ -91,7 +91,7 @@
 <title
 >Giriş</title>
 <para
->&ktimer; farklı görevler girmenize ve her biri için bir zamanlayıcı belirlemenize izin verir. Zamanlayıcı sıfıra ulaştığında, görev yürütülür. Her bir görev için zamanlayıcılar başlatılabilir, durdurulabilir, değiştirilebilir veya döngüye alınabilir.</para
+>&ktimer;, farklı görevler girmenize ve her biri için bir sayaç belirlemenize izin verir. Sayaç sıfıra ulaştığında, görev yürütülür. Her bir görev için sayaçlar başlatılabilir, durdurulabilir, değiştirilebilir veya döngüye alınabilir.</para
 > 
 
 </chapter>
@@ -119,11 +119,11 @@
 >Yeni</guibutton
 > ögesini seçerek ilk görevinizi ekleyin. Ardından <guilabel
 >Komut satırı:</guilabel
-> bölümüne çalıştırılmasını istediğiniz komutu girin. Daha sonra ayarları değiştirebilir veya zamanlayıcının geri sayımını başlatabilirsiniz. Zaman dolduğunda, komut çalıştırılacaktır.</para>
+> bölümüne yürütülmesini istediğiniz komutu girin. Daha sonra ayarları değiştirebilir veya sayacın geri sayımını başlatabilirsiniz. Zaman dolduğunda, komut çalıştırılacaktır.</para>
 
 <screenshot>
 <screeninfo
->&konqueror;'un çalıştırmasını görev olarak belirledikten sonra, &ktimer;'ın bir ekran görüntüsü.</screeninfo>
+>&konqueror;'un çalıştırmasını söyledikten sonra, &ktimer;'ın bir ekran görüntüsü.</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="first.png" format="PNG"/>
@@ -136,7 +136,7 @@
 </screenshot>
 
 <para
->&konqueror;'u örnek olarak kullanalım. Varsayılan olarak, zamanlayıcı geri sayımı başladığında 100 saniye içinde başlayacaktır.</para>
+>&konqueror;'u örnek olarak kullanalım. Öntanımlı olarak, sayaç geri sayıma başladığında 100 saniye içinde başlatılacaktır.</para>
 
 <screenshot>
 <screeninfo
@@ -167,16 +167,16 @@
 	  </imageobject>
 	    <textobject>
 	    <phrase
->başka bir &konqueror; başlatın, çok fazla sayıda başlatamassınız!</phrase>
+>başka bir &konqueror; başlatın, isteğiniz kadar açabilirsiniz!</phrase>
 	  </textobject>
 	</mediaobject>
 </screenshot>
 
 <para
->Şimdi, iki &konqueror; çalışmak için programlandı. Üstteki 20 saniye içinde çalıştırılacak ve alttaki durdurulmuştur durumda. Daha fazla komut ekleyebilirsiniz. Hiçbir zaman çok fazla &konqueror; çalıştırmassınız, muhtemelen diğer yürütülebilir dosyaları kullanmak isteyeceksinizdir. Belki kendi betiğinizi çalıştırmak istersiniz.</para>
+>Şimdi, iki &konqueror; çalışmak için programlandı. Üstteki 20 saniye içinde çalıştırılacak ve alttaki durdurulmuştur durumda. Daha fazla komut ekleyebilirsiniz. İstediğiniz &konqueror; çalıştırabilirsiniz; ancak başka yürütülebilir dosyaları da kullanmak isteyeceksinizdir. Belki kendi betiğinizi çalıştırmak istersiniz.</para>
 
 <para
->Listedeki bir önceki görev tamamlandıktan sonra belirli bir gecikmeyle yeni bir görev başlatmak istiyorsanız, <guilabel
+>Listedeki bir önceki görev tamamlandıktan sonra belirli bir gecikmeyle yeni bir görev başlatmak istiyorsanız <guilabel
 > Ardışık görev</guilabel
 > seçeneğini işaretleyin ve <guilabel
 >Gecikme</guilabel
@@ -222,7 +222,7 @@
     <listitem
 ><para
 ><action
->El Kitabını Açar.</action
+>El Kitabı'nı açar.</action
 ></para
 ></listitem>
     </varlistentry>
@@ -239,7 +239,7 @@
 <chapter id="credits">
 
 <title
->Hazırlayanlar ve Lisans</title>
+>Emeği Geçenler ve Lisans</title>
 
 <para
 >&ktimer; </para>
@@ -247,13 +247,13 @@
 
 <!--List all the copyright holders here-->
 <para
->Program Telif Hakkı 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+>Program telif hakkı 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
 
 <para
->Belgelendirme Telif Hakkı 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+>Belgelendirme telif hakkı 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
 
 <para
->Kaan Özdinçer <email
+>Çeviren: Kaan Özdinçer <email
 >kaanozdincer@gmail.com</email
 ></para
 > &underFDL; &underGPL; </chapter>

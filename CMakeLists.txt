@@ -47,13 +47,13 @@ set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
     TYPE OPTIONAL
 )
 
-ecm_set_disabled_deprecation_versions(QT 6.5.0
-    KF 5.109
+ecm_set_disabled_deprecation_versions(QT 6.6.0
+    KF 5.240
 )
 
 add_executable(ktimer)
 
-configure_file(config-ktimer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
+configure_file(config-ktimer.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
 
 
 target_sources(ktimer PRIVATE main.cpp ktimer.cpp ktimer.h)

@@ -27,7 +27,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("ktimer");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("ktimer"));
     KAboutData aboutData(QStringLiteral("ktimer"),
                          i18n("KTimer"),
                          QStringLiteral(KTIMER_VERSION),

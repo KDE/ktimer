@@ -298,7 +298,7 @@ void KTimerPref::saveJobs(KConfig *cfg)
         item->job()->save(cfg, QStringLiteral("Job%1").arg(num));
     }
 
-    KConfigGroup jobscfg = cfg->group("Jobs");
+    KConfigGroup jobscfg = cfg->group(QStringLiteral("Jobs"));
     jobscfg.writeEntry("Number", m_list->topLevelItemCount());
 
     jobscfg.sync();
@@ -306,7 +306,7 @@ void KTimerPref::saveJobs(KConfig *cfg)
 
 void KTimerPref::loadJobs(KConfig *cfg)
 {
-    const int num = cfg->group("Jobs").readEntry("Number", 0);
+    const int num = cfg->group(QStringLiteral("Jobs")).readEntry("Number", 0);
     for (int n = 0; n < num; n++) {
         auto job = new KTimerJob;
         auto item = new KTimerJobItem(job, m_list);

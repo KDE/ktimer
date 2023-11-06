@@ -135,6 +135,7 @@
     <screenshot type="default">
       <caption>KTimer configuration window</caption>
       <caption xml:lang="ar">نافذة ضبط مؤقت ك</caption>
+      <caption xml:lang="ast">Ventana de configuración de KTimer</caption>
       <caption xml:lang="be">Акно канфігурацыі KTimer</caption>
       <caption xml:lang="bg">Прозорец за настройки на KTimer</caption>
       <caption xml:lang="ca">Finestra de configuració del KTimer</caption>

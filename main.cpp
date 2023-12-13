@@ -34,7 +34,7 @@ int main(int argc, char **argv)
                          i18n("KDE Timer"),
                          KAboutLicense::GPL,
                          i18n("(c) 2001, Stefan Schimanski"),
-                         QStringLiteral("https://utils.kde.org/projects/ktimer/"));
+                         QStringLiteral("https://apps.kde.org/ktimer"));
     aboutData.addAuthor(i18n("Stefan Schimanski"), QString(), QStringLiteral("schimmi@kde.org"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);

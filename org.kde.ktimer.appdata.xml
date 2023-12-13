@@ -129,7 +129,7 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ktimer</url>
   <url type="donation">https://www.kde.org/community/donations/?app=ktimer&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=ktimer</url>
-  <url type="homepage">https://utils.kde.org/projects/ktimer/</url>
+  <url type="homepage">https://apps.kde.org/ktimer</url>
   <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">

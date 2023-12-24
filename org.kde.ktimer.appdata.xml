@@ -42,7 +42,7 @@
   <name xml:lang="uk">KTimer</name>
   <name xml:lang="vi">KTimer</name>
   <name xml:lang="x-test">xxKTimerxx</name>
-  <name xml:lang="zh-CN">KTimer</name>
+  <name xml:lang="zh-CN">KTimer 倒计时程序启动器</name>
   <name xml:lang="zh-TW">KTimer</name>
   <summary>Countdown Launcher</summary>
   <summary xml:lang="ar">مطلق العدّ التنازلي</summary>
@@ -82,7 +82,7 @@
   <summary xml:lang="uk">Таймер</summary>
   <summary xml:lang="vi">Trình khởi chạy đếm ngược</summary>
   <summary xml:lang="x-test">xxCountdown Launcherxx</summary>
-  <summary xml:lang="zh-CN">倒计时执行器</summary>
+  <summary xml:lang="zh-CN">倒计时程序启动器</summary>
   <summary xml:lang="zh-TW">倒數計時啟動器</summary>
   <description>
     <p>
@@ -123,7 +123,7 @@
     <p xml:lang="uk">KTimer — невеличка програма для відкладеного запуску інших програм. За її допомогою ви зможете вказати декілька завдань і встановити для кожного з них таймер. Таймери для кожного з завдань можна запускати, зупиняти, змінювати або зациклювати.</p>
     <p xml:lang="vi">KTimer là một công cụ nhỏ để thực thi các chương trình sau một khoảng thời gian. Nó cho phép bạn nhập vào các tác vụ và đặt một bộ hẹn giờ cho mỗi cái. Các bộ hẹn giờ có thể được khởi động, dừng lại, thay đổi, hoặc lặp lại.</p>
     <p xml:lang="x-test">xxKTimer is a little tool to execute programs after some time. It allows you to enter several tasks and to set a timer for each of them. The timers for each task can be started, stopped, changed, or looped.xx</p>
-    <p xml:lang="zh-CN">KTimer 是一个用于在一段时间之后执行程序的小工具。它让您可以创建多个任务，并且为它们每一个设置一个定时器。每个任务的定时器均可被启动、停止、更改或循环运行。</p>
+    <p xml:lang="zh-CN">KTimer 是一款用于在倒计时结束后执行程序的简易工具程序。您可以在 KTimer 中创建多个任务，并且为每个任务单独设置倒计时。每个任务的倒计时可以单独启动、停止、更改或者循环运行。</p>
     <p xml:lang="zh-TW">KTimer 是讓您在一段時間之後執行程式的小型工具。它讓您輸入數個工作並為它們個別設定倒數計時。各個工作的計時器可以分別啟動、停止、變更或設定重複。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ktimer</url>

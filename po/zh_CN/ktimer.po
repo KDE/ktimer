@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 01:01+0000\n"
-"PO-Revision-Date: 2023-12-20 11:27\n"
+"PO-Revision-Date: 2023-12-23 08:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -30,12 +30,12 @@ msgstr "kde-china@kde.org, i@guoyunhe.me, henryhu@kde.org, tds00@qq.com"
 #: main.cpp:45
 #, kde-format
 msgid "KTimer"
-msgstr "KTimer"
+msgstr "KTimer 倒计时程序启动器"
 
 #: main.cpp:47
 #, kde-format
 msgid "KDE Timer"
-msgstr "KDE 计时器"
+msgstr "KDE 倒计时程序启动器"
 
 #: main.cpp:49
 #, kde-format
@@ -51,13 +51,13 @@ msgstr "Stefan Schimanski"
 #: prefwidget.ui:14
 #, kde-format
 msgid "Timer Settings"
-msgstr "计时器设置"
+msgstr "倒计时设置"
 
 #. i18n: ectx: property (toolTip), widget (QTreeWidget, m_list)
 #: prefwidget.ui:26
 #, kde-format
 msgid "List of countdowns you have set"
-msgstr "列出已设置的倒计时"
+msgstr "已设置的倒计时列表"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, m_list)
 #: prefwidget.ui:29
@@ -66,13 +66,13 @@ msgid ""
 "New countdowns are put here. You can add and remove them, and stop and start "
 "them."
 msgstr ""
-"新建的倒计时将在此列表中显示。您可以添加/移除它们，也可以开始/停止计时。"
+"新建倒计时将被添加到此列表。您可以在此添加/移除它们，也可以开始/停止倒计时。"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:36
 #, kde-format
 msgid "Counter"
-msgstr "倒计时秒表"
+msgstr "倒计时"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:41

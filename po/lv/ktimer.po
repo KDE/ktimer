@@ -5,31 +5,32 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2009-06-07 21:04+0300\n"
-"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-04-08 19:19+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andris Maziks, Rihards Priedītis"
+msgstr "Andris Maziks, Rihards Priedītis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andris.m@delfi.lv, RPrieditis@inbox.lv"
+msgstr "andris.m@delfi.lv, RPrieditis@inbox.lv, toms.trasuns@posteo.net"
 
 #: main.cpp:32
 #, kde-format
@@ -61,7 +62,7 @@ msgstr "Taimera iestatījumi"
 #: prefwidget.ui:26
 #, kde-format
 msgid "List of countdowns you have set"
-msgstr "Saraksts ar iestatītajām skaitīšanām"
+msgstr "Laika atskaišu saraksts"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, m_list)
 #: prefwidget.ui:29
@@ -70,7 +71,7 @@ msgid ""
 "New countdowns are put here. You can add and remove them, and stop and start "
 "them."
 msgstr ""
-"Šeit parādās janas atskaites. Varat tās pievienot un izņemt, palaist un "
+"Šeit redzamas jaunas atskaites. Varat tās pievienot un noņemt, palaist un "
 "apturēt."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
@@ -138,25 +139,25 @@ msgstr "&Izņemt"
 #: prefwidget.ui:116
 #, kde-format
 msgid "Speed up or slow down your countdown"
-msgstr "Paātrināt vai palēnināt atskaiti"
+msgstr "Paātrināt vai palēnināt laika atskaiti"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, m_slider)
 #: prefwidget.ui:119
 #, kde-format
 msgid "You can use this slider to adjust the time."
-msgstr "Ar šo slīdni var koriģēt laiku."
+msgstr "Ar šo slīdni varat pielāgot laiku."
 
 #. i18n: ectx: property (toolTip), widget (QLCDNumber, m_counter)
 #: prefwidget.ui:129
 #, kde-format
 msgid "Time in seconds until command is executed"
-msgstr ""
+msgstr "Laiks sekundēs līdz komandas izpildei"
 
 #. i18n: ectx: property (whatsThis), widget (QLCDNumber, m_counter)
 #: prefwidget.ui:132
 #, kde-format
 msgid "This number is how many seconds are left for the selected countdown."
-msgstr "Šis ir sekunžu skaits, kas palicis izvēlētajai atskaitei."
+msgstr "Sekunžu skaits atlasītajai laika atskaitei."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pause)
 #: prefwidget.ui:142
@@ -180,13 +181,13 @@ msgstr "||"
 #: prefwidget.ui:155
 #, kde-format
 msgid "Start a countdown"
-msgstr "Sākt atskaiti"
+msgstr "Sākt laika atskaiti"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_start)
 #: prefwidget.ui:158
 #, kde-format
 msgid "Use this to start or restart a countdown."
-msgstr "Lietojiet šo, lai sāktu vai turpinātu skaitīšanu."
+msgstr "Lietojiet šo, lai sāktu vai turpinātu atskaiti."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_start)
 #: prefwidget.ui:161
@@ -198,13 +199,13 @@ msgstr ">"
 #: prefwidget.ui:168
 #, kde-format
 msgid "Stop a countdown"
-msgstr "Atcelt atskaiti"
+msgstr "Apturēt laika atskaiti"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, m_stop)
 #: prefwidget.ui:171
 #, kde-format
 msgid "Use this to stop the countdown for a task."
-msgstr "Lietojiet šo, lai atceltu skaitīšanu šim darbam."
+msgstr "Lietojiet šo, lai apturētu skaitīšanu šim darbam."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_stop)
 #: prefwidget.ui:174
@@ -216,13 +217,13 @@ msgstr "="
 #: prefwidget.ui:184
 #, kde-format
 msgid "Detailed help documentation"
-msgstr "Detalizēta palīdzības dokumentācija"
+msgstr "Sīkākas palīdzības dokumentācija"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_help)
 #: prefwidget.ui:187
 #, kde-format
 msgid "Click here to open the help documentation viewer."
-msgstr "Spiediet šeit, lai avērtu palīdzību dokumentācijas skatītājā."
+msgstr "Spiediet, lai atvērtu palīdzību dokumentācijas skatītājā."
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_settings)
 #: prefwidget.ui:197
@@ -236,8 +237,7 @@ msgstr "Iestatījumi"
 #, kde-format
 msgid ""
 "Check this box if you want your countdown to start over after it finishes"
-msgstr ""
-"Atzīmējiet šo, ja vēlaties ka atskaite, beidzoties sākas atkal no sākuma"
+msgstr "Atzīmējiet, ja vēlaties, lai atskaite pēc beigšanās sāktos no sākums"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_loop)
 #: prefwidget.ui:215
@@ -255,25 +255,25 @@ msgstr "Aizture:"
 #: prefwidget.ui:229
 #, kde-format
 msgid "Enter the seconds here"
-msgstr ""
+msgstr "Ierakstiet sekundes"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, m_delay)
 #: prefwidget.ui:232
 #, kde-format
 msgid "You can change the amount of time in the countdown here."
-msgstr "Šei varat izmanīt skaitāmā laika ilgumu."
+msgstr "Šeit varat izmanīt skaitāmā laika ilgumu."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_one)
 #: prefwidget.ui:242
 #, kde-format
 msgid "Check this box if you only want to open one copy of your program"
-msgstr "Atzīmējiet šo, ja vēlaties atvērt tikai vienu programmas kopiju"
+msgstr "Atzīmējiet, ja vēlaties atvērt vienu programmas kopiju"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_one)
 #: prefwidget.ui:245
 #, kde-format
 msgid "Check this box if you only want one instance to open"
-msgstr "Atzīmējiet šo, ja vēlaties palaist tikai vienu eksemplāru"
+msgstr "Atzīmējiet, ja vēlaties atvērt tikai vienu instanci"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_one)
 #: prefwidget.ui:248
@@ -284,20 +284,18 @@ msgstr "Sākt tikai &vienu instanci"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_consecutive)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:255 prefwidget.ui:258
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box if you want your countdown to start over after it finishes"
+#, kde-format
 msgid ""
 "Check this box if you want to execute this task after the previous one "
 "finishes"
 msgstr ""
-"Atzīmējiet šo, ja vēlaties ka atskaite, beidzoties sākas atkal no sākuma"
+"Atzīmējiet, ja vēlaties izpildīt šo uzdevumu, kad ir beidzies iepriekšējais"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:261
 #, kde-format
 msgid "Consecutive task"
-msgstr ""
+msgstr "Secīgs uzdevums"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel3)
 #: prefwidget.ui:268
@@ -315,39 +313,39 @@ msgstr "Komandrinda:"
 #: prefwidget.ui:291
 #, kde-format
 msgid "Enter the hours here"
-msgstr ""
+msgstr "Ierakstiet stundas"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_delayM)
 #: prefwidget.ui:298
 #, kde-format
 msgid "Enter the minutes here"
-msgstr ""
+msgstr "Ierakstiet minūtes"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel4)
 #: prefwidget.ui:308
 #, kde-format
 msgid "hours"
-msgstr ""
+msgstr "stundas"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel5)
 #: prefwidget.ui:315
 #, kde-format
 msgid "minutes"
-msgstr ""
+msgstr "minūtes"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_commandLine)
 #: prefwidget.ui:350
 #, kde-format
 msgid "command you would like to run when time is up"
-msgstr "komanda, ko palaist, kad laiks iztecējis"
+msgstr "komanda, ko palaist, iztekot laikam"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, m_commandLine)
 #: prefwidget.ui:353
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enter here a program you would like to run when the countdown is zero"
+#, kde-format
 msgid "Enter a program you would like to run when the countdown is zero"
-msgstr "Šeit ievadiet programmu, kuru palaist kad atskaite sasniedz nulli"
+msgstr ""
+"Ievadiet programmu, kuru vēlaties palaist, kad laika atskaite nonāk līdz "
+"nullei"
 
 #~ msgid "You can change the amount of time here."
 #~ msgstr "Šei varat izmanīt laika ilgumu."

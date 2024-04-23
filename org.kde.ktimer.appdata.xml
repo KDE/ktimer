@@ -23,7 +23,6 @@
   <name xml:lang="fr">KTimer</name>
   <name xml:lang="gl">KTimer</name>
   <name xml:lang="he">KTimer</name>
-  <name xml:lang="hi">के-टाइमर</name>
   <name xml:lang="hu">KTimer</name>
   <name xml:lang="ia">KTimer</name>
   <name xml:lang="id">KTimer</name>
@@ -31,6 +30,7 @@
   <name xml:lang="ka">KTimer</name>
   <name xml:lang="ko">KTimer</name>
   <name xml:lang="lt">KTimer</name>
+  <name xml:lang="lv">KTimer</name>
   <name xml:lang="nl">KTimer</name>
   <name xml:lang="nn">KTimer</name>
   <name xml:lang="pl">KTimer</name>
@@ -66,7 +66,6 @@
   <summary xml:lang="fr">Lanceur de compte à rebours</summary>
   <summary xml:lang="gl">Iniciador de conta atrás</summary>
   <summary xml:lang="he">משגר מונה לאחור</summary>
-  <summary xml:lang="hi">उलटी गिनती प्रारंभक</summary>
   <summary xml:lang="hu">Visszaszámláló</summary>
   <summary xml:lang="ia">Lanceator de computo a retro</summary>
   <summary xml:lang="id">Peluncur Hitung Mundur</summary>
@@ -74,6 +73,7 @@
   <summary xml:lang="ka">ათვლის ტაიმერი</summary>
   <summary xml:lang="ko">카운트다운 실행기</summary>
   <summary xml:lang="lt">Atvirkštinis laikmatis</summary>
+  <summary xml:lang="lv">Laika atskaites palaidējs</summary>
   <summary xml:lang="nl">Starter van aftellen</summary>
   <summary xml:lang="nn">Nedteljingsstartar</summary>
   <summary xml:lang="pl">Odliczanie</summary>
@@ -111,7 +111,6 @@
     <p xml:lang="fr">KTimer est un petit outil qui exécute des programmes après un laps de temps défini. Il vous permet de configurer plusieurs tâches et de définir un compte à rebours pour chacune d'entre elles. Il est possible de lancer, d'arrêter, de modifier ou de faire tourner en boucle les comptes à rebours de chaque tâche.</p>
     <p xml:lang="gl">KTimer é unha pequena ferramenta para executar programas despois dun certo tempo. Permítelle introducir varias tarefas e definir un temporizador para cada unha delas. Os temporizadores de cada tarefa poden iniciarse, deterse, cambiarse ou executarse en bucle.</p>
     <p xml:lang="he">KTimer הוא כלי קטן להפעלת תוכניות לאחר זמן קצוב. הוא מאפשר לך להגדיר מספר משימות ולהגדיר תזמון לכל אחת מהן. אפשר להתחיל, לעצור, לשנות או להריץ בלולאה כל אחד משעוני העצר.</p>
-    <p xml:lang="hi">के-टाइमर कुछ समय बाद अनुप्रयोगों को निष्पादित करने के लिए एक छोटा  साधन है। यह आपको कई कार्यों को दर्ज करने और उनमें से प्रत्येक के लिए टाइमर सेट करने में मदत करता है। प्रत्येक कार्य के लिए टाइमर प्रारंभ, बंद, परिवर्तित या चक्र किया जा सकता है।</p>
     <p xml:lang="hu">A KTimer egy kis eszköz a programok bizonyos idő elteltével történő végrehajtásához. Lehetővé teszi, hogy több feladatot adjon meg, és mindegyikhez beállítson egy időzítőt. Az egyes feladatok időzítői elindíthatók, megállíthatók, módosíthatók vagy hurkolhatók.</p>
     <p xml:lang="ia">KTimer es un parve instrumento qu executa programmas post alcu tempore. Illo permitte que tu inserta multe cargas e fixa un timer per omne de illos. Le timers per cata carga pote esser startate, stoppate, modificate o repetite in loop.</p>
     <p xml:lang="id">KTimer adalah alat kecil untuk menjalankan program setelah beberapa waktu. Ini memungkinkan kamu untuk memasukkan beberapa tugas dan mengeset timer untuk setiap masing-masingnya. Timer untuk setiap tugas dapat dimulai, dihentikan, diubah, atau diulang.</p>
@@ -119,6 +118,7 @@
     <p xml:lang="ka">KTimer პატარა პროგრამაა გარკვეული დროის შემდეგ ბრძანებების შესასრულებლად. ის საშუალებას გაძლევთ, რამდენიმე ამოცანა აღწეროთ, თავისი ტაიმერებით. შეგიძლიათ თითოეული ტაიმერის გაშვება, გაჩერება, შეჩერება ან მარყუჟში ჩასმა.</p>
     <p xml:lang="ko">KTimer는 시간을 두고 프로그램을 실행할 수 있는 작은 도구입니다. 여러 작업과 타이머를 지정할 수 있으며, 각각 작업의 타이머를 개별적으로 관리할 수 있습니다.</p>
     <p xml:lang="lt">KTimer yra mažas įrankis, skirtas vykdyti programas po tam tikro laiko. Jis leidžia įvesti keletą užduočių ir kiekvienai iš jų nustatyti laikmatį. Kiekvienos užduoties laikmatis gali būti paleistas, sustabdytas, pakeistas arba nustatytas ciklu.</p>
+    <p xml:lang="lv">„KTimer“ ir neliels rīks, programmu palaišanai pēc noteikta laika. Tas ļauj ievadīt vairākus uzdevumus un katram iestatīt taimeri. Katra uzdevuma taimeri iespējams sākt, apturēt, mainīt vai atkārtot.</p>
     <p xml:lang="nl">KTimer is een klein hulpmiddel om programma's uit te voeren na enige tijd. Het stelt u in staat om verschillende taken in te voeren en een timer voor elk van hen in te stellen. De timers voor elke taak kunnen worden gestart, gestopt, gewijzigd of in een loop gezet worden.</p>
     <p xml:lang="nn">KTimer er eit lite verktøy for automatisk start av program når det har gått ei fastsett tid. Du kan leggja til fleire oppgåver og ha ei eiga nedteljing for kvar av dei. Nedteljarane kan du òg starta, stoppa, endra eller køyra i lykkje.</p>
     <p xml:lang="pl">KTimer jest małym narzędziem do wykonywania programów po danym czasie. Umożliwia podanie kliku zadań i ustawienia czasomierza dla nich. Czasomierz dla każdego z zadań można rozpocząć, zatrzymać, zmienić lub zapętlić.</p>
@@ -162,7 +162,6 @@
       <caption xml:lang="fr">Fenêtre de configuration de KTimer</caption>
       <caption xml:lang="gl">Xanela de configuración de KTimer</caption>
       <caption xml:lang="he">חלון ההגדרות של KTimer</caption>
-      <caption xml:lang="hi">के-टाइमर विन्यास विंडो</caption>
       <caption xml:lang="hu">KTimer beállítóablak</caption>
       <caption xml:lang="ia">Fenestra de configuration de KTimer</caption>
       <caption xml:lang="id">Jendela konfigurasi KTimer</caption>
@@ -170,6 +169,7 @@
       <caption xml:lang="ka">KTimer -ის მორგების ფანჯარა</caption>
       <caption xml:lang="ko">KTimer 설정 창</caption>
       <caption xml:lang="lt">KTimer konfigūracijos langas</caption>
+      <caption xml:lang="lv">„KTimer“ konfigurācijas logs</caption>
       <caption xml:lang="nl">Configuratievenster van KTimer</caption>
       <caption xml:lang="nn">Oppsettvindauge for KTimer</caption>
       <caption xml:lang="pl">Okno ustawień KTimer</caption>

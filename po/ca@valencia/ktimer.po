@@ -240,8 +240,8 @@ msgstr "Configuració"
 msgid ""
 "Check this box if you want your countdown to start over after it finishes"
 msgstr ""
-"Seleccioneu esta casella si voleu que el compte arrere torne a començar "
-"després que acabe"
+"Marqueu esta casella si voleu que el compte arrere torne a començar després "
+"que acabe"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_loop)
 #: prefwidget.ui:215
@@ -271,13 +271,13 @@ msgstr "Ací podeu canviar la duració del compte arrere."
 #: prefwidget.ui:242
 #, kde-format
 msgid "Check this box if you only want to open one copy of your program"
-msgstr "Seleccioneu esta casella si només voleu obrir una còpia del programa"
+msgstr "Marqueu esta casella si només voleu obrir una còpia del programa"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_one)
 #: prefwidget.ui:245
 #, kde-format
 msgid "Check this box if you only want one instance to open"
-msgstr "Seleccioneu esta casella si voleu que només s'òbriga una instància"
+msgstr "Marqueu esta casella si voleu que només s'òbriga una instància"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_one)
 #: prefwidget.ui:248
@@ -293,7 +293,7 @@ msgid ""
 "Check this box if you want to execute this task after the previous one "
 "finishes"
 msgstr ""
-"Seleccioneu esta casella si voleu executar esta tasca després que acabe "
+"Marqueu esta casella si voleu executar esta tasca després que acabe "
 "l'anterior"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)

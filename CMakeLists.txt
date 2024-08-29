@@ -36,6 +36,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     DBusAddons
     Notifications
     ConfigWidgets
+    Crash
 )
 
 find_package(KF6StatusNotifierItem ${KF_MIN_VERSION} REQUIRED)
@@ -64,7 +65,7 @@ ecm_add_app_icon(ktimer ICONS ${ICONS_SRCS})
 
 
 target_link_libraries(ktimer  KF6::I18n KF6::KIOWidgets KF6::ConfigWidgets
-    KF6::Notifications KF6::DBusAddons)
+    KF6::Notifications KF6::DBusAddons KF6::Crash)
 
 target_link_libraries(ktimer KF6::StatusNotifierItem)
 

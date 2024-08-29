@@ -17,9 +17,12 @@
  */
 
 #include "ktimer.h"
+
 #include <KAboutData>
+#include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
+
 #include <QApplication>
 #include <QCommandLineParser>
 #include <config-ktimer.h>
@@ -41,6 +44,8 @@ int main(int argc, char **argv)
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
+
+    KCrash::initialize();
 
     app.setQuitOnLastWindowClosed(false);
     KDBusService service;

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2024-08-30 00:42+0000\n"
 "PO-Revision-Date: 2021-08-18 15:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -35,22 +35,22 @@ msgstr ""
 "dr.khaled.hosny@gmail.com, Fahad.alsaidi@gmail.com, niceboy120@gmail.com,"
 "zayed.alsaidi@gmail.com"
 
-#: main.cpp:32
+#: main.cpp:23
 #, kde-format
 msgid "KTimer"
 msgstr "مؤقّت ك"
 
-#: main.cpp:34
+#: main.cpp:25
 #, kde-format
 msgid "KDE Timer"
 msgstr "مؤقّت كِيدِي"
 
-#: main.cpp:36
+#: main.cpp:27
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
 msgstr "(c) 2001, Stefan Schimanski"
 
-#: main.cpp:38
+#: main.cpp:29
 #, kde-format
 msgid "Stefan Schimanski"
 msgstr "Stefan Schimanski"

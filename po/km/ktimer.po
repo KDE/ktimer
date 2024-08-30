@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 01:55+0000\n"
+"POT-Creation-Date: 2024-08-30 00:42+0000\n"
 "PO-Revision-Date: 2012-07-10 15:40+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -32,22 +32,22 @@ msgstr ""
 "khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info,"
 "ratanak@khmeros.info,sophea@khmeros.info"
 
-#: main.cpp:32
+#: main.cpp:23
 #, kde-format
 msgid "KTimer"
 msgstr "KTimer"
 
-#: main.cpp:34
+#: main.cpp:25
 #, kde-format
 msgid "KDE Timer"
 msgstr "ឧបករណ៍​កំណត់​ពេល​របស់ KDE"
 
-#: main.cpp:36
+#: main.cpp:27
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
 msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០១ ដោយ Stefan Schimanski"
 
-#: main.cpp:38
+#: main.cpp:29
 #, kde-format
 msgid "Stefan Schimanski"
 msgstr "Stefan Schimanski"

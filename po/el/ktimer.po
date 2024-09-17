@@ -287,7 +287,7 @@ msgstr "Επιλέξτε αυτό το πλαίσιο αν θέλετε να α�
 #: prefwidget.ui:248
 #, kde-format
 msgid "Start only &one instance"
-msgstr "Εκκίνηση μόνο ενό&ς αντιγράφου"
+msgstr "Εκκίνηση μόνο ενός αντιγρά&φου"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_consecutive)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_consecutive)

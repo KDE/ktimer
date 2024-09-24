@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Slovenian "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>&ktimer; priročnik</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>04.03.2018</date>
+<releaseinfo
+>Aplikacije 18.04</releaseinfo>
+
+<abstract>
+<para
+>&ktimer; je aplikacija, ki omogoča zagon aplikacije po preteku določenega časa. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>ktimer</keyword>
+<keyword
+>odštevanje</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+<para
+>&ktimer; omogoča vnos več opravil in nastavitev časovnika za vsako od njih. Ko časovnik doseže ničlo, se opravilo izvede. Časovnike za vsako opravilo lahko zaženete, ustavite, spremenite ali zaporedno nastavite.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>Uporaba &ktimer;</title>
+
+<screenshot>
+<screeninfo
+>Tukaj je posnetek zaslona programa &ktimer; ko ga prvič zaženete</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>&ktimer;jevo glavno okno</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Za začetek najprej dodajte opravilo tako, da izberete <guibutton
+>Novo</guibutton
+>. Nato vnesite ukaz, ki ga želite izvesti, v polje <guilabel
+>Ukazna vrstica:</guilabel
+>. Nato lahko prilagodite nastavitve ali sprožite odštevanje časovnika. Ko se čas izteče, se zažene ukaz.</para>
+
+<screenshot>
+<screeninfo
+>Tukaj je posnetek zaslona programa &ktimer; potem ko ste mu rekli, naj zažene program &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>dodaj opravilo</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Kot primer uporabimo &konqueror;. Privzeto se začne čez 100 sekund, po začetku odštevanja časovnika.</para>
+
+<screenshot>
+<screeninfo
+>Tukaj je odštevanje: v 56 sekundah se bo zagnal &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>56 sekund do konca</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Začnimo z nalogo. Tukaj je že nekaj časa v pogonu in je na polovici odštevanja. V 56 sekundah se bo začel &konqueror;.</para>
+
+<para
+>Vidite drsno palico? Z njo lahko hitro povečate ali zmanjšate čas, namenjen opravilu.</para>
+
+<screenshot>
+<screeninfo
+>Dodajmo drugo nalogo.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>še enkrat poženi &konqueror;, nikoli jih ne moreš imeti preveč!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Zdaj sta načrtovana dva &konqueror;ja, ki ju je treba zagnati. Zgornji se bo zagnal čez 20 sekund, spodnji pa je trenutno ustavljen. Dodate lahko več ukazov. Čeprav ni nikoli preveč &konqueror;jev, boste verjetno želeli uporabljati druge izvršilne datoteke. Morda vaša lastna lupinska skripta.</para>
+
+<para
+>Če želite začeti novo opravilo z določenim zamikom po koncu prejšnjega opravila na seznamu, preverite možnost <guilabel
+>Zaporedno opravilo</guilabel
+> in prilagodite čas, določen v stolpcu <guilabel
+>Zakasnitev</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>Nastavitve</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>Novo</guibutton
+></term>
+    <listitem
+><para
+><action
+>Doda novo opravilo.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>Odstrani</guibutton
+></term>
+    <listitem
+><para
+><action
+>Odstrani trenutno opravilo.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>Pomoč</guibutton
+></term>
+    <listitem
+><para
+><action
+>Odpre priročnik.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&ktimer; </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>Avtorske pravice Programa 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>Avtorske pravice dokumentacije 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>Prevod: Luka Puhar<email
+>puhar.luka@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

@@ -47,7 +47,7 @@ set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
     TYPE OPTIONAL
 )
 
-ecm_set_disabled_deprecation_versions(QT 6.7.0
+ecm_set_disabled_deprecation_versions(QT 6.8.0
     KF 6.7
 )
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)

@@ -23,7 +23,11 @@ public:
     explicit KTimerJob(QObject *parent = nullptr);
     ~KTimerJob() override;
 
-    enum States { Stopped, Paused, Started };
+    enum States {
+        Stopped,
+        Paused,
+        Started
+    };
 
     unsigned delay() const;
     QString command() const;

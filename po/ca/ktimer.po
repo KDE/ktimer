@@ -350,9 +350,3 @@ msgstr "ordre que voleu que s'executi quan s'acabi el temps"
 msgid "Enter a program you would like to run when the countdown is zero"
 msgstr ""
 "Introduïu un programa que voleu executar quan el compte enrere sigui zero"
-
-#~ msgid "You can change the amount of time here."
-#~ msgstr "Aquí podeu canviar la durada."
-
-#~ msgid "This many seconds are left"
-#~ msgstr "Aquests són els segons que falten"

@@ -5,6 +5,8 @@
  */
 
 #include "ktimer.h"
+using namespace Qt::Literals::StringLiterals;
+
 
 #include <KAboutData>
 #include <KCrash>
@@ -19,15 +21,15 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("ktimer"));
-    KAboutData aboutData(QStringLiteral("ktimer"),
+    KAboutData aboutData(u"ktimer"_s,
                          i18n("KTimer"),
                          QStringLiteral(KTIMER_VERSION),
                          i18n("KDE Timer"),
                          KAboutLicense::GPL,
                          i18n("(c) 2001, Stefan Schimanski"),
-                         QStringLiteral("https://apps.kde.org/ktimer"));
-    aboutData.addAuthor(i18n("Stefan Schimanski"), QString(), QStringLiteral("schimmi@kde.org"));
-    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("ktimer")));
+                         u"https://apps.kde.org/ktimer"_s);
+    aboutData.addAuthor(i18n("Stefan Schimanski"), QString(), u"schimmi@kde.org"_s);
+    QApplication::setWindowIcon(QIcon::fromTheme(u"ktimer"_s));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
     aboutData.setupCommandLine(&parser);

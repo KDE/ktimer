@@ -7,7 +7,6 @@
 #include "ktimer.h"
 using namespace Qt::Literals::StringLiterals;
 
-
 #include <KConfigGroup>
 #include <KGuiItem>
 #include <KHelpClient>

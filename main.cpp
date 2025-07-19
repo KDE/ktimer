@@ -7,7 +7,6 @@
 #include "ktimer.h"
 using namespace Qt::Literals::StringLiterals;
 
-
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>

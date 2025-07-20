@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:42+0000\n"
+"POT-Creation-Date: 2025-07-20 00:46+0000\n"
 "PO-Revision-Date: 2018-05-01 19:13+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -28,22 +28,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nicola@nxnt.org,"
 
-#: main.cpp:23
+#: main.cpp:24
 #, kde-format
 msgid "KTimer"
 msgstr "KTimer"
 
-#: main.cpp:25
+#: main.cpp:26
 #, kde-format
 msgid "KDE Timer"
 msgstr "Conto alla rovescia di KDE"
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
 msgstr "(c) 2001, Stefan Schimanski"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid "Stefan Schimanski"
 msgstr "Stefan Schimanski"

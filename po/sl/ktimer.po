@@ -1,7 +1,7 @@
 # Translation of ktimer.po to Slovenian
 # SLOVENIAN TRANSLATION OF KTIMER.
 # Copyright (C) 2001,2003 Free Software Foundation, Inc.
-# $Id: ktimer.po 1689080 2024-08-30 01:14:03Z scripty $
+# $Id: ktimer.po 1713761 2025-07-20 01:23:58Z scripty $
 # $Source$
 #
 # Grega Fajdiga <gregor.fajdiga@telemach.net>, 2001.
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:42+0000\n"
+"POT-Creation-Date: 2025-07-20 00:46+0000\n"
 "PO-Revision-Date: 2020-01-23 16:28+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -38,22 +38,22 @@ msgstr ""
 "andrej.vernekar@moj.net,gregor.fajdiga@telemach.net,matjaz85@yahoo.com,"
 "jlp@holodeck1.com,andrejm@ubuntu.si"
 
-#: main.cpp:23
+#: main.cpp:24
 #, kde-format
 msgid "KTimer"
 msgstr "KTimer"
 
-#: main.cpp:25
+#: main.cpp:26
 #, kde-format
 msgid "KDE Timer"
 msgstr "Časomer za KDE"
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "(c) 2001, Stefan Schimanski"
 msgstr "© 2001, Stefan Schimanski"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid "Stefan Schimanski"
 msgstr "Stefan Schimanski"

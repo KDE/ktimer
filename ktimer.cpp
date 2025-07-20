@@ -380,7 +380,7 @@ QString KTimerJob::formatTime(int seconds) const
 {
     int h, m, s;
     secondsToHMS(seconds, &h, &m, &s);
-    return u"%1:%2:%3"_s.arg(h).arg(m, 2, 10, u'0').arg(s, 2, 10, u'0');
+    return QStringLiteral("%1:%2:%3").arg(h).arg(m, 2, 10, QLatin1Char('0')).arg(s, 2, 10, QLatin1Char('0'));
 }
 
 // calculate seconds from hour, minute and seconds, returns seconds

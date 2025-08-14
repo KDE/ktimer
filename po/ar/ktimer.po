@@ -74,7 +74,7 @@ msgid ""
 "New countdowns are put here. You can add and remove them, and stop and start "
 "them."
 msgstr ""
-"المؤقتات الجديدة توضع هنا ، يمكنك إضافة أو إزالة أو توقيف أو بدء أي منها."
+"المؤقتات الجديدة توضع هنا، يمكنك إضافة أو إزالة أو توقيف أو بدء أي منها."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_list)
 #: prefwidget.ui:36

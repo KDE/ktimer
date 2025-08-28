@@ -47,8 +47,8 @@ set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
     TYPE OPTIONAL
 )
 
-ecm_set_disabled_deprecation_versions(QT 6.9.0
-    KF 6.16.0
+ecm_set_disabled_deprecation_versions(QT 6.10.0
+    KF 6.17.0
 )
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 add_executable(ktimer)

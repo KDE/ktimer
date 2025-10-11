@@ -1,7 +1,7 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007.
-# Gregor Zumstein <gz@orchester-bremgarten.ch>, 2007, 2008.
-# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2018.
-# Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2016.
+# SPDX-FileCopyrightText: 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2007, 2008 Gregor Zumstein <gz@orchester-bremgarten.ch>
+# SPDX-FileCopyrightText: 2009, 2018 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2009, 2010, 2016 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"

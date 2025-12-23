@@ -64,7 +64,7 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2018-03-04</date>
+>2018‒03‒04</date>
 <releaseinfo
 >Uygulamalar 18.04</releaseinfo>
 
@@ -102,7 +102,7 @@
 
 <screenshot>
 <screeninfo
->İlk defa başlattığınızda &ktimer;'ın bir ekran görüntüsü</screeninfo>
+>İlk defa başlattığınızda &ktimer;’ın bir ekran görüntüsü</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="main.png" format="PNG"/>
@@ -123,7 +123,7 @@
 
 <screenshot>
 <screeninfo
->&konqueror;'un çalıştırmasını söyledikten sonra, &ktimer;'ın bir ekran görüntüsü.</screeninfo>
+>&konqueror;’un çalıştırmasını söyledikten sonra, &ktimer;’ın bir ekran görüntüsü.</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="first.png" format="PNG"/>
@@ -136,7 +136,7 @@
 </screenshot>
 
 <para
->&konqueror;'u örnek olarak kullanalım. Öntanımlı olarak, sayaç geri sayıma başladığında 100 saniye içinde başlatılacaktır.</para>
+>&konqueror;’u örnek olarak kullanalım. Öntanımlı olarak, sayaç geri sayıma başladığında 100 saniye içinde başlatılacaktır.</para>
 
 <screenshot>
 <screeninfo

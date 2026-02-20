@@ -285,15 +285,11 @@ msgstr "Ná t&osaigh ach an t-ásc amháin"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_consecutive)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:255 prefwidget.ui:258
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box if you want your countdown to start over after it finishes"
+#, kde-format
 msgid ""
 "Check this box if you want to execute this task after the previous one "
 "finishes"
 msgstr ""
-"Cuir tic sa bhosca seo más mian leat do chomhaireamh síos a thosú arís nuair "
-"a bheidh sé críochnaithe"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:261
@@ -351,18 +347,3 @@ msgid "Enter a program you would like to run when the countdown is zero"
 msgstr ""
 "Iontráil ríomhchlár is mian leat a rith nuair a bheidh an comhaireamh síos "
 "críochnaithe"
-
-#~ msgid "You can change the amount of time here."
-#~ msgstr "Is féidir an tréimhse a athrú anseo."
-
-#~ msgid "This many seconds are left"
-#~ msgstr "Seo é líon na soicindí atá fágtha"
-
-#~ msgid "Show help"
-#~ msgstr "Taispeáin cabhair"
-
-#~ msgid "&Help"
-#~ msgstr "Cab&hair"
-
-#~ msgid "Delay [s]"
-#~ msgstr "Moill [s]"

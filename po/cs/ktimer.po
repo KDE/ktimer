@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2026-02-27 20:57+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-08-06 23:10+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -219,7 +219,7 @@ msgstr "Podrobná dokumentace"
 #: prefwidget.ui:187
 #, kde-format
 msgid "Click here to open the help documentation viewer."
-msgstr "Klikněte sem pro otevření dokumentace"
+msgstr "Klikněte sem pro otevření dokumentace."
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_settings)
 #: prefwidget.ui:197
@@ -288,7 +288,7 @@ msgid ""
 "finishes"
 msgstr ""
 "Zaškrtněte toto políčko, pokud chcete tento úkol provést po dokončení "
-"předchozího úkolu."
+"předchozího úkolu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:261

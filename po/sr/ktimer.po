@@ -1,14 +1,15 @@
 # Translation of ktimer.po into Serbian.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2009, 2010.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2009, 2010, 2018.
 # Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2010.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktimer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2010-07-01 20:55+0200\n"
-"Last-Translator: Dalibor Djuric <daliborddjuric@gmail.com>\n"
+"PO-Revision-Date: 2026-10-04 23:13+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -23,12 +24,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Часлав Илић"
+msgstr "Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: main.cpp:24
 #, kde-format
@@ -286,20 +287,19 @@ msgstr "Покрени само &један примерак"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_consecutive)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:255 prefwidget.ui:258
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box if you want your countdown to start over after it finishes"
+#, kde-format
 msgid ""
 "Check this box if you want to execute this task after the previous one "
 "finishes"
 msgstr ""
-"Попуните ову кућицу ако желите да одбројавање поново почне пошто се заврши."
+"Попуните ову кућицу ако желите да се овај задатак изврши пошто се заврши "
+"претходни"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_consecutive)
 #: prefwidget.ui:261
 #, kde-format
 msgid "Consecutive task"
-msgstr ""
+msgstr "Узастопни задатак"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel3)
 #: prefwidget.ui:268

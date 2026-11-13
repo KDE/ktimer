@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY A.L.Spehr "<personname
+><firstname
+>A. L.</firstname
+><surname
+>Spehr</surname
+></personname
+>">
+  <!ENTITY A.L.Spehr.email "<email
+>zahl+kde@transbay.net</email
+>">
+  <!ENTITY Stefan.Schimanski "<personname
+><firstname
+>Stefan</firstname
+><surname
+>Schimanski</surname
+></personname
+>">
+  <!ENTITY Stefan.Schimanski.email "<email
+>1Stein@gmx.de</email
+>">
+  <!ENTITY % Arabic "INCLUDE">
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="ktimer" lang="&language;">
+
+<bookinfo>
+<title
+>دليل مؤقت ك</title>
+
+<authorgroup>
+<author
+><firstname
+>A. L.</firstname
+> <othername
+></othername
+> <surname
+>Spehr</surname
+> <affiliation
+> <address
+>&A.L.Spehr.email;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2018-03-04</date>
+<releaseinfo
+>تطبيقات 18.04</releaseinfo>
+
+<abstract>
+<para
+>مؤقت ك هو تطبيق يتيح لك تشغيل تطبيق بعد مرور مقدار معين من الوقت. </para>
+</abstract>
+
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>kdeutils</keyword>
+<keyword
+>مؤقّت ك</keyword>
+<keyword
+>عد تنازلي</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+<para
+>مؤقت ك يسمح لك بإدخال عدة مهام وضبط مؤقت لكل منها. عندما يصل المؤقت إلى الصفر، تُنفذ المهمة. يمكن بدء المؤقتات لكل مهمة أو إيقافها أو تغييرها أو تكرارها.</para
+> 
+
+</chapter>
+
+<chapter id="using-ktimer">
+<title
+>استخدام مؤقت ك</title>
+
+<screenshot>
+<screeninfo
+>هذه لقطة شاشة لـ مؤقت ك عند تشغيله لأول مرة</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="main.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>النافذة الرئيسة لـ مؤقت ك</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>للبدء، أضف أولًا مهمة باختيار <guibutton
+>جديد</guibutton
+>. ثم اكتب الأمر الذي ترغب في تنفيذه في مربع <guilabel
+>سطر الأوامر:</guilabel
+>. يمكنك بعد ذلك ضبط الإعدادات، أو بدء العد التنازلي للمؤقت. عندما ينتهي الوقت، سيُشغّل الأمر.</para>
+
+<screenshot>
+<screeninfo
+>هذه لقطة شاشة لـ مؤقت ك بعد أن أخبرته بتشغيل &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="first.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>أضف مهمة</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>لنستخدم &konqueror; كمثال. افتراضيًا، سيبدأ بعد 100 ثانية بمجرد بدء العد التنازلي للمؤقت.</para>
+
+<screenshot>
+<screeninfo
+>ها هو يعد تنازليًا: بعد 56 ثانية سيُشغّل &konqueror;.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="running.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>تبقى 56 ثانية</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>لنبدأ الآن المهمة. ها هي تعمل لبعض الوقت وهي في منتصف العد التنازلي. بعد 56 ثانية، سيبدأ &konqueror;.</para>
+
+<para
+>أترى ذلك الشريط المنزلق؟ يمكنك استخدامه لزيادة أو تقليل مقدار الوقت لمهمة بسرعة.</para>
+
+<screenshot>
+<screeninfo
+>لنضف مهمة ثانية.</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="two_at_once.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>شغّل &konqueror; آخر، لا يمكنك أبدًا أن تملك الكثير!</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>الآن تمت جدولة تشغيل &konqueror;ين. سيُشغّل العلوي بعد 20 ثانية، والسفلي متوقف حاليًا. يمكنك إضافة المزيد من الأوامر. بينما لا يمكنك أبدًا أن تملك الكثير من &konqueror;، ربما ترغب في استخدام ملفات تنفيذية أخرى. ربما نص برمجي خاص بك.</para>
+
+<para
+>إذا أردت بدء مهمة جديدة بتأخير معين بعد انتهاء المهمة السابقة في القائمة، فعِّل الخيار <guilabel
+>مهمة متتابعة</guilabel
+> واضبط الوقت المحدد في العمود <guilabel
+>تأخير</guilabel
+>. </para>
+
+<sect1 id="settings">
+<title
+>إعدادات</title>
+<para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guibutton
+>جديد</guibutton
+></term>
+    <listitem
+><para
+><action
+>يضيف مهمة جديدة.</action
+></para
+></listitem>
+    </varlistentry>
+    
+    <varlistentry>
+    <term
+><guibutton
+>أزل</guibutton
+></term>
+    <listitem
+><para
+><action
+>يزيل المهمة الحالية.</action
+></para
+></listitem>
+    </varlistentry>
+ 
+    <varlistentry>
+    <term
+><guibutton
+>مساعدة</guibutton
+></term>
+    <listitem
+><para
+><action
+>يفتح الدليل.</action
+></para
+></listitem>
+    </varlistentry>
+</variablelist>
+
+
+</para>
+</sect1>
+</chapter>
+
+
+
+
+<chapter id="credits">
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>مؤقت ك </para>
+
+
+<!--List all the copyright holders here-->
+<para
+>حقوق البرنامج 2001 &Stefan.Schimanski; &Stefan.Schimanski.email;</para>
+
+<para
+>حقوق التوثيق 2008 &A.L.Spehr; &A.L.Spehr.email;</para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+

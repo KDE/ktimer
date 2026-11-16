@@ -1,7 +1,7 @@
 # Translation of ktimer.po to Slovenian
 # SLOVENIAN TRANSLATION OF KTIMER.
 # Copyright (C) 2001,2003 Free Software Foundation, Inc.
-# $Id: ktimer.po 1723087 2025-11-17 12:44:32Z scripty $
+# $Id$
 # $Source$
 #
 # Grega Fajdiga <gregor.fajdiga@telemach.net>, 2001.

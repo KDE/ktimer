@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>org.kde.ktimer</id>
   <metadata_license>FSFAP</metadata_license>
-  <project_license>GPL-2.0+</project_license>
+  <project_license>GPL-2.0-or-later</project_license>
   <name>KTimer</name>
   <name xml:lang="ar">مؤقّت ك</name>
   <name xml:lang="ast">KTimer</name>
@@ -157,6 +157,8 @@
   <url type="donation">https://www.kde.org/community/donations/?app=ktimer&amp;source=appdata</url>
   <url type="help">https://docs.kde.org/?application=ktimer</url>
   <url type="homepage">https://apps.kde.org/ktimer</url>
+  <url type="vcs-browser">https://invent.kde.org/utilities/ktimer</url>
+  <url type="contribute">https://community.kde.org/Get_Involved</url>
   <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">

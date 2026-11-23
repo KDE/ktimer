@@ -51,6 +51,9 @@ ecm_set_disabled_deprecation_versions(QT 6.10.0
     KF 6.17.0
 )
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
+if(ECM_VERSION VERSION_GREATER_EQUAL "6.33.0")
+    add_definitions(-DQT_LEAN_HEADERS=2)
+endif()
 add_executable(ktimer)
 
 configure_file(config-ktimer.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-ktimer.h)
